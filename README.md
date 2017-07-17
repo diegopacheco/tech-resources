@@ -16,27 +16,27 @@ of technologies that you can do POC and CODE practice, also with a list of usefu
 * You need make sure you got concepts right, validate with more experienced engineers. 
 * Progress is best tracked in Weekly Coaching Sessions. 
 * Balance is always welcome. You might use the Breath/Deepth method where 90% time invested on main topic and 10% on random.
-* No matter your specific field like JS or CN you should read all this book https://gist.github.com/diegopacheco/d64f12de059b097533dcfa630a0cb263
+* No matter your specific field like JS or CN you should read all this book https://github.com/diegopacheco/tech-resources/blob/master/agile-dev-resources.md
 
 ### JS
 
-https://gist.github.com/diegopacheco/c58b9a3fcfd447d8fc953848c50bb808
+https://github.com/diegopacheco/tech-resources/blob/master/js-frontend-resources.md
 
 ### Mobile
 
-https://gist.github.com/diegopacheco/10b9ee4f29e7f40281261ff993d2a54f
+https://github.com/diegopacheco/tech-resources/blob/master/mobile-resources.md
 
 ### Cloud Native
 
-https://gist.github.com/diegopacheco/16b753df7058be84fb40c43625626fb2
+https://github.com/diegopacheco/tech-resources/blob/master/cloud-native-resources.md
 
 ### Software Architecture | DevOps Engineering
 
-https://gist.github.com/diegopacheco/5696a6403e9eeefe84a0c0dc6a2db77d
+https://github.com/diegopacheco/tech-resources/blob/master/arch-devops-resources.md
 
 ### GCP
 
-https://gist.github.com/diegopacheco/148e2eac545e27cad1f49ee6efa410ed
+https://github.com/diegopacheco/tech-resources/blob/master/GCP-resources.md
 
 #### POC Ideas
 
