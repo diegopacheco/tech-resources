@@ -53,3 +53,5 @@ https://github.com/diegopacheco/tech-resources/blob/master/GCP-resources.md
 * - Slack
 * - GitHub
 
+Cheers,
+Diego Pacheco
