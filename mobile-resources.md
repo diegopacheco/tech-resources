@@ -82,3 +82,4 @@
 * http://slack.androiddevbr.org/
 * https://medium.cobeisfresh.com/@COBEistech
 * https://medium.mybridge.co/39-open-source-swift-ui-libraries-for-ios-app-development-da1f8dc61a0f
+* https://github.com/android10/Android-CleanArchitecture
