@@ -72,6 +72,8 @@
 * ELK -> https://www.elastic.co/products
 * Kubernetes -> https://kubernetes.io/
 * StatsD -> https://github.com/etsy/statsd
+* Vault -> https://www.vaultproject.io/
+* VaultUI -> https://github.com/djenriquez/vault-ui
 
 ### Books
 
