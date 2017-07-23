@@ -51,6 +51,7 @@
 * Argon -> https://www.argonjs.io/
 * Primrose -> https://www.primrosevr.com/
 * React-VR -> https://github.com/facebook/react-vr
+* ink -> https://github.com/vadimdemedes/ink
 
 #### Books
 
