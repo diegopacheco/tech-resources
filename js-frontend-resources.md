@@ -16,6 +16,7 @@
 * Gulp    -> http://gulpjs.com/
 * Yoman   -> http://yeoman.io/
 * Flow    -> https://flow.org/
+* Lodash  -> https://github.com/lodash/lodash
 * Ramda   -> https://github.com/ramda/ramda
 * Ramda Fantasy -> https://github.com/ramda/ramda-fantasy
 * Redux -> http://redux.js.org/
