@@ -1,6 +1,6 @@
 ## Software Architecture | DevOps Engineering Resources
 
-![Architecture/DevOpsEngineering](http://www.appservgrid.com/paw/wp-content/uploads/2017/04/devopscicdcompanies.jpg.jpeg)
+![Architecture/DevOpsEngineering](http://studyinukraine.site/wp-content/uploads/2016/01/engineering.png)
 
 ### Important Topics
 
@@ -74,6 +74,7 @@
 * StatsD -> https://github.com/etsy/statsd
 * Vault -> https://www.vaultproject.io/
 * VaultUI -> https://github.com/djenriquez/vault-ui
+* smith -> https://github.com/oracle/smith
 
 ### Books
 
