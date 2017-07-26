@@ -21,6 +21,7 @@
 * Ramda Fantasy -> https://github.com/ramda/ramda-fantasy
 * Redux -> http://redux.js.org/
 * redux-transform -> https://github.com/contrarian/redux-transform
+* redux-offline -> https://github.com/jevakallio/redux-offline
 * Redux-Saga -> https://redux-saga.js.org/
 * Mobx      -> https://github.com/mobxjs/mobx
 * Xstream   -> https://github.com/staltz/xstream
