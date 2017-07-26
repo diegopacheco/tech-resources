@@ -19,6 +19,7 @@
 * Lodash  -> https://github.com/lodash/lodash
 * Ramda   -> https://github.com/ramda/ramda
 * Ramda Fantasy -> https://github.com/ramda/ramda-fantasy
+* kea -> * kea -> https://kea.js.org/
 * Redux -> http://redux.js.org/
 * redux-transform -> https://github.com/contrarian/redux-transform
 * redux-offline -> https://github.com/jevakallio/redux-offline
