@@ -55,6 +55,7 @@
 * Primrose -> https://www.primrosevr.com/
 * React-VR -> https://github.com/facebook/react-vr
 * ink -> https://github.com/vadimdemedes/ink
+* Chromeless -> https://github.com/graphcool/chromeless
 
 #### Books
 
