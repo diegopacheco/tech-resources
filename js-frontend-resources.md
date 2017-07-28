@@ -95,3 +95,4 @@
 * http://hello.p5js.org/
 * http://play.elevatorsaga.com/
 * https://reactarmory.com/guides/learn-nude-react/react-basics
+* https://github.com/ryanmcdermott/clean-code-javascript
