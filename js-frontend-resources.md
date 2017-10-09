@@ -61,6 +61,10 @@
 * React-VR -> https://github.com/facebook/react-vr
 * ink -> https://github.com/vadimdemedes/ink
 * Chromeless -> https://github.com/graphcool/chromeless
+* One-Loader -> https://github.com/digitalie/one-loader
+* Vuera -> https://github.com/akxcv/vuera
+* Loopback-Next -> https://github.com/strongloop/loopback-next
+* DeepleatnJS -> https://deeplearnjs.org/
 
 #### Books
 
