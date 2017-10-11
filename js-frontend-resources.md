@@ -11,6 +11,7 @@
 * React   -> https://facebook.github.io/react/
 * Vue     -> https://vuejs.org/
 * RxJS     -> http://reactivex.io/rxjs/
+* RxFiddle -> https://rxfiddle.net/#
 * Webpack -> https://github.com/webpack/webpack
 * yarn    -> https://yarnpkg.com/en/
 * Gulp    -> http://gulpjs.com/
