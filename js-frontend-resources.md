@@ -27,6 +27,7 @@
 * Redux-Saga -> https://redux-saga.js.org/
 * react-autocompletely -> https://github.com/paypal/react-autocompletely
 * react-atmo -> https://github.com/Raathigesh/react-atmo
+* react-content-loader -> https://github.com/danilowoz/react-content-loader
 * ReactShadow -> https://github.com/Wildhoney/ReactShadow
 * graphql-voyager -> https://github.com/APIs-guru/graphql-voyager
 * react-traverse -> https://github.com/elierotenberg/react-traverse
