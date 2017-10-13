@@ -65,6 +65,7 @@
 * Chromeless -> https://github.com/graphcool/chromeless
 * One-Loader -> https://github.com/digitalie/one-loader
 * Vuera -> https://github.com/akxcv/vuera
+* Vue-Model -> https://github.com/aarondfrancis/vue-model
 * Loopback-Next -> https://github.com/strongloop/loopback-next
 * DeepleatnJS -> https://deeplearnjs.org/
 
