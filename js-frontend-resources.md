@@ -31,6 +31,7 @@
 * ReactShadow -> https://github.com/Wildhoney/ReactShadow
 * graphql-voyager -> https://github.com/APIs-guru/graphql-voyager
 * react-traverse -> https://github.com/elierotenberg/react-traverse
+* React-Sight -> https://github.com/React-Sight/React-Sight
 * Mobx      -> https://github.com/mobxjs/mobx
 * Xstream   -> https://github.com/staltz/xstream
 * Hammerjs -> http://hammerjs.github.io/
