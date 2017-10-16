@@ -13,6 +13,7 @@
 * RxJS     -> http://reactivex.io/rxjs/
 * RxFiddle -> https://rxfiddle.net/#
 * Webpack -> https://github.com/webpack/webpack
+* Webpack-monitor -> https://github.com/webpackmonitor/webpackmonitor
 * yarn    -> https://yarnpkg.com/en/
 * Gulp    -> http://gulpjs.com/
 * Yoman   -> http://yeoman.io/
