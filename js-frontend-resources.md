@@ -70,6 +70,7 @@
 * Vuera -> https://github.com/akxcv/vuera
 * Vue-Model -> https://github.com/aarondfrancis/vue-model
 * Loopback-Next -> https://github.com/strongloop/loopback-next
+* lodash-webpack-plugin -> https://github.com/lodash/lodash-webpack-plugin
 * DeepleatnJS -> https://deeplearnjs.org/
 
 #### Books
