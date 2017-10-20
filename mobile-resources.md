@@ -30,6 +30,7 @@
 * TensorFlow -> https://github.com/tensorflow/tensorflow/tree/master/tensorflow/examples/android
 * leakcanary -> https://github.com/square/leakcanary
 * chuck -> https://github.com/jgilfelt/chuck
+* litho -> https://github.com/facebook/litho
 
 ###### IOS
 
