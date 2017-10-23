@@ -72,6 +72,7 @@
 * Loopback-Next -> https://github.com/strongloop/loopback-next
 * lodash-webpack-plugin -> https://github.com/lodash/lodash-webpack-plugin
 * DeepleatnJS -> https://deeplearnjs.org/
+* mlhelper -> https://github.com/laoqiren/mlhelper
 
 #### Books
 
