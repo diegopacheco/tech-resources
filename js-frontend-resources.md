@@ -73,6 +73,7 @@
 * lodash-webpack-plugin -> https://github.com/lodash/lodash-webpack-plugin
 * DeepleatnJS -> https://deeplearnjs.org/
 * mlhelper -> https://github.com/laoqiren/mlhelper
+* image-trace-loader -> https://github.com/EmilTholin/image-trace-loader
 
 #### Books
 
