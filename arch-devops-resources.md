@@ -77,6 +77,7 @@
 * smith -> https://github.com/oracle/smith
 * Operators -> https://coreos.com/operators
 * Micrometer -> http://micrometer.io/
+* napalm -> https://github.com/napalm-automation/napalm
 
 ### Books
 
