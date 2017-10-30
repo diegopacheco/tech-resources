@@ -35,6 +35,7 @@
 * react-traverse -> https://github.com/elierotenberg/react-traverse
 * React-Sight -> https://github.com/React-Sight/React-Sight
 * React-Virgin -> https://github.com/Trixieapp/react-virgin
+* svgr -> https://github.com/smooth-code/svgr
 * Mobx      -> https://github.com/mobxjs/mobx
 * Xstream   -> https://github.com/staltz/xstream
 * Hammerjs -> http://hammerjs.github.io/
