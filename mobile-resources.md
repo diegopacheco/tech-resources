@@ -52,6 +52,7 @@
 * json-framework -> https://github.com/stig/json-framework
 * TensorFlow -> https://github.com/tensorflow/tensorflow/tree/master/tensorflow/examples/ios
 * j2objc-> https://developers.google.com/j2objc/
+* Attributed -> https://github.com/Nirma/Attributed
 
 #### Books
 
