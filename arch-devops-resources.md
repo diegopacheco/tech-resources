@@ -78,6 +78,7 @@
 * Operators -> https://coreos.com/operators
 * Micrometer -> http://micrometer.io/
 * napalm -> https://github.com/napalm-automation/napalm
+* heptio -> https://github.com/heptio/contour
 
 ### Books
 
