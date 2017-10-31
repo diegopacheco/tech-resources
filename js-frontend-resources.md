@@ -76,6 +76,7 @@
 * DeepleatnJS -> https://deeplearnjs.org/
 * mlhelper -> https://github.com/laoqiren/mlhelper
 * image-trace-loader -> https://github.com/EmilTholin/image-trace-loader
+* frappe-charts -> https://frappe.github.io/charts/
 
 #### Books
 
