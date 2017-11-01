@@ -43,6 +43,8 @@
 * MapDB -> http://www.mapdb.org/
 * Time4J -> https://github.com/MenoData/Time4J
 * NoException -> https://noexception.machinezoo.com/
+* Genson -> http://owlike.github.io/genson/
+* Jolt -> https://github.com/bazaarvoice/jolt
 * DevOps Engineering -> https://gist.github.com/diegopacheco/5696a6403e9eeefe84a0c0dc6a2db77d#devops-engineering
 
 #### Books
