@@ -79,6 +79,8 @@
 * Micrometer -> http://micrometer.io/
 * napalm -> https://github.com/napalm-automation/napalm
 * heptio -> https://github.com/heptio/contour
+* Live HTop -> https://github.com/theden/0xfee1dead.top
+* Closh -> https://github.com/dundalek/closh
 
 ### Books
 
