@@ -19,6 +19,7 @@
 * Dropwizard ->  http://dropwizard.io/
 * Finagle    -> https://twitter.github.io/finagle/
 * Guice      -> https://github.com/google/guice
+* Feign      -> https://github.com/OpenFeign/feign
 * Kubernetes -> https://kubernetes.io/
 * Mesos      -> http://mesos.apache.org/
 * Docker     -> https://www.docker.com/
@@ -34,6 +35,14 @@
 * Kappa -> https://github.com/garnaat/kappa
 * GraphQL -> http://graphql.org/
 * Spring Cloud Functions -> https://github.com/spring-cloud/spring-cloud-function
+* Orika -> https://github.com/orika-mapper/orika
+* ByteBuddy -> http://bytebuddy.net/#/
+* CGLib -> https://github.com/cglib/cglib
+* Caffeine -> https://github.com/ben-manes/caffeine
+* Config -> https://github.com/lightbend/config
+* MapDB -> http://www.mapdb.org/
+* Time4J -> https://github.com/MenoData/Time4J
+* NoException -> https://noexception.machinezoo.com/
 * DevOps Engineering -> https://gist.github.com/diegopacheco/5696a6403e9eeefe84a0c0dc6a2db77d#devops-engineering
 
 #### Books
