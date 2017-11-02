@@ -30,6 +30,7 @@
 * react-atmo -> https://github.com/Raathigesh/react-atmo
 * react-content-loader -> https://github.com/danilowoz/react-content-loader
 * react-snap -> https://github.com/stereobooster/react-snap
+* React PWA -> https://www.reactpwa.com/
 * ReactShadow -> https://github.com/Wildhoney/ReactShadow
 * graphql-voyager -> https://github.com/APIs-guru/graphql-voyager
 * react-traverse -> https://github.com/elierotenberg/react-traverse
