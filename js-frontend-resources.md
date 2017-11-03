@@ -79,6 +79,7 @@
 * image-trace-loader -> https://github.com/EmilTholin/image-trace-loader
 * frappe-charts -> https://frappe.github.io/charts/
 * svg-fill-loader -> https://github.com/kisenka/svg-fill-loader
+* cesium-> https://github.com/AnalyticalGraphicsInc/cesium
 
 #### Books
 
