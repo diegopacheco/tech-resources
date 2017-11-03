@@ -32,6 +32,7 @@
 * react-snap -> https://github.com/stereobooster/react-snap
 * React PWA -> https://www.reactpwa.com/
 * ReactShadow -> https://github.com/Wildhoney/ReactShadow
+* react-bits-> https://github.com/vasanthk/react-bits
 * graphql-voyager -> https://github.com/APIs-guru/graphql-voyager
 * react-traverse -> https://github.com/elierotenberg/react-traverse
 * React-Sight -> https://github.com/React-Sight/React-Sight
