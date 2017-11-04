@@ -42,6 +42,7 @@
 * Samza -> http://samza.apache.org/
 * Flink -> http://flink.apache.org/
 * Spark -> https://spark.apache.org/
+* Pravega -> https://github.com/pravega/pravega
 * Gradle -> https://gradle.org/
 * Spring Cloud -> http://projects.spring.io/spring-cloud/
 * NetflixOSS -> https://netflix.github.io/
