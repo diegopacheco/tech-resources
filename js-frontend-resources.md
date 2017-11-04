@@ -83,6 +83,7 @@
 * cesium-> https://github.com/AnalyticalGraphicsInc/cesium
 * jSchema -> https://github.com/ignoreintuition/jSchema
 * serverjs -> https://serverjs.io/
+* create-react-kotlin-app -> https://github.com/JetBrains/create-react-kotlin-app
 
 #### Books
 
