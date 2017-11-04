@@ -81,6 +81,7 @@
 * frappe-charts -> https://frappe.github.io/charts/
 * svg-fill-loader -> https://github.com/kisenka/svg-fill-loader
 * cesium-> https://github.com/AnalyticalGraphicsInc/cesium
+* jSchema -> https://github.com/ignoreintuition/jSchema
 
 #### Books
 
