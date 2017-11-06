@@ -126,3 +126,4 @@
 * https://reactarmory.com/guides/learn-nude-react/react-basics
 * https://github.com/ryanmcdermott/clean-code-javascript
 * https://github.com/vuejs/awesome-vue
+* https://medium.freecodecamp.org/modern-frontend-hacking-cheatsheets-df9c2566c72a
