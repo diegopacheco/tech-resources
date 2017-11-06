@@ -84,6 +84,7 @@
 * jSchema -> https://github.com/ignoreintuition/jSchema
 * serverjs -> https://serverjs.io/
 * create-react-kotlin-app -> https://github.com/JetBrains/create-react-kotlin-app
+* tufte-css/ -> https://edwardtufte.github.io/tufte-css/
 
 #### Books
 
