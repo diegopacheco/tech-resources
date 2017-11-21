@@ -136,3 +136,4 @@
 * https://medium.freecodecamp.org/modern-frontend-hacking-cheatsheets-df9c2566c72a
 * http://acko.net/files/fullfrontal/fullfrontal/webglmath/online.html
 * http://www.franktip.org/pubs/oopsla2017promises.pdf
+* https://reacttraining.com/patterns/
