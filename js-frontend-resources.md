@@ -38,6 +38,7 @@
 * React-Sight -> https://github.com/React-Sight/React-Sight
 * React-Virgin -> https://github.com/Trixieapp/react-virgin
 * react-intl -> https://github.com/yahoo/react-intl
+* React-AR -> https://github.com/nitin42/React-AR
 * jsLingui -> https://github.com/lingui/js-lingui
 * svgr -> https://github.com/smooth-code/svgr
 * Mobx      -> https://github.com/mobxjs/mobx
