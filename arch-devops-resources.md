@@ -84,6 +84,7 @@
 * Closh -> https://github.com/dundalek/closh
 * sultan -> https://github.com/aeroxis/sultan
 * telepresence -> https://www.telepresence.io/
+* mitmproxy tools -> https://mitmproxy.org/index.html
 
 ### Books
 
