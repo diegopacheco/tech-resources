@@ -11,6 +11,8 @@
 * Lifecycle Events
 * Hooks and custom hooks
 * Fetch vs Axios
+* Native Modules (IOS and Android)
+* Performance and Profiling
 
 ## State Management
 
@@ -21,4 +23,5 @@
 ## Testing
 
 * React Native Testing Library
-* 
+* Jest
+* Detox
