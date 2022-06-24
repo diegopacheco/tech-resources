@@ -11,7 +11,9 @@
 * Lifecycle Events
 * Hooks and custom hooks
 * Fetch vs Axios
+* FlatList + Pagination
 * Native Modules (IOS and Android)
+* Debugging: JavaScript Remotely, React DevTools
 * Performance and Profiling
 
 ## State Management
