@@ -29,6 +29,17 @@
 * Cache with Caffeine
 * Configure Transaction management with JPA
 
+### Learn Frameworks and Libs
+
+* Gson
+* Guava
+* Quartz
+* Apache Camel
+* Google GRPC
+* Resilience4j
+* Vert.X
+* Quarkus
+
 ### Challenges
 
 * (1) Build a Converter Framework where you convert complex types.
