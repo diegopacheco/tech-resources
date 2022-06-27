@@ -18,6 +18,12 @@
 * Module Federation
 * Performance and Profiling
 
+## Advanced
+
+* Electron
+* Next.js
+* WebAssembly
+
 ## State Management
 
 * Redux
@@ -39,6 +45,17 @@
 * (5) Build your own Linux Terminal (ls, cat, mkdir, touch, echo, cd)
 * (6) Build your own Slack (profile, chat rooms, notifications)
 * (7) Build your own Notability (list, make notes)
+
+## Links
+
+* Learn how React Reconciler package works by building your own lightweight React DOM
+https://hackernoon.com/learn-you-some-custom-react-renderers-aed7164a4199
+* How to write your own Virtual DOM
+https://medium.com/@deathmood/how-to-write-your-own-virtual-dom-ee74acc13060
+* Build your own React
+https://pomb.us/build-your-own-react/
+* WTF is JSX (Let's Build a JSX Renderer)
+https://jasonformat.com/wtf-is-jsx/
 
 ## Books
 

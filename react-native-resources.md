@@ -11,6 +11,12 @@
 * Lifecycle Events
 * Hooks and custom hooks
 * Fetch vs Axios
+* Navigation
+* Deep Linking
+* Analytics
+* Geolocation
+* Internationalization
+* Animation
 * Routing
 * FlatList + Pagination
 * Expo
