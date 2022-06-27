@@ -15,6 +15,7 @@
 * Celery
 * Flask
 * Tornado
+* Bottle
 * NumPy
 * OpenCV 
 * Scalene
