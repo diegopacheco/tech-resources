@@ -37,6 +37,14 @@
 * Jest
 * Detox
 
+## Advanced
+
+* lottie-web (https://github.com/airbnb/lottie-web)
+* Bundle Visualizer (https://github.com/IjzerenHein/react-native-bundle-visualizer)
+* Re.Pack (https://github.com/callstack/repack)
+* Reactotron (https://github.com/infinitered/reactotron)
+* Flipper (https://github.com/facebook/flipper)
+
 ## Challenges
 
 * (1) Build your own Wheater App(show the wheater in celcius/fahrenheit, annimations)
