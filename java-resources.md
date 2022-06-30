@@ -28,6 +28,8 @@
 * Spring Data JDBC
 * Cache with Caffeine
 * Configure Transaction management with JPA
+* Spring Security: CSRF Protection
+* Spring Security: Authorize HTTP Requests(HttpSecurity and SecurityFilterChain)
 
 ### Learn Frameworks and Libs
 
