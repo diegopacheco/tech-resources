@@ -74,3 +74,5 @@ https://www.amazon.com/Unit-Testing-Principles-Practices-Patterns-ebook/dp/B0978
 http://www.amazon.com/Working-Effectively-Legacy-Michael-Feathers/dp/0131177052/ref=pd_sim_b_3?ie=UTF8&refRID=0NFDX09AB5N8Y6EM4BB5
 * Designing Data-Intensive Applications: The Big Ideas Behind Reliable, Scalable, and Maintainable Systems
 https://www.amazon.com/Designing-Data-Intensive-Applications-Reliable-Maintainable-ebook/dp/B06XPJML5D/ref=sr_1_65?crid=3CX1FTAAZCG03&keywords=coding+patterns&qid=1656112744&s=digital-text&sprefix=coding+pattern%2Cdigital-text%2C115&sr=1-65
+* The Pragmatic Programmer
+https://www.amazon.com/Pragmatic-Programmer-journey-mastery-Anniversary-ebook/dp/B07VRS84D1/ref=tmm_kin_swatch_0?_encoding=UTF8&qid=1656566171&sr=8-1
