@@ -39,6 +39,7 @@
 
 ## Advanced
 
+* flash-list (https://shopify.github.io/flash-list/)
 * lottie-web (https://github.com/airbnb/lottie-web)
 * Bundle Visualizer (https://github.com/IjzerenHein/react-native-bundle-visualizer)
 * Re.Pack (https://github.com/callstack/repack)
