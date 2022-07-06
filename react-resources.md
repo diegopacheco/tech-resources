@@ -56,6 +56,9 @@ https://medium.com/@deathmood/how-to-write-your-own-virtual-dom-ee74acc13060
 https://pomb.us/build-your-own-react/
 * WTF is JSX (Let's Build a JSX Renderer)
 https://jasonformat.com/wtf-is-jsx/
+* Clean Code with TypeScript
+https://github.com/labs42io/clean-code-typescript
+
 
 ## Books
 
