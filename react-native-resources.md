@@ -46,6 +46,18 @@
 * Reactotron (https://github.com/infinitered/reactotron)
 * Flipper (https://github.com/facebook/flipper)
 
+## OOAD Challenges
+
+* (1) Build a TAX system where different products have different tax per state and year.
+* (2) Build a Logger Builder Router System where you can log into FS, ELK or any other log system where you can configure the logs to be sync or assync using the same API.
+* (3) Build Render Template where the same temple can be render in HTML, PDF or CSV.
+* (4) Build A Logistic System where you need to calculate different freigth prices based on volume, size and type of transportation i.e boat, truck, rail, prices are dynamic they keep changing.
+* (5) Build Restaurant Queue System Capable of telling how long each dish will take.
+* (6) Build Guitar Factory System where you can specify details of a guitar and the system creates a 
+custon guitar for you with OS, Specs, Models. The system should keep track of Inventory.
+* (7) Build Ticket system, where you should be able to sell x number of ticker per different shows and
+choose the seats number, zone of the venue, date and respect maximun capacity.
+
 ## Challenges
 
 * (1) Build your own Wheater App(show the wheater in celcius/fahrenheit, annimations)
