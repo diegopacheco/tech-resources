@@ -68,7 +68,7 @@ choose the seats number, zone of the venue, date and respect maximun capacity.
 * (6) Build a Teacher's Class Organizer/Optimizer
 * (7) Build a Social Media Sharing Photo App (publish photos, tag photos, timeline, comments)
 
-## Challenges - Round 1
+## Code Challenges - Round 1
 
 * (1) Build your own Wheater App(show the wheater in celcius/fahrenheit, annimations)
 * (2) Build your own Trello(Simple Kanban board, create: cards, collumns, move, delete)
