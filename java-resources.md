@@ -56,13 +56,13 @@ choose the seats number, zone of the venue, date and respect maximun capacity.
 
 ## OOAD Challenges Round 2
 
-* (1) Build a TODO List app  (add item, remove, mark as done, do, re-do, listAll)
-* (2) Build a Dropbox clone  (save files, restore files, delete files, listFiles, Search) with encryption
-* (3) Build a Evernote clone (add notes,save notes,edit notes, delete notes, sync)
-* (4) Build a 
-* (5) Build a 
-* (6) Build a 
-* (7) Build a 
+* (1) Build a Grocery TODO List system (add item, remove, mark as done, do, re-do, listAll)
+* (2) Build a FileShare System  (save files, restore files, delete files, listFiles, Search) with encryption
+* (3) Build a Note Taking system (add notes,save notes,edit notes, delete notes, sync)
+* (4) Build a Calendar system (book meetings, remove meetings, listMeetings, suggest best time for 2 people)
+* (5) Build a Redis clone client/server (Strings: set,get,remove,append, maps: set,get,keys,values)
+* (6) Build a Teacher's Class Organizer/Optimizer
+* (7) Build a Social Media Sharing Photo App (publish photos, tag photos, timeline, comments)
 
 ### Code Challenges Round 1
 
