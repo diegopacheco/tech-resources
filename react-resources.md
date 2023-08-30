@@ -68,6 +68,16 @@ choose the seats number, zone of the venue, date and respect maximun capacity.
 * (6) Build your own Slack (profile, chat rooms, notifications)
 * (7) Build your own Notability (list, make notes)
 
+## Code Challenges - Round 2
+
+* (1) Build your own Time Tracker App (start, stop, laps)
+* (2) Build your own Calendar App (Book meetings, edit, remove, sugest best time for 2 people)
+* (3) Build your own Benchmark App for JS code
+* (4) Build your own Flap Bird clone game
+* (5) Build your own MS Paint clone App
+* (6) Build your own Video Player
+* (7) Build your own React (render, pass props, mount/unmount hooks)
+
 ## Links
 
 * Learn how React Reconciler package works by building your own lightweight React DOM
