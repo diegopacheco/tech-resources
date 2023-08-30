@@ -23,6 +23,7 @@
 * Electron
 * Next.js
 * WebAssembly
+* Million.js
 
 ## State Management
 
