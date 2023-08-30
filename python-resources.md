@@ -22,7 +22,7 @@
 * Scalene
 * scikit-learn
 
-## OOAD Challenges
+## OOAD Challenges - Round 1
 
 * (1) Build a TAX system where different products have different tax per state and year.
 * (2) Build a Logger Builder Router System where you can log into FS, ELK or any other log system where you can configure the logs to be sync or assync using the same API.
@@ -34,7 +34,17 @@ custon guitar for you with OS, Specs, Models. The system should keep track of In
 * (7) Build Ticket system, where you should be able to sell x number of ticker per different shows and
 choose the seats number, zone of the venue, date and respect maximun capacity.
 
-### Challenges
+## OOAD Challenges Round 2
+
+* (1) Build a Grocery TODO List system (add item, remove, mark as done, do, re-do, listAll)
+* (2) Build a FileShare System  (save files, restore files, delete files, listFiles, Search) with encryption
+* (3) Build a Note Taking system (add notes,save notes,edit notes, delete notes, sync)
+* (4) Build a Calendar system (book meetings, remove meetings, listMeetings, suggest best time for 2 people)
+* (5) Build a Redis clone client/server (Strings: set,get,remove,append, maps: set,get,keys,values)
+* (6) Build a Teacher's Class Organizer/Optimizer
+* (7) Build a Social Media Sharing Photo App (publish photos, tag photos, timeline, comments)
+
+### Code Challenges - Round 1
 
 * (1) Build a Converter Framework where you convert complex types.
 * (2) Build a Task framework where you submit tasks to your own pool of threads.
