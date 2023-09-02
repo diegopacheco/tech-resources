@@ -4,6 +4,7 @@
 * How nodejs Reactor Pattern/Architecture works
 * Promises, Async/Await
 * Classes, Objects, Arrays, Map and Set, JSON
+* Tailwind
 
 ## Core Learning React
 
@@ -17,6 +18,7 @@
 * Web Components
 * Module Federation
 * Performance and Profiling
+* SWR https://swr.vercel.app/
 
 ## Advanced
 
