@@ -39,6 +39,20 @@
 * Jest
 * Cypress
 
+## Better React
+
+* Next (<https://nextjs.org/>)
+* Astro (<https://astro.build/>)
+* Elysia (<https://elysiajs.com/>)
+* Solid (<https://www.solidjs.com/>)
+* Svelte (<https://svelte.dev/>)
+* Fresh (<https://fresh.deno.dev/>)
+
+## Better JS Runtime
+
+* Bun (<https://bun.sh/>)
+* Deno (<https://deno.com/>)
+
 ## OOAD Challenges - Round 1
 
 * (1) Build a TAX system where different products have different tax per state and year.
