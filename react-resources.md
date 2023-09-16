@@ -47,11 +47,16 @@
 * Solid (<https://www.solidjs.com/>)
 * Svelte (<https://svelte.dev/>)
 * Fresh (<https://fresh.deno.dev/>)
+* Enhance (<https://enhance.dev/>)
 
 ## Better JS Runtime
 
 * Bun (<https://bun.sh/>)
 * Deno (<https://deno.com/>)
+
+## The future, maybe?
+
+* HTMX -> https://htmx.org/essays/hateoas/
 
 ## OOAD Challenges - Round 1
 
