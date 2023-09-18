@@ -57,6 +57,7 @@
 ## The future, maybe?
 
 * HTMX -> https://htmx.org/essays/hateoas/
+* Typed HTML -> https://github.com/nicojs/typed-html
 
 ## OOAD Challenges - Round 1
 
