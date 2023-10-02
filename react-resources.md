@@ -101,6 +101,16 @@ choose the seats number, zone of the venue, date and respect maximun capacity.
 * (6) Build your own Video Player
 * (7) Build your own React (render, pass props, mount/unmount hooks)
 
+## Code Challenges - Round 3
+
+* (1) Build your own Linter
+* (2) Build your own Testing Framework
+* (3) Build your own Fetch Library
+* (4) Build your own Data Faker
+* (5) Build your own Background Process Job Manager
+* (6) Build your own Http Server
+* (7) Build your own NodeJS Runtime
+
 ## Links
 
 * Learn how React Reconciler package works by building your own lightweight React DOM
