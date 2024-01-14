@@ -51,6 +51,7 @@ Example:
 4. Testability: Chaos engineering is a must and property testing. Testing should be done by engineers all times.
 5. Cache efficiency: Should leverage SSD caches and all forms of caches as much as possible.
 ```
+Recommended Reading: http://diego-pacheco.blogspot.com/2018/01/stability-principles.html
 
 ### 🏗️ 4. Overall Diagrams
 
