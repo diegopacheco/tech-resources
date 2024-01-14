@@ -69,7 +69,15 @@ Recommended Reading: http://diego-pacheco.blogspot.com/2020/10/uml-hidden-gems.h
 ### 🧭 5. Trade-offs
 
 List the tradeoffs analysis, comparing pros and cons for each major decision.
+Before you need list all your major decisions, them run tradeoffs on than.
 example:
+Major Decisions: 
+```
+1. One mobile code base - should be (...)
+2. Reusable capability and low latency backends should be (...)
+3. Cache efficiency therefore should do (...)
+```
+Tradeoffs:
 ```
 1. React Native vs (Flutter and Native)
 2. Serverless vs Microservices
