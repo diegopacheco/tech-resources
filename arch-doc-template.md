@@ -37,7 +37,7 @@ Example:
 2. DynamoDB: Dynamo is expensive, we want be away from the DB.
 3. Serverless: Serverless has high latency, we do not want to use it.
 4. Mobile-native: We want have one single codebase, therefore we will not have 2 mobile code bases(ios and android) thefore be native is not a goal.
-5. 
+5. ...
 ```
 
 ### 📐 3. Principles
@@ -75,7 +75,7 @@ example:
 
 What is a majore component? A service, a lambda, a important ui, a generalized approach for all uis, a generazid approach for computing a workload, etc...
 ```
-6.1 - Class Diagram           :
+6.1 - Class Diagram           : classic uml diagram with attributes and methods
 6.2 - Contract Documentation  : Operations, Inputs and Outputs
 6.3 - Persistence Model       : Diagrams, Table structure, partiotioning, main queries.
 6.4 - Algorithms/Data Structures : Spesific algos that need to be used, along size with spesific data structures.     
