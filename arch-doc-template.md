@@ -61,6 +61,7 @@ Here there will be a bunch of diagrams, to understand the solution.
 🗂️ 4.2 Deployment: Show the infra in a big picture. 
 🗂️ 4.3 Use Cases: Make 1 macro use case diagram that list the main capability that needs to be covered. 
 ```
+Recommended Reading: http://diego-pacheco.blogspot.com/2020/10/uml-hidden-gems.html
 
 ### 🧭 5. Trade-offs
 
@@ -90,3 +91,4 @@ What is a majore component? A service, a lambda, a important ui, a generalized a
 6.3 - Persistence Model       : Diagrams, Table structure, partiotioning, main queries.
 6.4 - Algorithms/Data Structures : Spesific algos that need to be used, along size with spesific data structures.     
 ```
+Recommended Reading: http://diego-pacheco.blogspot.com/2018/05/internal-system-design-forgotten.html
