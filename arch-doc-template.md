@@ -70,6 +70,15 @@ example:
 2. Serverless vs Microservices
 3. Redis vs Enbeded Caches
 ```
+Each tradeoff line need to be:
+```
+PROS (+) 
+  * Benefit: Explanation that justify why the benefit is true.
+CONS (+)
+  * Problem: Explanation that justify why the problem is true.
+```
+PS: Be careful to not confuse problem with explanation. 
+<BR/>Recommended reading: http://diego-pacheco.blogspot.com/2023/07/tradeoffs.html
 
 ### 🌏 6. For each key major component
 
