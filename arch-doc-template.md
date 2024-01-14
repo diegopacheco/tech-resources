@@ -27,6 +27,7 @@ Example:
 4. Work offline: Re-consiliation, CRDTs are a must.
 5. Cloud-Native: All backend must be 100% cloud native, using open-source and should and should be cloud-agnostic, avoid propretaty apis.
 ```
+Recommended Learning: http://diego-pacheco.blogspot.com/2020/05/education-vs-learning.html
 
 ### 3. 🎯 Non-Goals
 
