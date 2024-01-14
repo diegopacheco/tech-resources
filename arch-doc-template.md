@@ -39,6 +39,7 @@ Example:
 4. Mobile-native: We want have one single codebase, therefore we will not have 2 mobile code bases(ios and android) thefore be native is not a goal.
 5. ...
 ```
+Recommended Reading: http://diego-pacheco.blogspot.com/2021/01/requirements-are-dangerous.html
 
 ### 📐 3. Principles
 
