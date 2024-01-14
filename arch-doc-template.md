@@ -15,6 +15,7 @@ to have a huge selectio and find ways to people find they perpect show at the
 same time market teams would need to change campains all the time, we need to
 have way to make things fast and dynamic.
 ```
+Recomended Reading: http://diego-pacheco.blogspot.com/2021/10/breaking-problems-down.html
 
 ### 2. 🎯 Goals
 
