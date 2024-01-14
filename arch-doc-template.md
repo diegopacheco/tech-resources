@@ -1,13 +1,60 @@
-### Template
+# 🧬 Template
 
-This is a template created by Diego Pacheco which the goal to better describe a tought process which is called architecture. 
+This is a template created by Diego Pacheco which the goal to better describe a tought process which is called architecture. This should be used to learn software architecture and to pratice with use cases.
 
-## Structure
+## 🏛️ Structure
 
-### Goals
+### 1. 🎯 Problem Statement and Context
+
+What is the problem? What is the context of the problem?
+Example:
+```
+The problem is to sell shoes online, the main issue with buying shoes online is 
+how we will make our users buy shoes if they cannot make them fit? We would need
+to have a huge selectio and find ways to people find they perpect show at the 
+same time market teams would need to change campains all the time, we need to
+have way to make things fast and dynamic.
+```
+
+### 2. 🎯 Goals
 
 List in form of bullets what goals do have. Here it's great to have 5-10 lines.
+Example:
+```
+1. Solution needs to be fast! Performance for all operations bellow ~1 ms.
+2. Security is non-negociable! Security at-rest, transite, threat analysis and review for by at least 3 different people.
+3. Composable solution. Users should be able to mix and match components instead of building all for scratch. ie: map component can be reused on counters component.
+4. Work offline: Re-consiliation, CRDTs are a must.
+5. Cloud-Native: All backend must be 100% cloud native, using open-source and should and should be cloud-agnostic, avoid propretaty apis.
+```
 
-### Principles
+### 3. 🎯 Non-Goals
+
+List in form of bullets what non-goals do have. Here it's great to have 5-10 lines.
+Example:
+```
+1. Be perfect: There will be mistakes, we dont want have automatic-rollback for everything.
+2. DynamoDB: Dynamo is expensive, we want be away from the DB.
+3. Serverless: Serverless has high latency, we do not want to use it.
+4. Mobile-native: We want have one single codebase, therefore we will not have 2 mobile code bases(ios and android) thefore be native is not a goal.
+5. 
+```
+
+### 📐 3. Principles
 
 List in form of bullets what design principles you want to be followed, it's great to have 5-10 lines.
+Example:
+```
+1. Low Coupling: We need to watch for coupling all times.
+2. Flexibility: Users should be able to customize behavior without leaking the internals of the system. Leverage interfaces.
+3. Observability: we should expose all key metrics on main features. Sucess and errors counters need to be exposed.
+4. Testability: Chaos engineering is a must and property testing. Testing should be done by engineers all times.
+5. Cache efficiency: Should leverage SSD caches and all forms of caches as much as possible.
+```
+
+### 🏗️ 4. Diagrams
+
+Here there will be a bunch of diagrams, to understand the solution.
+```
+
+```
