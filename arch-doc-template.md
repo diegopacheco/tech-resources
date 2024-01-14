@@ -71,3 +71,12 @@ example:
 3. Redis vs Enbeded Caches
 ```
 
+### 🌏 6. For each key major component
+
+What is a majore component? A service, a lambda, a important ui, a generalized approach for all uis, a generazid approach for computing a workload, etc...
+```
+6.1 - Class Diagram           :
+6.2 - Contract Documentation  : Operations, Inputs and Outputs
+6.3 - Persistence Model       : Diagrams, Table structure, partiotioning, main queries.
+6.4 - Algorithms/Data Structures : Spesific algos that need to be used, along size with spesific data structures.     
+```
