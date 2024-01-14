@@ -52,9 +52,22 @@ Example:
 5. Cache efficiency: Should leverage SSD caches and all forms of caches as much as possible.
 ```
 
-### 🏗️ 4. Diagrams
+### 🏗️ 4. Overall Diagrams
 
 Here there will be a bunch of diagrams, to understand the solution.
 ```
-
+🗂️ 4.1 Overall architecture: Show the big picture, relationship between macro components.
+🗂️ 4.2 Deployment: Show the infra in a big picture. 
+🗂️ 4.3 Use Cases: Make 1 macro use case diagram that list the main capability that needs to be covered. 
 ```
+
+### 🧭 5. Trade-offs
+
+List the tradeoffs analysis, comparing pros and cons for each major decision.
+example:
+```
+1. React Native vs (Flutter and Native)
+2. Serverless vs Microservices
+3. Redis vs Enbeded Caches
+```
+
