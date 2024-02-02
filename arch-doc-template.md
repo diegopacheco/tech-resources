@@ -118,4 +118,4 @@ Recommended Reading: http://diego-pacheco.blogspot.com/2018/05/internal-system-d
 * 12 Factors App https://12factor.net/
 * Relational DB Patterns https://www.geeksforgeeks.org/design-patterns-for-relational-databases/
 * Rendering Patterns https://www.patterns.dev/vanilla/rendering-patterns/
-* 
+* REST API Design https://blog.stoplight.io/api-design-patterns-for-rest-web-services
