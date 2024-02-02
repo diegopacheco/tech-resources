@@ -104,7 +104,7 @@ What is a majore component? A service, a lambda, a important ui, a generalized a
 ```
 Recommended Reading: http://diego-pacheco.blogspot.com/2018/05/internal-system-design-forgotten.html
 
-#### 7. References
+#### 🖹 7. References
 
 * Architecture Anti-Patterns: https://architecture-antipatterns.tech/
 * EIP https://www.enterpriseintegrationpatterns.com/
@@ -114,4 +114,8 @@ Recommended Reading: http://diego-pacheco.blogspot.com/2018/05/internal-system-d
 * Refactoring Patterns https://sourcemaking.com/refactoring/refactorings
 * Database Refactoring Patterns https://databaserefactoring.com/
 * Data Modelling Redis https://redis.com/blog/nosql-data-modeling/
+* Cloud Patterns https://docs.aws.amazon.com/prescriptive-guidance/latest/cloud-design-patterns/introduction.html
+* 12 Factors App https://12factor.net/
+* Relational DB Patterns https://www.geeksforgeeks.org/design-patterns-for-relational-databases/
+* Rendering Patterns https://www.patterns.dev/vanilla/rendering-patterns/
 * 
