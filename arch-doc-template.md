@@ -102,9 +102,28 @@ What is a majore component? A service, a lambda, a important ui, a generalized a
 6.3 - Persistence Model          : Diagrams, Table structure, partiotioning, main queries.
 6.4 - Algorithms/Data Structures : Spesific algos that need to be used, along size with spesific data structures.
 ```
+
+Exemplos of other components: Batch jobs, Events, 3rd Party Integrations, Streaming, ML Models, ChatBots, etc... 
+
 Recommended Reading: http://diego-pacheco.blogspot.com/2018/05/internal-system-design-forgotten.html
 
-#### 🖹 7. References
+#### 🖹 7. Migrations
+
+IF Migrations are required describe the migrations strategy with proper diagrams, text and tradeoffs.
+
+#### 🖹 8. Testing strategy
+
+Explain the techniques, principles, types of tests and will be performaned, and spesific details how to mock data, stress test it, spesific chaos goals and assumptions.
+
+#### 🖹 9. Observability strategy
+
+Explain the techniques, principles,types of observability that will be used, key metrics, what would be logged and how to design proper dashboards and alerts.
+
+#### 🖹 10. Data Store Designs
+
+For each different kind of data store i.e (Postgres, Memcached, Elasticache, S3, Neo4J etc...) describe the schemas, what would be stored there and why, main queries, expectations on performance. Diagrams are welcome but you really need some dictionaries.
+
+#### 🖹 11. References
 
 * Architecture Anti-Patterns: https://architecture-antipatterns.tech/
 * EIP https://www.enterpriseintegrationpatterns.com/
