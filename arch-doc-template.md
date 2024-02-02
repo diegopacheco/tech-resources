@@ -103,3 +103,15 @@ What is a majore component? A service, a lambda, a important ui, a generalized a
 6.4 - Algorithms/Data Structures : Spesific algos that need to be used, along size with spesific data structures.
 ```
 Recommended Reading: http://diego-pacheco.blogspot.com/2018/05/internal-system-design-forgotten.html
+
+#### 7. References
+
+* Architecture Anti-Patterns: https://architecture-antipatterns.tech/
+* EIP https://www.enterpriseintegrationpatterns.com/
+* SOA Patterns https://patterns.arcitura.com/soa-patterns
+* API Patterns https://microservice-api-patterns.org/
+* Anti-Patterns https://sourcemaking.com/antipatterns/software-development-antipatterns
+* Refactoring Patterns https://sourcemaking.com/refactoring/refactorings
+* Database Refactoring Patterns https://databaserefactoring.com/
+* Data Modelling Redis https://redis.com/blog/nosql-data-modeling/
+* 
