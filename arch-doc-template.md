@@ -107,27 +107,27 @@ Exemplos of other components: Batch jobs, Events, 3rd Party Integrations, Stream
 
 Recommended Reading: http://diego-pacheco.blogspot.com/2018/05/internal-system-design-forgotten.html
 
-#### 🖹 7. Migrations
+### 🖹 7. Migrations
 
 IF Migrations are required describe the migrations strategy with proper diagrams, text and tradeoffs.
 
-#### 🖹 8. Testing strategy
+### 🖹 8. Testing strategy
 
 Explain the techniques, principles, types of tests and will be performaned, and spesific details how to mock data, stress test it, spesific chaos goals and assumptions.
 
-#### 🖹 9. Observability strategy
+### 🖹 9. Observability strategy
 
 Explain the techniques, principles,types of observability that will be used, key metrics, what would be logged and how to design proper dashboards and alerts.
 
-#### 🖹 10. Data Store Designs
+### 🖹 10. Data Store Designs
 
 For each different kind of data store i.e (Postgres, Memcached, Elasticache, S3, Neo4J etc...) describe the schemas, what would be stored there and why, main queries, expectations on performance. Diagrams are welcome but you really need some dictionaries.
 
-#### 🖹 11. Technology Stack
+### 🖹 11. Technology Stack
 
 Describe your stack, what databases would be used, what servers, what kind of components, mobile/ui approach, general architecture components, frameworks and libs to be used or not be used and why.
 
-#### 🖹 12. References
+### 🖹 12. References
 
 * Architecture Anti-Patterns: https://architecture-antipatterns.tech/
 * EIP https://www.enterpriseintegrationpatterns.com/
