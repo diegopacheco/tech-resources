@@ -108,6 +108,7 @@
 
 #### Links
 
+* Eloquent JavaScript - 4th edition (2024) https://eloquentjavascript.net/
 * https://hackernoon.com/
 * https://facebook.github.io/flux/
 * https://twitter.com/dan_abramov
