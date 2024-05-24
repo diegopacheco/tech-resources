@@ -307,4 +307,5 @@ The mosquito can walk in any direction (up, down, left, right, diagonals).
 The exterminator can walk in one direction, it should swap the metrixs.
 The exterminator can walk from the bottown left corner to the top right corner them from the botton to the top them return on the same route.
 ```
+
 The game does not needa UI, you can be print the matrix in the console.
