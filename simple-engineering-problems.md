@@ -39,6 +39,14 @@
   * however you might find better ways of doing it - if you dont - is also fine.  
 * Any issues? Ask for help.
 
+## How should be presented?
+
+* Explain the problem.
+* Explain the solution line by line of the code.
+* Share the parts that was hard to understand - ask for advice.
+* Ask for refactoring tips - how could we make the code better.
+* Ask for feedback
+
 ## Problems
 
 ### DPK01 Revert String
