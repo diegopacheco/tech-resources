@@ -3,6 +3,7 @@
 A great presentation is just an output of a well-prepared research, poc or piece of work.
 There is no way you will do an amazing presentation if you the content is not good.
 A presentation is just an excuse, a reason or a motivation if you will do learn someeting deep and deliver an awesome experience.
+When you are presenting, you are delivering a story, think about order of things.
 
 ## 0. What you should never (ever) do:
  * Present content you don't unbderstand
