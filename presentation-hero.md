@@ -1,6 +1,6 @@
 ## How to deliver a great presentation
 
-A great presentation is just an output of a well-prepared reserch, poc or piece of work. 
+A great presentation is just an output of a well-prepared research, poc or piece of work.
 There is no way you will do an amazing presentation if you the content is not good.
 A presentation is just an excuse, a reason or a motivation if you will do learn someeting deep and deliver an awesome experience.
 
@@ -9,7 +9,7 @@ A presentation is just an excuse, a reason or a motivation if you will do learn 
  * Talk about things you did not run a poc or some experiment or have experience with in production
  * Have a lot of text and just read all time
  * Have a white background with or poor color scheme. 
- * Splash code from IDE, dont show code without syntax highlight
+ * Splash code in text, dont show code without syntax highlight
  * Do no sufer in silence, ask for help
 
 ## 1. What you should always do:
@@ -18,8 +18,9 @@ A presentation is just an excuse, a reason or a motivation if you will do learn 
     * Debug
     * Google it
     * Read about it
-  * Context: What it is? How it works? Showing arch diagrams always good.  
+  * Give Context: What it is? How it works? Showing arch diagrams always good.  
   * Always have trade-offs (PROS and CONS)  
+  * Comparisons with similar solutins and options always good i.e talking about Kafka, compare with RabbitMQ, Kinesis, ActiveMQ, etc.
   * CODE
   * Live-demo (which can be recorded)
 
@@ -32,3 +33,11 @@ A presentation is just an excuse, a reason or a motivation if you will do learn 
  * Be clam
  * Dont rush
  * Mind the time (have a clock in front of you) or in yoir phone
+ * Ask for feedback after the presentation
+
+## 4. How to improve:
+  * Read the book `Presentation Zen` by Garr Reynolds
+  * Try to add some humor, data, facts or intersting trivia is always fun
+  * Watch other people presenting
+  * Use google for research, read books, read papers, debug the code, do multiple pocs.
+  * Book time in your agenda to prepare the presentation (review and dry-run too)
