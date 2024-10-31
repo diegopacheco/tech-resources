@@ -11,6 +11,7 @@ A presentation is just an excuse, a reason or a motivation if you will do learn 
  * Have a white background with or poor color scheme. 
  * Splash code in text, dont show code without syntax highlight
  * Do no sufer in silence, ask for help
+ * Dont do the presentation for compliance, do your best, use as a tool for continnuous learning and improvement
 
 ## 1. What you should always do:
  * Research
@@ -30,10 +31,10 @@ A presentation is just an excuse, a reason or a motivation if you will do learn 
   * The more you present, the better you get, pratice is the key to success
 
 ## 3. How to deliver:
- * Be clam
- * Dont rush
- * Mind the time (have a clock in front of you) or in yoir phone
- * Ask for feedback after the presentation
+  * Be clam
+  * Dont rush
+  * Mind the time (have a clock in front of you) or in yoir phone
+  * Ask for feedback after the presentation
 
 ## 4. How to improve:
   * Read the book `Presentation Zen` by Garr Reynolds
