@@ -41,3 +41,8 @@ A presentation is just an excuse, a reason or a motivation if you will do learn 
   * Watch other people presenting
   * Use google for research, read books, read papers, debug the code, do multiple pocs.
   * Book time in your agenda to prepare the presentation (review and dry-run too)
+
+## 5. When you learn to how to present well...
+  * You will comunicate better
+  * You will sell better
+  * You will be more confident
