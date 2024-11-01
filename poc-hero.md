@@ -27,9 +27,19 @@ POC can be shallow but is important to have Deep POCs. Doing POCs must be a mind
 
 ## 4. Keep in mind
  * The more you pratice, the better you get.
+ * POCs comparing libraries, approaches, languages, patterns help a lot to learn and master tecnhiques.
  * Make sure it gets harder, no matter if you need to do 10-100x to understand. Repetition is key.
  * You are only fooling yourself if you just go shallow all the time.
  * Doing Shallow pocs is not neccesary bad or wrong, but you should be doing Deep POCs as well.
  * Challenge yourself, do not be afraid to fail, is part of the learning process.
  * Consider doing crazy things like: a parser, a compiler, a framework, a library, maybe even a new language.
  * Remember learning with code is a long term game and a mindset, so keep doing it everyday.
+
+## 5. To improve
+ * Share the code with others ask feedback
+ * look for different and better ways to do the same thing
+ * Be curious, ask questions, do not be afraid to ask for help
+ * Go read the source code of big projects, is a great way to learn like: Java, Spring, Netty, Linux, React, Nodejs, etc.
+ * Document your POC, write text exmplaning what you did a why and why is impotant.
+ * Good POCs take hours, days and weeks and thats fine, the more time you invest the better you get.
+ * Make doing POCs a habit, do it everyday, is like going to the gym, you need to do it everyday to get better.
