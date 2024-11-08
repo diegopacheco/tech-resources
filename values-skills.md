@@ -28,3 +28,13 @@
  * Delay, always deliver, now is always the best time to start
  * Be afraid of change, embrace it, always, embrace the chaos, the unknown, the new.
  * 
+
+### Daily
+
+ * Read books
+ * Read papers
+ * Read code
+ * Write code
+ * Write POCs
+ * Write Tests
+ * 
