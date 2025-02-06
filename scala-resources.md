@@ -52,6 +52,11 @@
 * Json4S
 * Slick
 
+## Functional Programing Challenges 1
+
+* (1) S99 Problems: https://aperiodic.net/pip/scala/s-99/
+* (2) Project Euler: https://projecteuler.net/
+
 ## OOAD Challenges Round 1
 
 * (1) Build a TAX system where different products have different tax per state and year.
