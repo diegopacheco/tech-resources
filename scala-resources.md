@@ -19,6 +19,8 @@
   * Map
 * For Comprehensions  
 * Mutable and Immutable Collections
+* Scala Test
+* Scala Check
 * Advanced Monads
   * IO
   * State
@@ -51,6 +53,11 @@
 * Pekko
 * Json4S
 * Slick
+* Cats
+* ZIO
+* Scalaz
+* Http4s
+* Circe
 
 ## Functional Programing Challenges 1
 
