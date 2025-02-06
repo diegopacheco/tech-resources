@@ -8,8 +8,10 @@
   * Objects
   * Case Classes
   * Case Objects
+  * Sealed Traits
 * Pattern Matching
 * Tuples
+* Generics
 * Monads
   * Option
   * Try
@@ -21,6 +23,13 @@
 * Mutable and Immutable Collections
 * Scala Test
 * Scala Check
+* Higher Order Functions
+* Currying
+* Partial Functions
+* Type Classes
+* Tail Recursion
+* Reflection
+* Implicits
 * Advanced Monads
   * IO
   * State
@@ -28,8 +37,9 @@
   * Writer
   * Free
 * Parser Combinators
+* Macros
 
-### Spring Stack 
+### Spring Stack
 
 * Spring Core - IoC
 * Spring Core - Bean Scopes(Singleton, Prototype)
@@ -58,6 +68,8 @@
 * Scalaz
 * Http4s
 * Circe
+* Specs2
+* Tapir
 
 ## Functional Programing Challenges 1
 
