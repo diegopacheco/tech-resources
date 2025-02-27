@@ -21,7 +21,7 @@ Manifested as:
 * High level of autonomy and Maturity
 * Extreme ownership
 
-At the same time you you can count on:
+At the same time you can count on:
 
 * A lot of support/help
 * NO delay to get feedback and course correction
