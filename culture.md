@@ -1,6 +1,6 @@
-## Diego Pacheco's Way of Working
+# Diego Pacheco's Way of Working
 
-### This is not for you IF...
+## This is not for you IF
 
 1. You have no comitmment
 2. You will not invest the time to read, do POCs, homeworks
@@ -23,6 +23,7 @@ Manifested as:
 
 At the same time you can count on:
 
+* A lot of learning
 * A lot of support/help
 * NO delay to get feedback and course correction
 * As long as you are delivering and listening to feedback, we will have patience
