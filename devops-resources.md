@@ -25,6 +25,33 @@
 * Grafana
 * ELK
 * Splunk 
+* Druid
+* Presto
+* JVM Tunning
+* GC Tunning
+* Linux Tunning
+* K8s Tunning
+* Database Tunning
+
+### Code Challenges Round 1
+
+* (1) Create a Jenkins DSL that can deploy a simple Spring Boot app (build, run tests, run sonnar and deploy in EC2) use terraform
+* (2) Create a Jenkins DSL that can deploy a simple Spring Boot app (build, run tests, run sonnar and deploy in EKS) use HELM
+* (3) Create a Jenkins DSL that can deploy a simple Spring Boot app (build, run tests, run sonnar and deploy in EKS) use ArgoCD
+* (4) Create a Docker-Compose that has Prometheus, Spring Boot App, Grafana and ELK. All integrated and working.
+* (5) Create a set of terraform scripts: deploy a but to s3, deploy a lambda, deploy a api gateway, deploy new IAM rule.
+* (6) Create a simple Spring Boot App that can consume a Kafka Topic and produce a Kafka Topic. Provision a Kafka Cluster in AWS.
+* (7) Create a simple Spring Boot App that can consume a Redis and produce a Redis. Provision a Redis Cluster in AWS.
+
+### Code Challenges Round 2
+
+* (1) Create a Python App using Flask. Should be deployed in EKS. Use Helm.
+* (2) Create a Sidecar in Go that drop properties files into configmap in K8s. 
+* (3) Create a Sidecar in Python 3x that drop properties files into configmap in K8s.
+* (4) Create a Sidecar in Java that drop properties files into configmap in K8s.
+* (5) Create a Sidecar in Go that load credentials from AWS ASM and drop into configmap in K8s.
+* (6) Create a Sidecar in Python 3x that load credentials from AWS ASM and drop into configmap in K8s. 
+* (7) Deploy a Spring Boot App in EKS using ArgoCD and helm. Perform Stress Tests with Terraform, tune up JVM, GC, K8s, Linux, the App JDBC Pool and the Database.
 
 ## Books
 
