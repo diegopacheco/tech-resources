@@ -19,6 +19,27 @@
 * k8s -> https://kubernetes.io/
 * Jenkins -> https://www.jenkins.io/
 * SonarQube -> https://www.sonarqube.org/
+* Detox -> https://wix.github.io/Detox/
+* Testing Library -> https://testing-library.com/
+* TestContainers -> https://www.testcontainers.org/
+* Bruno -> https://www.usebruno.com/
+* Robot Framework -> https://robotframework.org/
+* Lighthouse -> https://developer.chrome.com/docs/lighthouse/overview?hl=en
+
+## Testing Skills in Testing Diversity
+
+* Unit Tests
+* Integration Tests
+* Contract Testing
+* End to End Tests
+* Stress Testing / Performance Tests / Load Testing
+* CSS Testing
+* Mutation Testing
+* Fuzzy Testing
+* Chaos Engineering / Chaos Testing / Fault Injection
+* Configuration Testing
+* A/B Testing 
+* Threat Analysis
 
 ### Code Challenges Round 1 (build and test with test diversity)
 
