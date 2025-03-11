@@ -10,6 +10,8 @@
 * AWS ELB / ALB
 * AWS Router 53
 * K8s / EKS
+* Helm
+* ArgoCD
 * Jenkins / Groovy DSL
 * Trivy / tfsec / Checkov / Terrascan / TFLint / KubeLinter
 * Java
@@ -32,6 +34,10 @@
 * Linux Tunning
 * K8s Tunning
 * Database Tunning
+* AWS VPC Flow
+* Cloud Trail
+* Cloud Watch
+* OpenSearch / ElasticSearch
 
 ### Code Challenges Round 1
 
@@ -65,6 +71,7 @@
 * The Site Reliability Workbook https://www.amazon.com/Site-Reliability-Workbook-Practical-Implement-ebook/dp/B07FWFPMYG/ref=sr_1_1?crid=2SS94RR3AHU05&dib=eyJ2IjoiMSJ9.DQNZ_mS_1GDA3CExYRoBR61H0K11qFoqBy-wAZXfMHX1PBNO9BkAkpQWKVEBKdCt3-IrruHnWt5C-FqeRsGJTUElfXbX4NGuFLXYAZ7yIz_U4TE9qkqEs4m1fYcFHmat33kI6_ZQ2GAru-yb4wK0DG93H17qIgFKk26JQ47vcNv21aK0ajxApTk9xO3-jU-Dph0B6XtGYLQB5gaaIFXAp_owz69QP27eMDyqTRYVJQo.O-CaTVXPMCzL6GjekiIzVh9jTcX1A0oMgHuGPxXPZzc&dib_tag=se&keywords=The+Site+Reliability+Workbook&qid=1741070100&s=digital-text&sprefix=the+site+reliability+workbook%2Cdigital-text%2C153&sr=1-1
 * Observability Engineering: Achieving Production Excellence https://www.amazon.com/dp/B09ZQ6FHTT/ref=mes-dp?_encoding=UTF8&pd_rd_w=silQx&content-id=amzn1.sym.7d2923e8-7496-46a5-862d-8ef28e908025&pf_rd_p=7d2923e8-7496-46a5-862d-8ef28e908025&pf_rd_r=QJZ8TFH5DT8XJXEANCE4&pd_rd_wg=KQq5x&pd_rd_r=cca1a16b-470e-446b-b1a8-a135ce447bed
 * Refactoring Databases: Evolutionary Database Design https://www.amazon.com/Refactoring-Databases-Evolutionary-Addison-Wesley-Signature-ebook/dp/B0DHY617PD/ref=sr_1_2?crid=1QNITR8ADX418&dib=eyJ2IjoiMSJ9.Mgmjte1N_iknsu2Xw0EdQJuZfe5t9RUUL4SNkdTNtqwZvXwdVSNvPaeO5ubNOEjVXGmD9YSBsY6zSX1bZMgnv3mjudEOKRsBR-En3oG3ojT3px51KJzJcfruJGBRx_0NDkh7yajOmKk0mB7AyDLIcLm5ivIYvmlW-Cy458LFLF1kRJ5ifGDFO7FiPAZ-3skwXCAXE0ZzhhA_cH__DHgRjFyFK5uN7SOoRwg_vM4s9KW6HrY3zCs7dmjMwjvCYe-qDEPxrCYrUfwQPIGMHYDpthyhdkeBM2LiTGaoc3O2GlY.OJIGcek6--srp3ttBg1SQShUWg9C4cakqJfnKGxX8H0&dib_tag=se&keywords=database+refactoring&qid=1741070303&s=digital-text&sprefix=database+refacrtoring%2Cdigital-text%2C145&sr=1-2
+* Data Intensive Applications https://www.amazon.com/Designing-Data-Intensive-Applications-Reliable-Maintainable-ebook/dp/B06XPJML5D/ref=sr_1_1?crid=JFZ55X89JHP0&dib=eyJ2IjoiMSJ9.ScUjfrRSlTSXTtLBuC0DXSaGKqlDdMwB7RFFyk_gcKP4jt2pDMT94khvobsJMaNq72IkRPo9wTbaQXjmL-9KfbpZU10rAql-hnEAhaVPGb1S7byM4yRclet2dUkElNuJQZwvdaYhfa3-tcK8V2RwXHXroiDjncQeyWoZaiexa5KGJUKYK4VHd-zHeNdg7bVGWQtHGl1Wb4hqD_yw6YBcfun24Dkt_PHxfXbyNdfj7c4.zD0O-vfQNqa5amOI6UnYqbGp-6RNl1NuJo5hBbgLSJ4&dib_tag=se&keywords=Data+Intensive+Applications&qid=1741665534&sprefix=data+intensive+applications%2Caps%2C213&sr=8-1
 
 
 ## All the Things Devops
