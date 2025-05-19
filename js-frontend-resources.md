@@ -111,6 +111,7 @@
 #### Links
 
 * Eloquent JavaScript - 4th edition (2024) https://eloquentjavascript.net/
+* CSS Hell -> https://csshell.com/
 * https://hackernoon.com/
 * https://facebook.github.io/flux/
 * https://twitter.com/dan_abramov
