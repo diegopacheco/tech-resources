@@ -114,6 +114,7 @@ choose the seats number, zone of the venue, date and respect maximun capacity.
 ## Links
 
 * Eloquent JavaScript - 4th edition (2024) https://eloquentjavascript.net/
+* CSS Hell -> https://csshell.com/
 * Learn how React Reconciler package works by building your own lightweight React DOM
 https://hackernoon.com/learn-you-some-custom-react-renderers-aed7164a4199
 * How to write your own Virtual DOM
