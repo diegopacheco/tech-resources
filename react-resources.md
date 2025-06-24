@@ -19,6 +19,15 @@
 * Module Federation
 * Performance and Profiling
 * SWR https://swr.vercel.app/
+* Local Storage
+* Session Storage
+* Cookies
+* IndexedDB
+* Drag and Drop API
+* Intersection Observer API
+* Mutation Observer API
+* Canvas API
+* Context Security Policy (CSP)
 
 ## Advanced
 
@@ -32,6 +41,10 @@
 * Redux
 * Context Api
 * MobX
+* Zustand
+* Recoil
+* Jotai
+* XState
 
 ## Testing
 
@@ -110,6 +123,8 @@ choose the seats number, zone of the venue, date and respect maximun capacity.
 * (5) Build your own Background Process Job Manager
 * (6) Build your own Http Server
 * (7) Build your own NodeJS Runtime
+* (8) Build your own Tailwind CSS
+* (9) Build your own React Renderer
 
 ## Links
 
