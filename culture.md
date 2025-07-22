@@ -54,6 +54,9 @@ https://diegopachecotech.substack.com/p/the-cost-of-silence-eadc2b3139ba
 Ignoring Culture
 https://diegopachecotech.substack.com/p/ignoring-culture-cf3efdd2886c
 
+Doing better on AI Era
+
+
 The Issue with Feedbacks
 https://diegopachecotech.substack.com/p/the-issue-with-feedbacks
 
