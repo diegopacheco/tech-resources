@@ -92,3 +92,8 @@ Engineers always assume they are doing great, but in reality they are not, becau
  * You will be held accoutable for you performance, so you must be on TOP of your numbers.
  * Lack of feedback is not good feedback.
 
+## The Way Forward
+
+* Be Curious, always ask questions, always learn.
+* Be Proactive, always take the lead, always be on TOP of things.
+* Be a Killer, always deliver, always do more than expected.
