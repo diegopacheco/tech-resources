@@ -1,6 +1,6 @@
 ## Doing better in AI Era
 
-AI is here and is creating disruption. Does not matter how good or bad AI it is, the fact is that is changing people perceptions and behavior. Some CEOs are already pushing companies to use AI very hard(like Shopify, Microsoft, Google, and X). AI is good but there is a some concerning stuff happening, like:
+Like it or not... AI is here and is creating disruption. Does not matter how good or bad AI it is, the fact is that is changing people perceptions and behaviors. Some CEOs are already pushing companies to use AI very hard(like Shopify, Microsoft, Google, and X). AI(Gen-AI) is good but there is a some concerning stuff happening, like:
  * There is a overal reduction in the number of jobs available(https://www.trueup.io/job-trend).
  * There is a posibility that will reduce wages/salaries(https://thejobchicksinsideredge.substack.com/p/inside-amazons-offshoring-playbook). 
 
@@ -14,17 +14,19 @@ AI is here and is creating disruption. Does not matter how good or bad AI it is,
 <br/>
 <br/>
 
-Some of this movements are not enterily to AI credit, for instance, the pandemic(COVID/2019) was a big facotr in slowing down enough the economy and TECH was in a bubble(free money in USA is over). Companies always like to optimize and reduce costs, and people are very exmpensive. So some of this movements have nothing todo with AI but combined we are in a complex situation where things are a bit harder and more uncertain and way more competitive than before.
+Some of this movements are not enterily to AI credit, for instance, the pandemic(COVID/2019) was a big factor in slowing down the economy and TECH was in a bubble(free money in USA is over). Companies always like to optimize and reduce costs, and people are very exmpensive. So some of this movements have nothing todo with AI but combined we are in a complex situation where things are a bit harder and more uncertain and way more competitive than before.
 
-I'm mostely optimistic about AI and do belive in Jevons paradox(https://en.wikipedia.org/wiki/Jevons_paradox). I dont think AI is magic and will replace all engineering but if you suck, if you performance is very poor you are at high risk. So we must be doing better. 
+I'm mostely optimistic about AI and do belive in Jevons paradox(https://en.wikipedia.org/wiki/Jevons_paradox). I dont think AI is magic and will replace all engineering but if you suck, if you performance is very poor you are at high risk. So we must be doing better.
 
 ## Producing Code
 
-Considering Generative AI, producing code(even a lot of it) is nothing now a days. Anyone can produce a lot of code. So do not think producing code is the most impressive thing. However producing good code still matters, knows proper design, testing, and architecture are very important skills. Why I'm talking about this? Because you must change your mind and mindset and delivery, delivery matters the most but just deliverying is not good enought never was and never will be. You must deliver good code, that is maintainable, testable, and scalable.
+Considering Generative AI, producing code(even a lot of it) is nothing now a days. Anyone can produce a lot of code(look tools like Claude Code, OpenAI codex CLI, Gemini CLI, Google Jules, GitHub Copilot, Cursor). So do not think producing code is the most impressive thing. However producing good code still matters, knows proper design, testing, and architecture are very important skills. How do you know what is good code? Think about that! Why I'm talking about this? Because you must change your mind and mindset and delivery, delivery matters the most but just deliverying is not good enought never was and never will be. You must deliver good code, that is maintainable, testable, and scalable.
+
+Throwing AI generated code at someone is like searching something in google, get the first anwser and just present that as your university thesis, how that went in the past? (Pretty bad and pretty wrong thing to do). So you must review more and do more homework.
 
 ## Review Pressure
 
-Since producing code is trivial and it can be done in large quantities all the presure is on the reviewers. So you must not throw code(or AI generated code) in others withoout reviwing and understanding it deeply, you must do you homework, meaning:
+Since producing code is trivial and it can be done in large quantities all the presure is on the reviewers. So you must not throw code(or AI generated code) in others without reviwing and understanding it deeply, you must do you homework, meaning:
  * Before submiting code to others, review and understand it deeply.
  * You must know everything all the time.
  * If you are touching the code, you must know.
@@ -62,7 +64,7 @@ Everyboddy is being watched and measured all the time, you track record matters 
 
 AI is being trained and improved all the time, so you must be doing the same. You must be improving all the time, you must be learning and applying this learning in your day-by-day work. You must be proactive and look for ways to improve your performance, your code, your design, your architecture, your tests, your documentation, and your presentations. 
 
-Why AI is getting better? Because is being measured. You must know your numbers, would know your performance by heart, so tell me?:
+Why AI is getting better? Because is being measured. Every single new model, they always disaplay benchmarks they beat up. We can learn something from that. You must know your numbers, would know your performance by heart, so tell me?:
 * How many PRs you did last month?
 * How many Tests you wrote?
 * How many bugs you fixed?
@@ -99,7 +101,7 @@ Engineers always assume they are doing great, but in reality they are not, becau
 * Be a Killer, always deliver, always do more than expected.
 * Have constant discipline, learn all the things you dont know, repeat.
 * Avoid complacency. Do not be happy with little, always do more, always be better.
-* You promise, you deliver, so always write down, always use agent, be someone reliable like a rock.
+* You promise, you deliver, so always write down, always remember, be someone reliable like a rock.
 * Go Deeper, know better, invest more on POCs, reading papers, videos and do not avoid hard problems, face hard problems early on.
 
 <br/>
