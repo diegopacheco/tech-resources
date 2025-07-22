@@ -73,3 +73,23 @@ Why AI is getting better? Because is being measured. You must know your numbers,
 * How many people you helped?
 
 It's always a good idea have an EXCEL and track all this things everyday, the better you know your number, easier is for you to beat team.Going DEEP is the only way to improve, if we are not in TOP of things and dont master our GAME we are not doing better, so you must be doing better all the time. 
+
+Obeservability is everything. Think about a F1 race, if you dont know how long take to do a lap, you cant beat your team. Several engineers think they are killing it and doing fine but is they ask the right people, mentors, they might realize they are not there. So the important thing is to always ask and align expectations, so here is a seconf suggestion for tracking:
+ * Story ID or link(maybe issue tracking link)
+ * What date you started?
+ * What was the estimation from the manager?
+ * What date you finished?
+ * Did you beat the estimation or not?
+ * Notes of what happened and why, did you have any delays or surpises?
+
+Whith that, you can build ownership. Extreme ownership is very much needed. You can ask you self, consider last 10 items, I'm beating the time always? You might be wonder, why to ask a manager estimates(and must be days, story points is useless)? Because people have exceptations and they dont tell you, usually and a EM or director set of exceptations not meet could get you fired. 
+
+Engineers always assume they are doing great, but in reality they are not, because they *calibration is wrong*. So let me give you better calibarion:
+ * Zero story delivered per week is bad.
+ * Zero story per sprint is very bad.
+ * You must deliver all that was addressed to you.
+ * Push back, when is not clear or when requirements, business rules are missing.
+ * You will be held accoutable for you performance, so you must be on TOP of your numbers.
+ * Lack of feedback is not good feedback.
+
+ 
