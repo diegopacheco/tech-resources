@@ -101,3 +101,9 @@ Engineers always assume they are doing great, but in reality they are not, becau
 * Avoid complacency. Do not be happy with little, always do more, always be better.
 * You promise, you deliver, so always write down, always use agent, be someone reliable like a rock.
 * Go Deeper, know better, invest more on POCs, reading papers, videos and do not avoid hard problems, face hard problems early on.
+
+<br/>
+<br/>
+
+<img src="images/belive.jpg" />
+* Ted Lasso reference: https://www.imdb.com/title/tt10986410/ (highly recommended).
