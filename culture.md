@@ -55,7 +55,7 @@ Ignoring Culture
 https://diegopachecotech.substack.com/p/ignoring-culture-cf3efdd2886c
 
 Doing better on AI Era
-
+https://github.com/diegopacheco/tech-resources/blob/master/doing-better-in-AI-era.md
 
 The Issue with Feedbacks
 https://diegopachecotech.substack.com/p/the-issue-with-feedbacks
