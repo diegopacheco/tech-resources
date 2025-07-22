@@ -56,4 +56,20 @@ All learning must be applied in day-by-day work otherwise is not useful for you 
  * A) YES Mr X is a killer, I want him badly.
  * B) OH No MR Z sucks, pls I pass dont need him.
 
-Everyboddy is being watched and measured all the time, you track record matters a lot, so keep in mind, what performance do you want associated with your name? The great one or a bad one? Performance is key for future improvements and opportunities, so you must be doing better all the time.
+Everyboddy is being watched and measured all the time, you track record matters a lot, so keep in mind, what performance do you want associated with your name? The great one or a bad one? Performance is key for future improvements and opportunities, so you must be doing better all the time. You are RESPONSIBLE for your performance, excuses and blaming others will make you not good. Dont look for excuses, look for oportunities to grow and feedfack, there are always opportunitites to do better, so be proactive and look for them.
+
+## Continnous Improvement
+
+AI is being trained and improved all the time, so you must be doing the same. You must be improving all the time, you must be learning and applying this learning in your day-by-day work. You must be proactive and look for ways to improve your performance, your code, your design, your architecture, your tests, your documentation, and your presentations. 
+
+Why AI is getting better? Because is being measured. You must know your numbers, would know your performance by heart, so tell me?:
+* How many PRs you did last month?
+* How many Tests you wrote?
+* How many bugs you fixed?
+* How many features you delivered?
+* How many reviews you did?
+* How many presentations you did?
+* How many meetings you attended?
+* How many people you helped?
+
+It's always a good idea have an EXCEL and track all this things everyday, the better you know your number, easier is for you to beat team.Going DEEP is the only way to improve, if we are not in TOP of things and dont master our GAME we are not doing better, so you must be doing better all the time. 
