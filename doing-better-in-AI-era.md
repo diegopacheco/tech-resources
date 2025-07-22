@@ -97,3 +97,7 @@ Engineers always assume they are doing great, but in reality they are not, becau
 * Be Curious, always ask questions, always learn.
 * Be Proactive, always take the lead, always be on TOP of things.
 * Be a Killer, always deliver, always do more than expected.
+* Have constant discipline, learn all the things you dont know, repeat.
+* Avoid complacency. Do not be happy with little, always do more, always be better.
+* You promise, you deliver, so always write down, always use agent, be someone reliable like a rock.
+* Go Deeper, know better, invest more on POCs, reading papers, videos and do not avoid hard problems, face hard problems early on.
