@@ -48,8 +48,9 @@
     * ORC
     * JSON
     * Delta Lake
-
-
+* DDD
+* Data Mash
+    
 ### Code Challenges Round 1
 
 * (1) Create a Jenkins DSL that can deploy a simple Spring Boot app (build, run tests, run sonnar and deploy in EC2) use terraform
