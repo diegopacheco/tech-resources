@@ -2,6 +2,19 @@
 
 Read this multiple times and follow strickly and will be awesome at presenting.
 
+## Before you start
+
+Preparation is everythinng. When should I start preparing? 30 days before your presentation day. Why you need start 30 days ahead?
+* Because you will need time to research
+* Because you will get feedback and will have homework
+* Because even if your deck is amazing, you need do multiple dry runs before presenting.
+
+How many dry runs is enought?
+* There is not limit, more preparation is always better.
+* You must feel confident and be able to deliver on time
+* You should dry run so many times that you can present without slides (presentation zen idea).
+* Usually 3 to 5 dry runs is enough
+
 ## How to deliver a great presentation
 
 A great presentation is just an output of a well-prepared research, poc or piece of work.
