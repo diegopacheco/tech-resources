@@ -56,3 +56,12 @@ Go do some research, read some papers, watch some videos, read some books, try t
 * It's a question - write down what you know and what you want to know and ask for review
 
 Better questions look like code review.
+
+## Getting Better
+
+1. Always spend time doing research before asking questions.
+2. Write down what you know and what you want to know.
+3. Propose something based on your research.
+4. The questions could also be reviewed and classified if they are good or bad. For sake of improvement.
+5. Think about corner cases / edge cases as as way to generate better questions.
+6. Repeat and Pratice, to get better.
