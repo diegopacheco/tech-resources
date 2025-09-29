@@ -87,6 +87,12 @@ https://getdeploying.com/reference/data-egress
 AWS Instances Cost
 https://instances.vantage.sh/
 
+AWS Network Guide
+https://www.ducktyped.org/p/a-mini-book-on-aws-networking-introduction
+
+S3 Scalability
+https://bigdata.2minutestreaming.com/p/how-aws-s3-scales-with-tens-of-millions-of-hard-drives
+
 ## Lean all this tools for Troubleshooting in Linux
 
 ![Linux Performance / Troubleshooting ](linux-perf-troubleshooting.png)
