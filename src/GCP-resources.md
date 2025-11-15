@@ -1,6 +1,6 @@
 ## GCP Resources
 
-![GCP](images/gcp-hero.png)
+![GCP](./images/gcp-hero.png)
 
 #### Important Topics
 

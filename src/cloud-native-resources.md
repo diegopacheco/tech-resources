@@ -1,6 +1,6 @@
 ## Cloud Native Resources
 
-![Cloud Native](images/cloud-native-hero.png)
+![Cloud Native](./images/cloud-native-hero.png)
 
 #### Important Topics
 

@@ -1,6 +1,6 @@
 ## Mobile Resources
 
-![Mobile](images/mobile-hero.png)
+![Mobile](./images/mobile-hero.png)
 
 #### Tech
 
