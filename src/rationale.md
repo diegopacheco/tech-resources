@@ -2,6 +2,11 @@
 
 I have this repository since 2017. I always had this collections of resources to give "tips" and "directions" to people I was mentoring/coaching.
 
+Tech Support Guidance and tips - Since 2017.
+[Online Book](https://diegopacheco.github.io/tech-resources/)
+
+<img src="images/Tech_Resources_logo.png" width="400" alt="Tech Resources Logo"/>
+
 #### How to use this gist?
 
 This gist contains lists of resources about JS, Mobile, Architecture/DevOps and Cloud Native. Each gist has a list <BR> 

@@ -177,6 +177,9 @@
                     <main>
                         <h2 id="tech-study"><a class="header" href="#tech-study">Tech Study</a></h2>
 <p>I have this repository since 2017. I always had this collections of resources to give "tips" and "directions" to people I was mentoring/coaching.</p>
+<p>Tech Support Guidance and tips - Since 2017.
+<a href="https://diegopacheco.github.io/tech-resources/">Online Book</a></p>
+<img src="images/Tech_Resources_logo.png" width="400" alt="Tech Resources Logo"/>
 <h4 id="how-to-use-this-gist"><a class="header" href="#how-to-use-this-gist">How to use this gist?</a></h4>
 <p>This gist contains lists of resources about JS, Mobile, Architecture/DevOps and Cloud Native. Each gist has a list <BR>
 of technologies that you can do POC and CODE practice, also with a list of useful books and links. <BR></p>
@@ -271,6 +274,22 @@ I have been doing coaching/mentorship with tech professionals for decades. Here 
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
 
 
 
