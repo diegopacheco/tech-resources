@@ -4,95 +4,95 @@
 
 #### Tech
 
-* Nodejs  -> https://nodejs.org/en/
-* Typescript -> https://www.typescriptlang.org/
-* Express -> http://expressjs.com/pt-br/
-* Angular -> https://angularjs.org/
-* React   -> https://facebook.github.io/react/
-* Vue     -> https://vuejs.org/
-* RxJS     -> http://reactivex.io/rxjs/
-* RxFiddle -> https://rxfiddle.net/#
-* Webpack -> https://github.com/webpack/webpack
-* Webpack-monitor -> https://github.com/webpackmonitor/webpackmonitor
-* yarn    -> https://yarnpkg.com/en/
-* Gulp    -> http://gulpjs.com/
-* Yoman   -> http://yeoman.io/
-* Flow    -> https://flow.org/
-* Lodash  -> https://github.com/lodash/lodash
-* Ramda   -> https://github.com/ramda/ramda
-* Ramda Fantasy -> https://github.com/ramda/ramda-fantasy
-* kea -> * kea -> https://kea.js.org/
-* Redux -> http://redux.js.org/
-* redux-transform -> https://github.com/contrarian/redux-transform
-* redux-offline -> https://github.com/jevakallio/redux-offline
-* Redux-Saga -> https://redux-saga.js.org/
-* react-autocompletely -> https://github.com/paypal/react-autocompletely
-* react-atmo -> https://github.com/Raathigesh/react-atmo
-* react-content-loader -> https://github.com/danilowoz/react-content-loader
-* react-snap -> https://github.com/stereobooster/react-snap
-* React PWA -> https://www.reactpwa.com/
-* ReactShadow -> https://github.com/Wildhoney/ReactShadow
-* react-bits-> https://github.com/vasanthk/react-bits
-* graphql-voyager -> https://github.com/APIs-guru/graphql-voyager
-* react-traverse -> https://github.com/elierotenberg/react-traverse
-* React-Sight -> https://github.com/React-Sight/React-Sight
-* React-Virgin -> https://github.com/Trixieapp/react-virgin
-* react-intl -> https://github.com/yahoo/react-intl
-* React-AR -> https://github.com/nitin42/React-AR
-* jsLingui -> https://github.com/lingui/js-lingui
-* svgr -> https://github.com/smooth-code/svgr
-* Mobx      -> https://github.com/mobxjs/mobx
-* Xstream   -> https://github.com/staltz/xstream
-* Hammerjs -> http://hammerjs.github.io/
-* D3      -> https://github.com/d3/d3
-* Emotion -> https://emotion.sh/
-* popmotion -> https://github.com/Popmotion/popmotion
-* browserify -> https://github.com/substack/node-browserify
-* Jasmine -> https://github.com/jasmine/jasmine
-* chai -> https://github.com/chaijs/chai
-* mocha -> https://github.com/mochajs/mocha
-* Protractor -> https://github.com/angular/protractor
-* phantomjs -> https://github.com/ariya/phantomjs
-* Immutable.js -> https://facebook.github.io/immutable-js/
-* resilient.js -> https://github.com/resilient-http/resilient.js
-* Riot -> http://riotjs.com/
-* Meteor -> https://www.meteor.com/
-* Ember -> https://www.emberjs.com/
-* Rendr -> https://github.com/rendrjs/rendr
-* three -> https://threejs.org/
-* T3 -> http://t3js.org/
-* p5 -> https://p5js.org/
-* Babel -> https://babeljs.io/
-* babel-plugin-preval -> https://github.com/kentcdodds/babel-plugin-preval
-* Electron -> https://electron.atom.io/
-* html-to-react-components -> https://github.com/roman01la/html-to-react-components
-* React-Native -> https://facebook.github.io/react-native/
-* lottie-react-native -> https://github.com/airbnb/lottie-react-native
-* Argon -> https://www.argonjs.io/
-* Primrose -> https://www.primrosevr.com/
-* React-VR -> https://github.com/facebook/react-vr
-* ink -> https://github.com/vadimdemedes/ink
-* Chromeless -> https://github.com/graphcool/chromeless
-* One-Loader -> https://github.com/digitalie/one-loader
-* Vuera -> https://github.com/akxcv/vuera
-* Vue-Model -> https://github.com/aarondfrancis/vue-model
-* Loopback-Next -> https://github.com/strongloop/loopback-next
-* lodash-webpack-plugin -> https://github.com/lodash/lodash-webpack-plugin
-* DeepleatnJS -> https://deeplearnjs.org/
-* mlhelper -> https://github.com/laoqiren/mlhelper
-* image-trace-loader -> https://github.com/EmilTholin/image-trace-loader
-* frappe-charts -> https://frappe.github.io/charts/
-* svg-fill-loader -> https://github.com/kisenka/svg-fill-loader
-* cesium-> https://github.com/AnalyticalGraphicsInc/cesium
-* jSchema -> https://github.com/ignoreintuition/jSchema
-* serverjs -> https://serverjs.io/
-* create-react-kotlin-app -> https://github.com/JetBrains/create-react-kotlin-app
-* tufte-css/ -> https://edwardtufte.github.io/tufte-css/
-* YamUI -> https://github.com/microsoft/YamUI/
-* react-tv -> https://github.com/raphamorim/react-tv
-* luxon -> https://github.com/moment/luxon
-* node-prune -> https://github.com/tj/node-prune
-* date-fns -> https://date-fns.org/
+* [Nodejs](https://nodejs.org/en/)
+* [Typescript](https://www.typescriptlang.org/)
+* [Express](http://expressjs.com/pt-br/)
+* [Angular](https://angularjs.org/)
+* [React](https://facebook.github.io/react/)
+* [Vue](https://vuejs.org/)
+* [RxJS](http://reactivex.io/rxjs/)
+* [RxFiddle](https://rxfiddle.net/#)
+* [Webpack](https://github.com/webpack/webpack)
+* [Webpack-monitor](https://github.com/webpackmonitor/webpackmonitor)
+* [yarn](https://yarnpkg.com/en/)
+* [Gulp](http://gulpjs.com/)
+* [Yoman](http://yeoman.io/)
+* [Flow](https://flow.org/)
+* [Lodash](https://github.com/lodash/lodash)
+* [Ramda](https://github.com/ramda/ramda)
+* [Ramda Fantasy](https://github.com/ramda/ramda-fantasy)
+* [kea](https://kea.js.org/)
+* [Redux](http://redux.js.org/)
+* [redux-transform](https://github.com/contrarian/redux-transform)
+* [redux-offline](https://github.com/jevakallio/redux-offline)
+* [Redux-Saga](https://redux-saga.js.org/)
+* [react-autocompletely](https://github.com/paypal/react-autocompletely)
+* [react-atmo](https://github.com/Raathigesh/react-atmo)
+* [react-content-loader](https://github.com/danilowoz/react-content-loader)
+* [react-snap](https://github.com/stereobooster/react-snap)
+* [React PWA](https://www.reactpwa.com/)
+* [ReactShadow](https://github.com/Wildhoney/ReactShadow)
+* [react-bits](https://github.com/vasanthk/react-bits)
+* [graphql-voyager](https://github.com/APIs-guru/graphql-voyager)
+* [react-traverse](https://github.com/elierotenberg/react-traverse)
+* [React-Sight](https://github.com/React-Sight/React-Sight)
+* [React-Virgin](https://github.com/Trixieapp/react-virgin)
+* [react-intl](https://github.com/yahoo/react-intl)
+* [React-AR](https://github.com/nitin42/React-AR)
+* [jsLingui](https://github.com/lingui/js-lingui)
+* [svgr](https://github.com/smooth-code/svgr)
+* [Mobx](https://github.com/mobxjs/mobx)
+* [Xstream](https://github.com/staltz/xstream)
+* [Hammerjs](http://hammerjs.github.io/)
+* [D3](https://github.com/d3/d3)
+* [Emotion](https://emotion.sh/)
+* [popmotion](https://github.com/Popmotion/popmotion)
+* [browserify](https://github.com/substack/node-browserify)
+* [Jasmine](https://github.com/jasmine/jasmine)
+* [chai](https://github.com/chaijs/chai)
+* [mocha](https://github.com/mochajs/mocha)
+* [Protractor](https://github.com/angular/protractor)
+* [phantomjs](https://github.com/ariya/phantomjs)
+* [Immutable.js](https://facebook.github.io/immutable-js/)
+* [resilient.js](https://github.com/resilient-http/resilient.js)
+* [Riot](http://riotjs.com/)
+* [Meteor](https://www.meteor.com/)
+* [Ember](https://www.emberjs.com/)
+* [Rendr](https://github.com/rendrjs/rendr)
+* [three](https://threejs.org/)
+* [T3](http://t3js.org/)
+* [p5](https://p5js.org/)
+* [Babel](https://babeljs.io/)
+* [babel-plugin-preval](https://github.com/kentcdodds/babel-plugin-preval)
+* [Electron](https://electron.atom.io/)
+* [html-to-react-components](https://github.com/roman01la/html-to-react-components)
+* [React-Native](https://facebook.github.io/react-native/)
+* [lottie-react-native](https://github.com/airbnb/lottie-react-native)
+* [Argon](https://www.argonjs.io/)
+* [Primrose](https://www.primrosevr.com/)
+* [React-VR](https://github.com/facebook/react-vr)
+* [ink](https://github.com/vadimdemedes/ink)
+* [Chromeless](https://github.com/graphcool/chromeless)
+* [One-Loader](https://github.com/digitalie/one-loader)
+* [Vuera](https://github.com/akxcv/vuera)
+* [Vue-Model](https://github.com/aarondfrancis/vue-model)
+* [Loopback-Next](https://github.com/strongloop/loopback-next)
+* [lodash-webpack-plugin](https://github.com/lodash/lodash-webpack-plugin)
+* [DeepleatnJS](https://deeplearnjs.org/)
+* [mlhelper](https://github.com/laoqiren/mlhelper)
+* [image-trace-loader](https://github.com/EmilTholin/image-trace-loader)
+* [frappe-charts](https://frappe.github.io/charts/)
+* [svg-fill-loader](https://github.com/kisenka/svg-fill-loader)
+* [cesium](https://github.com/AnalyticalGraphicsInc/cesium)
+* [jSchema](https://github.com/ignoreintuition/jSchema)
+* [serverjs](https://serverjs.io/)
+* [create-react-kotlin-app](https://github.com/JetBrains/create-react-kotlin-app)
+* [tufte-css](https://edwardtufte.github.io/tufte-css/)
+* [YamUI](https://github.com/microsoft/YamUI/)
+* [react-tv](https://github.com/raphamorim/react-tv)
+* [luxon](https://github.com/moment/luxon)
+* [node-prune](https://github.com/tj/node-prune)
+* [date-fns](https://date-fns.org/)
 
 #### Books
 

@@ -4,56 +4,56 @@
 
 #### Tech
 
-* Google Analytics -> https://www.google.com/intl/pt-BR/analytics/index.html
-* Crashlytics -> https://try.crashlytics.com/
-* Bitrise -> https://www.bitrise.io/
-* Fabric -> http://fabric.io/
-* InstaVR -> http://www.instavr.co/
-* EasyAR -> https://easyar.com/
-* Vuforia -> https://vuforia.com/
+* [Google Analytics](https://www.google.com/intl/pt-BR/analytics/index.html)
+* [Crashlytics](https://try.crashlytics.com/)
+* [Bitrise](https://www.bitrise.io/)
+* [Fabric](http://fabric.io/)
+* [InstaVR](http://www.instavr.co/)
+* [EasyAR](https://easyar.com/)
+* [Vuforia](https://vuforia.com/)
 
 ###### Android
 
-* Kotlin -> https://kotlinlang.org/
-* RxJava -> https://github.com/ReactiveX/RxJava
-* genymotion -> https://www.genymotion.com/
-* RoboBinding -> https://github.com/RoboBinding/RoboBinding
-* Butter Knife -> http://jakewharton.github.io/butterknife/
-* Picasso -> http://square.github.io/picasso/
-* WellSQL -> https://github.com/yarolegovich/wellsql
-* Jackson -> https://github.com/FasterXML/jackson
-* Retrofit -> http://square.github.io/retrofit/
-* robotium -> https://github.com/robotiumtech/robotium
-* Firebase -> https://firebase.google.com/?hl=pt-br
-* lottie-android-> https://github.com/airbnb/lottie-android
-* Unity -> https://unity3d.com/unity/multiplatform
-* TensorFlow -> https://github.com/tensorflow/tensorflow/tree/master/tensorflow/examples/android
-* leakcanary -> https://github.com/square/leakcanary
-* chuck -> https://github.com/jgilfelt/chuck
-* litho -> https://github.com/facebook/litho
+* [Kotlin](https://kotlinlang.org/)
+* [RxJava](https://github.com/ReactiveX/RxJava)
+* [genymotion](https://www.genymotion.com/)
+* [RoboBinding](https://github.com/RoboBinding/RoboBinding)
+* [Butter Knife](http://jakewharton.github.io/butterknife/)
+* [Picasso](http://square.github.io/picasso/)
+* [WellSQL](https://github.com/yarolegovich/wellsql)
+* [Jackson](https://github.com/FasterXML/jackson)
+* [Retrofit](http://square.github.io/retrofit/)
+* [robotium](https://github.com/robotiumtech/robotium)
+* [Firebase](https://firebase.google.com/?hl=pt-br)
+* [lottie-android](https://github.com/airbnb/lottie-android)
+* [Unity](https://unity3d.com/unity/multiplatform)
+* [TensorFlow for Android](https://github.com/tensorflow/tensorflow/tree/master/tensorflow/examples/android)
+* [leakcanary](https://github.com/square/leakcanary)
+* [chuck](https://github.com/jgilfelt/chuck)
+* [litho](https://github.com/facebook/litho)
 
 ###### IOS
 
-* Sync -> https://github.com/SyncDB/Sync
-* realm-cocoa -> https://github.com/realm/realm-cocoa
-* Alamofire -> https://github.com/Alamofire/Alamofire
-* SDWebImage -> https://github.com/rs/SDWebImage
-* Eureka -> https://github.com/xmartlabs/Eureka
-* RxSwift -> https://github.com/ReactiveX/RxSwift
-* R.swift -> https://github.com/mac-cain13/R.swift
-* SnapKit -> https://github.com/SnapKit/SnapKit
-* IQKeyboardManagerSwift -> https://github.com/hackiftekhar/IQKeyboardManager
-* Quick -> https://github.com/Quick/Quick
-* Hero -> https://github.com/lkzhao/Hero
-* Material -> https://github.com/CosmicMind/Material
-* IGListKit -> https://github.com/Instagram/IGListKit
-* Chameleon -> https://github.com/ViccAlexander/Chameleon
-* FileKit -> https://github.com/nvzqz/FileKit
-* json-framework -> https://github.com/stig/json-framework
-* TensorFlow -> https://github.com/tensorflow/tensorflow/tree/master/tensorflow/examples/ios
-* j2objc-> https://developers.google.com/j2objc/
-* Attributed -> https://github.com/Nirma/Attributed
-* Cadmium -> https://github.com/jmfieldman/Cadmium
+* [Sync](https://github.com/SyncDB/Sync)
+* [realm-cocoa](https://github.com/realm/realm-cocoa)
+* [Alamofire](https://github.com/Alamofire/Alamofire)
+* [SDWebImage](https://github.com/rs/SDWebImage)
+* [Eureka](https://github.com/xmartlabs/Eureka)
+* [RxSwift](https://github.com/ReactiveX/RxSwift)
+* [R.swift](https://github.com/mac-cain13/R.swift)
+* [SnapKit](https://github.com/SnapKit/SnapKit)
+* [IQKeyboardManagerSwift](https://github.com/hackiftekhar/IQKeyboardManager)
+* [Quick](https://github.com/Quick/Quick)
+* [Hero](https://github.com/lkzhao/Hero)
+* [Material](https://github.com/CosmicMind/Material)
+* [IGListKit](https://github.com/Instagram/IGListKit)
+* [Chameleon](https://github.com/ViccAlexander/Chameleon)
+* [FileKit](https://github.com/nvzqz/FileKit)
+* [json-framework](https://github.com/stig/json-framework)
+* [TensorFlow for iOS](https://github.com/tensorflow/tensorflow/tree/master/tensorflow/examples/ios)
+* [j2objc](https://developers.google.com/j2objc/)
+* [Attributed](https://github.com/Nirma/Attributed)
+* [Cadmium](https://github.com/jmfieldman/Cadmium)
 
 #### Books
 
