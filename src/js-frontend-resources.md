@@ -1,6 +1,6 @@
 ## Frontend / JavaScript Resources
 
-![JavaScript](images/js-frontend-hero.png)
+<img src="./images/js-frontend-hero.png" alt="JavaScript Technologies" width="420" />
 
 #### Tech
 

@@ -1,7 +1,5 @@
 ## Mobile Resources
 
-![Mobile](./images/mobile-hero.png)
-
 #### Tech
 
 * [Google Analytics](https://www.google.com/intl/pt-BR/analytics/index.html)

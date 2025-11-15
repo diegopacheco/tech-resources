@@ -176,7 +176,7 @@
                 <div id="content" class="content">
                     <main>
                         <h2 id="frontend--javascript-resources"><a class="header" href="#frontend--javascript-resources">Frontend / JavaScript Resources</a></h2>
-<p><img src="images/js-frontend-hero.png" alt="JavaScript" /></p>
+<img src="./images/js-frontend-hero.png" alt="JavaScript Technologies" width="420" />
 <h4 id="tech"><a class="header" href="#tech">Tech</a></h4>
 <ul>
 <li><a href="https://nodejs.org/en/">Nodejs</a></li>
@@ -348,22 +348,6 @@
 
         </div>
 
-        <!-- Livereload script (if served using the cli tool) -->
-        <script>
-            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
-            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
-            const socket = new WebSocket(wsAddress);
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
 
 
 
