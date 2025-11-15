@@ -96,49 +96,49 @@
 
 #### Books
 
-* Principles of Software Architecture Modernization https://www.amazon.com/Principles-Software-Architecture-Modernization-microservices/dp/9355519532/ref=sr_1_1?crid=7U3H2IE5U7Y4&dib=eyJ2IjoiMSJ9.ebHg7EIiJ3GThIg8Dwf4PelC70iUIbHPKv7_7zk8vrk8K2FB4zlrUQyNZwKAHPO46cAYR5z2-KyqnXqNz3Ee2lmU-aGR7NLhq7jko2UihHIl-taoJ6i_hkMjcc12ZF3pOmB9lFrvbsGgbDagq1Vzqg.oz7TxYpSBxBZjVjkuIPDZM7Wxx_XMRU0Uj7jo9Rq_BI&dib_tag=se&keywords=principles+of+software+architecture+modernization&qid=1741069169&sprefix=Principles+of+software+a%2Caps%2C190&sr=8-1
-* Continuous Modernization https://www.amazon.com/dp/9365893100/ref=mes-dp?_encoding=UTF8&pd_rd_w=JpyYV&content-id=amzn1.sym.7d2923e8-7496-46a5-862d-8ef28e908025&pf_rd_p=7d2923e8-7496-46a5-862d-8ef28e908025&pf_rd_r=K6XYEHZZ76RWDSAXAY5X&pd_rd_wg=RH04x&pd_rd_r=f230b2e4-c342-429e-a362-c856e4c2362a
-* https://www.amazon.com/JavaScript-Definitive-Guide-Activate-Guides-ebook/dp/B004XQX4K0/ref=sr_1_5?ie=UTF8&qid=1498488801&sr=8-5&keywords=javascript
-* https://www.amazon.com/Node-js-Design-Patterns-Mario-Casciaro-ebook/dp/B00RP13D24/ref=sr_1_13?ie=UTF8&qid=1498488514&sr=8-13&keywords=nodejs
-* https://www.amazon.com/Web-Development-Node-Express-Leveraging/dp/1491988649/ref=sr_1_22?ie=UTF8&qid=1498488534&sr=8-22&keywords=nodejs
-* https://www.amazon.com/Learning-React-Functional-Development-Redux/dp/1491954620/ref=sr_1_2?ie=UTF8&qid=1498488863&sr=8-2&keywords=react
-* https://www.amazon.com/Pro-Angular-Adam-Freeman/dp/1484223063/ref=sr_1_3?ie=UTF8&qid=1498488882&sr=8-3&keywords=angular
-* https://www.amazon.com/Flux-Architecture-Adam-Boduch-ebook/dp/B01CR5GCXO/ref=sr_1_1?ie=UTF8&qid=1498489019&sr=8-1&keywords=flux+redux
-* https://github.com/getify/You-Dont-Know-JS
-* https://drboolean.gitbooks.io/mostly-adequate-guide/
-* http://javascriptissexy.com/how-to-learn-javascript-properly/
+* [Principles of Software Architecture Modernization](https://www.amazon.com/Principles-Software-Architecture-Modernization-microservices/dp/9355519532/ref=sr_1_1?crid=7U3H2IE5U7Y4&dib=eyJ2IjoiMSJ9.ebHg7EIiJ3GThIg8Dwf4PelC70iUIbHPKv7_7zk8vrk8K2FB4zlrUQyNZwKAHPO46cAYR5z2-KyqnXqNz3Ee2lmU-aGR7NLhq7jko2UihHIl-taoJ6i_hkMjcc12ZF3pOmB9lFrvbsGgbDagq1Vzqg.oz7TxYpSBxBZjVjkuIPDZM7Wxx_XMRU0Uj7jo9Rq_BI&dib_tag=se&keywords=principles+of+software+architecture+modernization&qid=1741069169&sprefix=Principles+of+software+a%2Caps%2C190&sr=8-1)
+* [Continuous Modernization](https://www.amazon.com/dp/9365893100/ref=mes-dp?_encoding=UTF8&pd_rd_w=JpyYV&content-id=amzn1.sym.7d2923e8-7496-46a5-862d-8ef28e908025&pf_rd_p=7d2923e8-7496-46a5-862d-8ef28e908025&pf_rd_r=K6XYEHZZ76RWDSAXAY5X&pd_rd_wg=RH04x&pd_rd_r=f230b2e4-c342-429e-a362-c856e4c2362a)
+* [JavaScript: The Definitive Guide](https://www.amazon.com/JavaScript-Definitive-Guide-Activate-Guides-ebook/dp/B004XQX4K0/ref=sr_1_5?ie=UTF8&qid=1498488801&sr=8-5&keywords=javascript)
+* [Node.js Design Patterns](https://www.amazon.com/Node-js-Design-Patterns-Mario-Casciaro-ebook/dp/B00RP13D24/ref=sr_1_13?ie=UTF8&qid=1498488514&sr=8-13&keywords=nodejs)
+* [Web Development with Node and Express](https://www.amazon.com/Web-Development-Node-Express-Leveraging/dp/1491988649/ref=sr_1_22?ie=UTF8&qid=1498488534&sr=8-22&keywords=nodejs)
+* [Learning React](https://www.amazon.com/Learning-React-Functional-Development-Redux/dp/1491954620/ref=sr_1_2?ie=UTF8&qid=1498488863&sr=8-2&keywords=react)
+* [Pro Angular](https://www.amazon.com/Pro-Angular-Adam-Freeman/dp/1484223063/ref=sr_1_3?ie=UTF8&qid=1498488882&sr=8-3&keywords=angular)
+* [Flux Architecture](https://www.amazon.com/Flux-Architecture-Adam-Boduch-ebook/dp/B01CR5GCXO/ref=sr_1_1?ie=UTF8&qid=1498489019&sr=8-1&keywords=flux+redux)
+* [You Don't Know JS](https://github.com/getify/You-Dont-Know-JS)
+* [Mostly Adequate Guide](https://drboolean.gitbooks.io/mostly-adequate-guide/)
+* [How to Learn JavaScript Properly](http://javascriptissexy.com/how-to-learn-javascript-properly/)
 
 #### Links
 
-* Eloquent JavaScript - 4th edition (2024) https://eloquentjavascript.net/
-* CSS Hell -> https://csshell.com/
-* https://hackernoon.com/
-* https://facebook.github.io/flux/
-* https://twitter.com/dan_abramov
-* https://twitter.com/benlesh
-* https://twitter.com/mjackson
-* https://twitter.com/BrendanEich
-* https://twitter.com/dshaw
-* https://twitter.com/ladyleet
-* https://github.com/sorrycc/awesome-javascript
-* https://github.com/sindresorhus/awesome-nodejs
-* https://slack.engineering/
-* https://blog.codeship.com/
-* http://angularjs.blogspot.com.br/
-* https://facebook.github.io/react/blog/
-* https://blogs.windows.com/msedgedev/
-* https://egghead.io/courses/getting-started-with-redux
-* https://egghead.io/courses/asynchronous-javascript-with-async-await
-* https://github.com/grab/front-end-guide
-* https://github.com/uanders/react-redux-cheatsheet
-* https://devchat.tv/react-native-radio
-* http://hello.p5js.org/
-* http://play.elevatorsaga.com/
-* https://reactarmory.com/guides/learn-nude-react/react-basics
-* https://github.com/ryanmcdermott/clean-code-javascript
-* https://github.com/vuejs/awesome-vue
-* https://medium.freecodecamp.org/modern-frontend-hacking-cheatsheets-df9c2566c72a
-* http://acko.net/files/fullfrontal/fullfrontal/webglmath/online.html
-* http://www.franktip.org/pubs/oopsla2017promises.pdf
-* https://reacttraining.com/patterns/
-* https://github.com/aviabird/angularspree
+* [Eloquent JavaScript - 4th edition (2024)](https://eloquentjavascript.net/)
+* [CSS Hell](https://csshell.com/)
+* [HackerNoon](https://hackernoon.com/)
+* [Flux](https://facebook.github.io/flux/)
+* [Dan Abramov Twitter](https://twitter.com/dan_abramov)
+* [Ben Lesh Twitter](https://twitter.com/benlesh)
+* [Michael Jackson Twitter](https://twitter.com/mjackson)
+* [Brendan Eich Twitter](https://twitter.com/BrendanEich)
+* [dshaw Twitter](https://twitter.com/dshaw)
+* [ladyleet Twitter](https://twitter.com/ladyleet)
+* [Awesome JavaScript](https://github.com/sorrycc/awesome-javascript)
+* [Awesome Node.js](https://github.com/sindresorhus/awesome-nodejs)
+* [Slack Engineering](https://slack.engineering/)
+* [Codeship Blog](https://blog.codeship.com/)
+* [AngularJS Blog](http://angularjs.blogspot.com.br/)
+* [React Blog](https://facebook.github.io/react/blog/)
+* [MS Edge Dev Blog](https://blogs.windows.com/msedgedev/)
+* [Getting Started with Redux](https://egghead.io/courses/getting-started-with-redux)
+* [Asynchronous JavaScript with Async Await](https://egghead.io/courses/asynchronous-javascript-with-async-await)
+* [Grab Front-End Guide](https://github.com/grab/front-end-guide)
+* [React Redux Cheatsheet](https://github.com/uanders/react-redux-cheatsheet)
+* [React Native Radio](https://devchat.tv/react-native-radio)
+* [Hello p5.js](http://hello.p5js.org/)
+* [Elevator Saga](http://play.elevatorsaga.com/)
+* [React Armory - React Basics](https://reactarmory.com/guides/learn-nude-react/react-basics)
+* [Clean Code JavaScript](https://github.com/ryanmcdermott/clean-code-javascript)
+* [Awesome Vue](https://github.com/vuejs/awesome-vue)
+* [Modern Frontend Hacking Cheatsheets](https://medium.freecodecamp.org/modern-frontend-hacking-cheatsheets-df9c2566c72a)
+* [WebGL Math](http://acko.net/files/fullfrontal/fullfrontal/webglmath/online.html)
+* [JavaScript Promises Paper](http://www.franktip.org/pubs/oopsla2017promises.pdf)
+* [React Training Patterns](https://reacttraining.com/patterns/)
+* [AngularSpree](https://github.com/aviabird/angularspree)

@@ -57,33 +57,33 @@
 
 #### Books
 
-* https://www.amazon.com/Android-Cookbook-Problems-Solutions-Developers-ebook/dp/B071VLZ9ZK/ref=sr_1_14?s=digital-text&ie=UTF8&qid=1498492311&sr=1-14&keywords=android
-* https://www.amazon.com/Android-Design-Patterns-Best-Practice-ebook/dp/B01HGR1RFG/ref=sr_1_27?s=digital-text&ie=UTF8&qid=1498492331&sr=1-27&keywords=android
-* https://www.amazon.com/iOS-10-Programming-Fundamentals-Swift-ebook/dp/B01M0XVT2G/ref=sr_1_2?s=digital-text&ie=UTF8&qid=1498492791&sr=1-2&keywords=ios
-* https://www.amazon.com/Learning-Swift-Building-macOS-Beyond-ebook/dp/B06XYGFYQT/ref=sr_1_18?s=digital-text&ie=UTF8&qid=1498492821&sr=1-18&keywords=ios
+* [Android Cookbook](https://www.amazon.com/Android-Cookbook-Problems-Solutions-Developers-ebook/dp/B071VLZ9ZK/ref=sr_1_14?s=digital-text&ie=UTF8&qid=1498492311&sr=1-14&keywords=android)
+* [Android Design Patterns and Best Practice](https://www.amazon.com/Android-Design-Patterns-Best-Practice-ebook/dp/B01HGR1RFG/ref=sr_1_27?s=digital-text&ie=UTF8&qid=1498492331&sr=1-27&keywords=android)
+* [iOS 10 Programming Fundamentals with Swift](https://www.amazon.com/iOS-10-Programming-Fundamentals-Swift-ebook/dp/B01M0XVT2G/ref=sr_1_2?s=digital-text&ie=UTF8&qid=1498492791&sr=1-2&keywords=ios)
+* [Learning Swift](https://www.amazon.com/Learning-Swift-Building-macOS-Beyond-ebook/dp/B06XYGFYQT/ref=sr_1_18?s=digital-text&ie=UTF8&qid=1498492821&sr=1-18&keywords=ios)
 
 #### Links
 
-* https://github.com/JStumpp/awesome-android
-* https://github.com/vsouza/awesome-ios
-* https://developer.android.com/index.html
-* https://www.youtube.com/user/androiddevelopers?gl=CO&hl=es-419
-* https://source.android.com/
-* http://www.vogella.com/tutorials/android.html
-* http://gizmodo.com/tag/android
-* https://www.androidcentral.com/
-* https://www.cultofmac.com/
-* http://www.cocoawithlove.com/
-* http://iosdevweekly.com/
-* http://www.cimgf.com/
-* http://nshipster.com/
-* https://www.cocoacontrols.com/
-* http://petersteinberger.com/
-* http://www.ios-blog.co.uk/
-* https://medium.com/app-coder-io/33-ios-open-source-libraries-that-will-dominate-2017-4762cf3ce449
-* https://www.raywenderlich.com/
-* https://iosdevbr.herokuapp.com/
-* http://slack.androiddevbr.org/
-* https://medium.cobeisfresh.com/@COBEistech
-* https://medium.mybridge.co/39-open-source-swift-ui-libraries-for-ios-app-development-da1f8dc61a0f
-* https://github.com/android10/Android-CleanArchitecture
+* [Awesome Android](https://github.com/JStumpp/awesome-android)
+* [Awesome iOS](https://github.com/vsouza/awesome-ios)
+* [Android Developer](https://developer.android.com/index.html)
+* [Android Developers YouTube](https://www.youtube.com/user/androiddevelopers?gl=CO&hl=es-419)
+* [Android Source](https://source.android.com/)
+* [Vogella Android Tutorials](http://www.vogella.com/tutorials/android.html)
+* [Gizmodo Android](http://gizmodo.com/tag/android)
+* [Android Central](https://www.androidcentral.com/)
+* [Cult of Mac](https://www.cultofmac.com/)
+* [Cocoa with Love](http://www.cocoawithlove.com/)
+* [iOS Dev Weekly](http://iosdevweekly.com/)
+* [CIMGF](http://www.cimgf.com/)
+* [NSHipster](http://nshipster.com/)
+* [Cocoa Controls](https://www.cocoacontrols.com/)
+* [Peter Steinberger](http://petersteinberger.com/)
+* [iOS Blog UK](http://www.ios-blog.co.uk/)
+* [33 iOS Open Source Libraries](https://medium.com/app-coder-io/33-ios-open-source-libraries-that-will-dominate-2017-4762cf3ce449)
+* [Ray Wenderlich](https://www.raywenderlich.com/)
+* [iOS Dev BR Slack](https://iosdevbr.herokuapp.com/)
+* [Android Dev BR Slack](http://slack.androiddevbr.org/)
+* [COBE Tech Medium](https://medium.cobeisfresh.com/@COBEistech)
+* [39 Open Source Swift UI Libraries](https://medium.mybridge.co/39-open-source-swift-ui-libraries-for-ios-app-development-da1f8dc61a0f)
+* [Android Clean Architecture](https://github.com/android10/Android-CleanArchitecture)
