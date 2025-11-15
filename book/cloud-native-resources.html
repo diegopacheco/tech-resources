@@ -176,7 +176,7 @@
                 <div id="content" class="content">
                     <main>
                         <h2 id="cloud-native-resources"><a class="header" href="#cloud-native-resources">Cloud Native Resources</a></h2>
-<p><img src="images/Tech_Resources_logo.png" alt="Cloud Native" /></p>
+<p><img src="images/cloud-native-hero.png" alt="Cloud Native" /></p>
 <h4 id="important-topics"><a class="header" href="#important-topics">Important Topics</a></h4>
 <ul>
 <li><a href="http://www.soa-manifesto.org/">SOA</a></li>
@@ -283,22 +283,6 @@
 
         </div>
 
-        <!-- Livereload script (if served using the cli tool) -->
-        <script>
-            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
-            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
-            const socket = new WebSocket(wsAddress);
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
 
 
 

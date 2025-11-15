@@ -1,6 +1,6 @@
 ## Mobile Resources
 
-![Mobile](http://d1vqbpto5tbbz0.cloudfront.net/blog/wp-content/uploads/2015/01/21180000/iOS-and-Android.jpg)
+![Mobile](images/mobile-hero.png)
 
 #### Tech
 

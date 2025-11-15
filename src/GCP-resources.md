@@ -1,6 +1,6 @@
 ## GCP Resources
 
-![GCP](images/Tech_Resources_logo.png)
+![GCP](images/gcp-hero.png)
 
 #### Important Topics
 

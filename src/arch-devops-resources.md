@@ -1,6 +1,6 @@
 ## Software Architecture | DevOps Engineering Resources
 
-![Architecture and DevOps](images/Tech_Resources_logo.png)
+![Architecture and DevOps](images/arch-devops-hero.png)
 
 ### Important Topics
 

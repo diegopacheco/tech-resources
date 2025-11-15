@@ -1,6 +1,6 @@
 ## Frontend / JavaScript Resources
 
-![JavaScript](images/Tech_Resources_logo.png)
+![JavaScript](images/js-frontend-hero.png)
 
 #### Tech
 
