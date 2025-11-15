@@ -4,9 +4,9 @@
 
 #### Important Topics
 
-* SOA -> http://www.soa-manifesto.org/
-* Containers -> https://en.wikipedia.org/wiki/Docker_(software)
-* Cloud Computing -> https://en.wikipedia.org/wiki/Cloud_computing
+* [SOA](http://www.soa-manifesto.org/)
+* [Containers](https://en.wikipedia.org/wiki/Docker_(software))
+* [Cloud Computing](https://en.wikipedia.org/wiki/Cloud_computing)
 
 #### Tech
 
