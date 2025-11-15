@@ -1,0 +1,461 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>AI Resources - Tech Resources</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "searchindex.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Tech Resources</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <i class="fa fa-spinner fa-spin"></i>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="ai-resources"><a class="header" href="#ai-resources">AI Resources</a></h1>
+<h2 id="important-topics"><a class="header" href="#important-topics">Important Topics</a></h2>
+<ul>
+<li>Machine Learning Fundamentals -&gt; https://en.wikipedia.org/wiki/Machine_learning</li>
+<li>Deep Learning -&gt; https://en.wikipedia.org/wiki/Deep_learning</li>
+<li>Neural Networks -&gt; https://en.wikipedia.org/wiki/Artificial_neural_network</li>
+<li>Natural Language Processing -&gt; https://en.wikipedia.org/wiki/Natural_language_processing</li>
+<li>Computer Vision -&gt; https://en.wikipedia.org/wiki/Computer_vision</li>
+<li>Reinforcement Learning -&gt; https://en.wikipedia.org/wiki/Reinforcement_learning</li>
+<li>Generative AI -&gt; https://en.wikipedia.org/wiki/Generative_artificial_intelligence</li>
+<li>Large Language Models -&gt; https://en.wikipedia.org/wiki/Large_language_model</li>
+<li>MLOps -&gt; https://en.wikipedia.org/wiki/MLOps</li>
+<li>AI Ethics -&gt; https://en.wikipedia.org/wiki/AI_ethics</li>
+<li>Transformer Architecture -&gt; https://en.wikipedia.org/wiki/Transformer_(machine_learning_model)</li>
+<li>Attention Mechanisms -&gt; https://en.wikipedia.org/wiki/Attention_(machine_learning)</li>
+</ul>
+<h2 id="traditional-ai-tech"><a class="header" href="#traditional-ai-tech">Traditional AI Tech</a></h2>
+<h3 id="machine-learning-frameworks"><a class="header" href="#machine-learning-frameworks">Machine Learning Frameworks</a></h3>
+<ul>
+<li>Scikit-learn -&gt; https://scikit-learn.org/</li>
+<li>TensorFlow -&gt; https://www.tensorflow.org/</li>
+<li>PyTorch -&gt; https://pytorch.org/</li>
+<li>Keras -&gt; https://keras.io/</li>
+<li>XGBoost -&gt; https://xgboost.readthedocs.io/</li>
+<li>LightGBM -&gt; https://lightgbm.readthedocs.io/</li>
+<li>CatBoost -&gt; https://catboost.ai/</li>
+<li>Apache Spark MLlib -&gt; https://spark.apache.org/mllib/</li>
+</ul>
+<h3 id="computer-vision"><a class="header" href="#computer-vision">Computer Vision</a></h3>
+<ul>
+<li>OpenCV -&gt; https://opencv.org/</li>
+<li>PIL/Pillow -&gt; https://python-pillow.org/</li>
+<li>Albumentations -&gt; https://albumentations.ai/</li>
+<li>YOLO -&gt; https://ultralytics.com/yolo</li>
+<li>MediaPipe -&gt; https://mediapipe.dev/</li>
+</ul>
+<h3 id="natural-language-processing"><a class="header" href="#natural-language-processing">Natural Language Processing</a></h3>
+<ul>
+<li>NLTK -&gt; https://www.nltk.org/</li>
+<li>spaCy -&gt; https://spacy.io/</li>
+<li>Gensim -&gt; https://radimrehurek.com/gensim/</li>
+<li>TextBlob -&gt; https://textblob.readthedocs.io/</li>
+<li>Stanford NLP -&gt; https://stanfordnlp.github.io/CoreNLP/</li>
+</ul>
+<h3 id="data-processing--analysis"><a class="header" href="#data-processing--analysis">Data Processing &amp; Analysis</a></h3>
+<ul>
+<li>Pandas -&gt; https://pandas.pydata.org/</li>
+<li>NumPy -&gt; https://numpy.org/</li>
+<li>SciPy -&gt; https://scipy.org/</li>
+<li>Matplotlib -&gt; https://matplotlib.org/</li>
+<li>Seaborn -&gt; https://seaborn.pydata.org/</li>
+<li>Plotly -&gt; https://plotly.com/python/</li>
+</ul>
+<h3 id="mlops--model-deployment"><a class="header" href="#mlops--model-deployment">MLOps &amp; Model Deployment</a></h3>
+<ul>
+<li>MLflow -&gt; https://mlflow.org/</li>
+<li>Kubeflow -&gt; https://www.kubeflow.org/</li>
+<li>Apache Airflow -&gt; https://airflow.apache.org/</li>
+<li>DVC -&gt; https://dvc.org/</li>
+<li>Weights &amp; Biases -&gt; https://wandb.ai/</li>
+<li>Neptune -&gt; https://neptune.ai/</li>
+<li>Apache Beam -&gt; https://beam.apache.org/</li>
+</ul>
+<h2 id="generative-ai-tech"><a class="header" href="#generative-ai-tech">Generative AI Tech</a></h2>
+<h3 id="large-language-models"><a class="header" href="#large-language-models">Large Language Models</a></h3>
+<ul>
+<li>OpenAI GPT -&gt; https://openai.com/gpt-4</li>
+<li>Anthropic Claude -&gt; https://www.anthropic.com/claude</li>
+<li>Google Gemini -&gt; https://gemini.google.com/</li>
+<li>Meta Llama -&gt; https://llama.meta.com/</li>
+<li>Mistral AI -&gt; https://mistral.ai/</li>
+<li>Cohere -&gt; https://cohere.com/</li>
+<li>Hugging Face Transformers -&gt; https://huggingface.co/transformers/</li>
+</ul>
+<h3 id="image-generation"><a class="header" href="#image-generation">Image Generation</a></h3>
+<ul>
+<li>DALL-E -&gt; https://openai.com/dall-e-3</li>
+<li>Midjourney -&gt; https://www.midjourney.com/</li>
+<li>Stable Diffusion -&gt; https://stability.ai/stable-diffusion</li>
+<li>Adobe Firefly -&gt; https://firefly.adobe.com/</li>
+<li>RunwayML -&gt; https://runwayml.com/</li>
+</ul>
+<h3 id="code-generation"><a class="header" href="#code-generation">Code Generation</a></h3>
+<ul>
+<li>GitHub Copilot -&gt; https://github.com/features/copilot</li>
+<li>Claude Code -&gt; https://claude.ai/code</li>
+<li>OpenAI Codex -&gt; https://openai.com/blog/openai-codex</li>
+<li>Tabnine -&gt; https://www.tabnine.com/</li>
+<li>Replit Ghostwriter -&gt; https://replit.com/site/ghostwriter</li>
+<li>Cursor -&gt; https://cursor.sh/</li>
+</ul>
+<h3 id="audiospeech"><a class="header" href="#audiospeech">Audio/Speech</a></h3>
+<ul>
+<li>OpenAI Whisper -&gt; https://openai.com/research/whisper</li>
+<li>ElevenLabs -&gt; https://elevenlabs.io/</li>
+<li>Murf -&gt; https://murf.ai/</li>
+<li>Speechify -&gt; https://speechify.com/</li>
+</ul>
+<h3 id="video-generation"><a class="header" href="#video-generation">Video Generation</a></h3>
+<ul>
+<li>Sora -&gt; https://openai.com/sora</li>
+<li>Pika Labs -&gt; https://pika.art/</li>
+<li>Runway Gen-2 -&gt; https://research.runwayml.com/gen2</li>
+<li>Synthesia -&gt; https://www.synthesia.io/</li>
+</ul>
+<h3 id="ai-development-platforms"><a class="header" href="#ai-development-platforms">AI Development Platforms</a></h3>
+<ul>
+<li>OpenAI API -&gt; https://platform.openai.com/</li>
+<li>Anthropic API -&gt; https://docs.anthropic.com/</li>
+<li>Google AI Studio -&gt; https://aistudio.google.com/</li>
+<li>Azure OpenAI -&gt; https://azure.microsoft.com/en-us/products/ai-services/openai-service</li>
+<li>AWS Bedrock -&gt; https://aws.amazon.com/bedrock/</li>
+<li>Vertex AI -&gt; https://cloud.google.com/vertex-ai</li>
+</ul>
+<h3 id="vector-databases--rag"><a class="header" href="#vector-databases--rag">Vector Databases &amp; RAG</a></h3>
+<ul>
+<li>Pinecone -&gt; https://www.pinecone.io/</li>
+<li>Weaviate -&gt; https://weaviate.io/</li>
+<li>Chroma -&gt; https://www.trychroma.com/</li>
+<li>Qdrant -&gt; https://qdrant.tech/</li>
+<li>FAISS -&gt; https://faiss.ai/</li>
+<li>LangChain -&gt; https://langchain.com/</li>
+<li>LlamaIndex -&gt; https://www.llamaindex.ai/</li>
+</ul>
+<h2 id="ai-challenges-round-1"><a class="header" href="#ai-challenges-round-1">AI Challenges Round 1</a></h2>
+<ul>
+<li>(1) Build a Movie Recommendation System using collaborative filtering, content-based filtering, and hybrid approaches with explicit feedback.</li>
+<li>(2) Create an Image Classification System using CNNs to classify different categories of images with data augmentation and transfer learning.</li>
+<li>(3) Build a Sentiment Analysis API that can analyze text sentiment across multiple languages using pre-trained models and custom training.</li>
+<li>(4) Create a Chatbot using traditional NLP techniques (intent recognition, entity extraction) with conversation management and context tracking.</li>
+<li>(5) Build a Price Prediction System for real estate using various regression algorithms, feature engineering, and model comparison.</li>
+<li>(6) Create an Anomaly Detection System for network traffic or system logs using unsupervised learning techniques.</li>
+<li>(7) Build a Credit Risk Assessment System using classification algorithms with proper feature selection and model validation.</li>
+</ul>
+<h2 id="ai-challenges-round-2"><a class="header" href="#ai-challenges-round-2">AI Challenges Round 2</a></h2>
+<ul>
+<li>(1) Create a RAG (Retrieval-Augmented Generation) System that can answer questions about your personal knowledge base using vector embeddings.</li>
+<li>(2) Build a Code Generation Assistant that can generate code in multiple programming languages based on natural language descriptions.</li>
+<li>(3) Create a Multi-modal AI System that can process both text and images to provide comprehensive responses (like describing images or creating images from text).</li>
+<li>(4) Build an AI-powered Content Moderation System that can detect harmful content across text, images, and videos with high accuracy.</li>
+<li>(5) Create a Personal AI Assistant that can schedule meetings, send emails, and manage tasks through natural language conversations.</li>
+<li>(6) Build a Fine-tuned LLM for a specific domain (legal, medical, financial) with proper training pipeline and evaluation metrics.</li>
+<li>(7) Create an AI Agent System that can browse the web, extract information, and perform tasks autonomously with safety guardrails.</li>
+</ul>
+<h2 id="ai-challenges-round-3"><a class="header" href="#ai-challenges-round-3">AI Challenges Round 3</a></h2>
+<ul>
+<li>(1) Build a Multi-Agent AI System where different AI agents collaborate to solve complex problems with coordination and conflict resolution.</li>
+<li>(2) Create an AI Model Training Pipeline with automated hyperparameter tuning, distributed training, and model versioning on cloud infrastructure.</li>
+<li>(3) Build a Real-time AI Inference System that can handle millions of requests with sub-second latency using model optimization and caching.</li>
+<li>(4) Create an AI Safety and Alignment System with red-teaming, jailbreak detection, and content filtering with continuous monitoring.</li>
+<li>(5) Build a Federated Learning System where multiple parties can train models collaboratively without sharing raw data.</li>
+<li>(6) Create an AI Explainability Dashboard that can provide interpretable explanations for model decisions using SHAP, LIME, and other techniques.</li>
+<li>(7) Build a Continuous Learning AI System that can adapt to new data patterns without forgetting previous knowledge (catastrophic forgetting prevention).</li>
+</ul>
+<h2 id="books"><a class="header" href="#books">Books</a></h2>
+<ul>
+<li>Principles of Software Architecture Modernization https://www.amazon.com/Principles-Software-Architecture-Modernization-microservices/dp/9355519532/ref=sr_1_1?crid=7U3H2IE5U7Y4&amp;dib=eyJ2IjoiMSJ9.ebHg7EIiJ3GThIg8Dwf4PelC70iUIbHPKv7_7zk8vrk8K2FB4zlrUQyNZwKAHPO46cAYR5z2-KyqnXqNz3Ee2lmU-aGR7NLhq7jko2UihHIl-taoJ6i_hkMjcc12ZF3pOmB9lFrvbsGgbDagq1Vzqg.oz7TxYpSBxBZjVjkuIPDZM7Wxx_XMRU0Uj7jo9Rq_BI&amp;dib_tag=se&amp;keywords=principles+of+software+architecture+modernization&amp;qid=1741069169&amp;sprefix=Principles+of+software+a%2Caps%2C190&amp;sr=8-1</li>
+<li>Continuous Modernization https://www.amazon.com/dp/9365893100/ref=mes-dp?_encoding=UTF8&amp;pd_rd_w=JpyYV&amp;content-id=amzn1.sym.7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_p=7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_r=K6XYEHZZ76RWDSAXAY5X&amp;pd_rd_wg=RH04x&amp;pd_rd_r=f230b2e4-c342-429e-a362-c856e4c2362a</li>
+<li>Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow https://www.amazon.com/Hands-Machine-Learning-Scikit-Learn-TensorFlow/dp/1492032646/</li>
+<li>Deep Learning https://www.amazon.com/Deep-Learning-Ian-Goodfellow/dp/0262035618/</li>
+<li>Pattern Recognition and Machine Learning https://www.amazon.com/Pattern-Recognition-Learning-Information-Statistics/dp/0387310738/</li>
+<li>The Elements of Statistical Learning https://www.amazon.com/Elements-Statistical-Learning-Prediction-Statistics/dp/0387848576/</li>
+<li>Machine Learning Yearning https://www.deeplearning.ai/machine-learning-yearning/</li>
+<li>Building Machine Learning Powered Applications https://www.amazon.com/Building-Machine-Learning-Powered-Applications/dp/149204511X/</li>
+<li>Designing Machine Learning Systems https://www.amazon.com/Designing-Machine-Learning-Systems-Production-Ready/dp/1098107969/</li>
+<li>MLOps: Continuous Delivery and Automation Pipelines in Machine Learning https://www.amazon.com/MLOps-Continuous-Delivery-Automation-Pipelines/dp/1449321000/</li>
+<li>Machine Learning Design Patterns https://www.amazon.com/Machine-Learning-Design-Patterns-Preparation/dp/1098115783/</li>
+<li>Artificial Intelligence: A Modern Approach https://www.amazon.com/Artificial-Intelligence-Modern-Approach-4th/dp/0134610997/</li>
+<li>The Hundred-Page Machine Learning Book https://www.amazon.com/Hundred-Page-Machine-Learning-Book/dp/199957950X/</li>
+<li>Python Machine Learning https://www.amazon.com/Python-Machine-Learning-scikit-learn-TensorFlow/dp/1789955750/</li>
+<li>Natural Language Processing with Python https://www.amazon.com/Natural-Language-Processing-Python-Analyzing/dp/0596516495/</li>
+<li>Computer Vision: Algorithms and Applications https://www.amazon.com/Computer-Vision-Algorithms-Applications-Science/dp/1848829345/</li>
+<li>Reinforcement Learning: An Introduction https://www.amazon.com/Reinforcement-Learning-Introduction-Adaptive-Computation/dp/0262039249/</li>
+<li>Generative Deep Learning https://www.amazon.com/Generative-Deep-Learning-Teaching-Machines/dp/1492041947/</li>
+<li>GPT-3: Building Innovative NLP Products Using Large Language Models https://www.amazon.com/GPT-3-Building-Innovative-Products-Language/dp/1484268494/</li>
+<li>AI and Machine Learning for Coders https://www.amazon.com/AI-Machine-Learning-Coders-algorithms/dp/1492078212/</li>
+<li>Building Intelligent Systems https://www.amazon.com/Building-Intelligent-Systems-Machine-Learning/dp/1484239652/</li>
+<li>The Master Algorithm https://www.amazon.com/Master-Algorithm-Ultimate-Learning-Machine/dp/0465065708/</li>
+<li>Life 3.0: Being Human in the Age of Artificial Intelligence https://www.amazon.com/Life-3-0-Being-Artificial-Intelligence/dp/1101946598/</li>
+<li>Human Compatible: Artificial Intelligence and the Problem of Control https://www.amazon.com/Human-Compatible-Artificial-Intelligence-Problem/dp/0525558616/</li>
+<li>The Alignment Problem https://www.amazon.com/Alignment-Problem-Machine-Learning-Values/dp/0393635821/</li>
+</ul>
+<h2 id="links"><a class="header" href="#links">Links</a></h2>
+<ul>
+<li>Papers With Code -&gt; https://paperswithcode.com/</li>
+<li>Towards Data Science -&gt; https://towardsdatascience.com/</li>
+<li>Machine Learning Mastery -&gt; https://machinelearningmastery.com/</li>
+<li>Distill -&gt; https://distill.pub/</li>
+<li>OpenAI Blog -&gt; https://openai.com/blog/</li>
+<li>Google AI Blog -&gt; https://ai.googleblog.com/</li>
+<li>DeepMind Blog -&gt; https://deepmind.com/blog</li>
+<li>Anthropic Blog -&gt; https://www.anthropic.com/news</li>
+<li>Hugging Face Blog -&gt; https://huggingface.co/blog</li>
+<li>Stanford AI Lab -&gt; https://ai.stanford.edu/</li>
+<li>MIT AI Lab -&gt; https://www.csail.mit.edu/</li>
+<li>Berkeley AI Research -&gt; https://bair.berkeley.edu/</li>
+<li>AI/ML YouTube Channels -&gt; https://www.youtube.com/c/MachineLearningExplained</li>
+<li>Coursera ML Course -&gt; https://www.coursera.org/learn/machine-learning</li>
+<li>edX MIT Introduction to AI -&gt; https://www.edx.org/course/artificial-intelligence-ai</li>
+<li>Fast.ai -&gt; https://www.fast.ai/</li>
+<li>Kaggle Learn -&gt; https://www.kaggle.com/learn</li>
+<li>Google AI Education -&gt; https://ai.google/education/</li>
+<li>AWS Machine Learning -&gt; https://aws.amazon.com/machine-learning/</li>
+<li>Azure AI -&gt; https://azure.microsoft.com/en-us/overview/ai-platform/</li>
+<li>Google Cloud AI -&gt; https://cloud.google.com/ai-platform/</li>
+<li>NVIDIA AI Developer -&gt; https://developer.nvidia.com/ai-and-data-science</li>
+<li>AI Ethics Institute -&gt; https://www.aiethicsinstitute.org/</li>
+<li>Partnership on AI -&gt; https://www.partnershiponai.org/</li>
+<li>AI Safety Gridworlds -&gt; https://github.com/deepmind/ai-safety-gridworlds</li>
+<li>OpenAI Gym -&gt; https://gym.openai.com/</li>
+<li>TensorFlow Hub -&gt; https://tfhub.dev/</li>
+<li>PyTorch Hub -&gt; https://pytorch.org/hub/</li>
+<li>Model Zoo -&gt; https://modelzoo.co/</li>
+<li>AI Conferences -&gt; https://aideadlin.es/</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="agile-dev-resources.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="arch-devops-resources.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="agile-dev-resources.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="arch-devops-resources.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+
+    </div>
+    </body>
+</html>

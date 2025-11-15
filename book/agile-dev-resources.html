@@ -1,0 +1,273 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Agile Development Resources - Tech Resources</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "searchindex.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Tech Resources</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <i class="fa fa-spinner fa-spin"></i>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h2 id="agile-dev-resources"><a class="header" href="#agile-dev-resources">Agile Dev Resources</a></h2>
+<h2 id="why-scrum-sucks"><a class="header" href="#why-scrum-sucks">Why Scrum Sucks</a></h2>
+<ul>
+<li>One Hacker Way Rational alternative of Agile - Erik Meijer (<a href="https://www.youtube.com/watch?v=2u0sNRO-QKQ&amp;t=253s&amp;ab_channel=SabbirAhmed">https://www.youtube.com/watch?v=2u0sNRO-QKQ&amp;t=253s&amp;ab_channel=SabbirAhmed</a>)</li>
+<li>Scrum is a cancer (<a href="https://twitter.com/svpino/status/1695806027256475777">https://twitter.com/svpino/status/1695806027256475777</a>)</li>
+</ul>
+<h2 id="why-safe-sucks"><a class="header" href="#why-safe-sucks">Why Safe Sucks</a></h2>
+<ul>
+<li>SAFe - Good But Not Good Enough (<a href="https://ronjeffries.com/xprog/articles/safe-good-but-not-good-enough/">https://ronjeffries.com/xprog/articles/safe-good-but-not-good-enough/</a>)</li>
+<li>The Major Problems with SAFe (<a href="https://productcoalition.com/the-major-problems-with-safe-1e797f7e48f8">https://productcoalition.com/the-major-problems-with-safe-1e797f7e48f8</a>)</li>
+</ul>
+<h3 id="books"><a class="header" href="#books">Books</a></h3>
+<ul>
+<li>Getting Real -&gt; (<a href="http://www.amazon.com/Getting-Real-Jason-Fried-ebook/dp/B0053KHGWM/ref=sr_1_2?ie=UTF8&amp;qid=1417434564&amp;sr=8-2&amp;keywords=getting+real">http://www.amazon.com/Getting-Real-Jason-Fried-ebook/dp/B0053KHGWM/ref=sr_1_2?ie=UTF8&amp;qid=1417434564&amp;sr=8-2&amp;keywords=getting+real</a>)</li>
+<li>Rework -&gt; (&lt;https://37signals.com/rework</li>
+<li>The Pragmatic Programmer: From Journeyman to Master -&gt; (<a href="http://www.amazon.com/The-Pragmatic-Programmer-Journeyman-Master/dp/020161622X/ref=pd_sim_b_40?ie=UTF8&amp;refRID=1C5QKVRR1RC45BRTRBFA">http://www.amazon.com/The-Pragmatic-Programmer-Journeyman-Master/dp/020161622X/ref=pd_sim_b_40?ie=UTF8&amp;refRID=1C5QKVRR1RC45BRTRBFA</a>) </br></li>
+<li>Refactoring: Improving the Design of Existing Code -&gt; (<a href="http://www.amazon.com/gp/product/0201485672/ref=s9_psimh_gw_p14_d12_i4?pf_rd_m=ATVPDKIKX0DER&amp;pf_rd_s=desktop-2&amp;pf_rd_r=13XTHB4RKQ3H35TH2BZX&amp;pf_rd_t=36701&amp;pf_rd_p=1970567562&amp;pf_rd_i=desktop">http://www.amazon.com/gp/product/0201485672/ref=s9_psimh_gw_p14_d12_i4?pf_rd_m=ATVPDKIKX0DER&amp;pf_rd_s=desktop-2&amp;pf_rd_r=13XTHB4RKQ3H35TH2BZX&amp;pf_rd_t=36701&amp;pf_rd_p=1970567562&amp;pf_rd_i=desktop</a>) </br></li>
+<li>Working Effectively with Legacy Code -&gt; (<a href="http://www.amazon.com/Working-Effectively-Legacy-Michael-Feathers/dp/0131177052/ref=pd_sim_b_3?ie=UTF8&amp;refRID=0NFDX09AB5N8Y6EM4BB5">http://www.amazon.com/Working-Effectively-Legacy-Michael-Feathers/dp/0131177052/ref=pd_sim_b_3?ie=UTF8&amp;refRID=0NFDX09AB5N8Y6EM4BB5</a>) </br></li>
+<li>Extreme Programming Explained: Embrace Change, 2nd Edition (The XP Series) -&gt; (<a href="http://www.amazon.com/Extreme-Programming-Explained-Embrace-Edition/dp/0321278658/ref=pd_sim_b_16?ie=UTF8&amp;refRID=0NFDX09AB5N8Y6EM4BB5">http://www.amazon.com/Extreme-Programming-Explained-Embrace-Edition/dp/0321278658/ref=pd_sim_b_16?ie=UTF8&amp;refRID=0NFDX09AB5N8Y6EM4BB5</a>) </br></li>
+<li>Clean Code: A Handbook of Agile Software Craftsmanship -&gt; (<a href="http://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882/ref=pd_sim_b_6?ie=UTF8&amp;refRID=1C5QKVRR1RC45BRTRBFA">http://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882/ref=pd_sim_b_6?ie=UTF8&amp;refRID=1C5QKVRR1RC45BRTRBFA</a>) </br></li>
+<li>Code Complete: A Practical Handbook of Software Construction, Second Edition -&gt; (<a href="http://www.amazon.com/Code-Complete-Practical-Handbook-Construction/dp/0735619670/ref=sr_1_1?ie=UTF8&amp;qid=1417434555&amp;sr=8-1&amp;keywords=code+complete">http://www.amazon.com/Code-Complete-Practical-Handbook-Construction/dp/0735619670/ref=sr_1_1?ie=UTF8&amp;qid=1417434555&amp;sr=8-1&amp;keywords=code+complete</a>) </br></li>
+<li>Presentation Zen -&gt; (<a href="http://www.amazon.com/gp/product/0321811984?ie=UTF8&amp;tag=garrreynoldsc-20&amp;linkCode=xm2&amp;camp=1789&amp;creativeASIN=0321811984">http://www.amazon.com/gp/product/0321811984?ie=UTF8&amp;tag=garrreynoldsc-20&amp;linkCode=xm2&amp;camp=1789&amp;creativeASIN=0321811984</a>) <br></li>
+<li>Seven Languages in Seven Weeks -&gt; (<a href="http://www.amazon.com/Seven-Languages-Weeks-Programming-Programmers/dp/193435659X/ref=sr_1_2?s=books&amp;ie=UTF8&amp;qid=1417434852&amp;sr=1-2&amp;keywords=7+languages+in+seven+weeks">http://www.amazon.com/Seven-Languages-Weeks-Programming-Programmers/dp/193435659X/ref=sr_1_2?s=books&amp;ie=UTF8&amp;qid=1417434852&amp;sr=1-2&amp;keywords=7+languages+in+seven+weeks</a>) </br></li>
+<li>Programming Clojure -&gt; (<a href="http://www.amazon.com/Programming-Clojure-Pragmatic-Programmers-Halloway/dp/1934356336/ref=sr_1_4?s=books&amp;ie=UTF8&amp;qid=1417434888&amp;sr=1-4&amp;keywords=programming+clojure">http://www.amazon.com/Programming-Clojure-Pragmatic-Programmers-Halloway/dp/1934356336/ref=sr_1_4?s=books&amp;ie=UTF8&amp;qid=1417434888&amp;sr=1-4&amp;keywords=programming+clojure</a>) </br></li>
+<li>Seven Databases in Seven Weeks -&gt; (<a href="http://www.amazon.com/Seven-Databases-Weeks-Modern-Movement/dp/1934356921/ref=sr_1_1?s=books&amp;ie=UTF8&amp;qid=1417434913&amp;sr=1-1&amp;keywords=7+databases+in+seven+weeks">http://www.amazon.com/Seven-Databases-Weeks-Modern-Movement/dp/1934356921/ref=sr_1_1?s=books&amp;ie=UTF8&amp;qid=1417434913&amp;sr=1-1&amp;keywords=7+databases+in+seven+weeks</a>) </br></li>
+<li>Learn You a Haskell for Great Good! -&gt; (<a href="http://learnyouahaskell.com/chapters">http://learnyouahaskell.com/chapters</a>) </br></li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="ai-resources.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="ai-resources.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+
+    </div>
+    </body>
+</html>

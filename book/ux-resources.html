@@ -1,0 +1,326 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>UX Resources - Tech Resources</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "searchindex.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Tech Resources</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <i class="fa fa-spinner fa-spin"></i>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h2 id="technology--skills"><a class="header" href="#technology--skills">Technology / Skills</a></h2>
+<ul>
+<li>Figma - https://www.figma.com/</li>
+<li>Heap Analytics - https://heap.io/</li>
+<li>Typescript (need to be able to read JS Code)</li>
+<li>JavaScript (need to be able to read JS Code)</li>
+<li>Need to be able to run Webapp and Mobile App locally</li>
+<li>UI Patterns for Mobile</li>
+<li>Web UI Patterns</li>
+<li>Accessibility Patterns</li>
+<li>Usability Patterns</li>
+<li>User Research Patterns</li>
+<li>A/B Testing Patterns</li>
+<li>Design Systems / Atomic Design</li>
+<li>Design Thinking</li>
+<li>Startegic Design</li>
+<li>Design Sprint</li>
+<li>Design Ops</li>
+<li>Dark Patterns</li>
+<li>Microinteractions</li>
+<li>Material Design</li>
+<li>CSS</li>
+<li>HTML</li>
+<li>React</li>
+<li>Responsive Design</li>
+<li>LLMs and UX Writing</li>
+<li>LLMs and UX Research</li>
+<li>LLMs and Figma Design</li>
+</ul>
+<h3 id="design-challenges-round-1"><a class="header" href="#design-challenges-round-1">Design Challenges Round 1</a></h3>
+<ul>
+<li>(1) Design a Netflix-like clone</li>
+<li>(2) Design a Spotify-like clone</li>
+<li>(3) Design a Uber-like clone</li>
+<li>(4) Design a Amazon-like clone</li>
+<li>(5) Design a Facebook-like clone</li>
+<li>(6) Design a Modern Bank Webapp</li>
+<li>(7) Design a Metrics Dashboard app</li>
+</ul>
+<h3 id="researchpresentation-challenges-round-1"><a class="header" href="#researchpresentation-challenges-round-1">Research/Presentation Challenges Round 1</a></h3>
+<ul>
+<li>(1) Research Modern Banking</li>
+<li>(2) Research Modern Credit Cards</li>
+<li>(3) Research Modern Payments Solutions</li>
+<li>(4) Research Modern FinTech Startups</li>
+<li>(5) Research Modern Open Banking</li>
+<li>(6) Research Modern Loans</li>
+<li>(7) Research Modern Marketplaces</li>
+</ul>
+<h3 id="random-challenges-round-1"><a class="header" href="#random-challenges-round-1">Random Challenges Round 1</a></h3>
+<ul>
+<li>(1) Pick up 10 random UIs and make proposals to make them better (use Figma)</li>
+<li>(2) Pair with an Engineer everyday 2h per day (UI or Mobile)</li>
+<li>(3) Given a bad UI - make 8 versions of the UI and write trade-offs + Figmas</li>
+<li>(4) Do UX reasearch on a random app/domain</li>
+<li>(5) Do UX writting for core flows of a random UI</li>
+<li>(6) Propose a new feature for a random app</li>
+<li>(7) Do a usability test on a random UI</li>
+</ul>
+<h2 id="books"><a class="header" href="#books">Books</a></h2>
+<ul>
+<li>Principles of Software Architecture Modernization https://www.amazon.com/Principles-Software-Architecture-Modernization-microservices/dp/9355519532/ref=sr_1_1?crid=7U3H2IE5U7Y4&amp;dib=eyJ2IjoiMSJ9.ebHg7EIiJ3GThIg8Dwf4PelC70iUIbHPKv7_7zk8vrk8K2FB4zlrUQyNZwKAHPO46cAYR5z2-KyqnXqNz3Ee2lmU-aGR7NLhq7jko2UihHIl-taoJ6i_hkMjcc12ZF3pOmB9lFrvbsGgbDagq1Vzqg.oz7TxYpSBxBZjVjkuIPDZM7Wxx_XMRU0Uj7jo9Rq_BI&amp;dib_tag=se&amp;keywords=principles+of+software+architecture+modernization&amp;qid=1741069169&amp;sprefix=Principles+of+software+a%2Caps%2C190&amp;sr=8-1</li>
+<li>Continuous Modernization https://www.amazon.com/dp/9365893100/ref=mes-dp?_encoding=UTF8&amp;pd_rd_w=JpyYV&amp;content-id=amzn1.sym.7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_p=7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_r=K6XYEHZZ76RWDSAXAY5X&amp;pd_rd_wg=RH04x&amp;pd_rd_r=f230b2e4-c342-429e-a362-c856e4c2362a</li>
+<li>Don't Make Me Think, Revisited: A Common Sense Approach to Web Usability
+https://www.amazon.com/Dont-Make-Think-Revisited-Usability-ebook/dp/B00HJUBRPG/ref=sr_1_2?crid=3ET4QC9V7BL7F&amp;keywords=usability&amp;qid=1656113354&amp;s=digital-text&amp;sprefix=usability%2Cdigital-text%2C119&amp;sr=1-2</li>
+<li>The Design of Everyday Things: Revised and Expanded Edition https://www.amazon.com/Design-Everyday-Things-Revised-Expanded-ebook/dp/B00E257T6C/ref=sr_1_1?crid=3LH185K7GWQF5&amp;dib=eyJ2IjoiMSJ9.gsNbTKuP5yRscAUenjRTw7whCOWfTn0rm2v3oyfmXF4bLa9azhngpqm3g3o7U1mvTqdu6CqdP6KTBdYOVlVhL_g0sP2UaXfWXRh9ku232hvRRu-mV9g7TyeBKRPijRq3zKjBzixw3FBaUJFGeDhL2E1zk0811RLSxjDGpATrW12yndL02gQKi56uZVVUYDm-cSI2XP2OkREB6gM4IbTGBUsLp6k2vClaK3Hz2HsAlIQ.mxJeFcAmRr_j_hpXaRCgCdw8qFBXCIPLNPHjfQbn6jo&amp;dib_tag=se&amp;keywords=dan+norman&amp;qid=1741070806&amp;sprefix=dan+norman%2Caps%2C283&amp;sr=8-1</li>
+<li>Sprint: How to Solve Big Problems and Test New Ideas in Just Five Days https://www.amazon.com/dp/B010MH1DAQ/ref=mes-dp?_encoding=UTF8&amp;pd_rd_w=Ti2Rc&amp;content-id=amzn1.sym.7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_p=7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_r=QN9F1KVTMP6E4AEK7R7T&amp;pd_rd_wg=JzXCk&amp;pd_rd_r=12d6c393-39af-46de-9496-6e46694ae908</li>
+<li>Empowered: Ordinary People, Extraordinary Products (Silicon Valley Product Group) https://www.amazon.com/dp/B08LPKRD5L/ref=mes-dp?_encoding=UTF8&amp;pd_rd_w=Hziom&amp;content-id=amzn1.sym.7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_p=7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_r=F5SJY3ZWMST8K81WRDGF&amp;pd_rd_wg=VokvJ&amp;pd_rd_r=fd1f8e0f-4bd4-4b7e-946d-4c202cf983fa</li>
+<li>Inspired: How to Create Tech Products Customers Love (Silicon Valley Product Group)  https://www.amazon.com/dp/B077NRB36N/ref=mes-dp?_encoding=UTF8&amp;pd_rd_w=OTfZf&amp;content-id=amzn1.sym.7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_p=7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_r=X4QZX80SJFD1HKWDKDVE&amp;pd_rd_wg=12KuC&amp;pd_rd_r=0ea2b47a-8635-409e-ab6b-ffd977fa6d66</li>
+<li>Continuous Discovery Habits: Discover Products that Create Customer Value and Business Value https://www.amazon.com/dp/B094PVB97X/ref=mes-dp?_encoding=UTF8&amp;pd_rd_w=GjdOX&amp;content-id=amzn1.sym.7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_p=7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_r=P47XMCYDD15GB703X20E&amp;pd_rd_wg=Uohqg&amp;pd_rd_r=29f522ec-4d0b-492b-9e33-974b7daa0082</li>
+<li>The Mom Test: How to talk to customers &amp; learn if your business is a good idea when everyone is lying to you https://www.amazon.com/dp/B01H4G2J1U/ref=mes-dp?_encoding=UTF8&amp;pd_rd_w=DdQm5&amp;content-id=amzn1.sym.7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_p=7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_r=3D0PNG6NYMPTW8T7MHR5&amp;pd_rd_wg=irshv&amp;pd_rd_r=e9ea45a9-67f6-4596-baf5-6e2f6882e72d</li>
+<li>The Lean Startup: How Today's Entrepreneurs Use Continuous Innovation to Create Radically Successful Businesses https://www.amazon.com/dp/B004J4XGN6/ref=mes-dp?_encoding=UTF8&amp;pd_rd_w=7yS2z&amp;content-id=amzn1.sym.7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_p=7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_r=SM6T9RE7BGAP6773J4YE&amp;pd_rd_wg=fNEBH&amp;pd_rd_r=b47ba69e-c1de-480f-99fd-81e36c6ba50d</li>
+<li>The Startup Owner's Manual: The Step-By-Step Guide for Building a Great Company https://www.amazon.com/dp/B084RHMYZM/ref=mes-dp?_encoding=UTF8&amp;pd_rd_w=gZxMC&amp;content-id=amzn1.sym.7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_p=7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_r=YD1GM12Z8RBMMPE219DV&amp;pd_rd_wg=XISXS&amp;pd_rd_r=4b3a1ef0-b0e2-4e49-bc72-c2fc05d9f87c</li>
+<li>UX Research: Practical Techniques for Designing Better https://www.amazon.com/UX-Research-Practical-Techniques-Designing-ebook/dp/B01N9BZ060/ref=sr_1_25?crid=3KQK712DUTZ87&amp;dib=eyJ2IjoiMSJ9.VMGD_DzawQPRJAmvIr-w8yXtXJaypvNWf5f_asjp9tqlTeb5LdbMUcM3OeUcQotelndqQDI2tvshjx7eGWTM6lSi9iogOinQMDRNFfzhI9Sv3TIUvsMEP_uGNl6QazOtn0l5PTeGoUXAXqsvU14WcFS826feSAJ1b6x5P-uwkoaDYm-ATh59wATyBjpUg2BUP0lQXp2AvqMSdcjwoEVkKHTEbAG7H05La8h8srvDmJw.6auj0qYgpqc8eBhUbroTii_eujiWriayfgmQHOgVQuE&amp;dib_tag=se&amp;keywords=ux+design&amp;qid=1741070976&amp;s=digital-text&amp;sprefix=ux+design%2Cdigital-text%2C172&amp;sr=1-25&amp;xpid=euB_C-7V7NDbF</li>
+<li>Lean UX: Designing Great Products with Agile Teams  https://www.amazon.com/dp/B09BH8RF8M/ref=mes-dp?_encoding=UTF8&amp;pd_rd_w=YqgoQ&amp;content-id=amzn1.sym.7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_p=7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_r=F5KHKKFVFB282R63721B&amp;pd_rd_wg=l8vTH&amp;pd_rd_r=7d750286-e82c-4524-ad2d-a6011d494787</li>
+<li>Outcomes Over Output: Why customer behavior is the key metric for business success https://www.amazon.com/dp/B07QJ1Y8Y5/ref=mes-dp?_encoding=UTF8&amp;pd_rd_w=fqCSF&amp;content-id=amzn1.sym.7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_p=7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_r=B3FTQ78PR89AHCBJZQZZ&amp;pd_rd_wg=gcGac&amp;pd_rd_r=1074ffcd-4c13-4189-bc3f-7df8f0229566</li>
+<li>The Jobs To Be Done Playbook: Align Your Markets, Organization, and Strategy Around Customer Needs https://www.amazon.com/dp/B07X1LQ45Y/ref=mes-dp?_encoding=UTF8&amp;pd_rd_w=7hKG1&amp;content-id=amzn1.sym.7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_p=7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_r=N42QSDC69D326PJ0GGSF&amp;pd_rd_wg=Lq02V&amp;pd_rd_r=954890a2-36f2-4d3c-95a6-860203d30c9a</li>
+<li>User Story Mapping: Discover the Whole Story, Build the Right Product  https://www.amazon.com/dp/B00NF07FHS/ref=mes-dp?_encoding=UTF8&amp;pd_rd_w=0nRxu&amp;content-id=amzn1.sym.7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_p=7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_r=5C17075YRY1ETAFCN40Z&amp;pd_rd_wg=icqUo&amp;pd_rd_r=9390e642-98d0-4c7f-b242-63d683daf565</li>
+<li>Lean Software Development: An Agile Toolkit: An Agile Toolkit (Agile Software Development Series) https://www.amazon.com/Lean-Software-Development-Agile-Toolkit-ebook/dp/B00HEL13HW/ref=sr_1_1?crid=14I8JFW6SOKOI&amp;dib=eyJ2IjoiMSJ9.JneXkk11X4Fn_rQ77mMEug3QWCrQdlPdMeXZztCFBeXZC0miW4PO2vsYbpIw0rKi9xYzQyhoqeFkVz811DAJwrgrnhjfP-Ajwrgj7C8wGf8yl4tEYwSW3cKUrVRspTOJxVm9_HpA2R9BOOAaqxbJyftMpXTL3v_RHye-pHpr_15IqBzwBaSGUHQN2QGs7xl4mVQ9N-5GEcIeiPJEsLJ8j8Rl5mY5-5GtWCBygfjo1x0.t3YSkHwY4rPrEODancSrXAV94-JGK4ZC2iEOGcv1BJE&amp;dib_tag=se&amp;keywords=lean+software&amp;qid=1741071116&amp;s=digital-text&amp;sprefix=lean+software%2Cdigital-text%2C163&amp;sr=1-1</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="security-infosec-resources.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="arch-doc-template.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="security-infosec-resources.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="arch-doc-template.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+
+    </div>
+    </body>
+</html>

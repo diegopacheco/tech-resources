@@ -1,0 +1,5 @@
+[book]
+authors = ["diegopacheco"]
+language = "en"
+src = "src"
+title = "Tech Resources"

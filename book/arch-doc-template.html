@@ -1,0 +1,353 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Architecture Documentation Template - Tech Resources</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "searchindex.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Tech Resources</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <i class="fa fa-spinner fa-spin"></i>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="-template"><a class="header" href="#-template">🧬 Template</a></h1>
+<p>This is a template created by Diego Pacheco which the goal to better describe a tought process which is called architecture. This should be used to learn software architecture and to pratice with use cases.</p>
+<h2 id="-structure"><a class="header" href="#-structure">🏛️ Structure</a></h2>
+<h3 id="1--problem-statement-and-context"><a class="header" href="#1--problem-statement-and-context">1. 🎯 Problem Statement and Context</a></h3>
+<p>What is the problem? What is the context of the problem?
+Example:</p>
+<pre><code>The problem is to sell shoes online, the main issue with buying shoes online is 
+how we will make our users buy shoes if they cannot make them fit? We would need
+to have a huge selectio and find ways to people find they perpect show at the 
+same time market teams would need to change campains all the time, we need to
+have way to make things fast and dynamic.
+</code></pre>
+<p>Recomended Reading: http://diego-pacheco.blogspot.com/2021/10/breaking-problems-down.html</p>
+<h3 id="2--goals"><a class="header" href="#2--goals">2. 🎯 Goals</a></h3>
+<p>List in form of bullets what goals do have. Here it's great to have 5-10 lines.
+Example:</p>
+<pre><code>1. Solution needs to be fast! Performance for all operations bellow ~1 ms.
+2. Security is non-negociable! Security at-rest, transite, threat analysis and review for by at least 3 different people.
+3. Composable solution. Users should be able to mix and match components instead of building all for scratch. ie: map component can be reused on counters component.
+4. Work offline: Re-consiliation, CRDTs are a must.
+5. Cloud-Native: All backend must be 100% cloud native, using open-source and should and should be cloud-agnostic, avoid propretaty apis.
+</code></pre>
+<p>Recommended Learning: http://diego-pacheco.blogspot.com/2020/05/education-vs-learning.html</p>
+<h3 id="3--non-goals"><a class="header" href="#3--non-goals">3. 🎯 Non-Goals</a></h3>
+<p>List in form of bullets what non-goals do have. Here it's great to have 5-10 lines.
+Example:</p>
+<pre><code>1. Be perfect: There will be mistakes, we dont want have automatic-rollback for everything.
+2. DynamoDB: Dynamo is expensive, we want be away from the DB.
+3. Serverless: Serverless has high latency, we do not want to use it.
+4. Mobile-native: We want have one single codebase, therefore we will not have 2 mobile code bases(ios and android) thefore be native is not a goal.
+5. ...
+</code></pre>
+<p>Recommended Reading: http://diego-pacheco.blogspot.com/2021/01/requirements-are-dangerous.html</p>
+<h3 id="-3-principles"><a class="header" href="#-3-principles">📐 3. Principles</a></h3>
+<p>List in form of bullets what design principles you want to be followed, it's great to have 5-10 lines.
+Example:</p>
+<pre><code>1. Low Coupling: We need to watch for coupling all times.
+2. Flexibility: Users should be able to customize behavior without leaking the internals of the system. Leverage interfaces.
+3. Observability: we should expose all key metrics on main features. Sucess and errors counters need to be exposed.
+4. Testability: Chaos engineering is a must and property testing. Testing should be done by engineers all times.
+5. Cache efficiency: Should leverage SSD caches and all forms of caches as much as possible.
+</code></pre>
+<p>Recommended Reading: http://diego-pacheco.blogspot.com/2018/01/stability-principles.html</p>
+<h3 id="-4-overall-diagrams"><a class="header" href="#-4-overall-diagrams">🏗️ 4. Overall Diagrams</a></h3>
+<p>Here there will be a bunch of diagrams, to understand the solution.</p>
+<pre><code>🗂️ 4.1 Overall architecture: Show the big picture, relationship between macro components.
+🗂️ 4.2 Deployment: Show the infra in a big picture. 
+🗂️ 4.3 Use Cases: Make 1 macro use case diagram that list the main capability that needs to be covered. 
+</code></pre>
+<p>Recommended Reading: http://diego-pacheco.blogspot.com/2020/10/uml-hidden-gems.html</p>
+<h3 id="-5-trade-offs"><a class="header" href="#-5-trade-offs">🧭 5. Trade-offs</a></h3>
+<p>List the tradeoffs analysis, comparing pros and cons for each major decision.
+Before you need list all your major decisions, them run tradeoffs on than.
+example:
+Major Decisions:</p>
+<pre><code>1. One mobile code base - should be (...)
+2. Reusable capability and low latency backends should be (...)
+3. Cache efficiency therefore should do (...)
+</code></pre>
+<p>Tradeoffs:</p>
+<pre><code>1. React Native vs (Flutter and Native)
+2. Serverless vs Microservices
+3. Redis vs Enbeded Caches
+</code></pre>
+<p>Each tradeoff line need to be:</p>
+<pre><code>PROS (+) 
+  * Benefit: Explanation that justify why the benefit is true.
+CONS (+)
+  * Problem: Explanation that justify why the problem is true.
+</code></pre>
+<p>PS: Be careful to not confuse problem with explanation.
+<BR/>Recommended reading: http://diego-pacheco.blogspot.com/2023/07/tradeoffs.html</p>
+<h3 id="-6-for-each-key-major-component"><a class="header" href="#-6-for-each-key-major-component">🌏 6. For each key major component</a></h3>
+<p>What is a majore component? A service, a lambda, a important ui, a generalized approach for all uis, a generazid approach for computing a workload, etc...</p>
+<pre><code>6.1 - Class Diagram              : classic uml diagram with attributes and methods
+6.2 - Contract Documentation     : Operations, Inputs and Outputs
+6.3 - Persistence Model          : Diagrams, Table structure, partiotioning, main queries.
+6.4 - Algorithms/Data Structures : Spesific algos that need to be used, along size with spesific data structures.
+</code></pre>
+<p>Exemplos of other components: Batch jobs, Events, 3rd Party Integrations, Streaming, ML Models, ChatBots, etc...</p>
+<p>Recommended Reading: http://diego-pacheco.blogspot.com/2018/05/internal-system-design-forgotten.html</p>
+<h3 id="-7-migrations"><a class="header" href="#-7-migrations">🖹 7. Migrations</a></h3>
+<p>IF Migrations are required describe the migrations strategy with proper diagrams, text and tradeoffs.</p>
+<h3 id="-8-testing-strategy"><a class="header" href="#-8-testing-strategy">🖹 8. Testing strategy</a></h3>
+<p>Explain the techniques, principles, types of tests and will be performaned, and spesific details how to mock data, stress test it, spesific chaos goals and assumptions.</p>
+<h3 id="-9-observability-strategy"><a class="header" href="#-9-observability-strategy">🖹 9. Observability strategy</a></h3>
+<p>Explain the techniques, principles,types of observability that will be used, key metrics, what would be logged and how to design proper dashboards and alerts.</p>
+<h3 id="-10-data-store-designs"><a class="header" href="#-10-data-store-designs">🖹 10. Data Store Designs</a></h3>
+<p>For each different kind of data store i.e (Postgres, Memcached, Elasticache, S3, Neo4J etc...) describe the schemas, what would be stored there and why, main queries, expectations on performance. Diagrams are welcome but you really need some dictionaries.</p>
+<h3 id="-11-technology-stack"><a class="header" href="#-11-technology-stack">🖹 11. Technology Stack</a></h3>
+<p>Describe your stack, what databases would be used, what servers, what kind of components, mobile/ui approach, general architecture components, frameworks and libs to be used or not be used and why.</p>
+<h3 id="-12-references"><a class="header" href="#-12-references">🖹 12. References</a></h3>
+<ul>
+<li>Architecture Anti-Patterns: https://architecture-antipatterns.tech/</li>
+<li>EIP https://www.enterpriseintegrationpatterns.com/</li>
+<li>SOA Patterns https://patterns.arcitura.com/soa-patterns</li>
+<li>API Patterns https://microservice-api-patterns.org/</li>
+<li>Anti-Patterns https://sourcemaking.com/antipatterns/software-development-antipatterns</li>
+<li>Refactoring Patterns https://sourcemaking.com/refactoring/refactorings</li>
+<li>Database Refactoring Patterns https://databaserefactoring.com/</li>
+<li>Data Modelling Redis https://redis.com/blog/nosql-data-modeling/</li>
+<li>Cloud Patterns https://docs.aws.amazon.com/prescriptive-guidance/latest/cloud-design-patterns/introduction.html</li>
+<li>12 Factors App https://12factor.net/</li>
+<li>Relational DB Patterns https://www.geeksforgeeks.org/design-patterns-for-relational-databases/</li>
+<li>Rendering Patterns https://www.patterns.dev/vanilla/rendering-patterns/</li>
+<li>REST API Design https://blog.stoplight.io/api-design-patterns-for-rest-web-services</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="ux-resources.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="poc-hero.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="ux-resources.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="poc-hero.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+
+    </div>
+    </body>
+</html>
