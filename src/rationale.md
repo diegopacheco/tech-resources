@@ -1,5 +1,7 @@
 ## Tech Study
 
+I have this repository since 2017. I always had this collections of resources to give "tips" and "directions" to people I was mentoring/coaching.
+
 #### How to use this gist?
 
 This gist contains lists of resources about JS, Mobile, Architecture/DevOps and Cloud Native. Each gist has a list <BR> 
