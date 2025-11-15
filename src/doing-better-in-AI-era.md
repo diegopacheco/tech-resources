@@ -4,12 +4,12 @@ Like it or not... AI is here and is creating disruption. Does not matter how goo
  * There is a overal reduction in the number of jobs available(https://www.trueup.io/job-trend).
  * There is a posibility that will reduce wages/salaries(https://thejobchicksinsideredge.substack.com/p/inside-amazons-offshoring-playbook). 
 
-<img src="../images/jobs-tech-2025.png" />
+<img src="images/jobs-tech-2025.png" />
 * Print screen from https://www.trueup.io/job-trend on 2025-JUL-21.
 <br/>
 <br/>
 
-<img src="../images/jobs-reductions-july-6-2025.png" />
+<img src="images/jobs-reductions-july-6-2025.png" />
 * Print screen from https://thejobchicksinsideredge.substack.com/p/inside-amazons-offshoring-playbook on tweet of JUL 6, 2025.
 <br/>
 <br/>
@@ -107,5 +107,5 @@ Engineers always assume they are doing great, but in reality they are not, becau
 <br/>
 <br/>
 
-<img src="../images/belive.jpg" />
+<img src="images/belive.jpg" />
 * Ted Lasso reference: https://www.imdb.com/title/tt10986410/ (highly recommended).

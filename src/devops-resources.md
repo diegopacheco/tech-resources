@@ -87,4 +87,4 @@
 
 ## Lean all this tools for Troubleshooting in Linux
 
-![Linux Performance / Troubleshooting ](../linux-perf-troubleshooting.png)
+![Linux Performance / Troubleshooting ](images/linux-perf-troubleshooting.png)

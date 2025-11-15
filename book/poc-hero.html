@@ -196,12 +196,12 @@ POC can be shallow but is important to have Deep POCs. Doing POCs must be a mind
 </ul>
 <h2 id="3-examples-of-good-deep-pocs"><a class="header" href="#3-examples-of-good-deep-pocs">3. Examples of Good Deep POCs</a></h2>
 <ul>
-<li>https://github.com/diegopacheco/servers-benchmark</li>
-<li>https://github.com/diegopacheco/java-pocs/tree/master/pocs/if-alternatives-fun</li>
-<li>https://github.com/diegopacheco/java-pocs/tree/master/pocs/java-21-spring-boot-3-async</li>
-<li>https://github.com/diegopacheco/Elegant.Objects</li>
-<li>https://github.com/diegopacheco/Elegant.Objects.vol.2</li>
-<li>https://github.com/diegopacheco/scala-playground/tree/master/scala-3.5-patterns</li>
+<li><a href="https://github.com/diegopacheco/servers-benchmark">Servers Benchmark</a></li>
+<li><a href="https://github.com/diegopacheco/java-pocs/tree/master/pocs/if-alternatives-fun">If Alternatives</a></li>
+<li><a href="https://github.com/diegopacheco/java-pocs/tree/master/pocs/java-21-spring-boot-3-async">Java 21 Spring Boot 3 Async</a></li>
+<li><a href="https://github.com/diegopacheco/Elegant.Objects">Elegant Objects</a></li>
+<li><a href="https://github.com/diegopacheco/Elegant.Objects.vol.2">Elegant Objects Vol 2</a></li>
+<li><a href="https://github.com/diegopacheco/scala-playground/tree/master/scala-3.5-patterns">Scala 3.5 Patterns</a></li>
 </ul>
 <h2 id="4-keep-in-mind"><a class="header" href="#4-keep-in-mind">4. Keep in mind</a></h2>
 <ul>
@@ -254,6 +254,22 @@ POC can be shallow but is important to have Deep POCs. Doing POCs must be a mind
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
 
 
 

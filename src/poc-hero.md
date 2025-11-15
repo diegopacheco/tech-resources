@@ -18,12 +18,12 @@ POC can be shallow but is important to have Deep POCs. Doing POCs must be a mind
 * Do not challenge yourself, if you know is too easy is not a good POC
 
 ## 3. Examples of Good Deep POCs
-* https://github.com/diegopacheco/servers-benchmark
-* https://github.com/diegopacheco/java-pocs/tree/master/pocs/if-alternatives-fun
-* https://github.com/diegopacheco/java-pocs/tree/master/pocs/java-21-spring-boot-3-async
-* https://github.com/diegopacheco/Elegant.Objects
-* https://github.com/diegopacheco/Elegant.Objects.vol.2
-* https://github.com/diegopacheco/scala-playground/tree/master/scala-3.5-patterns
+* [Servers Benchmark](https://github.com/diegopacheco/servers-benchmark)
+* [If Alternatives](https://github.com/diegopacheco/java-pocs/tree/master/pocs/if-alternatives-fun)
+* [Java 21 Spring Boot 3 Async](https://github.com/diegopacheco/java-pocs/tree/master/pocs/java-21-spring-boot-3-async)
+* [Elegant Objects](https://github.com/diegopacheco/Elegant.Objects)
+* [Elegant Objects Vol 2](https://github.com/diegopacheco/Elegant.Objects.vol.2)
+* [Scala 3.5 Patterns](https://github.com/diegopacheco/scala-playground/tree/master/scala-3.5-patterns)
 
 ## 4. Keep in mind
  * The more you pratice, the better you get.
