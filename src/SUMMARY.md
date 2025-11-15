@@ -2,7 +2,16 @@
 
 [Introduction](./README.md)
 
-# Resources
+# Philosophy & Culture
+
+- [Culture](./culture.md)
+- [Doing Better in AI Era](./doing-better-in-AI-era.md)
+- [QA Manifesto](./qa-manifesto.md)
+- [Questions](./questions.md)
+- [Simple Engineering Problems](./simple-engineering-problems.md)
+- [Values & Skills](./values-skills.md)
+
+# Self-Growth Resources
 
 - [Agile Development Resources](./agile-dev-resources.md)
 - [AI Resources](./ai-resources.md)
@@ -27,12 +36,3 @@
 - [Architecture Documentation Template](./arch-doc-template.md)
 - [POC Hero](./poc-hero.md)
 - [Presentation Hero](./presentation-hero.md)
-
-# Philosophy & Culture
-
-- [Culture](./culture.md)
-- [Doing Better in AI Era](./doing-better-in-AI-era.md)
-- [QA Manifesto](./qa-manifesto.md)
-- [Questions](./questions.md)
-- [Simple Engineering Problems](./simple-engineering-problems.md)
-- [Values & Skills](./values-skills.md)
