@@ -49,32 +49,13 @@ At the same time you can count on:
 
 ### Mandatory Readings
 
-Values and Skills
-https://github.com/diegopacheco/tech-resources/blob/master/values-skills.md
-
-Training like Pros
-https://diegopachecotech.substack.com/p/training-like-pros
-
-Shallow vs Deep Mindset
-https://diegopachecotech.substack.com/p/shallow-vs-deep-mindset
-
-Exceptations
-https://diegopachecotech.substack.com/p/expectations
-
-The Cost of Silence
-https://diegopachecotech.substack.com/p/the-cost-of-silence-eadc2b3139ba
-
-Ignoring Culture
-https://diegopachecotech.substack.com/p/ignoring-culture-cf3efdd2886c
-
-Doing better on AI Era
-https://github.com/diegopacheco/tech-resources/blob/master/doing-better-in-AI-era.md
-
-The Issue with Feedbacks
-https://diegopachecotech.substack.com/p/the-issue-with-feedbacks
-
-Quality Needs to be Managed
-https://diegopachecotech.substack.com/p/quality-needs-to-be-managed
-
-Lean & Agile Videos
-https://diegopachecotech.substack.com/p/lean-agile-videos
+* [Values and Skills](./values-skills.md)
+* [Training like Pros](https://diegopachecotech.substack.com/p/training-like-pros)
+* [Shallow vs Deep Mindset](https://diegopachecotech.substack.com/p/shallow-vs-deep-mindset)
+* [Exceptations](https://diegopachecotech.substack.com/p/expectations)
+* [The Cost of Silence](https://diegopachecotech.substack.com/p/the-cost-of-silence-eadc2b3139ba)
+* [Ignoring Culture](https://diegopachecotech.substack.com/p/ignoring-culture-cf3efdd2886c)
+* [Doing better on AI Era](./doing-better-in-AI-era.md)
+* [The Issue with Feedbacks](https://diegopachecotech.substack.com/p/the-issue-with-feedbacks)
+* [Quality Needs to be Managed](https://diegopachecotech.substack.com/p/quality-needs-to-be-managed)
+* [Lean & Agile Videos](https://diegopachecotech.substack.com/p/lean-agile-videos)

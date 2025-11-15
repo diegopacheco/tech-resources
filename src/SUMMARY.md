@@ -4,12 +4,12 @@
 
 # Philosophy & Culture
 
+- [Values & Skills](./values-skills.md)
 - [Culture](./culture.md)
-- [Doing Better in AI Era](./doing-better-in-AI-era.md)
 - [QA Manifesto](./qa-manifesto.md)
 - [Questions](./questions.md)
 - [Simple Engineering Problems](./simple-engineering-problems.md)
-- [Values & Skills](./values-skills.md)
+- [Doing Better in AI Era](./doing-better-in-AI-era.md)
 
 # Guides & Templates
 

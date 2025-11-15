@@ -76,22 +76,14 @@
 
 ## All the Things Devops
 
-Leanr DevOps The Hard Way by Diego Pacheco
-https://trello.com/b/ZFVZz4Cd/devops-learning-the-hard-way
+* [Leanr DevOps The Hard Way by Diego Pacheco](https://trello.com/b/ZFVZz4Cd/devops-learning-the-hard-way)
 
 ## Useful Information
 
-Cloud Egress Costs
-https://getdeploying.com/reference/data-egress
-
-AWS Instances Cost
-https://instances.vantage.sh/
-
-AWS Network Guide
-https://www.ducktyped.org/p/a-mini-book-on-aws-networking-introduction
-
-S3 Scalability
-https://bigdata.2minutestreaming.com/p/how-aws-s3-scales-with-tens-of-millions-of-hard-drives
+* [Cloud Egress Costs](https://getdeploying.com/reference/data-egress)
+* [AWS Instances Cost](https://instances.vantage.sh/)
+* [AWS Network Guide](https://www.ducktyped.org/p/a-mini-book-on-aws-networking-introduction)
+* [S3 Scalability](https://bigdata.2minutestreaming.com/p/how-aws-s3-scales-with-tens-of-millions-of-hard-drives)
 
 ## Lean all this tools for Troubleshooting in Linux
 

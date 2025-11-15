@@ -18,27 +18,27 @@ of technologies that you can do POC and CODE practice, also with a list of usefu
 * You need make sure you got concepts right, validate with more experienced engineers. 
 * Progress is best tracked in Weekly Coaching Sessions. 
 * Balance is always welcome. You might use the Breath/Deepth method where 90% time invested on main topic and 10% on random.
-* No matter your specific field like JS or CN you should read all this book https://github.com/diegopacheco/tech-resources/blob/master/agile-dev-resources.md
+* No matter your specific field like JS or CN you should read all this book: [Agile Dev Resources](./agile-dev-resources.md)
 
 ### JS
 
-https://github.com/diegopacheco/tech-resources/blob/master/js-frontend-resources.md
+[JavaScript Frontend Resources](./js-frontend-resources.md)
 
 ### Mobile
 
-https://github.com/diegopacheco/tech-resources/blob/master/mobile-resources.md
+[Mobile Resources](./mobile-resources.md)
 
 ### Cloud Native
 
-https://github.com/diegopacheco/tech-resources/blob/master/cloud-native-resources.md
+[Cloud Native Resources](./cloud-native-resources.md)
 
 ### Software Architecture | DevOps Engineering
 
-https://github.com/diegopacheco/tech-resources/blob/master/arch-devops-resources.md
+[Architecture DevOps Resources](./arch-devops-resources.md)
 
 ### GCP
 
-https://github.com/diegopacheco/tech-resources/blob/master/GCP-resources.md
+[GCP Resources](./GCP-resources.md)
 
 #### POC Ideas
 
