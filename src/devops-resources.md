@@ -95,4 +95,4 @@ https://bigdata.2minutestreaming.com/p/how-aws-s3-scales-with-tens-of-millions-o
 
 ## Lean all this tools for Troubleshooting in Linux
 
-![Linux Performance / Troubleshooting ](linux-perf-troubleshooting.png)
+![Linux Performance / Troubleshooting ](../linux-perf-troubleshooting.png)

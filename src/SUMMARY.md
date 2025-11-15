@@ -1,6 +1,6 @@
 # Summary
 
-[Introduction](./README.md)
+[Rationale](./rationale.md)
 
 # Philosophy & Culture
 
@@ -10,6 +10,12 @@
 - [Questions](./questions.md)
 - [Simple Engineering Problems](./simple-engineering-problems.md)
 - [Values & Skills](./values-skills.md)
+
+# Guides & Templates
+
+- [Architecture Documentation Template](./arch-doc-template.md)
+- [POC Hero](./poc-hero.md)
+- [Presentation Hero](./presentation-hero.md)
 
 # Self-Growth Resources
 
@@ -30,9 +36,3 @@
 - [Scala Resources](./scala-resources.md)
 - [Security InfoSec Resources](./security-infosec-resources.md)
 - [UX Resources](./ux-resources.md)
-
-# Guides & Templates
-
-- [Architecture Documentation Template](./arch-doc-template.md)
-- [POC Hero](./poc-hero.md)
-- [Presentation Hero](./presentation-hero.md)

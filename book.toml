@@ -3,3 +3,6 @@ authors = ["diegopacheco"]
 language = "en"
 src = "src"
 title = "Tech Resources"
+
+[output.html]
+default-theme = "light"

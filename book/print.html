@@ -321,11 +321,11 @@ https://diegopachecotech.substack.com/p/lean-agile-videos</p>
 <li>There is a overal reduction in the number of jobs available(https://www.trueup.io/job-trend).</li>
 <li>There is a posibility that will reduce wages/salaries(https://thejobchicksinsideredge.substack.com/p/inside-amazons-offshoring-playbook).</li>
 </ul>
-<img src="images/jobs-tech-2025.png" />
+<img src="../images/jobs-tech-2025.png" />
 * Print screen from https://www.trueup.io/job-trend on 2025-JUL-21.
 <br/>
 <br/>
-<img src="images/jobs-reductions-july-6-2025.png" />
+<img src="../images/jobs-reductions-july-6-2025.png" />
 * Print screen from https://thejobchicksinsideredge.substack.com/p/inside-amazons-offshoring-playbook on tweet of JUL 6, 2025.
 <br/>
 <br/>
@@ -417,7 +417,7 @@ https://diegopachecotech.substack.com/p/lean-agile-videos</p>
 </ul>
 <br/>
 <br/>
-<img src="images/belive.jpg" />
+<img src="../images/belive.jpg" />
 * Ted Lasso reference: https://www.imdb.com/title/tt10986410/ (highly recommended).<div style="break-before: page; page-break-before: always;"></div><h1 id="diego-pachecos-qa-manifesto"><a class="header" href="#diego-pachecos-qa-manifesto">Diego Pacheco's QA Manifesto</a></h1>
 <h2 id="summary"><a class="header" href="#summary">Summary</a></h2>
 <pre><code>1. QA is a engineer
@@ -824,6 +824,246 @@ The exterminator can walk from the bottown left corner to the top right corner t
 <li>Write POCs</li>
 <li>Write Tests</li>
 <li></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="-template"><a class="header" href="#-template">🧬 Template</a></h1>
+<p>This is a template created by Diego Pacheco which the goal to better describe a tought process which is called architecture. This should be used to learn software architecture and to pratice with use cases.</p>
+<h2 id="-structure"><a class="header" href="#-structure">🏛️ Structure</a></h2>
+<h3 id="1--problem-statement-and-context"><a class="header" href="#1--problem-statement-and-context">1. 🎯 Problem Statement and Context</a></h3>
+<p>What is the problem? What is the context of the problem?
+Example:</p>
+<pre><code>The problem is to sell shoes online, the main issue with buying shoes online is 
+how we will make our users buy shoes if they cannot make them fit? We would need
+to have a huge selectio and find ways to people find they perpect show at the 
+same time market teams would need to change campains all the time, we need to
+have way to make things fast and dynamic.
+</code></pre>
+<p>Recomended Reading: http://diego-pacheco.blogspot.com/2021/10/breaking-problems-down.html</p>
+<h3 id="2--goals"><a class="header" href="#2--goals">2. 🎯 Goals</a></h3>
+<p>List in form of bullets what goals do have. Here it's great to have 5-10 lines.
+Example:</p>
+<pre><code>1. Solution needs to be fast! Performance for all operations bellow ~1 ms.
+2. Security is non-negociable! Security at-rest, transite, threat analysis and review for by at least 3 different people.
+3. Composable solution. Users should be able to mix and match components instead of building all for scratch. ie: map component can be reused on counters component.
+4. Work offline: Re-consiliation, CRDTs are a must.
+5. Cloud-Native: All backend must be 100% cloud native, using open-source and should and should be cloud-agnostic, avoid propretaty apis.
+</code></pre>
+<p>Recommended Learning: http://diego-pacheco.blogspot.com/2020/05/education-vs-learning.html</p>
+<h3 id="3--non-goals"><a class="header" href="#3--non-goals">3. 🎯 Non-Goals</a></h3>
+<p>List in form of bullets what non-goals do have. Here it's great to have 5-10 lines.
+Example:</p>
+<pre><code>1. Be perfect: There will be mistakes, we dont want have automatic-rollback for everything.
+2. DynamoDB: Dynamo is expensive, we want be away from the DB.
+3. Serverless: Serverless has high latency, we do not want to use it.
+4. Mobile-native: We want have one single codebase, therefore we will not have 2 mobile code bases(ios and android) thefore be native is not a goal.
+5. ...
+</code></pre>
+<p>Recommended Reading: http://diego-pacheco.blogspot.com/2021/01/requirements-are-dangerous.html</p>
+<h3 id="-3-principles"><a class="header" href="#-3-principles">📐 3. Principles</a></h3>
+<p>List in form of bullets what design principles you want to be followed, it's great to have 5-10 lines.
+Example:</p>
+<pre><code>1. Low Coupling: We need to watch for coupling all times.
+2. Flexibility: Users should be able to customize behavior without leaking the internals of the system. Leverage interfaces.
+3. Observability: we should expose all key metrics on main features. Sucess and errors counters need to be exposed.
+4. Testability: Chaos engineering is a must and property testing. Testing should be done by engineers all times.
+5. Cache efficiency: Should leverage SSD caches and all forms of caches as much as possible.
+</code></pre>
+<p>Recommended Reading: http://diego-pacheco.blogspot.com/2018/01/stability-principles.html</p>
+<h3 id="-4-overall-diagrams"><a class="header" href="#-4-overall-diagrams">🏗️ 4. Overall Diagrams</a></h3>
+<p>Here there will be a bunch of diagrams, to understand the solution.</p>
+<pre><code>🗂️ 4.1 Overall architecture: Show the big picture, relationship between macro components.
+🗂️ 4.2 Deployment: Show the infra in a big picture. 
+🗂️ 4.3 Use Cases: Make 1 macro use case diagram that list the main capability that needs to be covered. 
+</code></pre>
+<p>Recommended Reading: http://diego-pacheco.blogspot.com/2020/10/uml-hidden-gems.html</p>
+<h3 id="-5-trade-offs"><a class="header" href="#-5-trade-offs">🧭 5. Trade-offs</a></h3>
+<p>List the tradeoffs analysis, comparing pros and cons for each major decision.
+Before you need list all your major decisions, them run tradeoffs on than.
+example:
+Major Decisions:</p>
+<pre><code>1. One mobile code base - should be (...)
+2. Reusable capability and low latency backends should be (...)
+3. Cache efficiency therefore should do (...)
+</code></pre>
+<p>Tradeoffs:</p>
+<pre><code>1. React Native vs (Flutter and Native)
+2. Serverless vs Microservices
+3. Redis vs Enbeded Caches
+</code></pre>
+<p>Each tradeoff line need to be:</p>
+<pre><code>PROS (+) 
+  * Benefit: Explanation that justify why the benefit is true.
+CONS (+)
+  * Problem: Explanation that justify why the problem is true.
+</code></pre>
+<p>PS: Be careful to not confuse problem with explanation.
+<BR/>Recommended reading: http://diego-pacheco.blogspot.com/2023/07/tradeoffs.html</p>
+<h3 id="-6-for-each-key-major-component"><a class="header" href="#-6-for-each-key-major-component">🌏 6. For each key major component</a></h3>
+<p>What is a majore component? A service, a lambda, a important ui, a generalized approach for all uis, a generazid approach for computing a workload, etc...</p>
+<pre><code>6.1 - Class Diagram              : classic uml diagram with attributes and methods
+6.2 - Contract Documentation     : Operations, Inputs and Outputs
+6.3 - Persistence Model          : Diagrams, Table structure, partiotioning, main queries.
+6.4 - Algorithms/Data Structures : Spesific algos that need to be used, along size with spesific data structures.
+</code></pre>
+<p>Exemplos of other components: Batch jobs, Events, 3rd Party Integrations, Streaming, ML Models, ChatBots, etc...</p>
+<p>Recommended Reading: http://diego-pacheco.blogspot.com/2018/05/internal-system-design-forgotten.html</p>
+<h3 id="-7-migrations"><a class="header" href="#-7-migrations">🖹 7. Migrations</a></h3>
+<p>IF Migrations are required describe the migrations strategy with proper diagrams, text and tradeoffs.</p>
+<h3 id="-8-testing-strategy"><a class="header" href="#-8-testing-strategy">🖹 8. Testing strategy</a></h3>
+<p>Explain the techniques, principles, types of tests and will be performaned, and spesific details how to mock data, stress test it, spesific chaos goals and assumptions.</p>
+<h3 id="-9-observability-strategy"><a class="header" href="#-9-observability-strategy">🖹 9. Observability strategy</a></h3>
+<p>Explain the techniques, principles,types of observability that will be used, key metrics, what would be logged and how to design proper dashboards and alerts.</p>
+<h3 id="-10-data-store-designs"><a class="header" href="#-10-data-store-designs">🖹 10. Data Store Designs</a></h3>
+<p>For each different kind of data store i.e (Postgres, Memcached, Elasticache, S3, Neo4J etc...) describe the schemas, what would be stored there and why, main queries, expectations on performance. Diagrams are welcome but you really need some dictionaries.</p>
+<h3 id="-11-technology-stack"><a class="header" href="#-11-technology-stack">🖹 11. Technology Stack</a></h3>
+<p>Describe your stack, what databases would be used, what servers, what kind of components, mobile/ui approach, general architecture components, frameworks and libs to be used or not be used and why.</p>
+<h3 id="-12-references"><a class="header" href="#-12-references">🖹 12. References</a></h3>
+<ul>
+<li>Architecture Anti-Patterns: https://architecture-antipatterns.tech/</li>
+<li>EIP https://www.enterpriseintegrationpatterns.com/</li>
+<li>SOA Patterns https://patterns.arcitura.com/soa-patterns</li>
+<li>API Patterns https://microservice-api-patterns.org/</li>
+<li>Anti-Patterns https://sourcemaking.com/antipatterns/software-development-antipatterns</li>
+<li>Refactoring Patterns https://sourcemaking.com/refactoring/refactorings</li>
+<li>Database Refactoring Patterns https://databaserefactoring.com/</li>
+<li>Data Modelling Redis https://redis.com/blog/nosql-data-modeling/</li>
+<li>Cloud Patterns https://docs.aws.amazon.com/prescriptive-guidance/latest/cloud-design-patterns/introduction.html</li>
+<li>12 Factors App https://12factor.net/</li>
+<li>Relational DB Patterns https://www.geeksforgeeks.org/design-patterns-for-relational-databases/</li>
+<li>Rendering Patterns https://www.patterns.dev/vanilla/rendering-patterns/</li>
+<li>REST API Design https://blog.stoplight.io/api-design-patterns-for-rest-web-services</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="0-how-to-do-a-good-poc"><a class="header" href="#0-how-to-do-a-good-poc">0. How to do a good POC</a></h2>
+<p>Proof of Concept (POC) is a important tool, it's like a lab where you should be doing experiments.
+POC allow you to learn something about a programing language, approach, school of tought, library or even to validate some crazy idea/hack.
+POC can be shallow but is important to have Deep POCs. Doing POCs must be a mindset, something you do everyday.</p>
+<h2 id="1-how-to-go-deep-in-a-poc"><a class="header" href="#1-how-to-go-deep-in-a-poc">1. How to go Deep in a POC?</a></h2>
+<ul>
+<li>Debug the code (write down classes names, make diagrams) do it multiple times</li>
+<li>Write down code that test, simulate or exaserbate the problem or target of your poc</li>
+<li>Do Research, see what other people do, are there any patterns? or idiomatic ways of doing this?</li>
+<li>Read the documentation, read book, avoid tutotials, read the source code</li>
+<li>Do experiments, test the API in several different conditions and scenarios of sucess and error see what happens</li>
+<li>Reading the source code of a framework or library is a must, is how you can understand how it works and how to use it</li>
+</ul>
+<h2 id="2-what-not-todo-in-poc"><a class="header" href="#2-what-not-todo-in-poc">2. What NOT todo in POC?</a></h2>
+<ul>
+<li>Be shallow all the time</li>
+<li>Just call methods</li>
+<li>Do not challenge yourself, if you know is too easy is not a good POC</li>
+</ul>
+<h2 id="3-examples-of-good-deep-pocs"><a class="header" href="#3-examples-of-good-deep-pocs">3. Examples of Good Deep POCs</a></h2>
+<ul>
+<li>https://github.com/diegopacheco/servers-benchmark</li>
+<li>https://github.com/diegopacheco/java-pocs/tree/master/pocs/if-alternatives-fun</li>
+<li>https://github.com/diegopacheco/java-pocs/tree/master/pocs/java-21-spring-boot-3-async</li>
+<li>https://github.com/diegopacheco/Elegant.Objects</li>
+<li>https://github.com/diegopacheco/Elegant.Objects.vol.2</li>
+<li>https://github.com/diegopacheco/scala-playground/tree/master/scala-3.5-patterns</li>
+</ul>
+<h2 id="4-keep-in-mind"><a class="header" href="#4-keep-in-mind">4. Keep in mind</a></h2>
+<ul>
+<li>The more you pratice, the better you get.</li>
+<li>POCs comparing libraries, approaches, languages, patterns help a lot to learn and master tecnhiques.</li>
+<li>Make sure it gets harder, no matter if you need to do 10-100x to understand. Repetition is key.</li>
+<li>You are only fooling yourself if you just go shallow all the time.</li>
+<li>Doing Shallow pocs is not neccesary bad or wrong, but you should be doing Deep POCs as well.</li>
+<li>Challenge yourself, do not be afraid to fail, is part of the learning process.</li>
+<li>Consider doing crazy things like: a parser, a compiler, a framework, a library, maybe even a new language.</li>
+<li>Remember learning with code is a long term game and a mindset, so keep doing it everyday.</li>
+</ul>
+<h2 id="5-to-improve"><a class="header" href="#5-to-improve">5. To improve</a></h2>
+<ul>
+<li>Share the code with others ask feedback</li>
+<li>look for different and better ways to do the same thing</li>
+<li>Be curious, ask questions, do not be afraid to ask for help</li>
+<li>Go read the source code of big projects, is a great way to learn like: Java, Spring, Netty, Linux, React, Nodejs, etc.</li>
+<li>Document your POC, write text exmplaning what you did a why and why is impotant.</li>
+<li>Good POCs take hours, days and weeks and thats fine, the more time you invest the better you get.</li>
+<li>Make doing POCs a habit, do it everyday, is like going to the gym, you need to do it everyday to get better.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="presentation-hero"><a class="header" href="#presentation-hero">Presentation Hero</a></h1>
+<p>Read this multiple times and follow strickly and will be awesome at presenting.</p>
+<h2 id="before-you-start"><a class="header" href="#before-you-start">Before you start</a></h2>
+<p>Preparation is everythinng. When should I start preparing? 30 days before your presentation day. Why you need start 30 days ahead?</p>
+<ul>
+<li>Because you will need time to research</li>
+<li>Because you will get feedback and will have homework</li>
+<li>Because even if your deck is amazing, you need do multiple dry runs before presenting.</li>
+</ul>
+<p>How many dry runs is enought?</p>
+<ul>
+<li>There is not limit, more preparation is always better.</li>
+<li>You must feel confident and be able to deliver on time</li>
+<li>You should dry run so many times that you can present without slides (presentation zen idea).</li>
+<li>Usually 3 to 5 dry runs is enough</li>
+</ul>
+<h2 id="how-to-deliver-a-great-presentation"><a class="header" href="#how-to-deliver-a-great-presentation">How to deliver a great presentation</a></h2>
+<p>A great presentation is just an output of a well-prepared research, poc or piece of work.
+There is no way you will do an amazing presentation if you the content is not good.
+A presentation is just an excuse, a reason or a motivation if you will do learn someeting deep and deliver an awesome experience.
+When you are presenting, you are delivering a story, think about order of things.</p>
+<h2 id="0-what-you-should-never-ever-do"><a class="header" href="#0-what-you-should-never-ever-do">0. What you should never (ever) do</a></h2>
+<ul>
+<li>Present content you don't understand</li>
+<li>You DONT know DEEPLY all the things you are presenting, all the strings, all the algos, all the techniques, all technologies, every single thing you don't master it.</li>
+<li>Talk about things you did not run a poc or some experiment or have experience with in production</li>
+<li>Have a lot of text and just read all time</li>
+<li>Have a white background with or poor color scheme.</li>
+<li>Splash code in text, dont show code without syntax highlight</li>
+<li>Do no sufer in silence, ask for help</li>
+<li>Dont do the presentation for compliance, do your best, use as a tool for continnuous learning and improvement</li>
+</ul>
+<h2 id="1-what-you-should-always-do"><a class="header" href="#1-what-you-should-always-do">1. What you should always do</a></h2>
+<ul>
+<li>Research
+<ul>
+<li>Do POCs</li>
+<li>Debug</li>
+<li>Google it</li>
+<li>Read about it</li>
+</ul>
+</li>
+<li>Give Context: What it is? How it works? Showing arch diagrams always good.</li>
+<li>Always have trade-offs (PROS and CONS)</li>
+<li>Comparisons with similar solutins and options always good i.e talking about Kafka, compare with RabbitMQ, Kinesis, ActiveMQ, etc.</li>
+<li>CODE</li>
+<li>Live-demo (which can be recorded)</li>
+</ul>
+<h2 id="2-how-to-prepare"><a class="header" href="#2-how-to-prepare">2. How to prepare</a></h2>
+<ul>
+<li>Record you presenting to your self like a unit test (do that 3 to 5 times) this is also called Dry Run</li>
+<li>Show to someone with more experience - get feedback</li>
+<li>The more you present, the better you get, pratice is the key to success</li>
+<li>Dry Runs: Do many dry runs as necessary, record a video so you see youself presenting and what is working or not, get feedback from other people.</li>
+</ul>
+<h2 id="3-how-to-create-a-good-presentation-structure"><a class="header" href="#3-how-to-create-a-good-presentation-structure">3. How to create a good presentation structure</a></h2>
+<ol>
+<li>What: Explain what it thing you are presenting.</li>
+<li>How: Explain how it works and how is the architecture under the hood.</li>
+<li>Trade-offs: Explain the trade-offs, pros and cons.</li>
+<li>Code/DEMO: Show code, if possible, live demo is always good.</li>
+<li>Comparisons: Show comparisons with similar solutions.</li>
+</ol>
+<h2 id="4-how-to-deliver"><a class="header" href="#4-how-to-deliver">4. How to deliver</a></h2>
+<ul>
+<li>Be clam</li>
+<li>Dont rush</li>
+<li>Mind the time (have a clock in front of you) or in yoir phone</li>
+<li>Ask for feedback after the presentation</li>
+</ul>
+<h2 id="5-how-to-improve"><a class="header" href="#5-how-to-improve">5. How to improve</a></h2>
+<ul>
+<li>Read the book <code>Presentation Zen</code> by Garr Reynolds</li>
+<li>Try to add some humor, data, facts or intersting trivia is always fun</li>
+<li>Watch other people presenting</li>
+<li>Use google for research, read books, read papers, debug the code, do multiple pocs.</li>
+<li>Book time in your agenda to prepare the presentation (review and dry-run too)</li>
+</ul>
+<h2 id="6-when-you-learn-to-how-to-present-well"><a class="header" href="#6-when-you-learn-to-how-to-present-well">6. When you learn to how to present well...</a></h2>
+<ul>
+<li>You will comunicate better</li>
+<li>You will sell better</li>
+<li>You will be more confident</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h2 id="agile-dev-resources"><a class="header" href="#agile-dev-resources">Agile Dev Resources</a></h2>
 <h2 id="why-scrum-sucks"><a class="header" href="#why-scrum-sucks">Why Scrum Sucks</a></h2>
@@ -1511,7 +1751,7 @@ https://www.ducktyped.org/p/a-mini-book-on-aws-networking-introduction</p>
 <p>S3 Scalability
 https://bigdata.2minutestreaming.com/p/how-aws-s3-scales-with-tens-of-millions-of-hard-drives</p>
 <h2 id="lean-all-this-tools-for-troubleshooting-in-linux"><a class="header" href="#lean-all-this-tools-for-troubleshooting-in-linux">Lean all this tools for Troubleshooting in Linux</a></h2>
-<p><img src="linux-perf-troubleshooting.png" alt="Linux Performance / Troubleshooting " /></p>
+<p><img src="../linux-perf-troubleshooting.png" alt="Linux Performance / Troubleshooting " /></p>
 <div style="break-before: page; page-break-before: always;"></div><h2 id="gcp-resources"><a class="header" href="#gcp-resources">GCP Resources</a></h2>
 <p><img src="https://cloud.google.com/solutions/images/data-lifecycle-1.svg" alt="GCP" /></p>
 <h4 id="important-topics-3"><a class="header" href="#important-topics-3">Important Topics</a></h4>
@@ -2813,246 +3053,6 @@ https://www.amazon.com/Dont-Make-Think-Revisited-Usability-ebook/dp/B00HJUBRPG/r
 <li>The Jobs To Be Done Playbook: Align Your Markets, Organization, and Strategy Around Customer Needs https://www.amazon.com/dp/B07X1LQ45Y/ref=mes-dp?_encoding=UTF8&amp;pd_rd_w=7hKG1&amp;content-id=amzn1.sym.7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_p=7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_r=N42QSDC69D326PJ0GGSF&amp;pd_rd_wg=Lq02V&amp;pd_rd_r=954890a2-36f2-4d3c-95a6-860203d30c9a</li>
 <li>User Story Mapping: Discover the Whole Story, Build the Right Product  https://www.amazon.com/dp/B00NF07FHS/ref=mes-dp?_encoding=UTF8&amp;pd_rd_w=0nRxu&amp;content-id=amzn1.sym.7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_p=7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_r=5C17075YRY1ETAFCN40Z&amp;pd_rd_wg=icqUo&amp;pd_rd_r=9390e642-98d0-4c7f-b242-63d683daf565</li>
 <li>Lean Software Development: An Agile Toolkit: An Agile Toolkit (Agile Software Development Series) https://www.amazon.com/Lean-Software-Development-Agile-Toolkit-ebook/dp/B00HEL13HW/ref=sr_1_1?crid=14I8JFW6SOKOI&amp;dib=eyJ2IjoiMSJ9.JneXkk11X4Fn_rQ77mMEug3QWCrQdlPdMeXZztCFBeXZC0miW4PO2vsYbpIw0rKi9xYzQyhoqeFkVz811DAJwrgrnhjfP-Ajwrgj7C8wGf8yl4tEYwSW3cKUrVRspTOJxVm9_HpA2R9BOOAaqxbJyftMpXTL3v_RHye-pHpr_15IqBzwBaSGUHQN2QGs7xl4mVQ9N-5GEcIeiPJEsLJ8j8Rl5mY5-5GtWCBygfjo1x0.t3YSkHwY4rPrEODancSrXAV94-JGK4ZC2iEOGcv1BJE&amp;dib_tag=se&amp;keywords=lean+software&amp;qid=1741071116&amp;s=digital-text&amp;sprefix=lean+software%2Cdigital-text%2C163&amp;sr=1-1</li>
-</ul>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="-template"><a class="header" href="#-template">🧬 Template</a></h1>
-<p>This is a template created by Diego Pacheco which the goal to better describe a tought process which is called architecture. This should be used to learn software architecture and to pratice with use cases.</p>
-<h2 id="-structure"><a class="header" href="#-structure">🏛️ Structure</a></h2>
-<h3 id="1--problem-statement-and-context"><a class="header" href="#1--problem-statement-and-context">1. 🎯 Problem Statement and Context</a></h3>
-<p>What is the problem? What is the context of the problem?
-Example:</p>
-<pre><code>The problem is to sell shoes online, the main issue with buying shoes online is 
-how we will make our users buy shoes if they cannot make them fit? We would need
-to have a huge selectio and find ways to people find they perpect show at the 
-same time market teams would need to change campains all the time, we need to
-have way to make things fast and dynamic.
-</code></pre>
-<p>Recomended Reading: http://diego-pacheco.blogspot.com/2021/10/breaking-problems-down.html</p>
-<h3 id="2--goals"><a class="header" href="#2--goals">2. 🎯 Goals</a></h3>
-<p>List in form of bullets what goals do have. Here it's great to have 5-10 lines.
-Example:</p>
-<pre><code>1. Solution needs to be fast! Performance for all operations bellow ~1 ms.
-2. Security is non-negociable! Security at-rest, transite, threat analysis and review for by at least 3 different people.
-3. Composable solution. Users should be able to mix and match components instead of building all for scratch. ie: map component can be reused on counters component.
-4. Work offline: Re-consiliation, CRDTs are a must.
-5. Cloud-Native: All backend must be 100% cloud native, using open-source and should and should be cloud-agnostic, avoid propretaty apis.
-</code></pre>
-<p>Recommended Learning: http://diego-pacheco.blogspot.com/2020/05/education-vs-learning.html</p>
-<h3 id="3--non-goals"><a class="header" href="#3--non-goals">3. 🎯 Non-Goals</a></h3>
-<p>List in form of bullets what non-goals do have. Here it's great to have 5-10 lines.
-Example:</p>
-<pre><code>1. Be perfect: There will be mistakes, we dont want have automatic-rollback for everything.
-2. DynamoDB: Dynamo is expensive, we want be away from the DB.
-3. Serverless: Serverless has high latency, we do not want to use it.
-4. Mobile-native: We want have one single codebase, therefore we will not have 2 mobile code bases(ios and android) thefore be native is not a goal.
-5. ...
-</code></pre>
-<p>Recommended Reading: http://diego-pacheco.blogspot.com/2021/01/requirements-are-dangerous.html</p>
-<h3 id="-3-principles"><a class="header" href="#-3-principles">📐 3. Principles</a></h3>
-<p>List in form of bullets what design principles you want to be followed, it's great to have 5-10 lines.
-Example:</p>
-<pre><code>1. Low Coupling: We need to watch for coupling all times.
-2. Flexibility: Users should be able to customize behavior without leaking the internals of the system. Leverage interfaces.
-3. Observability: we should expose all key metrics on main features. Sucess and errors counters need to be exposed.
-4. Testability: Chaos engineering is a must and property testing. Testing should be done by engineers all times.
-5. Cache efficiency: Should leverage SSD caches and all forms of caches as much as possible.
-</code></pre>
-<p>Recommended Reading: http://diego-pacheco.blogspot.com/2018/01/stability-principles.html</p>
-<h3 id="-4-overall-diagrams"><a class="header" href="#-4-overall-diagrams">🏗️ 4. Overall Diagrams</a></h3>
-<p>Here there will be a bunch of diagrams, to understand the solution.</p>
-<pre><code>🗂️ 4.1 Overall architecture: Show the big picture, relationship between macro components.
-🗂️ 4.2 Deployment: Show the infra in a big picture. 
-🗂️ 4.3 Use Cases: Make 1 macro use case diagram that list the main capability that needs to be covered. 
-</code></pre>
-<p>Recommended Reading: http://diego-pacheco.blogspot.com/2020/10/uml-hidden-gems.html</p>
-<h3 id="-5-trade-offs"><a class="header" href="#-5-trade-offs">🧭 5. Trade-offs</a></h3>
-<p>List the tradeoffs analysis, comparing pros and cons for each major decision.
-Before you need list all your major decisions, them run tradeoffs on than.
-example:
-Major Decisions:</p>
-<pre><code>1. One mobile code base - should be (...)
-2. Reusable capability and low latency backends should be (...)
-3. Cache efficiency therefore should do (...)
-</code></pre>
-<p>Tradeoffs:</p>
-<pre><code>1. React Native vs (Flutter and Native)
-2. Serverless vs Microservices
-3. Redis vs Enbeded Caches
-</code></pre>
-<p>Each tradeoff line need to be:</p>
-<pre><code>PROS (+) 
-  * Benefit: Explanation that justify why the benefit is true.
-CONS (+)
-  * Problem: Explanation that justify why the problem is true.
-</code></pre>
-<p>PS: Be careful to not confuse problem with explanation.
-<BR/>Recommended reading: http://diego-pacheco.blogspot.com/2023/07/tradeoffs.html</p>
-<h3 id="-6-for-each-key-major-component"><a class="header" href="#-6-for-each-key-major-component">🌏 6. For each key major component</a></h3>
-<p>What is a majore component? A service, a lambda, a important ui, a generalized approach for all uis, a generazid approach for computing a workload, etc...</p>
-<pre><code>6.1 - Class Diagram              : classic uml diagram with attributes and methods
-6.2 - Contract Documentation     : Operations, Inputs and Outputs
-6.3 - Persistence Model          : Diagrams, Table structure, partiotioning, main queries.
-6.4 - Algorithms/Data Structures : Spesific algos that need to be used, along size with spesific data structures.
-</code></pre>
-<p>Exemplos of other components: Batch jobs, Events, 3rd Party Integrations, Streaming, ML Models, ChatBots, etc...</p>
-<p>Recommended Reading: http://diego-pacheco.blogspot.com/2018/05/internal-system-design-forgotten.html</p>
-<h3 id="-7-migrations"><a class="header" href="#-7-migrations">🖹 7. Migrations</a></h3>
-<p>IF Migrations are required describe the migrations strategy with proper diagrams, text and tradeoffs.</p>
-<h3 id="-8-testing-strategy"><a class="header" href="#-8-testing-strategy">🖹 8. Testing strategy</a></h3>
-<p>Explain the techniques, principles, types of tests and will be performaned, and spesific details how to mock data, stress test it, spesific chaos goals and assumptions.</p>
-<h3 id="-9-observability-strategy"><a class="header" href="#-9-observability-strategy">🖹 9. Observability strategy</a></h3>
-<p>Explain the techniques, principles,types of observability that will be used, key metrics, what would be logged and how to design proper dashboards and alerts.</p>
-<h3 id="-10-data-store-designs"><a class="header" href="#-10-data-store-designs">🖹 10. Data Store Designs</a></h3>
-<p>For each different kind of data store i.e (Postgres, Memcached, Elasticache, S3, Neo4J etc...) describe the schemas, what would be stored there and why, main queries, expectations on performance. Diagrams are welcome but you really need some dictionaries.</p>
-<h3 id="-11-technology-stack"><a class="header" href="#-11-technology-stack">🖹 11. Technology Stack</a></h3>
-<p>Describe your stack, what databases would be used, what servers, what kind of components, mobile/ui approach, general architecture components, frameworks and libs to be used or not be used and why.</p>
-<h3 id="-12-references"><a class="header" href="#-12-references">🖹 12. References</a></h3>
-<ul>
-<li>Architecture Anti-Patterns: https://architecture-antipatterns.tech/</li>
-<li>EIP https://www.enterpriseintegrationpatterns.com/</li>
-<li>SOA Patterns https://patterns.arcitura.com/soa-patterns</li>
-<li>API Patterns https://microservice-api-patterns.org/</li>
-<li>Anti-Patterns https://sourcemaking.com/antipatterns/software-development-antipatterns</li>
-<li>Refactoring Patterns https://sourcemaking.com/refactoring/refactorings</li>
-<li>Database Refactoring Patterns https://databaserefactoring.com/</li>
-<li>Data Modelling Redis https://redis.com/blog/nosql-data-modeling/</li>
-<li>Cloud Patterns https://docs.aws.amazon.com/prescriptive-guidance/latest/cloud-design-patterns/introduction.html</li>
-<li>12 Factors App https://12factor.net/</li>
-<li>Relational DB Patterns https://www.geeksforgeeks.org/design-patterns-for-relational-databases/</li>
-<li>Rendering Patterns https://www.patterns.dev/vanilla/rendering-patterns/</li>
-<li>REST API Design https://blog.stoplight.io/api-design-patterns-for-rest-web-services</li>
-</ul>
-<div style="break-before: page; page-break-before: always;"></div><h2 id="0-how-to-do-a-good-poc"><a class="header" href="#0-how-to-do-a-good-poc">0. How to do a good POC</a></h2>
-<p>Proof of Concept (POC) is a important tool, it's like a lab where you should be doing experiments.
-POC allow you to learn something about a programing language, approach, school of tought, library or even to validate some crazy idea/hack.
-POC can be shallow but is important to have Deep POCs. Doing POCs must be a mindset, something you do everyday.</p>
-<h2 id="1-how-to-go-deep-in-a-poc"><a class="header" href="#1-how-to-go-deep-in-a-poc">1. How to go Deep in a POC?</a></h2>
-<ul>
-<li>Debug the code (write down classes names, make diagrams) do it multiple times</li>
-<li>Write down code that test, simulate or exaserbate the problem or target of your poc</li>
-<li>Do Research, see what other people do, are there any patterns? or idiomatic ways of doing this?</li>
-<li>Read the documentation, read book, avoid tutotials, read the source code</li>
-<li>Do experiments, test the API in several different conditions and scenarios of sucess and error see what happens</li>
-<li>Reading the source code of a framework or library is a must, is how you can understand how it works and how to use it</li>
-</ul>
-<h2 id="2-what-not-todo-in-poc"><a class="header" href="#2-what-not-todo-in-poc">2. What NOT todo in POC?</a></h2>
-<ul>
-<li>Be shallow all the time</li>
-<li>Just call methods</li>
-<li>Do not challenge yourself, if you know is too easy is not a good POC</li>
-</ul>
-<h2 id="3-examples-of-good-deep-pocs"><a class="header" href="#3-examples-of-good-deep-pocs">3. Examples of Good Deep POCs</a></h2>
-<ul>
-<li>https://github.com/diegopacheco/servers-benchmark</li>
-<li>https://github.com/diegopacheco/java-pocs/tree/master/pocs/if-alternatives-fun</li>
-<li>https://github.com/diegopacheco/java-pocs/tree/master/pocs/java-21-spring-boot-3-async</li>
-<li>https://github.com/diegopacheco/Elegant.Objects</li>
-<li>https://github.com/diegopacheco/Elegant.Objects.vol.2</li>
-<li>https://github.com/diegopacheco/scala-playground/tree/master/scala-3.5-patterns</li>
-</ul>
-<h2 id="4-keep-in-mind"><a class="header" href="#4-keep-in-mind">4. Keep in mind</a></h2>
-<ul>
-<li>The more you pratice, the better you get.</li>
-<li>POCs comparing libraries, approaches, languages, patterns help a lot to learn and master tecnhiques.</li>
-<li>Make sure it gets harder, no matter if you need to do 10-100x to understand. Repetition is key.</li>
-<li>You are only fooling yourself if you just go shallow all the time.</li>
-<li>Doing Shallow pocs is not neccesary bad or wrong, but you should be doing Deep POCs as well.</li>
-<li>Challenge yourself, do not be afraid to fail, is part of the learning process.</li>
-<li>Consider doing crazy things like: a parser, a compiler, a framework, a library, maybe even a new language.</li>
-<li>Remember learning with code is a long term game and a mindset, so keep doing it everyday.</li>
-</ul>
-<h2 id="5-to-improve"><a class="header" href="#5-to-improve">5. To improve</a></h2>
-<ul>
-<li>Share the code with others ask feedback</li>
-<li>look for different and better ways to do the same thing</li>
-<li>Be curious, ask questions, do not be afraid to ask for help</li>
-<li>Go read the source code of big projects, is a great way to learn like: Java, Spring, Netty, Linux, React, Nodejs, etc.</li>
-<li>Document your POC, write text exmplaning what you did a why and why is impotant.</li>
-<li>Good POCs take hours, days and weeks and thats fine, the more time you invest the better you get.</li>
-<li>Make doing POCs a habit, do it everyday, is like going to the gym, you need to do it everyday to get better.</li>
-</ul>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="presentation-hero"><a class="header" href="#presentation-hero">Presentation Hero</a></h1>
-<p>Read this multiple times and follow strickly and will be awesome at presenting.</p>
-<h2 id="before-you-start"><a class="header" href="#before-you-start">Before you start</a></h2>
-<p>Preparation is everythinng. When should I start preparing? 30 days before your presentation day. Why you need start 30 days ahead?</p>
-<ul>
-<li>Because you will need time to research</li>
-<li>Because you will get feedback and will have homework</li>
-<li>Because even if your deck is amazing, you need do multiple dry runs before presenting.</li>
-</ul>
-<p>How many dry runs is enought?</p>
-<ul>
-<li>There is not limit, more preparation is always better.</li>
-<li>You must feel confident and be able to deliver on time</li>
-<li>You should dry run so many times that you can present without slides (presentation zen idea).</li>
-<li>Usually 3 to 5 dry runs is enough</li>
-</ul>
-<h2 id="how-to-deliver-a-great-presentation"><a class="header" href="#how-to-deliver-a-great-presentation">How to deliver a great presentation</a></h2>
-<p>A great presentation is just an output of a well-prepared research, poc or piece of work.
-There is no way you will do an amazing presentation if you the content is not good.
-A presentation is just an excuse, a reason or a motivation if you will do learn someeting deep and deliver an awesome experience.
-When you are presenting, you are delivering a story, think about order of things.</p>
-<h2 id="0-what-you-should-never-ever-do"><a class="header" href="#0-what-you-should-never-ever-do">0. What you should never (ever) do</a></h2>
-<ul>
-<li>Present content you don't understand</li>
-<li>You DONT know DEEPLY all the things you are presenting, all the strings, all the algos, all the techniques, all technologies, every single thing you don't master it.</li>
-<li>Talk about things you did not run a poc or some experiment or have experience with in production</li>
-<li>Have a lot of text and just read all time</li>
-<li>Have a white background with or poor color scheme.</li>
-<li>Splash code in text, dont show code without syntax highlight</li>
-<li>Do no sufer in silence, ask for help</li>
-<li>Dont do the presentation for compliance, do your best, use as a tool for continnuous learning and improvement</li>
-</ul>
-<h2 id="1-what-you-should-always-do"><a class="header" href="#1-what-you-should-always-do">1. What you should always do</a></h2>
-<ul>
-<li>Research
-<ul>
-<li>Do POCs</li>
-<li>Debug</li>
-<li>Google it</li>
-<li>Read about it</li>
-</ul>
-</li>
-<li>Give Context: What it is? How it works? Showing arch diagrams always good.</li>
-<li>Always have trade-offs (PROS and CONS)</li>
-<li>Comparisons with similar solutins and options always good i.e talking about Kafka, compare with RabbitMQ, Kinesis, ActiveMQ, etc.</li>
-<li>CODE</li>
-<li>Live-demo (which can be recorded)</li>
-</ul>
-<h2 id="2-how-to-prepare"><a class="header" href="#2-how-to-prepare">2. How to prepare</a></h2>
-<ul>
-<li>Record you presenting to your self like a unit test (do that 3 to 5 times) this is also called Dry Run</li>
-<li>Show to someone with more experience - get feedback</li>
-<li>The more you present, the better you get, pratice is the key to success</li>
-<li>Dry Runs: Do many dry runs as necessary, record a video so you see youself presenting and what is working or not, get feedback from other people.</li>
-</ul>
-<h2 id="3-how-to-create-a-good-presentation-structure"><a class="header" href="#3-how-to-create-a-good-presentation-structure">3. How to create a good presentation structure</a></h2>
-<ol>
-<li>What: Explain what it thing you are presenting.</li>
-<li>How: Explain how it works and how is the architecture under the hood.</li>
-<li>Trade-offs: Explain the trade-offs, pros and cons.</li>
-<li>Code/DEMO: Show code, if possible, live demo is always good.</li>
-<li>Comparisons: Show comparisons with similar solutions.</li>
-</ol>
-<h2 id="4-how-to-deliver"><a class="header" href="#4-how-to-deliver">4. How to deliver</a></h2>
-<ul>
-<li>Be clam</li>
-<li>Dont rush</li>
-<li>Mind the time (have a clock in front of you) or in yoir phone</li>
-<li>Ask for feedback after the presentation</li>
-</ul>
-<h2 id="5-how-to-improve"><a class="header" href="#5-how-to-improve">5. How to improve</a></h2>
-<ul>
-<li>Read the book <code>Presentation Zen</code> by Garr Reynolds</li>
-<li>Try to add some humor, data, facts or intersting trivia is always fun</li>
-<li>Watch other people presenting</li>
-<li>Use google for research, read books, read papers, debug the code, do multiple pocs.</li>
-<li>Book time in your agenda to prepare the presentation (review and dry-run too)</li>
-</ul>
-<h2 id="6-when-you-learn-to-how-to-present-well"><a class="header" href="#6-when-you-learn-to-how-to-present-well">6. When you learn to how to present well...</a></h2>
-<ul>
-<li>You will comunicate better</li>
-<li>You will sell better</li>
-<li>You will be more confident</li>
 </ul>
 
                     </main>
