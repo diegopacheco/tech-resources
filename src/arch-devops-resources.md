@@ -1,6 +1,6 @@
 ## Software Architecture | DevOps Engineering Resources
 
-![Architecture/DevOpsEngineering](http://studyinukraine.site/wp-content/uploads/2016/01/engineering.png)
+![Architecture and DevOps](images/Tech_Resources_logo.png)
 
 ### Important Topics
 

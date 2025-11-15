@@ -1,6 +1,6 @@
 ## Frontend / JavaScript Resources
 
-![JavaScript](https://web-development.pw/data/posts/251200.jpg)
+![JavaScript](images/Tech_Resources_logo.png)
 
 #### Tech
 

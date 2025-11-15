@@ -1,6 +1,6 @@
 ## GCP Resources
 
-![GCP](https://cloud.google.com/solutions/images/data-lifecycle-1.svg)
+![GCP](images/Tech_Resources_logo.png)
 
 #### Important Topics
 

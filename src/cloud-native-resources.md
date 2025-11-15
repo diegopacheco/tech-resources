@@ -1,6 +1,6 @@
 ## Cloud Native Resources
 
-![Cloud-Native](https://scontent-gru2-1.xx.fbcdn.net/v/t31.0-8/19388446_811285335714121_7182658992525584368_o.jpg?oh=6a3ada7245faad28522e84ae7c0e06a0&oe=59C4F889)
+![Cloud Native](images/Tech_Resources_logo.png)
 
 #### Important Topics
 
