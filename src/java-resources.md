@@ -77,12 +77,12 @@ choose the seats number, zone of the venue, date and respect maximun capacity.
 ### Code Challenges Round 2
 
 * (1) Build a Stress Test Framework for HTTP
-* (2) Build a Dont Pad (<https://dontpad.com/>)
+* (2) Build a Dont Pad ([https://dontpad.com/](https://dontpad.com/))
 * (3) Build a Unused Class Detector
-* (4) Build a Murder Mistery Game using terminal and linux (<https://github.com/veltman/clmystery>)
+* (4) Build a Murder Mistery Game using terminal and linux ([https://github.com/veltman/clmystery](https://github.com/veltman/clmystery))
 * (5) Build a Implement your own String Implementation methods: (toArray,foreach,reverse,iterator,length,charAt,equals,isEmpty,replace,substring,trim,toJson,indexOf,hashCode)
 * (6) Build a Hibernate Slow Query Detector
-* (7) Build a oAuth 2.0 Server (<https://datatracker.ietf.org/doc/html/rfc6749>)
+* (7) Build a oAuth 2.0 Server ([https://datatracker.ietf.org/doc/html/rfc6749](https://datatracker.ietf.org/doc/html/rfc6749))
 
 ### Books
 
