@@ -15,7 +15,7 @@ to have a huge selectio and find ways to people find they perpect show at the
 same time market teams would need to change campains all the time, we need to
 have way to make things fast and dynamic.
 ```
-Recomended Reading: http://diego-pacheco.blogspot.com/2021/10/breaking-problems-down.html
+Recomended Reading: [Breaking problems down](http://diego-pacheco.blogspot.com/2021/10/breaking-problems-down.html)
 
 ### 2. 🎯 Goals
 
@@ -28,7 +28,7 @@ Example:
 4. Work offline: Re-consiliation, CRDTs are a must.
 5. Cloud-Native: All backend must be 100% cloud native, using open-source and should and should be cloud-agnostic, avoid propretaty apis.
 ```
-Recommended Learning: http://diego-pacheco.blogspot.com/2020/05/education-vs-learning.html
+Recommended Learning: [Education vs Learning](http://diego-pacheco.blogspot.com/2020/05/education-vs-learning.html)
 
 ### 3. 🎯 Non-Goals
 
@@ -41,7 +41,7 @@ Example:
 4. Mobile-native: We want have one single codebase, therefore we will not have 2 mobile code bases(ios and android) thefore be native is not a goal.
 5. ...
 ```
-Recommended Reading: http://diego-pacheco.blogspot.com/2021/01/requirements-are-dangerous.html
+Recommended Reading: [Requirements are dangerous](http://diego-pacheco.blogspot.com/2021/01/requirements-are-dangerous.html)
 
 ### 📐 3. Principles
 
@@ -54,7 +54,7 @@ Example:
 4. Testability: Chaos engineering is a must and property testing. Testing should be done by engineers all times.
 5. Cache efficiency: Should leverage SSD caches and all forms of caches as much as possible.
 ```
-Recommended Reading: http://diego-pacheco.blogspot.com/2018/01/stability-principles.html
+Recommended Reading: [Stability principles](http://diego-pacheco.blogspot.com/2018/01/stability-principles.html)
 
 ### 🏗️ 4. Overall Diagrams
 
@@ -64,7 +64,7 @@ Here there will be a bunch of diagrams, to understand the solution.
 🗂️ 4.2 Deployment: Show the infra in a big picture. 
 🗂️ 4.3 Use Cases: Make 1 macro use case diagram that list the main capability that needs to be covered. 
 ```
-Recommended Reading: http://diego-pacheco.blogspot.com/2020/10/uml-hidden-gems.html
+Recommended Reading: [UML hidden gems](http://diego-pacheco.blogspot.com/2020/10/uml-hidden-gems.html)
 
 ### 🧭 5. Trade-offs
 
@@ -91,7 +91,7 @@ CONS (+)
   * Problem: Explanation that justify why the problem is true.
 ```
 PS: Be careful to not confuse problem with explanation. 
-<BR/>Recommended reading: http://diego-pacheco.blogspot.com/2023/07/tradeoffs.html
+<BR/>Recommended reading: [Tradeoffs](http://diego-pacheco.blogspot.com/2023/07/tradeoffs.html)
 
 ### 🌏 6. For each key major component
 
@@ -105,7 +105,7 @@ What is a majore component? A service, a lambda, a important ui, a generalized a
 
 Exemplos of other components: Batch jobs, Events, 3rd Party Integrations, Streaming, ML Models, ChatBots, etc... 
 
-Recommended Reading: http://diego-pacheco.blogspot.com/2018/05/internal-system-design-forgotten.html
+Recommended Reading: [Internal system design forgotten](http://diego-pacheco.blogspot.com/2018/05/internal-system-design-forgotten.html)
 
 ### 🖹 7. Migrations
 
@@ -129,16 +129,16 @@ Describe your stack, what databases would be used, what servers, what kind of co
 
 ### 🖹 12. References
 
-* Architecture Anti-Patterns: https://architecture-antipatterns.tech/
-* EIP https://www.enterpriseintegrationpatterns.com/
-* SOA Patterns https://patterns.arcitura.com/soa-patterns
-* API Patterns https://microservice-api-patterns.org/
-* Anti-Patterns https://sourcemaking.com/antipatterns/software-development-antipatterns
-* Refactoring Patterns https://sourcemaking.com/refactoring/refactorings
-* Database Refactoring Patterns https://databaserefactoring.com/
-* Data Modelling Redis https://redis.com/blog/nosql-data-modeling/
-* Cloud Patterns https://docs.aws.amazon.com/prescriptive-guidance/latest/cloud-design-patterns/introduction.html
-* 12 Factors App https://12factor.net/
-* Relational DB Patterns https://www.geeksforgeeks.org/design-patterns-for-relational-databases/
-* Rendering Patterns https://www.patterns.dev/vanilla/rendering-patterns/
-* REST API Design https://blog.stoplight.io/api-design-patterns-for-rest-web-services
+* [Architecture Anti-Patterns](https://architecture-antipatterns.tech/)
+* [Enterprise Integration Patterns](https://www.enterpriseintegrationpatterns.com/)
+* [SOA Patterns](https://patterns.arcitura.com/soa-patterns)
+* [Microservice API Patterns](https://microservice-api-patterns.org/)
+* [Software Development Anti-Patterns](https://sourcemaking.com/antipatterns/software-development-antipatterns)
+* [Refactoring Patterns](https://sourcemaking.com/refactoring/refactorings)
+* [Database Refactoring Patterns](https://databaserefactoring.com/)
+* [Data Modelling Redis](https://redis.com/blog/nosql-data-modeling/)
+* [Cloud Design Patterns](https://docs.aws.amazon.com/prescriptive-guidance/latest/cloud-design-patterns/introduction.html)
+* [12 Factors App](https://12factor.net/)
+* [Relational DB Patterns](https://www.geeksforgeeks.org/design-patterns-for-relational-databases/)
+* [Rendering Patterns](https://www.patterns.dev/vanilla/rendering-patterns/)
+* [REST API Design Patterns](https://blog.stoplight.io/api-design-patterns-for-rest-web-services)

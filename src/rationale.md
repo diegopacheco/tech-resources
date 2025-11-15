@@ -5,7 +5,7 @@ I have this repository since 2017. I always had this collections of resources to
 Tech Support Guidance and tips - Since 2017.
 [Online Book](https://diegopacheco.github.io/tech-resources/)
 
-<img src="images/Tech_Resources_logo.png" width="400" alt="Tech Resources Logo"/>
+![Tech Resources Logo](images/Tech_Resources_logo.png)
 
 #### How to use this gist?
 
@@ -50,8 +50,8 @@ of technologies that you can do POC and CODE practice, also with a list of usefu
 * Get all language/framework/lib features and do some simple code.
 * Most of technical books have sample codes and excercis you can use for POC.
 * Look for a problem in your project or company or something you could improve.
-* 99 Problems -> http://www.ic.unicamp.br/~meidanis/courses/mc336/2009s2/prolog/problemas/
-* Dojo Puzzle -> http://dojopuzzles.com/
+* [99 Problems](http://www.ic.unicamp.br/~meidanis/courses/mc336/2009s2/prolog/problemas/)
+* [Dojo Puzzle](http://dojopuzzles.com/)
 * Create a simple version(smaller scale) of:
 * - Facebook
 * - Twitter

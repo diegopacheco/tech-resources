@@ -4,4 +4,4 @@ Tech Support Guidance and tips - Since 2017.
 
 [Online Book](https://diegopacheco.github.io/tech-resources/)
 
-<img src="src/images/Tech_Resources_logo.png" width="400" alt="Tech Resources Logo"/>
+![Tech Resources Logo](src/images/Tech_Resources_logo.png)
