@@ -73,8 +73,8 @@
 
 ## Functional Programing Challenges 1
 
-* (1) S99 Problems: https://aperiodic.net/pip/scala/s-99/
-* (2) Project Euler: https://projecteuler.net/
+* (1) [S99 Problems](https://aperiodic.net/pip/scala/s-99/)
+* (2) [Project Euler](https://projecteuler.net/)
 
 ## OOAD Challenges Round 1
 
@@ -111,17 +111,17 @@ choose the seats number, zone of the venue, date and respect maximun capacity.
 ### Code Challenges Round 2
 
 * (1) Build a Stress Test Framework for HTTP
-* (2) Build a Dont Pad (<https://dontpad.com/>)
+* (2) Build a [Dont Pad](https://dontpad.com/)
 * (3) Build a Unused Class Detector
-* (4) Build a Murder Mistery Game using terminal and linux (<https://github.com/veltman/clmystery>)
+* (4) Build a [Murder Mistery Game using terminal and linux](https://github.com/veltman/clmystery)
 * (5) Build a Implement your own String Implementation methods: (toArray,foreach,reverse,iterator,length,charAt,equals,isEmpty,replace,substring,trim,toJson,indexOf,hashCode)
 * (6) Build a Hibernate Slow Query Detector
-* (7) Build a oAuth 2.0 Server (<https://datatracker.ietf.org/doc/html/rfc6749>)
+* (7) Build a [oAuth 2.0 Server](https://datatracker.ietf.org/doc/html/rfc6749)
 
 ### Books
 
-* Build Applications with Scala: https://www.amazon.com/Building-applications-Scala-Diego-Pacheco/dp/178646148X
-* Learn you a haskell for greater good https://learnyouahaskell.com/
-* Programming in Scala https://www.amazon.com/Programming-Scala-Martin-Odersky/dp/098153161X/ref=sr_1_6?crid=5GM42PJRJSWW&dib=eyJ2IjoiMSJ9.7GINLZfnJ_0vYx0VCh4rKtT8ANlHmc4H5Iqs5TeA_5tJFbONsAqYSdkGZFKg9FkTmxCHEMQmARmP_yDBz0cARIuAgfLBXXUDdZ-6xr6bAaD4T6CBiXSRfKi62V8jQ3_mcuvX4zZ1dpk2j_19fzNojUGTOBhvw0q_oGL2esXBww1YDJSAy2ZN_holMkxFKm2ZUumevnKvEfkpKddnu4We9e28UgXHp0McfhhVTnKKHiU.8tlCS-goVU4MQmNkcLTwWz4s7wS1ZcRdfUY8t3HzQYU&dib_tag=se&keywords=scala+books&qid=1738832859&sprefix=scale+books%2Caps%2C196&sr=8-6
-* Scala Cookbook: Recipes for Object-Oriented and Functional Programming  https://www.amazon.com/Scala-Cookbook-Object-Oriented-Functional-Programming/dp/1449339611/ref=sr_1_9?crid=5GM42PJRJSWW&dib=eyJ2IjoiMSJ9.7GINLZfnJ_0vYx0VCh4rKtT8ANlHmc4H5Iqs5TeA_5tJFbONsAqYSdkGZFKg9FkTmxCHEMQmARmP_yDBz0cARIuAgfLBXXUDdZ-6xr6bAaD4T6CBiXSRfKi62V8jQ3_mcuvX4zZ1dpk2j_19fzNojUGTOBhvw0q_oGL2esXBww1YDJSAy2ZN_holMkxFKm2ZUumevnKvEfkpKddnu4We9e28UgXHp0McfhhVTnKKHiU.8tlCS-goVU4MQmNkcLTwWz4s7wS1ZcRdfUY8t3HzQYU&dib_tag=se&keywords=scala+books&qid=1738832859&sprefix=scale+books%2Caps%2C196&sr=8-9
-* Functional Programming, Simplified: (Scala edition)  https://www.amazon.com/Functional-Programming-Simplified-Alvin-Alexander-ebook/dp/B076J7CJKY/ref=sr_1_15?crid=5GM42PJRJSWW&dib=eyJ2IjoiMSJ9.7GINLZfnJ_0vYx0VCh4rKtT8ANlHmc4H5Iqs5TeA_5tJFbONsAqYSdkGZFKg9FkTmxCHEMQmARmP_yDBz0cARIuAgfLBXXUDdZ-6xr6bAaD4T6CBiXSRfKi62V8jQ3_mcuvX4zZ1dpk2j_19fzNojUGTOBhvw0q_oGL2esXBww1YDJSAy2ZN_holMkxFKm2ZUumevnKvEfkpKddnu4We9e28UgXHp0McfhhVTnKKHiU.8tlCS-goVU4MQmNkcLTwWz4s7wS1ZcRdfUY8t3HzQYU&dib_tag=se&keywords=scala+books&qid=1738832859&sprefix=scale+books%2Caps%2C196&sr=8-15
+* [Build Applications with Scala](https://www.amazon.com/Building-applications-Scala-Diego-Pacheco/dp/178646148X)
+* [Learn you a haskell for greater good](https://learnyouahaskell.com/)
+* [Programming in Scala](https://www.amazon.com/Programming-Scala-Martin-Odersky/dp/098153161X/ref=sr_1_6?crid=5GM42PJRJSWW&dib=eyJ2IjoiMSJ9.7GINLZfnJ_0vYx0VCh4rKtT8ANlHmc4H5Iqs5TeA_5tJFbONsAqYSdkGZFKg9FkTmxCHEMQmARmP_yDBz0cARIuAgfLBXXUDdZ-6xr6bAaD4T6CBiXSRfKi62V8jQ3_mcuvX4zZ1dpk2j_19fzNojUGTOBhvw0q_oGL2esXBww1YDJSAy2ZN_holMkxFKm2ZUumevnKvEfkpKddnu4We9e28UgXHp0McfhhVTnKKHiU.8tlCS-goVU4MQmNkcLTwWz4s7wS1ZcRdfUY8t3HzQYU&dib_tag=se&keywords=scala+books&qid=1738832859&sprefix=scale+books%2Caps%2C196&sr=8-6)
+* [Scala Cookbook: Recipes for Object-Oriented and Functional Programming](https://www.amazon.com/Scala-Cookbook-Object-Oriented-Functional-Programming/dp/1449339611/ref=sr_1_9?crid=5GM42PJRJSWW&dib=eyJ2IjoiMSJ9.7GINLZfnJ_0vYx0VCh4rKtT8ANlHmc4H5Iqs5TeA_5tJFbONsAqYSdkGZFKg9FkTmxCHEMQmARmP_yDBz0cARIuAgfLBXXUDdZ-6xr6bAaD4T6CBiXSRfKi62V8jQ3_mcuvX4zZ1dpk2j_19fzNojUGTOBhvw0q_oGL2esXBww1YDJSAy2ZN_holMkxFKm2ZUumevnKvEfkpKddnu4We9e28UgXHp0McfhhVTnKKHiU.8tlCS-goVU4MQmNkcLTwWz4s7wS1ZcRdfUY8t3HzQYU&dib_tag=se&keywords=scala+books&qid=1738832859&sprefix=scale+books%2Caps%2C196&sr=8-9)
+* [Functional Programming, Simplified: (Scala edition)](https://www.amazon.com/Functional-Programming-Simplified-Alvin-Alexander-ebook/dp/B076J7CJKY/ref=sr_1_15?crid=5GM42PJRJSWW&dib=eyJ2IjoiMSJ9.7GINLZfnJ_0vYx0VCh4rKtT8ANlHmc4H5Iqs5TeA_5tJFbONsAqYSdkGZFKg9FkTmxCHEMQmARmP_yDBz0cARIuAgfLBXXUDdZ-6xr6bAaD4T6CBiXSRfKi62V8jQ3_mcuvX4zZ1dpk2j_19fzNojUGTOBhvw0q_oGL2esXBww1YDJSAy2ZN_holMkxFKm2ZUumevnKvEfkpKddnu4We9e28UgXHp0McfhhVTnKKHiU.8tlCS-goVU4MQmNkcLTwWz4s7wS1ZcRdfUY8t3HzQYU&dib_tag=se&keywords=scala+books&qid=1738832859&sprefix=scale+books%2Caps%2C196&sr=8-15)
