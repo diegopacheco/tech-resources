@@ -323,6 +323,2246 @@ of technologies that you can do POC and CODE practice, also with a list of usefu
 </ul>
 <p>Cheers, <BR>
 Diego Pacheco</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="-template"><a class="header" href="#-template">🧬 Template</a></h1>
+<p>This is a template created by Diego Pacheco which the goal to better describe a tought process which is called architecture. This should be used to learn software architecture and to pratice with use cases.</p>
+<h2 id="-structure"><a class="header" href="#-structure">🏛️ Structure</a></h2>
+<h3 id="1--problem-statement-and-context"><a class="header" href="#1--problem-statement-and-context">1. 🎯 Problem Statement and Context</a></h3>
+<p>What is the problem? What is the context of the problem?
+Example:</p>
+<pre><code>The problem is to sell shoes online, the main issue with buying shoes online is 
+how we will make our users buy shoes if they cannot make them fit? We would need
+to have a huge selectio and find ways to people find they perpect show at the 
+same time market teams would need to change campains all the time, we need to
+have way to make things fast and dynamic.
+</code></pre>
+<p>Recomended Reading: <a href="http://diego-pacheco.blogspot.com/2021/10/breaking-problems-down.html">Breaking problems down</a></p>
+<h3 id="2--goals"><a class="header" href="#2--goals">2. 🎯 Goals</a></h3>
+<p>List in form of bullets what goals do have. Here it's great to have 5-10 lines.
+Example:</p>
+<pre><code>1. Solution needs to be fast! Performance for all operations bellow ~1 ms.
+2. Security is non-negociable! Security at-rest, transite, threat analysis and review for by at least 3 different people.
+3. Composable solution. Users should be able to mix and match components instead of building all for scratch. ie: map component can be reused on counters component.
+4. Work offline: Re-consiliation, CRDTs are a must.
+5. Cloud-Native: All backend must be 100% cloud native, using open-source and should and should be cloud-agnostic, avoid propretaty apis.
+</code></pre>
+<p>Recommended Learning: <a href="http://diego-pacheco.blogspot.com/2020/05/education-vs-learning.html">Education vs Learning</a></p>
+<h3 id="3--non-goals"><a class="header" href="#3--non-goals">3. 🎯 Non-Goals</a></h3>
+<p>List in form of bullets what non-goals do have. Here it's great to have 5-10 lines.
+Example:</p>
+<pre><code>1. Be perfect: There will be mistakes, we dont want have automatic-rollback for everything.
+2. DynamoDB: Dynamo is expensive, we want be away from the DB.
+3. Serverless: Serverless has high latency, we do not want to use it.
+4. Mobile-native: We want have one single codebase, therefore we will not have 2 mobile code bases(ios and android) thefore be native is not a goal.
+5. ...
+</code></pre>
+<p>Recommended Reading: <a href="http://diego-pacheco.blogspot.com/2021/01/requirements-are-dangerous.html">Requirements are dangerous</a></p>
+<h3 id="-3-principles"><a class="header" href="#-3-principles">📐 3. Principles</a></h3>
+<p>List in form of bullets what design principles you want to be followed, it's great to have 5-10 lines.
+Example:</p>
+<pre><code>1. Low Coupling: We need to watch for coupling all times.
+2. Flexibility: Users should be able to customize behavior without leaking the internals of the system. Leverage interfaces.
+3. Observability: we should expose all key metrics on main features. Sucess and errors counters need to be exposed.
+4. Testability: Chaos engineering is a must and property testing. Testing should be done by engineers all times.
+5. Cache efficiency: Should leverage SSD caches and all forms of caches as much as possible.
+</code></pre>
+<p>Recommended Reading: <a href="http://diego-pacheco.blogspot.com/2018/01/stability-principles.html">Stability principles</a></p>
+<h3 id="-4-overall-diagrams"><a class="header" href="#-4-overall-diagrams">🏗️ 4. Overall Diagrams</a></h3>
+<p>Here there will be a bunch of diagrams, to understand the solution.</p>
+<pre><code>🗂️ 4.1 Overall architecture: Show the big picture, relationship between macro components.
+🗂️ 4.2 Deployment: Show the infra in a big picture. 
+🗂️ 4.3 Use Cases: Make 1 macro use case diagram that list the main capability that needs to be covered. 
+</code></pre>
+<p>Recommended Reading: <a href="http://diego-pacheco.blogspot.com/2020/10/uml-hidden-gems.html">UML hidden gems</a></p>
+<h3 id="-5-trade-offs"><a class="header" href="#-5-trade-offs">🧭 5. Trade-offs</a></h3>
+<p>List the tradeoffs analysis, comparing pros and cons for each major decision.
+Before you need list all your major decisions, them run tradeoffs on than.
+example:
+Major Decisions:</p>
+<pre><code>1. One mobile code base - should be (...)
+2. Reusable capability and low latency backends should be (...)
+3. Cache efficiency therefore should do (...)
+</code></pre>
+<p>Tradeoffs:</p>
+<pre><code>1. React Native vs (Flutter and Native)
+2. Serverless vs Microservices
+3. Redis vs Enbeded Caches
+</code></pre>
+<p>Each tradeoff line need to be:</p>
+<pre><code>PROS (+) 
+  * Benefit: Explanation that justify why the benefit is true.
+CONS (+)
+  * Problem: Explanation that justify why the problem is true.
+</code></pre>
+<p>PS: Be careful to not confuse problem with explanation.
+<BR/>Recommended reading: <a href="http://diego-pacheco.blogspot.com/2023/07/tradeoffs.html">Tradeoffs</a></p>
+<h3 id="-6-for-each-key-major-component"><a class="header" href="#-6-for-each-key-major-component">🌏 6. For each key major component</a></h3>
+<p>What is a majore component? A service, a lambda, a important ui, a generalized approach for all uis, a generazid approach for computing a workload, etc...</p>
+<pre><code>6.1 - Class Diagram              : classic uml diagram with attributes and methods
+6.2 - Contract Documentation     : Operations, Inputs and Outputs
+6.3 - Persistence Model          : Diagrams, Table structure, partiotioning, main queries.
+6.4 - Algorithms/Data Structures : Spesific algos that need to be used, along size with spesific data structures.
+</code></pre>
+<p>Exemplos of other components: Batch jobs, Events, 3rd Party Integrations, Streaming, ML Models, ChatBots, etc...</p>
+<p>Recommended Reading: <a href="http://diego-pacheco.blogspot.com/2018/05/internal-system-design-forgotten.html">Internal system design forgotten</a></p>
+<h3 id="-7-migrations"><a class="header" href="#-7-migrations">🖹 7. Migrations</a></h3>
+<p>IF Migrations are required describe the migrations strategy with proper diagrams, text and tradeoffs.</p>
+<h3 id="-8-testing-strategy"><a class="header" href="#-8-testing-strategy">🖹 8. Testing strategy</a></h3>
+<p>Explain the techniques, principles, types of tests and will be performaned, and spesific details how to mock data, stress test it, spesific chaos goals and assumptions.</p>
+<h3 id="-9-observability-strategy"><a class="header" href="#-9-observability-strategy">🖹 9. Observability strategy</a></h3>
+<p>Explain the techniques, principles,types of observability that will be used, key metrics, what would be logged and how to design proper dashboards and alerts.</p>
+<h3 id="-10-data-store-designs"><a class="header" href="#-10-data-store-designs">🖹 10. Data Store Designs</a></h3>
+<p>For each different kind of data store i.e (Postgres, Memcached, Elasticache, S3, Neo4J etc...) describe the schemas, what would be stored there and why, main queries, expectations on performance. Diagrams are welcome but you really need some dictionaries.</p>
+<h3 id="-11-technology-stack"><a class="header" href="#-11-technology-stack">🖹 11. Technology Stack</a></h3>
+<p>Describe your stack, what databases would be used, what servers, what kind of components, mobile/ui approach, general architecture components, frameworks and libs to be used or not be used and why.</p>
+<h3 id="-12-references"><a class="header" href="#-12-references">🖹 12. References</a></h3>
+<ul>
+<li><a href="https://architecture-antipatterns.tech/">Architecture Anti-Patterns</a></li>
+<li><a href="https://www.enterpriseintegrationpatterns.com/">Enterprise Integration Patterns</a></li>
+<li><a href="https://patterns.arcitura.com/soa-patterns">SOA Patterns</a></li>
+<li><a href="https://microservice-api-patterns.org/">Microservice API Patterns</a></li>
+<li><a href="https://sourcemaking.com/antipatterns/software-development-antipatterns">Software Development Anti-Patterns</a></li>
+<li><a href="https://sourcemaking.com/refactoring/refactorings">Refactoring Patterns</a></li>
+<li><a href="https://databaserefactoring.com/">Database Refactoring Patterns</a></li>
+<li><a href="https://redis.com/blog/nosql-data-modeling/">Data Modelling Redis</a></li>
+<li><a href="https://docs.aws.amazon.com/prescriptive-guidance/latest/cloud-design-patterns/introduction.html">Cloud Design Patterns</a></li>
+<li><a href="https://12factor.net/">12 Factors App</a></li>
+<li><a href="https://www.geeksforgeeks.org/design-patterns-for-relational-databases/">Relational DB Patterns</a></li>
+<li><a href="https://www.patterns.dev/vanilla/rendering-patterns/">Rendering Patterns</a></li>
+<li><a href="https://blog.stoplight.io/api-design-patterns-for-rest-web-services">REST API Design Patterns</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="0-how-to-do-a-good-poc"><a class="header" href="#0-how-to-do-a-good-poc">0. How to do a good POC</a></h2>
+<p>Proof of Concept (POC) is a important tool, it's like a lab where you should be doing experiments.
+POC allow you to learn something about a programing language, approach, school of tought, library or even to validate some crazy idea/hack.
+POC can be shallow but is important to have Deep POCs. Doing POCs must be a mindset, something you do everyday.</p>
+<h2 id="1-how-to-go-deep-in-a-poc"><a class="header" href="#1-how-to-go-deep-in-a-poc">1. How to go Deep in a POC?</a></h2>
+<ul>
+<li>Debug the code (write down classes names, make diagrams) do it multiple times</li>
+<li>Write down code that test, simulate or exaserbate the problem or target of your poc</li>
+<li>Do Research, see what other people do, are there any patterns? or idiomatic ways of doing this?</li>
+<li>Read the documentation, read book, avoid tutotials, read the source code</li>
+<li>Do experiments, test the API in several different conditions and scenarios of sucess and error see what happens</li>
+<li>Reading the source code of a framework or library is a must, is how you can understand how it works and how to use it</li>
+</ul>
+<h2 id="2-what-not-todo-in-poc"><a class="header" href="#2-what-not-todo-in-poc">2. What NOT todo in POC?</a></h2>
+<ul>
+<li>Be shallow all the time</li>
+<li>Just call methods</li>
+<li>Do not challenge yourself, if you know is too easy is not a good POC</li>
+</ul>
+<h2 id="3-examples-of-good-deep-pocs"><a class="header" href="#3-examples-of-good-deep-pocs">3. Examples of Good Deep POCs</a></h2>
+<ul>
+<li><a href="https://github.com/diegopacheco/servers-benchmark">Servers Benchmark</a></li>
+<li><a href="https://github.com/diegopacheco/java-pocs/tree/master/pocs/if-alternatives-fun">If Alternatives</a></li>
+<li><a href="https://github.com/diegopacheco/java-pocs/tree/master/pocs/java-21-spring-boot-3-async">Java 21 Spring Boot 3 Async</a></li>
+<li><a href="https://github.com/diegopacheco/Elegant.Objects">Elegant Objects</a></li>
+<li><a href="https://github.com/diegopacheco/Elegant.Objects.vol.2">Elegant Objects Vol 2</a></li>
+<li><a href="https://github.com/diegopacheco/scala-playground/tree/master/scala-3.5-patterns">Scala 3.5 Patterns</a></li>
+</ul>
+<h2 id="4-keep-in-mind"><a class="header" href="#4-keep-in-mind">4. Keep in mind</a></h2>
+<ul>
+<li>The more you pratice, the better you get.</li>
+<li>POCs comparing libraries, approaches, languages, patterns help a lot to learn and master tecnhiques.</li>
+<li>Make sure it gets harder, no matter if you need to do 10-100x to understand. Repetition is key.</li>
+<li>You are only fooling yourself if you just go shallow all the time.</li>
+<li>Doing Shallow pocs is not neccesary bad or wrong, but you should be doing Deep POCs as well.</li>
+<li>Challenge yourself, do not be afraid to fail, is part of the learning process.</li>
+<li>Consider doing crazy things like: a parser, a compiler, a framework, a library, maybe even a new language.</li>
+<li>Remember learning with code is a long term game and a mindset, so keep doing it everyday.</li>
+</ul>
+<h2 id="5-to-improve"><a class="header" href="#5-to-improve">5. To improve</a></h2>
+<ul>
+<li>Share the code with others ask feedback</li>
+<li>look for different and better ways to do the same thing</li>
+<li>Be curious, ask questions, do not be afraid to ask for help</li>
+<li>Go read the source code of big projects, is a great way to learn like: Java, Spring, Netty, Linux, React, Nodejs, etc.</li>
+<li>Document your POC, write text exmplaning what you did a why and why is impotant.</li>
+<li>Good POCs take hours, days and weeks and thats fine, the more time you invest the better you get.</li>
+<li>Make doing POCs a habit, do it everyday, is like going to the gym, you need to do it everyday to get better.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="paper-hero"><a class="header" href="#paper-hero">Paper Hero</a></h1>
+<p>Papers are important, because most of breakthroughs in technology are first
+described in research papers. There is a lot of value in reading papers to
+stay up to date with the latest advancements, and to get inspiration for new
+ideas.</p>
+<h2 id="how-to-read-a-paper"><a class="header" href="#how-to-read-a-paper">How to Read a paper</a></h2>
+<ol>
+<li><strong>Skim the paper</strong>: Start by reading the abstract, introduction, and conclusion to get a high-level understanding of the paper's goals and contributions.</li>
+<li><strong>Identify key sections</strong>: Look for sections that are most relevant to your interests or research. Focus on these sections first.</li>
+<li><strong>Take notes</strong>: As you read, take notes on important concepts, methods, and results. Summarize key points in your own words to reinforce understanding.</li>
+<li><strong>Understand the methodology</strong>: Pay close attention to the methods used in the paper. Try to understand the experiments.</li>
+</ol>
+<p>Pretty much all PDF readers, even you browser(let's say chrome) has a highlighting tool. Use it to highlight important parts of the paper. You should use this.</p>
+<h2 id="presenting-papers"><a class="header" href="#presenting-papers">Presenting Papers</a></h2>
+<p>Presenting papers is a great challenge because papers can be as long as big books and usualy yhem are at least 7-15 pages long, but very often much bigger. It's not unusual to see papers that are 100+ pages long. So you can't just read the whole paper.</p>
+<p>Presenting a paper(whichout slides) forces you to:</p>
+<ol>
+<li><strong>Understand</strong>: Make sure you understand the paper well enough to explain it to others.</li>
+<li><strong>Select</strong>: Identify the most important points and contributions of the paper.</li>
+<li><strong>Practice</strong>: Practice your communication skills by explaining complex ideas in a clear and concise manner. (Dry runs, Dry runs, Dry runs...)</li>
+</ol>
+<h2 id="sources-of-papers"><a class="header" href="#sources-of-papers">Sources of Papers</a></h2>
+<ul>
+<li><a href="https://arxiv.org/">arXiv</a>: A repository of electronic preprints covering various fields including computer science, physics, mathematics, and more.</li>
+<li><a href="https://scholar.google.com/">Google Scholar</a>: A search engine for scholarly literature across many disciplines and sources.</li>
+<li><a href="https://ieeexplore.ieee.org/">IEEE Xplore</a>: A digital library for research articles and conference papers in engineering and technology.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="presentation-hero"><a class="header" href="#presentation-hero">Presentation Hero</a></h1>
+<p>Read this multiple times and follow strickly and will be awesome at presenting.</p>
+<h2 id="before-you-start"><a class="header" href="#before-you-start">Before you start</a></h2>
+<p>Preparation is everythinng. When should I start preparing? 30 days before your presentation day. Why you need start 30 days ahead?</p>
+<ul>
+<li>Because you will need time to research</li>
+<li>Because you will get feedback and will have homework</li>
+<li>Because even if your deck is amazing, you need do multiple dry runs before presenting.</li>
+</ul>
+<p>How many dry runs is enought?</p>
+<ul>
+<li>There is not limit, more preparation is always better.</li>
+<li>You must feel confident and be able to deliver on time</li>
+<li>You should dry run so many times that you can present without slides (presentation zen idea).</li>
+<li>Usually 3 to 5 dry runs is enough</li>
+</ul>
+<h2 id="how-to-deliver-a-great-presentation"><a class="header" href="#how-to-deliver-a-great-presentation">How to deliver a great presentation</a></h2>
+<p>A great presentation is just an output of a well-prepared research, poc or piece of work.
+There is no way you will do an amazing presentation if you the content is not good.
+A presentation is just an excuse, a reason or a motivation if you will do learn someeting deep and deliver an awesome experience.
+When you are presenting, you are delivering a story, think about order of things.</p>
+<h2 id="0-what-you-should-never-ever-do"><a class="header" href="#0-what-you-should-never-ever-do">0. What you should never (ever) do</a></h2>
+<ul>
+<li>Present content you don't understand</li>
+<li>You DONT know DEEPLY all the things you are presenting, all the strings, all the algos, all the techniques, all technologies, every single thing you don't master it.</li>
+<li>Talk about things you did not run a poc or some experiment or have experience with in production</li>
+<li>Have a lot of text and just read all time</li>
+<li>Have a white background with or poor color scheme.</li>
+<li>Splash code in text, dont show code without syntax highlight</li>
+<li>Do no sufer in silence, ask for help</li>
+<li>Dont do the presentation for compliance, do your best, use as a tool for continnuous learning and improvement</li>
+</ul>
+<h2 id="1-what-you-should-always-do"><a class="header" href="#1-what-you-should-always-do">1. What you should always do</a></h2>
+<ul>
+<li>Research
+<ul>
+<li>Do POCs</li>
+<li>Debug</li>
+<li>Google it</li>
+<li>Read about it</li>
+</ul>
+</li>
+<li>Give Context: What it is? How it works? Showing arch diagrams always good.</li>
+<li>Always have trade-offs (PROS and CONS)</li>
+<li>Comparisons with similar solutins and options always good i.e talking about Kafka, compare with RabbitMQ, Kinesis, ActiveMQ, etc.</li>
+<li>CODE</li>
+<li>Live-demo (which can be recorded)</li>
+</ul>
+<h2 id="2-how-to-prepare"><a class="header" href="#2-how-to-prepare">2. How to prepare</a></h2>
+<ul>
+<li>Record you presenting to your self like a unit test (do that 3 to 5 times) this is also called Dry Run</li>
+<li>Show to someone with more experience - get feedback</li>
+<li>The more you present, the better you get, pratice is the key to success</li>
+<li>Dry Runs: Do many dry runs as necessary, record a video so you see youself presenting and what is working or not, get feedback from other people.</li>
+</ul>
+<h2 id="3-how-to-create-a-good-presentation-structure"><a class="header" href="#3-how-to-create-a-good-presentation-structure">3. How to create a good presentation structure</a></h2>
+<ol>
+<li>What: Explain what it thing you are presenting.</li>
+<li>How: Explain how it works and how is the architecture under the hood.</li>
+<li>Trade-offs: Explain the trade-offs, pros and cons.</li>
+<li>Code/DEMO: Show code, if possible, live demo is always good.</li>
+<li>Comparisons: Show comparisons with similar solutions.</li>
+</ol>
+<h2 id="4-how-to-deliver"><a class="header" href="#4-how-to-deliver">4. How to deliver</a></h2>
+<ul>
+<li>Be clam</li>
+<li>Dont rush</li>
+<li>Mind the time (have a clock in front of you) or in yoir phone</li>
+<li>Ask for feedback after the presentation</li>
+</ul>
+<h2 id="5-how-to-improve"><a class="header" href="#5-how-to-improve">5. How to improve</a></h2>
+<ul>
+<li>Read the book <code>Presentation Zen</code> by Garr Reynolds</li>
+<li>Try to add some humor, data, facts or intersting trivia is always fun</li>
+<li>Watch other people presenting</li>
+<li>Use google for research, read books, read papers, debug the code, do multiple pocs.</li>
+<li>Book time in your agenda to prepare the presentation (review and dry-run too)</li>
+</ul>
+<h2 id="6-when-you-learn-to-how-to-present-well"><a class="header" href="#6-when-you-learn-to-how-to-present-well">6. When you learn to how to present well...</a></h2>
+<ul>
+<li>You will comunicate better</li>
+<li>You will sell better</li>
+<li>You will be more confident</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="sales-hero"><a class="header" href="#sales-hero">Sales Hero</a></h1>
+<p>Most of engineers have alergy to sales. I completely get it, flufly stuff, wrong terms, hype, things that are being forced down your throat to follow trends that don't make sense to you. However does not matter you are an engineer, you need to be doing sales all the time. If you are an architect, even more, sales need to happen even more often.</p>
+<h2 id="why-sales-where-we-apply-sales"><a class="header" href="#why-sales-where-we-apply-sales">Why Sales? Where we apply sales?</a></h2>
+<ol>
+<li>When you are convincing your team to use a new technology or approach.</li>
+<li>When you are trying to get buy-in from stakeholders for a project.</li>
+<li>When you are negotiating resources or timelines for your projects.</li>
+<li>When you are presenting your ideas or solutions to clients or management.</li>
+<li>When you are collaborating with cross-functional teams and need to align on goals.</li>
+<li>When you are doing a paper presentation or conference talk to share your work.</li>
+<li>When you are mentoring or coaching junior engineers and need to inspire them.</li>
+<li>When you are writing documentation or technical blogs to share knowledge.</li>
+<li>When you are participating in code reviews and need to persuade others of your viewpoint.</li>
+<li>When you are advocating for best practices or standards within your team or organization.</li>
+<li>When you are deliverying a demo and need to highlight the value of your solution.</li>
+</ol>
+<h2 id="invisible-structure"><a class="header" href="#invisible-structure">Invisible Structure</a></h2>
+<p>Does not matter if you are doing a demo, slide deck presentation or even writting a document. You need some elements, or structure, however such structure or element does not need to be explicitly stated or even named but it needs to be present.</p>
+<ol>
+<li>What is the problem?</li>
+<li>What is the solution (IF there are multiple solutions do bike-car-plane).</li>
+<li>Benefits of the solution.</li>
+</ol>
+<h2 id="what-is-the-problem"><a class="header" href="#what-is-the-problem">What is the problem?</a></h2>
+<p>You need to state the problem. More important than staing the problem is to state the pain of the problem.</p>
+<h2 id="bike-car--plane"><a class="header" href="#bike-car--plane">Bike, Car , Plane</a></h2>
+<img src="images/bike-car-plane-sales-gemini3-banana-pro.png" width="600"/>
+<p>When presenting multiple solutions, you must order them by simplicity to complexity, or from lower value to higher value. That way you are constaly raising the bar of your audience expectations.</p>
+<p>Problem: I need to go from Porto Alegre to Florianopolis. I don't have a transportation method.</p>
+<p>Solution: First I give you a bike, you get there in 2 days, them I give you a car, you get there in 6 hours, finally I give you a plane, you get there in 60 minutes.</p>
+<p>IF you are doing a demo, you can progressevly evole what you are presenting. IF you have just one solution, make sure you give the plane or the best option. IF you have multiple, organize them in a way where is progressively.</p>
+<h2 id="benefits-of-the-solution"><a class="header" href="#benefits-of-the-solution">Benefits of the solution</a></h2>
+<p>Benefits should come last, they will be like a summary, but at this point, you are doing a RECAP, where you your audience already understand the problem and the solution, now you are just reinforcing.</p>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="agile-dev-resources"><a class="header" href="#agile-dev-resources">Agile Dev Resources</a></h2>
+<h2 id="why-scrum-sucks"><a class="header" href="#why-scrum-sucks">Why Scrum Sucks</a></h2>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=2u0sNRO-QKQ&amp;t=253s&amp;ab_channel=SabbirAhmed">One Hacker Way Rational alternative of Agile - Erik Meijer</a></li>
+<li><a href="https://twitter.com/svpino/status/1695806027256475777">Scrum is a cancer</a></li>
+</ul>
+<h2 id="why-safe-sucks"><a class="header" href="#why-safe-sucks">Why Safe Sucks</a></h2>
+<ul>
+<li><a href="https://ronjeffries.com/xprog/articles/safe-good-but-not-good-enough/">SAFe - Good But Not Good Enough</a></li>
+<li><a href="https://productcoalition.com/the-major-problems-with-safe-1e797f7e48f8">The Major Problems with SAFe</a></li>
+</ul>
+<h3 id="books"><a class="header" href="#books">Books</a></h3>
+<ul>
+<li><a href="http://www.amazon.com/Getting-Real-Jason-Fried-ebook/dp/B0053KHGWM/ref=sr_1_2?ie=UTF8&amp;qid=1417434564&amp;sr=8-2&amp;keywords=getting+real">Getting Real</a></li>
+<li><a href="https://37signals.com/rework">Rework</a></li>
+<li><a href="http://www.amazon.com/The-Pragmatic-Programmer-Journeyman-Master/dp/020161622X/ref=pd_sim_b_40?ie=UTF8&amp;refRID=1C5QKVRR1RC45BRTRBFA">The Pragmatic Programmer: From Journeyman to Master</a></li>
+<li><a href="http://www.amazon.com/gp/product/0201485672/ref=s9_psimh_gw_p14_d12_i4?pf_rd_m=ATVPDKIKX0DER&amp;pf_rd_s=desktop-2&amp;pf_rd_r=13XTHB4RKQ3H35TH2BZX&amp;pf_rd_t=36701&amp;pf_rd_p=1970567562&amp;pf_rd_i=desktop">Refactoring: Improving the Design of Existing Code</a></li>
+<li><a href="http://www.amazon.com/Working-Effectively-Legacy-Michael-Feathers/dp/0131177052/ref=pd_sim_b_3?ie=UTF8&amp;refRID=0NFDX09AB5N8Y6EM4BB5">Working Effectively with Legacy Code</a></li>
+<li><a href="http://www.amazon.com/Extreme-Programming-Explained-Embrace-Edition/dp/0321278658/ref=pd_sim_b_16?ie=UTF8&amp;refRID=0NFDX09AB5N8Y6EM4BB5">Extreme Programming Explained: Embrace Change, 2nd Edition (The XP Series)</a></li>
+<li><a href="http://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882/ref=pd_sim_b_6?ie=UTF8&amp;refRID=1C5QKVRR1RC45BRTRBFA">Clean Code: A Handbook of Agile Software Craftsmanship</a></li>
+<li><a href="http://www.amazon.com/Code-Complete-Practical-Handbook-Construction/dp/0735619670/ref=sr_1_1?ie=UTF8&amp;qid=1417434555&amp;sr=8-1&amp;keywords=code+complete">Code Complete: A Practical Handbook of Software Construction, Second Edition</a></li>
+<li><a href="http://www.amazon.com/gp/product/0321811984?ie=UTF8&amp;tag=garrreynoldsc-20&amp;linkCode=xm2&amp;camp=1789&amp;creativeASIN=0321811984">Presentation Zen</a></li>
+<li><a href="http://www.amazon.com/Seven-Languages-Weeks-Programming-Programmers/dp/193435659X/ref=sr_1_2?s=books&amp;ie=UTF8&amp;qid=1417434852&amp;sr=1-2&amp;keywords=7+languages+in+seven+weeks">Seven Languages in Seven Weeks</a></li>
+<li><a href="http://www.amazon.com/Programming-Clojure-Pragmatic-Programmers-Halloway/dp/1934356336/ref=sr_1_4?s=books&amp;ie=UTF8&amp;qid=1417434888&amp;sr=1-4&amp;keywords=programming+clojure">Programming Clojure</a></li>
+<li><a href="http://www.amazon.com/Seven-Databases-Weeks-Modern-Movement/dp/1934356921/ref=sr_1_1?s=books&amp;ie=UTF8&amp;qid=1417434913&amp;sr=1-1&amp;keywords=7+databases+in+seven+weeks">Seven Databases in Seven Weeks</a></li>
+<li><a href="http://learnyouahaskell.com/chapters">Learn You a Haskell for Great Good!</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ai-resources"><a class="header" href="#ai-resources">AI Resources</a></h1>
+<h2 id="important-topics"><a class="header" href="#important-topics">Important Topics</a></h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Machine_learning">Machine Learning Fundamentals</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Deep_learning">Deep Learning</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Artificial_neural_network">Neural Networks</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Natural_language_processing">Natural Language Processing</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Computer_vision">Computer Vision</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Reinforcement_learning">Reinforcement Learning</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Generative_artificial_intelligence">Generative AI</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Large_language_model">Large Language Models</a></li>
+<li><a href="https://en.wikipedia.org/wiki/MLOps">MLOps</a></li>
+<li><a href="https://en.wikipedia.org/wiki/AI_ethics">AI Ethics</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Transformer_(machine_learning_model)">Transformer Architecture</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Attention_(machine_learning)">Attention Mechanisms</a></li>
+</ul>
+<h2 id="traditional-ai-tech"><a class="header" href="#traditional-ai-tech">Traditional AI Tech</a></h2>
+<h3 id="machine-learning-frameworks"><a class="header" href="#machine-learning-frameworks">Machine Learning Frameworks</a></h3>
+<ul>
+<li><a href="https://scikit-learn.org/">Scikit-learn</a></li>
+<li><a href="https://www.tensorflow.org/">TensorFlow</a></li>
+<li><a href="https://pytorch.org/">PyTorch</a></li>
+<li><a href="https://keras.io/">Keras</a></li>
+<li><a href="https://xgboost.readthedocs.io/">XGBoost</a></li>
+<li><a href="https://lightgbm.readthedocs.io/">LightGBM</a></li>
+<li><a href="https://catboost.ai/">CatBoost</a></li>
+<li><a href="https://spark.apache.org/mllib/">Apache Spark MLlib</a></li>
+</ul>
+<h3 id="computer-vision"><a class="header" href="#computer-vision">Computer Vision</a></h3>
+<ul>
+<li><a href="https://opencv.org/">OpenCV</a></li>
+<li><a href="https://python-pillow.org/">PIL/Pillow</a></li>
+<li><a href="https://albumentations.ai/">Albumentations</a></li>
+<li><a href="https://ultralytics.com/yolo">YOLO</a></li>
+<li><a href="https://mediapipe.dev/">MediaPipe</a></li>
+</ul>
+<h3 id="natural-language-processing"><a class="header" href="#natural-language-processing">Natural Language Processing</a></h3>
+<ul>
+<li><a href="https://www.nltk.org/">NLTK</a></li>
+<li><a href="https://spacy.io/">spaCy</a></li>
+<li><a href="https://radimrehurek.com/gensim/">Gensim</a></li>
+<li><a href="https://textblob.readthedocs.io/">TextBlob</a></li>
+<li><a href="https://stanfordnlp.github.io/CoreNLP/">Stanford NLP</a></li>
+</ul>
+<h3 id="data-processing--analysis"><a class="header" href="#data-processing--analysis">Data Processing &amp; Analysis</a></h3>
+<ul>
+<li><a href="https://pandas.pydata.org/">Pandas</a></li>
+<li><a href="https://numpy.org/">NumPy</a></li>
+<li><a href="https://scipy.org/">SciPy</a></li>
+<li><a href="https://matplotlib.org/">Matplotlib</a></li>
+<li><a href="https://seaborn.pydata.org/">Seaborn</a></li>
+<li><a href="https://plotly.com/python/">Plotly</a></li>
+</ul>
+<h3 id="mlops--model-deployment"><a class="header" href="#mlops--model-deployment">MLOps &amp; Model Deployment</a></h3>
+<ul>
+<li><a href="https://mlflow.org/">MLflow</a></li>
+<li><a href="https://www.kubeflow.org/">Kubeflow</a></li>
+<li><a href="https://airflow.apache.org/">Apache Airflow</a></li>
+<li><a href="https://dvc.org/">DVC</a></li>
+<li><a href="https://wandb.ai/">Weights &amp; Biases</a></li>
+<li><a href="https://neptune.ai/">Neptune</a></li>
+<li><a href="https://beam.apache.org/">Apache Beam</a></li>
+</ul>
+<h2 id="generative-ai-tech"><a class="header" href="#generative-ai-tech">Generative AI Tech</a></h2>
+<h3 id="large-language-models"><a class="header" href="#large-language-models">Large Language Models</a></h3>
+<ul>
+<li><a href="https://openai.com/gpt-4">OpenAI GPT</a></li>
+<li><a href="https://www.anthropic.com/claude">Anthropic Claude</a></li>
+<li><a href="https://gemini.google.com/">Google Gemini</a></li>
+<li><a href="https://llama.meta.com/">Meta Llama</a></li>
+<li><a href="https://mistral.ai/">Mistral AI</a></li>
+<li><a href="https://cohere.com/">Cohere</a></li>
+<li><a href="https://huggingface.co/transformers/">Hugging Face Transformers</a></li>
+</ul>
+<h3 id="image-generation"><a class="header" href="#image-generation">Image Generation</a></h3>
+<ul>
+<li><a href="https://openai.com/dall-e-3">DALL-E</a></li>
+<li><a href="https://www.midjourney.com/">Midjourney</a></li>
+<li><a href="https://stability.ai/stable-diffusion">Stable Diffusion</a></li>
+<li><a href="https://firefly.adobe.com/">Adobe Firefly</a></li>
+<li><a href="https://runwayml.com/">RunwayML</a></li>
+</ul>
+<h3 id="code-generation"><a class="header" href="#code-generation">Code Generation</a></h3>
+<ul>
+<li><a href="https://github.com/features/copilot">GitHub Copilot</a></li>
+<li><a href="https://claude.ai/code">Claude Code</a></li>
+<li><a href="https://openai.com/blog/openai-codex">OpenAI Codex</a></li>
+<li><a href="https://www.tabnine.com/">Tabnine</a></li>
+<li><a href="https://replit.com/site/ghostwriter">Replit Ghostwriter</a></li>
+<li><a href="https://cursor.sh/">Cursor</a></li>
+</ul>
+<h3 id="audiospeech"><a class="header" href="#audiospeech">Audio/Speech</a></h3>
+<ul>
+<li><a href="https://openai.com/research/whisper">OpenAI Whisper</a></li>
+<li><a href="https://elevenlabs.io/">ElevenLabs</a></li>
+<li><a href="https://murf.ai/">Murf</a></li>
+<li><a href="https://speechify.com/">Speechify</a></li>
+</ul>
+<h3 id="video-generation"><a class="header" href="#video-generation">Video Generation</a></h3>
+<ul>
+<li><a href="https://openai.com/sora">Sora</a></li>
+<li><a href="https://pika.art/">Pika Labs</a></li>
+<li><a href="https://research.runwayml.com/gen2">Runway Gen-2</a></li>
+<li><a href="https://www.synthesia.io/">Synthesia</a></li>
+</ul>
+<h3 id="ai-development-platforms"><a class="header" href="#ai-development-platforms">AI Development Platforms</a></h3>
+<ul>
+<li><a href="https://platform.openai.com/">OpenAI API</a></li>
+<li><a href="https://docs.anthropic.com/">Anthropic API</a></li>
+<li><a href="https://aistudio.google.com/">Google AI Studio</a></li>
+<li><a href="https://azure.microsoft.com/en-us/products/ai-services/openai-service">Azure OpenAI</a></li>
+<li><a href="https://aws.amazon.com/bedrock/">AWS Bedrock</a></li>
+<li><a href="https://cloud.google.com/vertex-ai">Vertex AI</a></li>
+</ul>
+<h3 id="vector-databases--rag"><a class="header" href="#vector-databases--rag">Vector Databases &amp; RAG</a></h3>
+<ul>
+<li><a href="https://www.pinecone.io/">Pinecone</a></li>
+<li><a href="https://weaviate.io/">Weaviate</a></li>
+<li><a href="https://www.trychroma.com/">Chroma</a></li>
+<li><a href="https://qdrant.tech/">Qdrant</a></li>
+<li><a href="https://faiss.ai/">FAISS</a></li>
+<li><a href="https://langchain.com/">LangChain</a></li>
+<li><a href="https://www.llamaindex.ai/">LlamaIndex</a></li>
+</ul>
+<h2 id="ai-challenges-round-1"><a class="header" href="#ai-challenges-round-1">AI Challenges Round 1</a></h2>
+<ul>
+<li>(1) Build a Movie Recommendation System using collaborative filtering, content-based filtering, and hybrid approaches with explicit feedback.</li>
+<li>(2) Create an Image Classification System using CNNs to classify different categories of images with data augmentation and transfer learning.</li>
+<li>(3) Build a Sentiment Analysis API that can analyze text sentiment across multiple languages using pre-trained models and custom training.</li>
+<li>(4) Create a Chatbot using traditional NLP techniques (intent recognition, entity extraction) with conversation management and context tracking.</li>
+<li>(5) Build a Price Prediction System for real estate using various regression algorithms, feature engineering, and model comparison.</li>
+<li>(6) Create an Anomaly Detection System for network traffic or system logs using unsupervised learning techniques.</li>
+<li>(7) Build a Credit Risk Assessment System using classification algorithms with proper feature selection and model validation.</li>
+</ul>
+<h2 id="ai-challenges-round-2"><a class="header" href="#ai-challenges-round-2">AI Challenges Round 2</a></h2>
+<ul>
+<li>(1) Create a RAG (Retrieval-Augmented Generation) System that can answer questions about your personal knowledge base using vector embeddings.</li>
+<li>(2) Build a Code Generation Assistant that can generate code in multiple programming languages based on natural language descriptions.</li>
+<li>(3) Create a Multi-modal AI System that can process both text and images to provide comprehensive responses (like describing images or creating images from text).</li>
+<li>(4) Build an AI-powered Content Moderation System that can detect harmful content across text, images, and videos with high accuracy.</li>
+<li>(5) Create a Personal AI Assistant that can schedule meetings, send emails, and manage tasks through natural language conversations.</li>
+<li>(6) Build a Fine-tuned LLM for a specific domain (legal, medical, financial) with proper training pipeline and evaluation metrics.</li>
+<li>(7) Create an AI Agent System that can browse the web, extract information, and perform tasks autonomously with safety guardrails.</li>
+</ul>
+<h2 id="ai-challenges-round-3"><a class="header" href="#ai-challenges-round-3">AI Challenges Round 3</a></h2>
+<ul>
+<li>(1) Build a Multi-Agent AI System where different AI agents collaborate to solve complex problems with coordination and conflict resolution.</li>
+<li>(2) Create an AI Model Training Pipeline with automated hyperparameter tuning, distributed training, and model versioning on cloud infrastructure.</li>
+<li>(3) Build a Real-time AI Inference System that can handle millions of requests with sub-second latency using model optimization and caching.</li>
+<li>(4) Create an AI Safety and Alignment System with red-teaming, jailbreak detection, and content filtering with continuous monitoring.</li>
+<li>(5) Build a Federated Learning System where multiple parties can train models collaboratively without sharing raw data.</li>
+<li>(6) Create an AI Explainability Dashboard that can provide interpretable explanations for model decisions using SHAP, LIME, and other techniques.</li>
+<li>(7) Build a Continuous Learning AI System that can adapt to new data patterns without forgetting previous knowledge (catastrophic forgetting prevention).</li>
+</ul>
+<h2 id="books-1"><a class="header" href="#books-1">Books</a></h2>
+<ul>
+<li><a href="https://www.amazon.com/Principles-Software-Architecture-Modernization-microservices/dp/9355519532/ref=sr_1_1?crid=7U3H2IE5U7Y4&amp;dib=eyJ2IjoiMSJ9.ebHg7EIiJ3GThIg8Dwf4PelC70iUIbHPKv7_7zk8vrk8K2FB4zlrUQyNZwKAHPO46cAYR5z2-KyqnXqNz3Ee2lmU-aGR7NLhq7jko2UihHIl-taoJ6i_hkMjcc12ZF3pOmB9lFrvbsGgbDagq1Vzqg.oz7TxYpSBxBZjVjkuIPDZM7Wxx_XMRU0Uj7jo9Rq_BI&amp;dib_tag=se&amp;keywords=principles+of+software+architecture+modernization&amp;qid=1741069169&amp;sprefix=Principles+of+software+a%2Caps%2C190&amp;sr=8-1">Principles of Software Architecture Modernization</a></li>
+<li><a href="https://www.amazon.com/dp/9365893100/ref=mes-dp?_encoding=UTF8&amp;pd_rd_w=JpyYV&amp;content-id=amzn1.sym.7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_p=7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_r=K6XYEHZZ76RWDSAXAY5X&amp;pd_rd_wg=RH04x&amp;pd_rd_r=f230b2e4-c342-429e-a362-c856e4c2362a">Continuous Modernization</a></li>
+<li><a href="https://www.amazon.com/Hands-Machine-Learning-Scikit-Learn-TensorFlow/dp/1492032646/">Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow</a></li>
+<li><a href="https://www.amazon.com/Deep-Learning-Ian-Goodfellow/dp/0262035618/">Deep Learning</a></li>
+<li><a href="https://www.amazon.com/Pattern-Recognition-Learning-Information-Statistics/dp/0387310738/">Pattern Recognition and Machine Learning</a></li>
+<li><a href="https://www.amazon.com/Elements-Statistical-Learning-Prediction-Statistics/dp/0387848576/">The Elements of Statistical Learning</a></li>
+<li><a href="https://www.deeplearning.ai/machine-learning-yearning/">Machine Learning Yearning</a></li>
+<li><a href="https://www.amazon.com/Building-Machine-Learning-Powered-Applications/dp/149204511X/">Building Machine Learning Powered Applications</a></li>
+<li><a href="https://www.amazon.com/Designing-Machine-Learning-Systems-Production-Ready/dp/1098107969/">Designing Machine Learning Systems</a></li>
+<li><a href="https://www.amazon.com/MLOps-Continuous-Delivery-Automation-Pipelines/dp/1449321000/">MLOps: Continuous Delivery and Automation Pipelines in Machine Learning</a></li>
+<li><a href="https://www.amazon.com/Machine-Learning-Design-Patterns-Preparation/dp/1098115783/">Machine Learning Design Patterns</a></li>
+<li><a href="https://www.amazon.com/Artificial-Intelligence-Modern-Approach-4th/dp/0134610997/">Artificial Intelligence: A Modern Approach</a></li>
+<li><a href="https://www.amazon.com/Hundred-Page-Machine-Learning-Book/dp/199957950X/">The Hundred-Page Machine Learning Book</a></li>
+<li><a href="https://www.amazon.com/Python-Machine-Learning-scikit-learn-TensorFlow/dp/1789955750/">Python Machine Learning</a></li>
+<li><a href="https://www.amazon.com/Natural-Language-Processing-Python-Analyzing/dp/0596516495/">Natural Language Processing with Python</a></li>
+<li><a href="https://www.amazon.com/Computer-Vision-Algorithms-Applications-Science/dp/1848829345/">Computer Vision: Algorithms and Applications</a></li>
+<li><a href="https://www.amazon.com/Reinforcement-Learning-Introduction-Adaptive-Computation/dp/0262039249/">Reinforcement Learning: An Introduction</a></li>
+<li><a href="https://www.amazon.com/Generative-Deep-Learning-Teaching-Machines/dp/1492041947/">Generative Deep Learning</a></li>
+<li><a href="https://www.amazon.com/GPT-3-Building-Innovative-Products-Language/dp/1484268494/">GPT-3: Building Innovative NLP Products Using Large Language Models</a></li>
+<li><a href="https://www.amazon.com/AI-Machine-Learning-Coders-algorithms/dp/1492078212/">AI and Machine Learning for Coders</a></li>
+<li><a href="https://www.amazon.com/Building-Intelligent-Systems-Machine-Learning/dp/1484239652/">Building Intelligent Systems</a></li>
+<li><a href="https://www.amazon.com/Master-Algorithm-Ultimate-Learning-Machine/dp/0465065708/">The Master Algorithm</a></li>
+<li><a href="https://www.amazon.com/Life-3-0-Being-Artificial-Intelligence/dp/1101946598/">Life 3.0: Being Human in the Age of Artificial Intelligence</a></li>
+<li><a href="https://www.amazon.com/Human-Compatible-Artificial-Intelligence-Problem/dp/0525558616/">Human Compatible: Artificial Intelligence and the Problem of Control</a></li>
+<li><a href="https://www.amazon.com/Alignment-Problem-Machine-Learning-Values/dp/0393635821/">The Alignment Problem</a></li>
+</ul>
+<h2 id="links"><a class="header" href="#links">Links</a></h2>
+<ul>
+<li><a href="https://paperswithcode.com/">Papers With Code</a></li>
+<li><a href="https://towardsdatascience.com/">Towards Data Science</a></li>
+<li><a href="https://machinelearningmastery.com/">Machine Learning Mastery</a></li>
+<li><a href="https://distill.pub/">Distill</a></li>
+<li><a href="https://openai.com/blog/">OpenAI Blog</a></li>
+<li><a href="https://ai.googleblog.com/">Google AI Blog</a></li>
+<li><a href="https://deepmind.com/blog">DeepMind Blog</a></li>
+<li><a href="https://www.anthropic.com/news">Anthropic Blog</a></li>
+<li><a href="https://huggingface.co/blog">Hugging Face Blog</a></li>
+<li><a href="https://ai.stanford.edu/">Stanford AI Lab</a></li>
+<li><a href="https://www.csail.mit.edu/">MIT AI Lab</a></li>
+<li><a href="https://bair.berkeley.edu/">Berkeley AI Research</a></li>
+<li><a href="https://www.youtube.com/c/MachineLearningExplained">AI/ML YouTube Channels</a></li>
+<li><a href="https://www.coursera.org/learn/machine-learning">Coursera ML Course</a></li>
+<li><a href="https://www.edx.org/course/artificial-intelligence-ai">edX MIT Introduction to AI</a></li>
+<li><a href="https://www.fast.ai/">Fast.ai</a></li>
+<li><a href="https://www.kaggle.com/learn">Kaggle Learn</a></li>
+<li><a href="https://ai.google/education/">Google AI Education</a></li>
+<li><a href="https://aws.amazon.com/machine-learning/">AWS Machine Learning</a></li>
+<li><a href="https://azure.microsoft.com/en-us/overview/ai-platform/">Azure AI</a></li>
+<li><a href="https://cloud.google.com/ai-platform/">Google Cloud AI</a></li>
+<li><a href="https://developer.nvidia.com/ai-and-data-science">NVIDIA AI Developer</a></li>
+<li><a href="https://www.aiethicsinstitute.org/">AI Ethics Institute</a></li>
+<li><a href="https://www.partnershiponai.org/">Partnership on AI</a></li>
+<li><a href="https://github.com/deepmind/ai-safety-gridworlds">AI Safety Gridworlds</a></li>
+<li><a href="https://gym.openai.com/">OpenAI Gym</a></li>
+<li><a href="https://tfhub.dev/">TensorFlow Hub</a></li>
+<li><a href="https://pytorch.org/hub/">PyTorch Hub</a></li>
+<li><a href="https://modelzoo.co/">Model Zoo</a></li>
+<li><a href="https://aideadlin.es/">AI Conferences</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="software-architecture--devops-engineering-resources"><a class="header" href="#software-architecture--devops-engineering-resources">Software Architecture | DevOps Engineering Resources</a></h2>
+<p><img src="./images/arch-devops-hero.png" alt="Architecture and DevOps" /></p>
+<h3 id="important-topics-1"><a class="header" href="#important-topics-1">Important Topics</a></h3>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Software_requirements">Requirements</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Availability">Availability</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Scalability">Scalability</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Software_design_pattern">Design Patterns</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Trade-off">Trade-offs</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Distributed_computing">Distributed Systems</a></li>
+<li><a href="https://martinfowler.com/bliki/CQRS.html">CQRS</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Cloud_computing">Cloud Computing</a></li>
+<li><a href="http://www.soa-manifesto.org/default.html">SOA / REST</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Infrastructure_as_Code">Infrastructure as Code</a></li>
+<li><a href="https://highops.com/insights/immutable-infrastructure-what-is-it/">Immutable Infrastructure</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Observability">Observability</a></li>
+</ul>
+<h3 id="tech"><a class="header" href="#tech">Tech</a></h3>
+<h4 id="software-architecture"><a class="header" href="#software-architecture">Software Architecture</a></h4>
+<ul>
+<li><a href="http://nosql-database.org/">NoSQL</a></li>
+<li><a href="https://www.ics.uci.edu/~fielding/pubs/dissertation/fielding_dissertation.pdf">REST</a></li>
+<li><a href="http://camel.apache.org/">Integration / Camel</a></li>
+<li><a href="http://akka.io/">Akka</a></li>
+<li><a href="http://www.oracle.com/technetwork/java/javaee/tech/index.html">JEE</a></li>
+<li><a href="https://kafka.apache.org/">Kafka</a></li>
+<li><a href="http://nsq.io/">nsq</a></li>
+<li><a href="https://www.elastic.co/">ElasticSearch</a></li>
+<li><a href="http://zeromq.org/">ZEROmq</a></li>
+<li><a href="http://vertx.io/">Vert.X</a></li>
+<li><a href="http://www.dropwizard.io/">Dropwizard</a></li>
+<li><a href="https://github.com/ReactiveX/RxJava">RxJava</a></li>
+<li><a href="https://netty.io/">Netty</a></li>
+<li><a href="https://github.com/LMAX-Exchange/disruptor">LMAX/Disruptor</a></li>
+<li><a href="https://github.com/quartz-scheduler/quartz">Quartz</a></li>
+<li><a href="https://ignite.apache.org/">Ignite</a></li>
+<li><a href="https://hazelcast.com/">Hazelcast</a></li>
+<li><a href="https://github.com/google/protobuf">Protobuf</a></li>
+<li><a href="http://samza.apache.org/">Samza</a></li>
+<li><a href="http://flink.apache.org/">Flink</a></li>
+<li><a href="https://spark.apache.org/">Spark</a></li>
+<li><a href="https://github.com/pravega/pravega">Pravega</a></li>
+<li><a href="https://gradle.org/">Gradle</a></li>
+<li><a href="http://projects.spring.io/spring-cloud/">Spring Cloud</a></li>
+<li><a href="https://netflix.github.io/">NetflixOSS</a></li>
+</ul>
+<h5 id="devops-engineering"><a class="header" href="#devops-engineering">DevOps Engineering</a></h5>
+<ul>
+<li><a href="https://www.ansible.com/">Ansible</a></li>
+<li><a href="https://www.terraform.io/">Terraform</a></li>
+<li><a href="https://www.packer.io/">Packer</a></li>
+<li><a href="https://aws.amazon.com/">AWS Stack</a></li>
+<li><a href="https://cloud.google.com/">Google GCP</a></li>
+<li><a href="http://gatling.io/">Gatling</a></li>
+<li><a href="https://jenkins.io/">Jenkins</a></li>
+<li><a href="https://travis-ci.org/">Travis</a></li>
+<li><a href="https://grafana.com/">Grafana</a></li>
+<li><a href="https://collectd.org/">Collectd</a></li>
+<li><a href="https://www.docker.com/">Docker</a></li>
+<li><a href="https://boto3.readthedocs.io/en/latest/">Boto3</a></li>
+<li><a href="https://www.nomadproject.io/">Nomad</a></li>
+<li><a href="https://www.vagrantup.com/">Vagrant</a></li>
+<li><a href="https://www.influxdata.com/">InfluxData</a></li>
+<li><a href="https://prometheus.io/">Prometheus</a></li>
+<li><a href="http://riemann.io/">riemann</a></li>
+<li><a href="http://www.liquibase.org/">Liquibase</a></li>
+<li><a href="https://flywaydb.org/">FlyWay</a></li>
+<li><a href="https://github.com/coreos/etcd">Etcd</a></li>
+<li><a href="https://www.graylog.org/">Graylog</a></li>
+<li><a href="https://www.elastic.co/products">ELK</a></li>
+<li><a href="https://kubernetes.io/">Kubernetes</a></li>
+<li><a href="https://github.com/etsy/statsd">StatsD</a></li>
+<li><a href="https://www.vaultproject.io/">Vault</a></li>
+<li><a href="https://github.com/djenriquez/vault-ui">VaultUI</a></li>
+<li><a href="https://github.com/oracle/smith">smith</a></li>
+<li><a href="https://coreos.com/operators">Operators</a></li>
+<li><a href="http://micrometer.io/">Micrometer</a></li>
+<li><a href="https://github.com/napalm-automation/napalm">napalm</a></li>
+<li><a href="https://github.com/heptio/contour">heptio</a></li>
+<li><a href="https://github.com/theden/0xfee1dead.top">Live HTop</a></li>
+<li><a href="https://github.com/dundalek/closh">Closh</a></li>
+<li><a href="https://github.com/aeroxis/sultan">sultan</a></li>
+<li><a href="https://www.telepresence.io/">telepresence</a></li>
+<li><a href="https://mitmproxy.org/index.html">mitmproxy tools</a></li>
+</ul>
+<h3 id="books-2"><a class="header" href="#books-2">Books</a></h3>
+<h4 id="software-architecture-1"><a class="header" href="#software-architecture-1">Software Architecture</a></h4>
+<ul>
+<li><a href="https://www.amazon.com/Software-Architect-Bootcamp-Raphael-Malveau/dp/0130274070/ref=sr_1_1?ie=UTF8&amp;qid=1498484909&amp;sr=8-1&amp;keywords=software+architecture+bootcamp">Software Architect Bootcamp</a></li>
+<li><a href="https://www.amazon.com/Enterprise-Integration-Patterns-Designing-Deploying/dp/0321200683/ref=sr_1_1?ie=UTF8&amp;qid=1498484951&amp;sr=8-1&amp;keywords=enterprise+integration+patterns">Enterprise Integration Patterns</a></li>
+<li><a href="https://www.amazon.com/Patterns-Enterprise-Application-Architecture-Martin/dp/0321127420/ref=sr_1_2?ie=UTF8&amp;qid=1498484951&amp;sr=8-2&amp;keywords=enterprise+integration+patterns">Patterns of Enterprise Application Architecture</a></li>
+<li><a href="https://www.amazon.com/Building-Microservices-Designing-Fine-Grained-Systems/dp/1491950358/ref=sr_1_3?ie=UTF8&amp;qid=1498484951&amp;sr=8-3&amp;keywords=enterprise+integration+patterns">Building Microservices</a></li>
+<li><a href="https://www.amazon.com/NoSQL-Distilled-Emerging-Polyglot-Persistence/dp/0321826620/ref=pd_sim_14_36?_encoding=UTF8&amp;pd_rd_i=0321826620&amp;pd_rd_r=3CER9EXCQK52Y75M4HB7&amp;pd_rd_w=g8Hl4&amp;pd_rd_wg=zpBo1&amp;psc=1&amp;refRID=3CER9EXCQK52Y75M4HB7">NoSQL Distilled</a></li>
+<li><a href="https://www.amazon.com/RESTful-Web-Services-Cookbook-Scalability/dp/0596801688/ref=pd_sim_14_28?_encoding=UTF8&amp;pd_rd_i=0596801688&amp;pd_rd_r=1SX8G8EG5968QEM7E7QS&amp;pd_rd_w=FAlmY&amp;pd_rd_wg=ZWPDz&amp;psc=1&amp;refRID=1SX8G8EG5968QEM7E7QS">RESTful Web Services Cookbook</a></li>
+<li><a href="https://www.amazon.com/SOA-Principles-Service-Thomas-Erl/dp/0132344823/ref=sr_1_1?s=books&amp;ie=UTF8&amp;qid=1498485155&amp;sr=1-1&amp;keywords=soa">SOA Principles of Service Design</a></li>
+<li><a href="https://www.amazon.com/Design-Patterns-Prentice-Service-Oriented-Computing/dp/0136135161/ref=sr_1_5?s=books&amp;ie=UTF8&amp;qid=1498485155&amp;sr=1-5&amp;keywords=soa">SOA Design Patterns</a></li>
+<li><a href="https://www.amazon.com/Software-Requirements-2-Karl-Wiegers/dp/0735618798/ref=sr_1_3?ie=UTF8&amp;qid=1498485216&amp;sr=8-3&amp;keywords=software+requirements">Software Requirements 2</a></li>
+<li><a href="https://www.amazon.com/More-About-Software-Requirements-Practical/dp/0735622671/ref=sr_1_6?ie=UTF8&amp;qid=1498485216&amp;sr=8-6&amp;keywords=software+requirements">More About Software Requirements</a></li>
+<li><a href="https://www.amazon.com/Software-Requirement-Patterns-Developer-Practices/dp/0735623988/ref=sr_1_11?ie=UTF8&amp;qid=1498485216&amp;sr=8-11&amp;keywords=software+requirements">Software Requirement Patterns</a></li>
+<li><a href="https://www.amazon.com/gp/product/B00ITGHBBS/ref=s9u_simh_gw_i4?ie=UTF8&amp;fpl=fresh&amp;pd_rd_i=B00ITGHBBS&amp;pd_rd_r=D5J8AWYN385GY80HJR81&amp;pd_rd_w=KgNDD&amp;pd_rd_wg=TZzmt&amp;pf_rd_m=ATVPDKIKX0DER&amp;pf_rd_s=&amp;pf_rd_r=FE36VY24HR1K6PXX7Y7X&amp;pf_rd_t=36701&amp;pf_rd_p=0411ffec-c026-40ae-aac5-2cd3d48aeeac&amp;pf_rd_i=desktop">Software Architecture Book</a></li>
+</ul>
+<h5 id="devops-engineering-1"><a class="header" href="#devops-engineering-1">DevOps Engineering</a></h5>
+<ul>
+<li><a href="https://www.amazon.com/Continuous-Delivery-Deployment-Automation-Addison-Wesley-ebook/dp/B003YMNVC0/ref=pd_sim_351_20?_encoding=UTF8&amp;psc=1&amp;refRID=6P97MATGSHZS24DWTAZE">Continuous Delivery</a></li>
+<li><a href="https://www.amazon.com/Phoenix-Project-DevOps-Helping-Business/dp/0988262509/ref=sr_1_2?ie=UTF8&amp;qid=1498484556&amp;sr=8-2&amp;keywords=DevOps">The Phoenix Project</a></li>
+<li><a href="https://www.amazon.com/DevOps-Handbook-World-Class-Reliability-Organizations-ebook/dp/B01M9ASFQ3/ref=sr_1_1?ie=UTF8&amp;qid=1498484556&amp;sr=8-1&amp;keywords=DevOps">The DevOps Handbook</a></li>
+<li><a href="https://www.amazon.com/Ansible-DevOps-Server-configuration-management-ebook/dp/B016G55NOU/ref=sr_1_15?ie=UTF8&amp;qid=1498484556&amp;sr=8-15&amp;keywords=DevOps">Ansible for DevOps</a></li>
+<li><a href="https://www.amazon.com/Terraform-Running-Writing-Infrastructure-Code-ebook/dp/B06XKHGJHP/ref=pd_sim_351_3?_encoding=UTF8&amp;psc=1&amp;refRID=6P97MATGSHZS24DWTAZE">Terraform: Up and Running</a></li>
+<li><a href="https://www.amazon.com/Visible-Ops-Handbook-Implementing-Practical-ebook/dp/B002BWQBEE/ref=pd_sim_351_98?_encoding=UTF8&amp;psc=1&amp;refRID=6P97MATGSHZS24DWTAZE">Visible Ops Handbook</a></li>
+</ul>
+<h3 id="links-1"><a class="header" href="#links-1">Links</a></h3>
+<h4 id="software-architecture-2"><a class="header" href="#software-architecture-2">Software Architecture</a></h4>
+<ul>
+<li><a href="http://www.codingthearchitecture.com/">Coding the Architecture</a></li>
+<li><a href="https://martinfowler.com/">Martin Fowler</a></li>
+<li><a href="http://highscalability.com/">High Scalability</a></li>
+<li><a href="https://www.infoq.com/">InfoQ</a></li>
+<li><a href="http://www.soa-manifesto.org/">SOA Manifesto</a></li>
+<li><a href="http://www.soapatterns.org/">SOA Patterns</a></li>
+<li><a href="http://www.soatesting.com/">SOA Testing</a></li>
+<li><a href="http://www.enterpriseintegrationpatterns.com/">Enterprise Integration Patterns</a></li>
+<li><a href="https://github.com/akullpp/awesome-java">Awesome Java</a></li>
+<li><a href="https://gist.github.com/diegopacheco/4387786">Diego's Architecture Gist</a></li>
+</ul>
+<h5 id="devops-engineering-2"><a class="header" href="#devops-engineering-2">DevOps Engineering</a></h5>
+<ul>
+<li><a href="https://devops.com/">DevOps.com</a></li>
+<li><a href="https://dzone.com/devops-tutorials-tools-news">DZone DevOps</a></li>
+<li><a href="https://trello.com/b/ZFVZz4Cd/devops-learning-the-hard-way">DevOps Learning The Hard Way</a></li>
+<li><a href="http://www.scriptcrafty.com/basic-infrastructure-patterns/">Basic Infrastructure Patterns</a></li>
+<li><a href="https://martinfowler.com/bliki/InfrastructureAsCode.html">Infrastructure As Code</a></li>
+<li><a href="https://github.com/veggiemonk/awesome-docker">Awesome Docker</a></li>
+<li><a href="https://github.com/AcalephStorage/awesome-devops">Awesome DevOps</a></li>
+<li><a href="https://xebialabs.com/periodic-table-of-devops-tools/">Periodic Table of DevOps Tools</a></li>
+<li><a href="https://blog.profitbricks.com/51-best-devops-tools-for-devops-engineers/">51 Best DevOps Tools</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="cloud-native-resources"><a class="header" href="#cloud-native-resources">Cloud Native Resources</a></h2>
+<p><img src="./images/cloud-native-hero.png" alt="Cloud Native" /></p>
+<h4 id="important-topics-2"><a class="header" href="#important-topics-2">Important Topics</a></h4>
+<ul>
+<li><a href="http://www.soa-manifesto.org/">SOA</a></li>
+<li><a href="https://martinfowler.com/articles/microservices.html">Microservices</a></li>
+<li><a href="https://www.cncf.io/about/faq/">Cloud Native</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Linux_containers">Containers</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Serverless_computing">Serverless</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Discoverability">Discoverability</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Log_management">Central Logging</a></li>
+</ul>
+<h4 id="tech-1"><a class="header" href="#tech-1">Tech</a></h4>
+<ul>
+<li><a href="https://netflix.github.io/">NettflixOSS</a></li>
+<li><a href="http://projects.spring.io/spring-cloud/">SpringCloud</a></li>
+<li><a href="http://dropwizard.io/">Dropwizard</a></li>
+<li><a href="https://twitter.github.io/finagle/">Finagle</a></li>
+<li><a href="https://github.com/google/guice">Guice</a></li>
+<li><a href="https://github.com/OpenFeign/feign">Feign</a></li>
+<li><a href="https://kubernetes.io/">Kubernetes</a></li>
+<li><a href="http://mesos.apache.org/">Mesos</a></li>
+<li><a href="https://www.docker.com/">Docker</a></li>
+<li><a href="https://github.com/ReactiveX/RxJava">RxJava</a></li>
+<li><a href="http://www.grpc.io/">gRPC</a></li>
+<li><a href="https://linkerd.io/">Linkerd</a></li>
+<li><a href="https://coredns.io/">CoreDNS</a></li>
+<li><a href="http://www.fluentd.org/">FluentD</a></li>
+<li><a href="http://nosql-database.org/">NoSQL</a></li>
+<li><a href="https://aws.amazon.com/lambda">Lambda</a></li>
+<li><a href="https://cloud.google.com/functions/">Cloud Functions</a></li>
+<li><a href="https://serverless.com/">Serverless</a></li>
+<li><a href="https://github.com/garnaat/kappa">Kappa</a></li>
+<li><a href="http://graphql.org/">GraphQL</a></li>
+<li><a href="https://github.com/spring-cloud/spring-cloud-function">Spring Cloud Functions</a></li>
+<li><a href="https://github.com/orika-mapper/orika">Orika</a></li>
+<li><a href="http://bytebuddy.net/#/">ByteBuddy</a></li>
+<li><a href="https://github.com/cglib/cglib">CGLib</a></li>
+<li><a href="https://github.com/ben-manes/caffeine">Caffeine</a></li>
+<li><a href="https://github.com/lightbend/config">Config</a></li>
+<li><a href="http://www.mapdb.org/">MapDB</a></li>
+<li><a href="https://github.com/MenoData/Time4J">Time4J</a></li>
+<li><a href="https://noexception.machinezoo.com/">NoException</a></li>
+<li><a href="http://owlike.github.io/genson/">Genson</a></li>
+<li><a href="https://github.com/bazaarvoice/jolt">Jolt</a></li>
+<li><a href="https://gist.github.com/diegopacheco/5696a6403e9eeefe84a0c0dc6a2db77d#devops-engineering">DevOps Engineering</a></li>
+</ul>
+<h4 id="books-3"><a class="header" href="#books-3">Books</a></h4>
+<ul>
+<li><a href="https://www.amazon.com/Principles-Software-Architecture-Modernization-microservices/dp/9355519532/ref=sr_1_1?crid=7U3H2IE5U7Y4&amp;dib=eyJ2IjoiMSJ9.ebHg7EIiJ3GThIg8Dwf4PelC70iUIbHPKv7_7zk8vrk8K2FB4zlrUQyNZwKAHPO46cAYR5z2-KyqnXqNz3Ee2lmU-aGR7NLhq7jko2UihHIl-taoJ6i_hkMjcc12ZF3pOmB9lFrvbsGgbDagq1Vzqg.oz7TxYpSBxBZjVjkuIPDZM7Wxx_XMRU0Uj7jo9Rq_BI&amp;dib_tag=se&amp;keywords=principles+of+software+architecture+modernization&amp;qid=1741069169&amp;sprefix=Principles+of+software+a%2Caps%2C190&amp;sr=8-1">Principles of Software Architecture Modernization</a></li>
+<li><a href="https://www.amazon.com/dp/9365893100/ref=mes-dp?_encoding=UTF8&amp;pd_rd_w=JpyYV&amp;content-id=amzn1.sym.7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_p=7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_r=K6XYEHZZ76RWDSAXAY5X&amp;pd_rd_wg=RH04x&amp;pd_rd_r=f230b2e4-c342-429e-a362-c856e4c2362a">Continuous Modernization</a></li>
+<li><a href="https://www.amazon.com/Cloud-Native-Java-Designing-Resilient/dp/1449374646/ref=sr_1_1?ie=UTF8&amp;qid=1498486436&amp;sr=8-1&amp;keywords=cloud+native">Cloud Native Java</a></li>
+<li><a href="https://www.amazon.com/Cloud-Native-Infrastructure-Manage-Scalable/dp/1491984309/ref=sr_1_6?ie=UTF8&amp;qid=1498486436&amp;sr=8-6&amp;keywords=cloud+native">Cloud Native Infrastructure</a></li>
+<li><a href="https://www.amazon.com/Kubernetes-Running-Dive-Future-Infrastructure/dp/1491935677/ref=pd_sbs_14_2?_encoding=UTF8&amp;pd_rd_i=1491935677&amp;pd_rd_r=TDNM9TRZWJNA9274A2VA&amp;pd_rd_w=8RsyM&amp;pd_rd_wg=uanTu&amp;psc=1&amp;refRID=TDNM9TRZWJNA9274A2VA">Kubernetes: Up and Running</a></li>
+<li><a href="https://www.amazon.com/Kubernetes-Action-Marko-Luksa/dp/1617293725/ref=pd_sbs_14_3?_encoding=UTF8&amp;pd_rd_i=1617293725&amp;pd_rd_r=TDNM9TRZWJNA9274A2VA&amp;pd_rd_w=8RsyM&amp;pd_rd_wg=uanTu&amp;psc=1&amp;refRID=TDNM9TRZWJNA9274A2VA">Kubernetes in Action</a></li>
+<li><a href="https://www.amazon.com/Mesos-Action-Roger-Ignazio/dp/1617292923/ref=pd_sbs_14_18?_encoding=UTF8&amp;pd_rd_i=1617292923&amp;pd_rd_r=9EAVSY0WPGMTWJ6SXP4W&amp;pd_rd_w=kSSRw&amp;pd_rd_wg=4lxtf&amp;psc=1&amp;refRID=9EAVSY0WPGMTWJ6SXP4W">Mesos in Action</a></li>
+<li><a href="https://www.amazon.com/Google-Cloud-Platform-Action-Geewax/dp/1617293520/ref=pd_sbs_14_22?_encoding=UTF8&amp;pd_rd_i=1617293520&amp;pd_rd_r=9EAVSY0WPGMTWJ6SXP4W&amp;pd_rd_w=kSSRw&amp;pd_rd_wg=4lxtf&amp;psc=1&amp;refRID=9EAVSY0WPGMTWJ6SXP4W">Google Cloud Platform in Action</a></li>
+<li><a href="https://www.amazon.com/Serverless-Architectures-AWS-examples-Lambda/dp/1617293822/ref=sr_1_1?s=books&amp;ie=UTF8&amp;qid=1498486532&amp;sr=1-1&amp;keywords=serverless">Serverless Architectures on AWS</a></li>
+<li><a href="https://www.amazon.com/Serverless-Single-Page-Apps-Available/dp/1680501496/ref=sr_1_3?s=books&amp;ie=UTF8&amp;qid=1498486532&amp;sr=1-3&amp;keywords=serverless">Serverless Single Page Apps</a></li>
+<li><a href="https://www.amazon.com/AWS-Lambda-Action-Event-driven-applications/dp/1617293717/ref=sr_1_4?s=books&amp;ie=UTF8&amp;qid=1498486532&amp;sr=1-4&amp;keywords=serverless">AWS Lambda in Action</a></li>
+<li><a href="https://www.amazon.com/dp/1617292540/ref=sxbs_sxwds-stvp_2?pf_rd_m=ATVPDKIKX0DER&amp;pf_rd_p=2972357942&amp;pd_rd_wg=eUzho&amp;pf_rd_r=39HDFBGCFN91KH898YS7&amp;pf_rd_s=desktop-sx-bottom-slot&amp;pf_rd_t=301&amp;pd_rd_i=1617292540&amp;pd_rd_w=uFrXb&amp;pf_rd_i=cloud+native+microservices&amp;pd_rd_r=A22KKY5PTXBPAHDM40Q1&amp;ie=UTF8&amp;qid=1498486607&amp;sr=2">Cloud Native Microservices</a></li>
+<li><a href="https://www.amazon.com/Docker-Action-Jeff-Nickoloff/dp/1633430235/ref=pd_sim_14_3?_encoding=UTF8&amp;pd_rd_i=1633430235&amp;pd_rd_r=KK8VZ74DG7H0AY7V9Z42&amp;pd_rd_w=eaBU2&amp;pd_rd_wg=Uk7B7&amp;psc=1&amp;refRID=KK8VZ74DG7H0AY7V9Z42">Docker in Action</a></li>
+<li><a href="https://www.amazon.com/RxJava-Essentials-Ivan-Morgillo/dp/1784399108/ref=sr_1_fkmr0_3?ie=UTF8&amp;qid=1498486849&amp;sr=8-3-fkmr0&amp;keywords=rx+java+book">RxJava Essentials</a></li>
+</ul>
+<h4 id="links-2"><a class="header" href="#links-2">Links</a></h4>
+<ul>
+<li><a href="https://www.cncf.io/">CNCF</a></li>
+<li><a href="https://martinfowler.com/microservices/">Martin Fowler on Microservices</a></li>
+<li><a href="https://medium.com/netflix-techblog">Netflix Tech Blog</a></li>
+<li><a href="https://spring.io/blog">Spring Blog</a></li>
+<li><a href="https://aws.amazon.com/blogs/compute/category/aws-lambda/">AWS Lambda Blog</a></li>
+<li><a href="https://cloudplatform.googleblog.com/">Google Cloud Platform Blog</a></li>
+<li><a href="https://blogs.vmware.com/cloudnative/">VMware Cloud Native Blog</a></li>
+<li><a href="https://cloudnative.io/blog/">Cloud Native Blog</a></li>
+<li><a href="https://www.infoq.com/microservices/?utm_source=infoq&amp;utm_medium=header_graybar&amp;utm_campaign=topic_clk">InfoQ Microservices</a></li>
+<li><a href="https://gist.github.com/diegopacheco/5696a6403e9eeefe84a0c0dc6a2db77d">Diego's Cloud Native Gist</a></li>
+<li><a href="https://courses.edx.org/courses/course-v1:LinuxFoundationX+LFS158x+2T2017/">Linux Foundation Kubernetes Course</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="data-resources"><a class="header" href="#data-resources">Data Resources</a></h1>
+<h2 id="tech-2"><a class="header" href="#tech-2">Tech</a></h2>
+<ul>
+<li>Terraform / OpenTofu</li>
+<li>AWS S3</li>
+<li>AWS Security Groups</li>
+<li>AWS Auto Scaling Groups</li>
+<li>AWS AMI / Packer</li>
+<li>AWS EC2</li>
+<li>AWS RDS</li>
+<li>AWS ELB / ALB</li>
+<li>AWS Route 53</li>
+<li>K8s / EKS</li>
+<li>Helm</li>
+<li>ArgoCD</li>
+<li>Jenkins / Groovy DSL</li>
+<li>Trivy / tfsec / Checkov / Terrascan / TFLint / KubeLinter</li>
+<li>Java</li>
+<li>Spring Boot</li>
+<li>Python 3x</li>
+<li>Postgress</li>
+<li>MySQL</li>
+<li>Redis</li>
+<li>Kafka</li>
+<li>Airflow</li>
+<li>Prometheus</li>
+<li>Grafana</li>
+<li>ELK</li>
+<li>Splunk</li>
+<li>Druid</li>
+<li>Presto</li>
+<li>Trino</li>
+<li>AWS Redshift</li>
+<li>Apache Spark</li>
+<li>Apache Flink</li>
+<li>Apache Beam</li>
+<li>Apache Kafka</li>
+<li>Kafka Streams</li>
+<li>KSQLDB</li>
+<li>Apache Pulsar</li>
+<li>Hadoop ecosystem (HDFS, MapReduce, Hive)</li>
+<li>JVM Tunning</li>
+<li>GC Tunning</li>
+<li>Linux Tunning</li>
+<li>K8s Tunning</li>
+<li>Database Tunning</li>
+<li>AWS VPC Flow</li>
+<li>Cloud Trail</li>
+<li>Cloud Watch</li>
+<li>OpenSearch / ElasticSearch</li>
+<li>Storage formats:
+<ul>
+<li>Parquet</li>
+<li>Avro</li>
+<li>ORC</li>
+<li>JSON</li>
+<li>Iceberg</li>
+<li>Delta Lake</li>
+</ul>
+</li>
+<li>Luigi</li>
+<li>Apache NiFi</li>
+<li>DDD</li>
+<li>Data Mash</li>
+<li>Snowflake</li>
+</ul>
+<h2 id="data-techniques"><a class="header" href="#data-techniques">Data Techniques</a></h2>
+<ul>
+<li>ETL vs ELT patterns</li>
+<li>Stream processing and windowing</li>
+<li>Change data capture (CDC)</li>
+<li>Data partitioning and sharding</li>
+<li>Batch vs real-time processing strategies</li>
+<li>Data federation vs data virtualization</li>
+<li>API-first data integration</li>
+<li>Event-driven architecture patterns</li>
+<li>Master data management (MDM)</li>
+<li>Data replication strategies (sync vs async)</li>
+<li>Columnar storage formats (Parquet, ORC)</li>
+<li>Data compression techniques</li>
+<li>Indexing strategies for analytics</li>
+<li>Query optimization and execution planning</li>
+<li>Caching layers and materialized views</li>
+<li>Schema-on-read vs schema-on-write</li>
+<li>Data denormalization for analytics</li>
+<li>Slowly changing dimensions (SCD) handling</li>
+<li>Data aggregation and rollup strategies</li>
+<li>Time-series data processing patterns</li>
+<li>Event sourcing patterns</li>
+<li>Complex event processing (CEP)</li>
+<li>Stream-stream and stream-table joins</li>
+<li>Watermarking for late-arriving data</li>
+<li>Backpressure handling in streaming systems</li>
+</ul>
+<h3 id="data-engineering-code-challenges-round-1"><a class="header" href="#data-engineering-code-challenges-round-1">Data Engineering Code Challenges Round 1</a></h3>
+<ol>
+<li>Create an Airflow DAG that extracts data from PostgreSQL, transforms it with Spark, and loads to Redshift. Include data quality checks and error handling.</li>
+<li>Build a real-time streaming pipeline using Kafka, Spark Structured Streaming, and Delta Lake. Process IoT sensor data with windowing and aggregations.</li>
+<li>Create a dbt project with dimensional modeling (fact/dimension tables), tests, documentation, and CI/CD pipeline deployment to Snowflake.</li>
+<li>Build a Docker Compose setup with Kafka, Spark, PostgreSQL, and Jupyter. Create a complete data pipeline that processes sample e-commerce data.</li>
+<li>Create Terraform scripts to deploy: S3 data lake with proper partitioning, Glue catalog, Glue ETL job, Lambda for data validation, and IAM roles.</li>
+<li>Build a Python data pipeline using Pandas that reads from multiple CSV sources, performs data cleaning/validation, and outputs to both PostgreSQL and Parquet files.</li>
+<li>Create a real-time CDC pipeline using Debezium, Kafka Connect, and Elasticsearch. Capture changes from MySQL and make them searchable in near real-time.</li>
+</ol>
+<h3 id="data-engineering-code-challenges-round-2"><a class="header" href="#data-engineering-code-challenges-round-2">Data Engineering Code Challenges Round 2</a></h3>
+<ol>
+<li>Build a serverless data pipeline using AWS Lambda, Step Functions, and S3. Process JSON files, transform with Pandas, and load to DynamoDB.</li>
+<li>Create a Kubernetes operator in Go that automatically provisions Spark clusters and manages data processing jobs based on custom resource definitions.</li>
+<li>Build a data quality monitoring system using Great Expectations, deployed on Kubernetes with alerts to Slack when data quality issues are detected.</li>
+<li>Create a multi-tenant data platform using Apache Iceberg tables with row-level security, deployed on EKS with Trino for querying.</li>
+<li>Build a feature store using Feast, deployed on Kubernetes, with both batch and real-time feature serving for ML pipelines.</li>
+<li>Create a data lineage tracking system using Apache Atlas or DataHub, integrated with Airflow and dbt to automatically track data dependencies.</li>
+<li>Deploy a complete lakehouse architecture using Delta Lake on S3, with Spark on EKS, Hive Metastore, and Superset for visualization. Include data governance, performance tuning, and cost optimization.</li>
+</ol>
+<h3 id="data-engineering-code-challenges-round-3"><a class="header" href="#data-engineering-code-challenges-round-3">Data Engineering Code Challenges Round 3</a></h3>
+<ol>
+<li>Create a data mesh implementation with domain-specific data products, each with their own CI/CD, data contracts, and SLA monitoring.</li>
+<li>Build a real-time fraud detection pipeline using Kafka Streams, feature engineering with time windows, and model serving with MLflow on Kubernetes.</li>
+<li>Create a data observability platform using OpenTelemetry, Grafana, and Prometheus to monitor data pipelines, including latency, throughput, and error rates.</li>
+<li>Build a data archiving solution using Apache Pulsar for event streaming, with automatic tiered storage to S3 Glacier for cold data.</li>
+<li>Create a data catalog with automated metadata extraction from various data sources (databases, files, APIs) using Apache Nifi and store in Apache Atlas.</li>
+<li>Build a real-time recommendation engine using Apache Flink, integrating with Kafka for user events and serving recommendations via a REST API.</li>
+<li>Create a data governance framework with Apache Ranger for access control, Apache Atlas for metadata management, and integration with dbt for data lineage tracking.</li>
+</ol>
+<h2 id="books-4"><a class="header" href="#books-4">Books</a></h2>
+<ul>
+<li><a href="https://www.amazon.com/Principles-Software-Architecture-Modernization-microservices/dp/9355519532/ref=sr_1_1?crid=7U3H2IE5U7Y4&amp;dib=eyJ2IjoiMSJ9.ebHg7EIiJ3GThIg8Dwf4PelC70iUIbHPKv7_7zk8vrk8K2FB4zlrUQyNZwKAHPO46cAYR5z2-KyqnXqNz3Ee2lmU-aGR7NLhq7jko2UihHIl-taoJ6i_hkMjcc12ZF3pOmB9lFrvbsGgbDagq1Vzqg.oz7TxYpSBxBZjVjkuIPDZM7Wxx_XMRU0Uj7jo9Rq_BI&amp;dib_tag=se&amp;keywords=principles+of+software+architecture+modernization&amp;qid=1741069169&amp;sprefix=Principles+of+software+a%2Caps%2C190&amp;sr=8-1">Principles of Software Architecture Modernization</a></li>
+<li><a href="https://www.amazon.com/dp/9365893100/ref=mes-dp?_encoding=UTF8&amp;pd_rd_w=JpyYV&amp;content-id=amzn1.sym.7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_p=7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_r=K6XYEHZZ76RWDSAXAY5X&amp;pd_rd_wg=RH04x&amp;pd_rd_r=f230b2e4-c342-429e-a362-c856e4c2362a">Continuous Modernization</a></li>
+<li><a href="https://www.amazon.com/DevOps-Handbook-World-Class-Reliability-Organizations-ebook/dp/B09G2GS39R/ref=sr_1_1?crid=J23TSXDWR7AM&amp;dib=eyJ2IjoiMSJ9.BbT6bWxtWqrPrx5gjOFUQrir5DUFD3frbmNM4-TIgCgu7QQdHpvkRcTVLq-KCHoBd21RdaNno96McVcd6zUcLthYoK876oJ6hmrrFLbj7GN8sIiA68CHhuprmzWNNpWlqA2T9-jjZwpBKjRmsH3LFbC-79sprFMOsyPazKri411fXeqTpYRaamhxn-DBNo04um0VmXl9o0QMtz42aFucjO29sWnuU--140TGTeiBlIg.RyNzNroqthJ6l9FmhH7oS673BYWDexv5DGhD9b79aJA&amp;dib_tag=se&amp;keywords=The+DevOps+Handbook&amp;qid=1741070019&amp;s=digital-text&amp;sprefix=the+devops+handbook%2Cdigital-text%2C277&amp;sr=1-1">The DevOps Handbook</a></li>
+<li><a href="https://www.amazon.com/Phoenix-Project-DevOps-Helping-Business-ebook/dp/B0DPNL8863/ref=sr_1_1?crid=8G1NX5OK9ZIQ&amp;dib=eyJ2IjoiMSJ9.wiWwt0G1guUdWgnsFDK6nal3hO4lijRYOrOZfxfZaTf-HsNtCwXfO0hOBZUDlRS-L3sZoZD6u38qiy4wNQG-r0IxV3OlrPNaI-RcyykMuXEhQpxAYAyXAj8mwQ5Qmf3CTD7oTeRiXViOI1PYkBSKQWWF3DThfHMwlGTMZR2GPTD7RYBf4FlSBzgtY_eJ3S5yjpzeCm5otrZAs2BqBnZ0c30lZ2UwUNVkNMXDh8lB9yY.IbPxgZbiFXccbFSFHnbyCw50DQ-Vcww7I-rzEw9g48g&amp;dib_tag=se&amp;keywords=The+Phoenix+Project&amp;qid=1741070029&amp;s=digital-text&amp;sprefix=the+phoenix+project%2Cdigital-text%2C151&amp;sr=1-1">The Phoenix Project</a></li>
+<li><a href="https://www.amazon.com/dp/B07B9F83WM/ref=mes-dp?_encoding=UTF8&amp;pd_rd_w=4jGOM&amp;content-id=amzn1.sym.7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_p=7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_r=GEB389BF3C27YR5FQ0QG&amp;pd_rd_wg=vF6D5&amp;pd_rd_r=653af9cc-a71b-4679-8b56-a416b943275b">Accelerate</a></li>
+<li><a href="https://www.amazon.com/Refactoring-Databases-Evolutionary-Addison-Wesley-Signature-ebook/dp/B0DHY617PD/ref=sr_1_2?crid=1QNITR8ADX418&amp;dib=eyJ2IjoiMSJ9.Mgmjte1N_iknsu2Xw0EdQJuZfe5t9RUUL4SNkdTNtqwZvXwdVSNvPaeO5ubNOEjVXGmD9YSBsY6zSX1bZMgnv3mjudEOKRsBR-En3oG3ojT3px51KJzJcfruJGBRx_0NDkh7yajOmKk0mB7AyDLIcLm5ivIYvmlW-Cy458LFLF1kRJ5ifGDFO7FiPAZ-3skwXCAXE0ZzhhA_cH__DHgRjFyFK5uN7SOoRwg_vM4s9KW6HrY3zCs7dmjMwjvCYe-qDEPxrCYrUfwQPIGMHYDpthyhdkeBM2LiTGaoc3O2GlY.OJIGcek6--srp3ttBg1SQShUWg9C4cakqJfnKGxX8H0&amp;dib_tag=se&amp;keywords=database+refactoring&amp;qid=1741070303&amp;s=digital-text&amp;sprefix=database+refacrtoring%2Cdigital-text%2C145&amp;sr=1-2">Refactoring Databases: Evolutionary Database Design</a></li>
+<li><a href="https://www.amazon.com/Designing-Data-Intensive-Applications-Reliable-Maintainable-ebook/dp/B06XPJML5D/ref=sr_1_1?crid=JFZ55X89JHP0&amp;dib=eyJ2IjoiMSJ9.ScUjfrRSlTSXTtLBuC0DXSaGKqlDdMwB7RFFyk_gcKP4jt2pDMT94khvobsJMaNq72IkRPo9wTbaQXjmL-9KfbpZU10rAql-hnEAhaVPGb1S7byM4yRclet2dUkElNuJQZwvdaYhfa3-tcK8V2RwXHXroiDjncQeyWoZaiexa5KGJUKYK4VHd-zHeNdg7bVGWQtHGl1Wb4hqD_yw6YBcfun24Dkt_PHxfXbyNdfj7c4.zD0O-vfQNqa5amOI6UnYqbGp-6RNl1NuJo5hBbgLSJ4&amp;dib_tag=se&amp;keywords=Data+Intensive+Applications&amp;qid=1741665534&amp;sprefix=data+intensive+applications%2Caps%2C213&amp;sr=8-1">Data Intensive Applications</a></li>
+<li><a href="https://www.amazon.com/Fundamentals-Data-Engineering-Joe-Reis-ebook/dp/B0B4VH4T37/ref=sr_1_6?crid=AYEO5IK8AMA8&amp;dib=eyJ2IjoiMSJ9.1FSa9Rq2vhmdm3SwSDlUmNo5G8pYO9O71yfY1A2QqirKcUOrQFD1h3vlYk4B7NkwGQ7o1s1nkOMs75tL2bX9fQ9kIFrAs0HrT4F6qVeLEld9AjIbgEaa5y3T35hdDUyKvoADgW8J5y81ukKsfHlEpj36A-0uv7SBjcy0VXn1f2TqVviFYt8KwaxHF3ioXqTeeDhvUcmyc84dc9KZasdIpOvq3fFUGyYpUeAsp5pnELXK_w1RGejWtVcq1ffmHBpRgp0cpOwOolOo8AHHF2McVygiiVoI1j1Z6NQdJ1_xPIs.fBYNZoi3NCm6Eo9-Madb03lW-8oCKdwlbkvH_fZPLeE&amp;dib_tag=se&amp;keywords=data+engineering&amp;qid=1754267717&amp;sprefix=data+engineerin%2Caps%2C217&amp;sr=8-6">Fundamentals of Data Engineering: Plan and Build Robust Data Systems</a></li>
+<li><a href="https://www.amazon.com/Data-Engineering-Design-Patterns-Problems-ebook/dp/B0F513GT2R/ref=sr_1_7?crid=AYEO5IK8AMA8&amp;dib=eyJ2IjoiMSJ9.1FSa9Rq2vhmdm3SwSDlUmNo5G8pYO9O71yfY1A2QqirKcUOrQFD1h3vlYk4B7NkwGQ7o1s1nkOMs75tL2bX9fQ9kIFrAs0HrT4F6qVeLEld9AjIbgEaa5y3T35hdDUyKvoADgW8J5y81ukKsfHlEpj36A-0uv7SBjcy0VXn1f2TqVviFYt8KwaxHF3ioXqTeeDhvUcmyc84dc9KZasdIpOvq3fFUGyYpUeAsp5pnELXK_w1RGejWtVcq1ffmHBpRgp0cpOwOolOo8AHHF2McVygiiVoI1j1Z6NQdJ1_xPIs.fBYNZoi3NCm6Eo9-Madb03lW-8oCKdwlbkvH_fZPLeE&amp;dib_tag=se&amp;keywords=data+engineering&amp;qid=1754267717&amp;sprefix=data+engineerin%2Caps%2C217&amp;sr=8-7">Data Engineering Design Patterns: Recipes for Solving the Most Common Data Engineering Problems</a></li>
+<li><a href="https://www.amazon.com/Data-Pipelines-Pocket-Reference-Processing/dp/1492087831/ref=sr_1_10?crid=AYEO5IK8AMA8&amp;dib=eyJ2IjoiMSJ9.1FSa9Rq2vhmdm3SwSDlUmNo5G8pYO9O71yfY1A2QqirKcUOrQFD1h3vlYk4B7NkwGQ7o1s1nkOMs75tL2bX9fQ9kIFrAs0HrT4F6qVeLEld9AjIbgEaa5y3T35hdDUyKvoADgW8J5y81ukKsfHlEpj36A-0uv7SBjcy0VXn1f2TqVviFYt8KwaxHF3ioXqTeeDhvUcmyc84dc9KZasdIpOvq3fFUGyYpUeAsp5pnELXK_w1RGejWtVcq1ffmHBpRgp0cpOwOolOo8AHHF2McVygiiVoI1j1Z6NQdJ1_xPIs.fBYNZoi3NCm6Eo9-Madb03lW-8oCKdwlbkvH_fZPLeE&amp;dib_tag=se&amp;keywords=data+engineering&amp;qid=1754267717&amp;sprefix=data+engineerin%2Caps%2C217&amp;sr=8-10">Data Pipelines Pocket Reference: Moving and Processing Data for Analytics</a></li>
+<li><a href="https://www.amazon.com/Financial-Data-Engineering-Data-Driven-Products/dp/1098159993/ref=sr_1_17?crid=AYEO5IK8AMA8&amp;dib=eyJ2IjoiMSJ9.1FSa9Rq2vhmdm3SwSDlUmNo5G8pYO9O71yfY1A2QqirKcUOrQFD1h3vlYk4B7NkwGQ7o1s1nkOMs75tL2bX9fQ9kIFrAs0HrT4F6qVeLEld9AjIbgEaa5y3T35hdDUyKvoADgW8J5y81ukKsfHlEpj36A-0uv7SBjcy0VXn1f2TqVviFYt8KwaxHF3ioXqTeeDhvUcmyc84dc9KZasdIpOvq3fFUGyYpUeAsp5pnELXK_w1RGejWtVcq1ffmHBpRgp0cpOwOolOo8AHHF2McVygiiVoI1j1Z6NQdJ1_xPIs.fBYNZoi3NCm6Eo9-Madb03lW-8oCKdwlbkvH_fZPLeE&amp;dib_tag=se&amp;keywords=data+engineering&amp;qid=1754267717&amp;sprefix=data+engineerin%2Caps%2C217&amp;sr=8-17">Financial Data Engineering: Design and Build Data-Driven Financial Products</a></li>
+<li><a href="https://www.amazon.com/Spark-Definitive-Guide-Processing-Simple/dp/1491912219/ref=sr_1_2?crid=30F7SXWERJWBV&amp;dib=eyJ2IjoiMSJ9.ydfjg0lAL91nWE1RcWbpyu2GpsWULp9TJu3ZEdYzqrcjjJxj-x9mv9iWdQubwr6-PB71Pfxkndu5RShuqJY3lC-gIO4VSd2bTBJffMOhGhNKi--E4dcL2JYK-WNO2OejOORw7GDAPIouk7thW9u_vE6t5ncZAikZWuIzd2yR2zyUZw_7jgKGYev6CmPzthVPElpoZAK4S1i3TmeTu5baJ615LeS6EZNcH0wmpZsydng.tVEF8MiSu8HB57raihHei46PW1PuWT7kKYAcBi1FTSE&amp;dib_tag=se&amp;keywords=data+engineering+spark&amp;qid=1754267926&amp;sprefix=data+engineering+spark%2Caps%2C205&amp;sr=8-2">Spark: The Definitive Guide: Big Data Processing Made Simple</a></li>
+<li><a href="https://www.amazon.com/Learning-Spark-Jules-Damji/dp/1492050040/ref=sr_1_4?crid=30F7SXWERJWBV&amp;dib=eyJ2IjoiMSJ9.ydfjg0lAL91nWE1RcWbpyu2GpsWULp9TJu3ZEdYzqrcjjJxj-x9mv9iWdQubwr6-PB71Pfxkndu5RShuqJY3lC-gIO4VSd2bTBJffMOhGhNKi--E4dcL2JYK-WNO2OejOORw7GDAPIouk7thW9u_vE6t5ncZAikZWuIzd2yR2zyUZw_7jgKGYev6CmPzthVPElpoZAK4S1i3TmeTu5baJ615LeS6EZNcH0wmpZsydng.tVEF8MiSu8HB57raihHei46PW1PuWT7kKYAcBi1FTSE&amp;dib_tag=se&amp;keywords=data+engineering+spark&amp;qid=1754267926&amp;sprefix=data+engineering+spark%2Caps%2C205&amp;sr=8-4">Learning Spark: Lightning-Fast Data Analytics</a></li>
+<li><a href="https://www.amazon.com/Stream-Processing-Apache-Flink-Implementation/dp/149197429X/ref=sr_1_1?crid=V4C6Q6LIKT3Q&amp;dib=eyJ2IjoiMSJ9.7xxznqUFEt8uvJimQfGgKQ8TNk-kp8B2f5bz7B9Jov-I74vd2PDOaAnigzARp21uE2IoYV2vrHRjiAv_oAstZNmMsNA9Z3qJnjgu86PVv_8NNpXYrkb_XxcoT9N5Y5ENS-qK9oRaqI-yZ6DxE_9qYuGFd4vz9LNfbTmKINPCzQAyJCL566frmJt5p2dN3310prmVa-6JyMKNtfS7Bu6NsvUCV8PqQOSQpkBd9NkDUd8.zHoiC3v9D6BmbVN7TyaqO1wCD_2di93Odq5X7eNi-Z4&amp;dib_tag=se&amp;keywords=data+engineering+flink&amp;qid=1754267949&amp;sprefix=data+engineering+flink%2Caps%2C254&amp;sr=8-1">Stream Processing with Apache Flink: Fundamentals, Implementation, and Operation of Streaming Applications</a></li>
+<li><a href="https://www.amazon.com/Streaming-Systems-Where-Large-Scale-Processing/dp/1491983876/ref=sr_1_5?crid=V4C6Q6LIKT3Q&amp;dib=eyJ2IjoiMSJ9.7xxznqUFEt8uvJimQfGgKQ8TNk-kp8B2f5bz7B9Jov-I74vd2PDOaAnigzARp21uE2IoYV2vrHRjiAv_oAstZNmMsNA9Z3qJnjgu86PVv_8NNpXYrkb_XxcoT9N5Y5ENS-qK9oRaqI-yZ6DxE_9qYuGFd4vz9LNfbTmKINPCzQAyJCL566frmJt5p2dN3310prmVa-6JyMKNtfS7Bu6NsvUCV8PqQOSQpkBd9NkDUd8.zHoiC3v9D6BmbVN7TyaqO1wCD_2di93Odq5X7eNi-Z4&amp;dib_tag=se&amp;keywords=data+engineering+flink&amp;qid=1754267949&amp;sprefix=data+engineering+flink%2Caps%2C254&amp;sr=8-5">Streaming Systems: The What, Where, When, and How of Large-Scale Data Processing</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="tech-3"><a class="header" href="#tech-3">Tech</a></h2>
+<ul>
+<li>Terraform / OpenTofu</li>
+<li>AWS S3</li>
+<li>AWS Security Groups</li>
+<li>AWS Auto Scaling Groups</li>
+<li>AWS AMI / Packer</li>
+<li>AWS EC2</li>
+<li>AWS RDS</li>
+<li>AWS ELB / ALB</li>
+<li>AWS Router 53</li>
+<li>K8s / EKS</li>
+<li>Helm</li>
+<li>ArgoCD</li>
+<li>Jenkins / Groovy DSL</li>
+<li>Trivy / tfsec / Checkov / Terrascan / TFLint / KubeLinter</li>
+<li>Java</li>
+<li>Spring Boot</li>
+<li>Python 3x</li>
+<li>Go Lang</li>
+<li>Postgress</li>
+<li>MySQL</li>
+<li>Redis</li>
+<li>Kafka</li>
+<li>Airflow</li>
+<li>Prometheus</li>
+<li>Grafana</li>
+<li>ELK</li>
+<li>Splunk</li>
+<li>Druid</li>
+<li>Presto</li>
+<li>JVM Tunning</li>
+<li>GC Tunning</li>
+<li>Linux Tunning</li>
+<li>K8s Tunning</li>
+<li>Database Tunning</li>
+<li>AWS VPC Flow</li>
+<li>Cloud Trail</li>
+<li>Cloud Watch</li>
+<li>OpenSearch / ElasticSearch</li>
+</ul>
+<h3 id="code-challenges-round-1"><a class="header" href="#code-challenges-round-1">Code Challenges Round 1</a></h3>
+<ul>
+<li>(1) Create a Jenkins DSL that can deploy a simple Spring Boot app (build, run tests, run sonnar and deploy in EC2) use terraform</li>
+<li>(2) Create a Jenkins DSL that can deploy a simple Spring Boot app (build, run tests, run sonnar and deploy in EKS) use HELM</li>
+<li>(3) Create a Jenkins DSL that can deploy a simple Spring Boot app (build, run tests, run sonnar and deploy in EKS) use ArgoCD</li>
+<li>(4) Create a Docker-Compose that has Prometheus, Spring Boot App, Grafana and ELK. All integrated and working.</li>
+<li>(5) Create a set of terraform scripts: deploy a but to s3, deploy a lambda, deploy a api gateway, deploy new IAM rule.</li>
+<li>(6) Create a simple Spring Boot App that can consume a Kafka Topic and produce a Kafka Topic. Provision a Kafka Cluster in AWS.</li>
+<li>(7) Create a simple Spring Boot App that can consume a Redis and produce a Redis. Provision a Redis Cluster in AWS.</li>
+</ul>
+<h3 id="code-challenges-round-2"><a class="header" href="#code-challenges-round-2">Code Challenges Round 2</a></h3>
+<ul>
+<li>(1) Create a Python App using Flask. Should be deployed in EKS. Use Helm.</li>
+<li>(2) Create a Sidecar in Go that drop properties files into configmap in K8s.</li>
+<li>(3) Create a Sidecar in Python 3x that drop properties files into configmap in K8s.</li>
+<li>(4) Create a Sidecar in Java that drop properties files into configmap in K8s.</li>
+<li>(5) Create a Sidecar in Go that load credentials from AWS ASM and drop into configmap in K8s.</li>
+<li>(6) Create a Sidecar in Python 3x that load credentials from AWS ASM and drop into configmap in K8s.</li>
+<li>(7) Deploy a Spring Boot App in EKS using ArgoCD and helm. Perform Stress Tests with Terraform, tune up JVM, GC, K8s, Linux, the App JDBC Pool and the Database.</li>
+</ul>
+<h2 id="books-5"><a class="header" href="#books-5">Books</a></h2>
+<ul>
+<li><a href="https://www.amazon.com/Principles-Software-Architecture-Modernization-microservices/dp/9355519532/ref=sr_1_1?crid=7U3H2IE5U7Y4&amp;dib=eyJ2IjoiMSJ9.ebHg7EIiJ3GThIg8Dwf4PelC70iUIbHPKv7_7zk8vrk8K2FB4zlrUQyNZwKAHPO46cAYR5z2-KyqnXqNz3Ee2lmU-aGR7NLhq7jko2UihHIl-taoJ6i_hkMjcc12ZF3pOmB9lFrvbsGgbDagq1Vzqg.oz7TxYpSBxBZjVjkuIPDZM7Wxx_XMRU0Uj7jo9Rq_BI&amp;dib_tag=se&amp;keywords=principles+of+software+architecture+modernization&amp;qid=1741069169&amp;sprefix=Principles+of+software+a%2Caps%2C190&amp;sr=8-1">Principles of Software Architecture Modernization</a></li>
+<li><a href="https://www.amazon.com/dp/9365893100/ref=mes-dp?_encoding=UTF8&amp;pd_rd_w=JpyYV&amp;content-id=amzn1.sym.7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_p=7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_r=K6XYEHZZ76RWDSAXAY5X&amp;pd_rd_wg=RH04x&amp;pd_rd_r=f230b2e4-c342-429e-a362-c856e4c2362a">Continuous Modernization</a></li>
+<li><a href="https://www.amazon.com/DevOps-Handbook-World-Class-Reliability-Organizations-ebook/dp/B09G2GS39R/ref=sr_1_1?crid=J23TSXDWR7AM&amp;dib=eyJ2IjoiMSJ9.BbT6bWxtWqrPrx5gjOFUQrir5DUFD3frbmNM4-TIgCgu7QQdHpvkRcTVLq-KCHoBd21RdaNno96McVcd6zUcLthYoK876oJ6hmrrFLbj7GN8sIiA68CHhuprmzWNNpWlqA2T9-jjZwpBKjRmsH3LFbC-79sprFMOsyPazKri411fXeqTpYRaamhxn-DBNo04um0VmXl9o0QMtz42aFucjO29sWnuU--140TGTeiBlIg.RyNzNroqthJ6l9FmhH7oS673BYWDexv5DGhD9b79aJA&amp;dib_tag=se&amp;keywords=The+DevOps+Handbook&amp;qid=1741070019&amp;s=digital-text&amp;sprefix=the+devops+handbook%2Cdigital-text%2C277&amp;sr=1-1">The DevOps Handbook</a></li>
+<li><a href="https://www.amazon.com/Phoenix-Project-DevOps-Helping-Business-ebook/dp/B0DPNL8863/ref=sr_1_1?crid=8G1NX5OK9ZIQ&amp;dib=eyJ2IjoiMSJ9.wiWwt0G1guUdWgnsFDK6nal3hO4lijRYOrOZfxfZaTf-HsNtCwXfO0hOBZUDlRS-L3sZoZD6u38qiy4wNQG-r0IxV3OlrPNaI-RcyykMuXEhQpxAYAyXAj8mwQ5Qmf3CTD7oTeRiXViOI1PYkBSKQWWF3DThfHMwlGTMZR2GPTD7RYBf4FlSBzgtY_eJ3S5yjpzeCm5otrZAs2BqBnZ0c30lZ2UwUNVkNMXDh8lB9yY.IbPxgZbiFXccbFSFHnbyCw50DQ-Vcww7I-rzEw9g48g&amp;dib_tag=se&amp;keywords=The+Phoenix+Project&amp;qid=1741070029&amp;s=digital-text&amp;sprefix=the+phoenix+project%2Cdigital-text%2C151&amp;sr=1-1">The Phoenix Project</a></li>
+<li><a href="https://www.amazon.com/dp/B07B9F83WM/ref=mes-dp?_encoding=UTF8&amp;pd_rd_w=4jGOM&amp;content-id=amzn1.sym.7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_p=7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_r=GEB389BF3C27YR5FQ0QG&amp;pd_rd_wg=vF6D5&amp;pd_rd_r=653af9cc-a71b-4679-8b56-a416b943275b">Accelerate</a></li>
+<li><a href="https://www.amazon.com/dp/B003YMNVC0/ref=mes-dp?_encoding=UTF8&amp;pd_rd_w=pXuk1&amp;content-id=amzn1.sym.7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_p=7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_r=S937BBT4763JRK46JGH9&amp;pd_rd_wg=F7mdW&amp;pd_rd_r=d41ab563-a3cb-444b-93c9-895800f3f1fd">Continuous Delivery</a></li>
+<li><a href="https://www.amazon.com/Site-Reliability-Engineering-Production-Systems-ebook/dp/B01DCPXKZ6/ref=sr_1_1?crid=3VV5LT0S01YF5&amp;dib=eyJ2IjoiMSJ9.USSaafrC7opfVDVuxgZ-7z0RV81XlRchBHRM9mXv0jHOfq5BwJDniXN77id7cJEs52JPY_8nXSgiv_ivMPwcZ8_ms6pthxJobBmmnpV2dTWC6ZyjLI5H408ClrDE0ojK54D10zlAAb5e4ftBDr9m9jkZA7hBwLITWypTbKh8UYCmxmd0d1d-wzYCiGH6P0Z1IFjohNsQbACArUXeVr9EbpC4L0d8DwWaJtSCQZwXXh0.HrNTBDkBnmRrGAuuBzbYBn3oMx6ic9mWhucwDgyYoeM&amp;dib_tag=se&amp;keywords=Site+Reliability+Engineering&amp;qid=1741070089&amp;s=digital-text&amp;sprefix=site+reliability+engineering%2Cdigital-text%2C138&amp;sr=1-1">Site Reliability Engineering</a></li>
+<li><a href="https://www.amazon.com/Site-Reliability-Workbook-Practical-Implement-ebook/dp/B07FWFPMYG/ref=sr_1_1?crid=2SS94RR3AHU05&amp;dib=eyJ2IjoiMSJ9.DQNZ_mS_1GDA3CExYRoBR61H0K11qFoqBy-wAZXfMHX1PBNO9BkAkpQWKVEBKdCt3-IrruHnWt5C-FqeRsGJTUElfXbX4NGuFLXYAZ7yIz_U4TE9qkqEs4m1fYcFHmat33kI6_ZQ2GAru-yb4wK0DG93H17qIgFKk26JQ47vcNv21aK0ajxApTk9xO3-jU-Dph0B6XtGYLQB5gaaIFXAp_owz69QP27eMDyqTRYVJQo.O-CaTVXPMCzL6GjekiIzVh9jTcX1A0oMgHuGPxXPZzc&amp;dib_tag=se&amp;keywords=The+Site+Reliability+Workbook&amp;qid=1741070100&amp;s=digital-text&amp;sprefix=the+site+reliability+workbook%2Cdigital-text%2C153&amp;sr=1-1">The Site Reliability Workbook</a></li>
+<li><a href="https://www.amazon.com/dp/B09ZQ6FHTT/ref=mes-dp?_encoding=UTF8&amp;pd_rd_w=silQx&amp;content-id=amzn1.sym.7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_p=7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_r=QJZ8TFH5DT8XJXEANCE4&amp;pd_rd_wg=KQq5x&amp;pd_rd_r=cca1a16b-470e-446b-b1a8-a135ce447bed">Observability Engineering: Achieving Production Excellence</a></li>
+<li><a href="https://www.amazon.com/Refactoring-Databases-Evolutionary-Addison-Wesley-Signature-ebook/dp/B0DHY617PD/ref=sr_1_2?crid=1QNITR8ADX418&amp;dib=eyJ2IjoiMSJ9.Mgmjte1N_iknsu2Xw0EdQJuZfe5t9RUUL4SNkdTNtqwZvXwdVSNvPaeO5ubNOEjVXGmD9YSBsY6zSX1bZMgnv3mjudEOKRsBR-En3oG3ojT3px51KJzJcfruJGBRx_0NDkh7yajOmKk0mB7AyDLIcLm5ivIYvmlW-Cy458LFLF1kRJ5ifGDFO7FiPAZ-3skwXCAXE0ZzhhA_cH__DHgRjFyFK5uN7SOoRwg_vM4s9KW6HrY3zCs7dmjMwjvCYe-qDEPxrCYrUfwQPIGMHYDpthyhdkeBM2LiTGaoc3O2GlY.OJIGcek6--srp3ttBg1SQShUWg9C4cakqJfnKGxX8H0&amp;dib_tag=se&amp;keywords=database+refactoring&amp;qid=1741070303&amp;s=digital-text&amp;sprefix=database+refacrtoring%2Cdigital-text%2C145&amp;sr=1-2">Refactoring Databases: Evolutionary Database Design</a></li>
+<li><a href="https://www.amazon.com/Designing-Data-Intensive-Applications-Reliable-Maintainable-ebook/dp/B06XPJML5D/ref=sr_1_1?crid=JFZ55X89JHP0&amp;dib=eyJ2IjoiMSJ9.ScUjfrRSlTSXTtLBuC0DXSaGKqlDdMwB7RFFyk_gcKP4jt2pDMT94khvobsJMaNq72IkRPo9wTbaQXjmL-9KfbpZU10rAql-hnEAhaVPGb1S7byM4yRclet2dUkElNuJQZwvdaYhfa3-tcK8V2RwXHXroiDjncQeyWoZaiexa5KGJUKYK4VHd-zHeNdg7bVGWQtHGl1Wb4hqD_yw6YBcfun24Dkt_PHxfXbyNdfj7c4.zD0O-vfQNqa5amOI6UnYqbGp-6RNl1NuJo5hBbgLSJ4&amp;dib_tag=se&amp;keywords=Data+Intensive+Applications&amp;qid=1741665534&amp;sprefix=data+intensive+applications%2Caps%2C213&amp;sr=8-1">Data Intensive Applications</a></li>
+</ul>
+<h2 id="all-the-things-devops"><a class="header" href="#all-the-things-devops">All the Things Devops</a></h2>
+<ul>
+<li><a href="https://trello.com/b/ZFVZz4Cd/devops-learning-the-hard-way">Leanr DevOps The Hard Way by Diego Pacheco</a></li>
+</ul>
+<h2 id="useful-information"><a class="header" href="#useful-information">Useful Information</a></h2>
+<ul>
+<li><a href="https://getdeploying.com/reference/data-egress">Cloud Egress Costs</a></li>
+<li><a href="https://instances.vantage.sh/">AWS Instances Cost</a></li>
+<li><a href="https://www.ducktyped.org/p/a-mini-book-on-aws-networking-introduction">AWS Network Guide</a></li>
+<li><a href="https://bigdata.2minutestreaming.com/p/how-aws-s3-scales-with-tens-of-millions-of-hard-drives">S3 Scalability</a></li>
+</ul>
+<h2 id="lean-all-this-tools-for-troubleshooting-in-linux"><a class="header" href="#lean-all-this-tools-for-troubleshooting-in-linux">Lean all this tools for Troubleshooting in Linux</a></h2>
+<p><img src="images/linux-perf-troubleshooting.png" alt="Linux Performance / Troubleshooting " /></p>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="gcp-resources"><a class="header" href="#gcp-resources">GCP Resources</a></h2>
+<p><img src="./images/gcp-hero.png" alt="GCP" /></p>
+<h4 id="important-topics-3"><a class="header" href="#important-topics-3">Important Topics</a></h4>
+<ul>
+<li><a href="http://www.soa-manifesto.org/">SOA</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Docker_(software)">Containers</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Cloud_computing">Cloud Computing</a></li>
+</ul>
+<h4 id="tech-4"><a class="header" href="#tech-4">Tech</a></h4>
+<ul>
+<li><a href="https://cloud.google.com/products/compute/">Compute</a></li>
+<li><a href="https://cloud.google.com/products/storage/">Storage</a></li>
+<li><a href="https://cloud.google.com/products/networking/">Networking</a></li>
+<li><a href="https://cloud.google.com/products/big-data/">Big Data</a></li>
+<li><a href="https://cloud.google.com/products/machine-learning/">ML</a></li>
+<li><a href="https://cloud.google.com/products/management/">Management Tools</a></li>
+<li><a href="https://kubernetes.io/">Kubernetes</a></li>
+<li><a href="https://www.tensorflow.org/">TensorFlow</a></li>
+<li><a href="https://cloud.google.com/spanner/">Cloud Spanner</a></li>
+<li><a href="https://cloud.google.com/functions/">Cloud Functions</a></li>
+<li><a href="https://cloud.google.com/container-engine/">GKE</a></li>
+</ul>
+<h4 id="books-6"><a class="header" href="#books-6">Books</a></h4>
+<ul>
+<li><a href="https://www.amazon.com/Google-Cloud-Platform-Action-Geewax/dp/1617293520/ref=sr_1_1?ie=UTF8&amp;qid=1499203188&amp;sr=8-1&amp;keywords=google+cloud">Google Cloud Platform in Action</a></li>
+<li><a href="https://www.amazon.com/Google-Compute-Engine-Managing-Computing-ebook/dp/B00QXWIWLS/ref=mt_kindle?_encoding=UTF8&amp;me=">Google Compute Engine</a></li>
+<li><a href="https://www.amazon.com/Data-Science-Google-Cloud-Platform/dp/1491974567/ref=sr_1_4?ie=UTF8&amp;qid=1499203188&amp;sr=8-4&amp;keywords=google+cloud">Data Science on Google Cloud Platform</a></li>
+<li><a href="https://www.amazon.com/Kubernetes-Running-Dive-Future-Infrastructure/dp/1491935677/ref=pd_sim_14_4?_encoding=UTF8&amp;pd_rd_i=1491935677&amp;pd_rd_r=TSZ7HEYA6PEK3S3DN8NC&amp;pd_rd_w=2zxgc&amp;pd_rd_wg=8MSeP&amp;psc=1&amp;refRID=TSZ7HEYA6PEK3S3DN8NC">Kubernetes: Up and Running</a></li>
+</ul>
+<h4 id="links-3"><a class="header" href="#links-3">Links</a></h4>
+<ul>
+<li><a href="https://cloudplatform.googleblog.com/">Google Cloud Platform Blog</a></li>
+<li><a href="https://cloud.google.com/blog/big-data/">GCP Big Data Blog</a></li>
+<li><a href="https://medium.com/google-cloud">Google Cloud on Medium</a></li>
+<li><a href="http://blog.kubernetes.io/">Kubernetes Blog</a></li>
+<li><a href="https://twitter.com/googlecloud">Google Cloud Twitter</a></li>
+<li><a href="https://mn.wordpress.com/tag/gcp/">GCP WordPress</a></li>
+<li><a href="https://cloud.google.com/docs/tutorials">GCP Tutorials</a></li>
+<li><a href="https://cloud.google.com/community/tutorials/">GCP Community Tutorials</a></li>
+<li><a href="https://www.gcppodcast.com/">GCP Podcast</a></li>
+<li><a href="https://codelabs.developers.google.com/?cat=Cloud">Google Codelabs Cloud</a></li>
+<li><a href="https://twitter.com/googlecloud">Google Cloud Twitter</a></li>
+<li><a href="https://twitter.com/gcpbigdata">GCP Big Data Twitter</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h3 id="core-java"><a class="header" href="#core-java">Core Java</a></h3>
+<ul>
+<li>Properties API: Create, Read, Store, System.</li>
+<li>Reflection API: Read, invoke, modify.</li>
+<li>Functional Interfaces</li>
+<li>Streams: Lists, Arrays, Map, Filter, Predicates</li>
+<li>Streams: Supplier, Consumer, BinaryOperator, UnaryOperator</li>
+<li>Concurrency: ExecutorService</li>
+<li>Concurrency: Callable and Future</li>
+<li>Concurrency: Java Locks and Atomic Variables</li>
+<li>Create your own Annotations - read with reflections</li>
+<li>Mockito - All Features</li>
+<li>JUnit 5 - All Features</li>
+<li>Data Time API + Joda time</li>
+<li>Implement all Gof Design Patterns</li>
+<li>Use/Test all new JDK Features</li>
+</ul>
+<h3 id="spring-stack"><a class="header" href="#spring-stack">Spring Stack</a></h3>
+<ul>
+<li>Spring Core - IoC</li>
+<li>Spring Core - Bean Scopes(Singleton, Prototype)</li>
+<li>Spring Core - Setter/Contructor Injection</li>
+<li>Spring Core - Bean Post Processor</li>
+<li>Spring Core - @Value</li>
+<li>Spring Core - Testing, Environment, WebTestClient</li>
+<li>Spring Boot - Rest Support, RestTemplate</li>
+<li>Spring Boot - Integration Test with Rest</li>
+<li>Spring Data JDBC</li>
+<li>Cache with Caffeine</li>
+<li>Configure Transaction management with JPA</li>
+<li>Spring Security: CSRF Protection</li>
+<li>Spring Security: Authorize HTTP Requests(HttpSecurity and SecurityFilterChain)</li>
+</ul>
+<h3 id="learn-frameworks-and-libs"><a class="header" href="#learn-frameworks-and-libs">Learn Frameworks and Libs</a></h3>
+<ul>
+<li>Gson</li>
+<li>Guava</li>
+<li>Quartz</li>
+<li>Apache Camel</li>
+<li>Google GRPC</li>
+<li>Resilience4j</li>
+<li>Vert.X</li>
+<li>Quarkus</li>
+</ul>
+<h2 id="ooad-challenges-round-1"><a class="header" href="#ooad-challenges-round-1">OOAD Challenges Round 1</a></h2>
+<ul>
+<li>(1) Build a TAX system where different products have different tax per state and year.</li>
+<li>(2) Build a Logger Builder Router System where you can log into FS, ELK or any other log system where you can configure the logs to be sync or assync using the same API.</li>
+<li>(3) Build Render Template where the same temple can be render in HTML, PDF or CSV.</li>
+<li>(4) Build A Logistic System where you need to calculate different freigth prices based on volume, size and type of transportation i.e boat, truck, rail, prices are dynamic they keep changing.</li>
+<li>(5) Build Restaurant Queue System Capable of telling how long each dish will take.</li>
+<li>(6) Build Guitar Factory System where you can specify details of a guitar and the system creates a
+custon guitar for you with OS, Specs, Models. The system should keep track of Inventory.</li>
+<li>(7) Build Ticket system, where you should be able to sell x number of ticker per different shows and
+choose the seats number, zone of the venue, date and respect maximun capacity.</li>
+</ul>
+<h2 id="ooad-challenges-round-2"><a class="header" href="#ooad-challenges-round-2">OOAD Challenges Round 2</a></h2>
+<ul>
+<li>(1) Build a Grocery TODO List system (add item, remove, mark as done, do, re-do, listAll)</li>
+<li>(2) Build a FileShare System  (save files, restore files, delete files, listFiles, Search) with encryption</li>
+<li>(3) Build a Note Taking system (add notes,save notes,edit notes, delete notes, sync)</li>
+<li>(4) Build a Calendar system (book meetings, remove meetings, listMeetings, suggest best time for 2 people)</li>
+<li>(5) Build a Redis clone client/server (Strings: set,get,remove,append, maps: set,get,keys,values)</li>
+<li>(6) Build a Teacher's Class Organizer/Optimizer</li>
+<li>(7) Build a Social Media Sharing Photo App (publish photos, tag photos, timeline, comments)</li>
+</ul>
+<h3 id="code-challenges-round-1-1"><a class="header" href="#code-challenges-round-1-1">Code Challenges Round 1</a></h3>
+<ul>
+<li>(1) Build a converter Framework where you convert complex types.</li>
+<li>(2) Build a task framework where you submit tasks to your own pool of threads.</li>
+<li>(3) Build a validation Framework based on Annotations.</li>
+<li>(4) Build a observability core framework based on latency metrics.</li>
+<li>(5) Build a code generator based on YAML Definitions.</li>
+<li>(6) Build a Core Bank Ledger.</li>
+<li>(7) Build a HTTP Server supporting /GET endpoints.</li>
+</ul>
+<h3 id="code-challenges-round-2-1"><a class="header" href="#code-challenges-round-2-1">Code Challenges Round 2</a></h3>
+<ul>
+<li>(1) Build a Stress Test Framework for HTTP</li>
+<li>(2) Build a Dont Pad (<a href="https://dontpad.com/">DontPad</a>)</li>
+<li>(3) Build a Unused Class Detector</li>
+<li>(4) Build a Murder Mistery Game using terminal and linux (<a href="https://github.com/veltman/clmystery">clmystery walkthrough</a>)</li>
+<li>(5) Build a Implement your own String Implementation methods: (toArray,foreach,reverse,iterator,length,charAt,equals,isEmpty,replace,substring,trim,toJson,indexOf,hashCode)</li>
+<li>(6) Build a Hibernate Slow Query Detector</li>
+<li>(7) Build a oAuth 2.0 Server (<a href="https://datatracker.ietf.org/doc/html/rfc6749">RFC 6749</a>)</li>
+</ul>
+<h3 id="books-7"><a class="header" href="#books-7">Books</a></h3>
+<ul>
+<li><a href="https://www.amazon.com/Principles-Software-Architecture-Modernization-microservices/dp/9355519532/ref=sr_1_1?crid=7U3H2IE5U7Y4&amp;dib=eyJ2IjoiMSJ9.ebHg7EIiJ3GThIg8Dwf4PelC70iUIbHPKv7_7zk8vrk8K2FB4zlrUQyNZwKAHPO46cAYR5z2-KyqnXqNz3Ee2lmU-aGR7NLhq7jko2UihHIl-taoJ6i_hkMjcc12ZF3pOmB9lFrvbsGgbDagq1Vzqg.oz7TxYpSBxBZjVjkuIPDZM7Wxx_XMRU0Uj7jo9Rq_BI&amp;dib_tag=se&amp;keywords=principles+of+software+architecture+modernization&amp;qid=1741069169&amp;sprefix=Principles+of+software+a%2Caps%2C190&amp;sr=8-1">Principles of Software Architecture Modernization</a></li>
+<li><a href="https://www.amazon.com/dp/9365893100/ref=mes-dp?_encoding=UTF8&amp;pd_rd_w=JpyYV&amp;content-id=amzn1.sym.7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_p=7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_r=K6XYEHZZ76RWDSAXAY5X&amp;pd_rd_wg=RH04x&amp;pd_rd_r=f230b2e4-c342-429e-a362-c856e4c2362a">Continuous Modernization</a></li>
+<li><a href="https://www.amazon.com/Effective-Java-Joshua-Bloch-ebook-dp-B078H61SCH/dp/B078H61SCH/ref=mt_other?_encoding=UTF8&amp;me=&amp;qid=1656112351">Effective Java</a></li>
+<li><a href="https://www.amazon.com/Java-Concurrency-Practice-CONCURRENCY-PRACT-ebook/dp/B004V9OA84/ref=sr_1_18?crid=3J7QMHJCUGFUR&amp;keywords=java&amp;qid=1656112397&amp;s=digital-text&amp;sprefix=java%2Cdigital-text%2C130&amp;sr=1-18">Java Concurrency in Practice</a></li>
+<li><a href="https://www.amazon.com/Java-Performance-Depth-Advice-Programming-ebook/dp/B084RY5438/ref=sr_1_45?crid=2EJZNHZEI4M5I&amp;keywords=java&amp;qid=1656112445&amp;s=digital-text&amp;sprefix=java%2Cdigital-text%2C126&amp;sr=1-45">Java Performance: In-Depth Advice for Tuning and Programming</a></li>
+<li><a href="https://www.amazon.com/Refactoring-Improving-Existing-Addison-Wesley-Technology-ebook/dp/B007WTFWJ6/ref=sr_1_4?crid=1PFLBMDO55DGS&amp;keywords=kent+beck&amp;qid=1656112484&amp;s=digital-text&amp;sprefix=kent+beck%2Cdigital-text%2C125&amp;sr=1-4">Refactoring: Improving the Design of Existing Code</a></li>
+<li><a href="https://www.amazon.com/Implementation-Patterns-Addison-Wesley-Signature-Beck-ebook/dp/B004UAALDW/ref=sr_1_3?crid=1PFLBMDO55DGS&amp;keywords=kent+beck&amp;qid=1656112484&amp;s=digital-text&amp;sprefix=kent+beck%2Cdigital-text%2C125&amp;sr=1-3">Implementation Patterns</a></li>
+<li><a href="https://www.amazon.com/Design-Patterns-Object-Oriented-Addison-Wesley-Professional-ebook/dp/B000SEIBB8/ref=sr_1_1?crid=AB99ZJ4MPI0D&amp;keywords=design+patterns&amp;qid=1656112548&amp;s=digital-text&amp;sprefix=designpatterns%2Cdigital-text%2C120&amp;sr=1-1">Design Patterns: Elements of Reusable Object-Oriented Software</a></li>
+<li><a href="https://www.amazon.com/Enterprise-Integration-Patterns-Designing-Addison-Wesley-ebook/dp/B007MQLL4E/ref=sr_1_1?keywords=enterprise+integration+patterns&amp;qid=1656112579&amp;s=digital-text&amp;sprefix=enterprise+in%2Cdigital-text%2C121&amp;sr=1-1">Enterprise Integration Patterns</a></li>
+<li><a href="https://www.amazon.com/Unit-Testing-Principles-Practices-Patterns-ebook/dp/B09782L692/ref=sr_1_2?crid=3AKFN85M7QTZG&amp;keywords=testing&amp;qid=1656112639&amp;s=digital-text&amp;sprefix=testin%2Cdigital-text%2C123&amp;sr=1-2">Unit Testing Principles, Practices, and Patterns</a></li>
+<li><a href="http://www.amazon.com/Working-Effectively-Legacy-Michael-Feathers/dp/0131177052/ref=pd_sim_b_3?ie=UTF8&amp;refRID=0NFDX09AB5N8Y6EM4BB5">Working Effectively with Legacy Code</a></li>
+<li><a href="https://www.amazon.com/Designing-Data-Intensive-Applications-Reliable-Maintainable-ebook/dp/B06XPJML5D/ref=sr_1_65?crid=3CX1FTAAZCG03&amp;keywords=coding+patterns&amp;qid=1656112744&amp;s=digital-text&amp;sprefix=coding+pattern%2Cdigital-text%2C115&amp;sr=1-65">Designing Data-Intensive Applications: The Big Ideas Behind Reliable, Scalable, and Maintainable Systems</a></li>
+<li><a href="https://www.amazon.com/Pragmatic-Programmer-journey-mastery-Anniversary-ebook/dp/B07VRS84D1/ref=tmm_kin_swatch_0?_encoding=UTF8&amp;qid=1656566171&amp;sr=8-1">The Pragmatic Programmer</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="frontend--javascript-resources"><a class="header" href="#frontend--javascript-resources">Frontend / JavaScript Resources</a></h2>
+<img src="./images/js-frontend-hero.png" alt="JavaScript Technologies" width="420" />
+<h4 id="tech-5"><a class="header" href="#tech-5">Tech</a></h4>
+<ul>
+<li><a href="https://nodejs.org/en/">Nodejs</a></li>
+<li><a href="https://www.typescriptlang.org/">Typescript</a></li>
+<li><a href="http://expressjs.com/pt-br/">Express</a></li>
+<li><a href="https://angularjs.org/">Angular</a></li>
+<li><a href="https://facebook.github.io/react/">React</a></li>
+<li><a href="https://vuejs.org/">Vue</a></li>
+<li><a href="http://reactivex.io/rxjs/">RxJS</a></li>
+<li><a href="https://rxfiddle.net/#">RxFiddle</a></li>
+<li><a href="https://github.com/webpack/webpack">Webpack</a></li>
+<li><a href="https://github.com/webpackmonitor/webpackmonitor">Webpack-monitor</a></li>
+<li><a href="https://yarnpkg.com/en/">yarn</a></li>
+<li><a href="http://gulpjs.com/">Gulp</a></li>
+<li><a href="http://yeoman.io/">Yoman</a></li>
+<li><a href="https://flow.org/">Flow</a></li>
+<li><a href="https://github.com/lodash/lodash">Lodash</a></li>
+<li><a href="https://github.com/ramda/ramda">Ramda</a></li>
+<li><a href="https://github.com/ramda/ramda-fantasy">Ramda Fantasy</a></li>
+<li><a href="https://kea.js.org/">kea</a></li>
+<li><a href="http://redux.js.org/">Redux</a></li>
+<li><a href="https://github.com/contrarian/redux-transform">redux-transform</a></li>
+<li><a href="https://github.com/jevakallio/redux-offline">redux-offline</a></li>
+<li><a href="https://redux-saga.js.org/">Redux-Saga</a></li>
+<li><a href="https://github.com/paypal/react-autocompletely">react-autocompletely</a></li>
+<li><a href="https://github.com/Raathigesh/react-atmo">react-atmo</a></li>
+<li><a href="https://github.com/danilowoz/react-content-loader">react-content-loader</a></li>
+<li><a href="https://github.com/stereobooster/react-snap">react-snap</a></li>
+<li><a href="https://www.reactpwa.com/">React PWA</a></li>
+<li><a href="https://github.com/Wildhoney/ReactShadow">ReactShadow</a></li>
+<li><a href="https://github.com/vasanthk/react-bits">react-bits</a></li>
+<li><a href="https://github.com/APIs-guru/graphql-voyager">graphql-voyager</a></li>
+<li><a href="https://github.com/elierotenberg/react-traverse">react-traverse</a></li>
+<li><a href="https://github.com/React-Sight/React-Sight">React-Sight</a></li>
+<li><a href="https://github.com/Trixieapp/react-virgin">React-Virgin</a></li>
+<li><a href="https://github.com/yahoo/react-intl">react-intl</a></li>
+<li><a href="https://github.com/nitin42/React-AR">React-AR</a></li>
+<li><a href="https://github.com/lingui/js-lingui">jsLingui</a></li>
+<li><a href="https://github.com/smooth-code/svgr">svgr</a></li>
+<li><a href="https://github.com/mobxjs/mobx">Mobx</a></li>
+<li><a href="https://github.com/staltz/xstream">Xstream</a></li>
+<li><a href="http://hammerjs.github.io/">Hammerjs</a></li>
+<li><a href="https://github.com/d3/d3">D3</a></li>
+<li><a href="https://emotion.sh/">Emotion</a></li>
+<li><a href="https://github.com/Popmotion/popmotion">popmotion</a></li>
+<li><a href="https://github.com/substack/node-browserify">browserify</a></li>
+<li><a href="https://github.com/jasmine/jasmine">Jasmine</a></li>
+<li><a href="https://github.com/chaijs/chai">chai</a></li>
+<li><a href="https://github.com/mochajs/mocha">mocha</a></li>
+<li><a href="https://github.com/angular/protractor">Protractor</a></li>
+<li><a href="https://github.com/ariya/phantomjs">phantomjs</a></li>
+<li><a href="https://facebook.github.io/immutable-js/">Immutable.js</a></li>
+<li><a href="https://github.com/resilient-http/resilient.js">resilient.js</a></li>
+<li><a href="http://riotjs.com/">Riot</a></li>
+<li><a href="https://www.meteor.com/">Meteor</a></li>
+<li><a href="https://www.emberjs.com/">Ember</a></li>
+<li><a href="https://github.com/rendrjs/rendr">Rendr</a></li>
+<li><a href="https://threejs.org/">three</a></li>
+<li><a href="http://t3js.org/">T3</a></li>
+<li><a href="https://p5js.org/">p5</a></li>
+<li><a href="https://babeljs.io/">Babel</a></li>
+<li><a href="https://github.com/kentcdodds/babel-plugin-preval">babel-plugin-preval</a></li>
+<li><a href="https://electron.atom.io/">Electron</a></li>
+<li><a href="https://github.com/roman01la/html-to-react-components">html-to-react-components</a></li>
+<li><a href="https://facebook.github.io/react-native/">React-Native</a></li>
+<li><a href="https://github.com/airbnb/lottie-react-native">lottie-react-native</a></li>
+<li><a href="https://www.argonjs.io/">Argon</a></li>
+<li><a href="https://www.primrosevr.com/">Primrose</a></li>
+<li><a href="https://github.com/facebook/react-vr">React-VR</a></li>
+<li><a href="https://github.com/vadimdemedes/ink">ink</a></li>
+<li><a href="https://github.com/graphcool/chromeless">Chromeless</a></li>
+<li><a href="https://github.com/digitalie/one-loader">One-Loader</a></li>
+<li><a href="https://github.com/akxcv/vuera">Vuera</a></li>
+<li><a href="https://github.com/aarondfrancis/vue-model">Vue-Model</a></li>
+<li><a href="https://github.com/strongloop/loopback-next">Loopback-Next</a></li>
+<li><a href="https://github.com/lodash/lodash-webpack-plugin">lodash-webpack-plugin</a></li>
+<li><a href="https://deeplearnjs.org/">DeepleatnJS</a></li>
+<li><a href="https://github.com/laoqiren/mlhelper">mlhelper</a></li>
+<li><a href="https://github.com/EmilTholin/image-trace-loader">image-trace-loader</a></li>
+<li><a href="https://frappe.github.io/charts/">frappe-charts</a></li>
+<li><a href="https://github.com/kisenka/svg-fill-loader">svg-fill-loader</a></li>
+<li><a href="https://github.com/AnalyticalGraphicsInc/cesium">cesium</a></li>
+<li><a href="https://github.com/ignoreintuition/jSchema">jSchema</a></li>
+<li><a href="https://serverjs.io/">serverjs</a></li>
+<li><a href="https://github.com/JetBrains/create-react-kotlin-app">create-react-kotlin-app</a></li>
+<li><a href="https://edwardtufte.github.io/tufte-css/">tufte-css</a></li>
+<li><a href="https://github.com/microsoft/YamUI/">YamUI</a></li>
+<li><a href="https://github.com/raphamorim/react-tv">react-tv</a></li>
+<li><a href="https://github.com/moment/luxon">luxon</a></li>
+<li><a href="https://github.com/tj/node-prune">node-prune</a></li>
+<li><a href="https://date-fns.org/">date-fns</a></li>
+</ul>
+<h4 id="books-8"><a class="header" href="#books-8">Books</a></h4>
+<ul>
+<li><a href="https://www.amazon.com/Principles-Software-Architecture-Modernization-microservices/dp/9355519532/ref=sr_1_1?crid=7U3H2IE5U7Y4&amp;dib=eyJ2IjoiMSJ9.ebHg7EIiJ3GThIg8Dwf4PelC70iUIbHPKv7_7zk8vrk8K2FB4zlrUQyNZwKAHPO46cAYR5z2-KyqnXqNz3Ee2lmU-aGR7NLhq7jko2UihHIl-taoJ6i_hkMjcc12ZF3pOmB9lFrvbsGgbDagq1Vzqg.oz7TxYpSBxBZjVjkuIPDZM7Wxx_XMRU0Uj7jo9Rq_BI&amp;dib_tag=se&amp;keywords=principles+of+software+architecture+modernization&amp;qid=1741069169&amp;sprefix=Principles+of+software+a%2Caps%2C190&amp;sr=8-1">Principles of Software Architecture Modernization</a></li>
+<li><a href="https://www.amazon.com/dp/9365893100/ref=mes-dp?_encoding=UTF8&amp;pd_rd_w=JpyYV&amp;content-id=amzn1.sym.7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_p=7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_r=K6XYEHZZ76RWDSAXAY5X&amp;pd_rd_wg=RH04x&amp;pd_rd_r=f230b2e4-c342-429e-a362-c856e4c2362a">Continuous Modernization</a></li>
+<li><a href="https://www.amazon.com/JavaScript-Definitive-Guide-Activate-Guides-ebook/dp/B004XQX4K0/ref=sr_1_5?ie=UTF8&amp;qid=1498488801&amp;sr=8-5&amp;keywords=javascript">JavaScript: The Definitive Guide</a></li>
+<li><a href="https://www.amazon.com/Node-js-Design-Patterns-Mario-Casciaro-ebook/dp/B00RP13D24/ref=sr_1_13?ie=UTF8&amp;qid=1498488514&amp;sr=8-13&amp;keywords=nodejs">Node.js Design Patterns</a></li>
+<li><a href="https://www.amazon.com/Web-Development-Node-Express-Leveraging/dp/1491988649/ref=sr_1_22?ie=UTF8&amp;qid=1498488534&amp;sr=8-22&amp;keywords=nodejs">Web Development with Node and Express</a></li>
+<li><a href="https://www.amazon.com/Learning-React-Functional-Development-Redux/dp/1491954620/ref=sr_1_2?ie=UTF8&amp;qid=1498488863&amp;sr=8-2&amp;keywords=react">Learning React</a></li>
+<li><a href="https://www.amazon.com/Pro-Angular-Adam-Freeman/dp/1484223063/ref=sr_1_3?ie=UTF8&amp;qid=1498488882&amp;sr=8-3&amp;keywords=angular">Pro Angular</a></li>
+<li><a href="https://www.amazon.com/Flux-Architecture-Adam-Boduch-ebook/dp/B01CR5GCXO/ref=sr_1_1?ie=UTF8&amp;qid=1498489019&amp;sr=8-1&amp;keywords=flux+redux">Flux Architecture</a></li>
+<li><a href="https://github.com/getify/You-Dont-Know-JS">You Don't Know JS</a></li>
+<li><a href="https://drboolean.gitbooks.io/mostly-adequate-guide/">Mostly Adequate Guide</a></li>
+<li><a href="http://javascriptissexy.com/how-to-learn-javascript-properly/">How to Learn JavaScript Properly</a></li>
+</ul>
+<h4 id="links-4"><a class="header" href="#links-4">Links</a></h4>
+<ul>
+<li><a href="https://eloquentjavascript.net/">Eloquent JavaScript - 4th edition (2024)</a></li>
+<li><a href="https://csshell.com/">CSS Hell</a></li>
+<li><a href="https://hackernoon.com/">HackerNoon</a></li>
+<li><a href="https://facebook.github.io/flux/">Flux</a></li>
+<li><a href="https://twitter.com/dan_abramov">Dan Abramov Twitter</a></li>
+<li><a href="https://twitter.com/benlesh">Ben Lesh Twitter</a></li>
+<li><a href="https://twitter.com/mjackson">Michael Jackson Twitter</a></li>
+<li><a href="https://twitter.com/BrendanEich">Brendan Eich Twitter</a></li>
+<li><a href="https://twitter.com/dshaw">dshaw Twitter</a></li>
+<li><a href="https://twitter.com/ladyleet">ladyleet Twitter</a></li>
+<li><a href="https://github.com/sorrycc/awesome-javascript">Awesome JavaScript</a></li>
+<li><a href="https://github.com/sindresorhus/awesome-nodejs">Awesome Node.js</a></li>
+<li><a href="https://slack.engineering/">Slack Engineering</a></li>
+<li><a href="https://blog.codeship.com/">Codeship Blog</a></li>
+<li><a href="http://angularjs.blogspot.com.br/">AngularJS Blog</a></li>
+<li><a href="https://facebook.github.io/react/blog/">React Blog</a></li>
+<li><a href="https://blogs.windows.com/msedgedev/">MS Edge Dev Blog</a></li>
+<li><a href="https://egghead.io/courses/getting-started-with-redux">Getting Started with Redux</a></li>
+<li><a href="https://egghead.io/courses/asynchronous-javascript-with-async-await">Asynchronous JavaScript with Async Await</a></li>
+<li><a href="https://github.com/grab/front-end-guide">Grab Front-End Guide</a></li>
+<li><a href="https://github.com/uanders/react-redux-cheatsheet">React Redux Cheatsheet</a></li>
+<li><a href="https://devchat.tv/react-native-radio">React Native Radio</a></li>
+<li><a href="http://hello.p5js.org/">Hello p5.js</a></li>
+<li><a href="http://play.elevatorsaga.com/">Elevator Saga</a></li>
+<li><a href="https://reactarmory.com/guides/learn-nude-react/react-basics">React Armory - React Basics</a></li>
+<li><a href="https://github.com/ryanmcdermott/clean-code-javascript">Clean Code JavaScript</a></li>
+<li><a href="https://github.com/vuejs/awesome-vue">Awesome Vue</a></li>
+<li><a href="https://medium.freecodecamp.org/modern-frontend-hacking-cheatsheets-df9c2566c72a">Modern Frontend Hacking Cheatsheets</a></li>
+<li><a href="http://acko.net/files/fullfrontal/fullfrontal/webglmath/online.html">WebGL Math</a></li>
+<li><a href="http://www.franktip.org/pubs/oopsla2017promises.pdf">JavaScript Promises Paper</a></li>
+<li><a href="https://reacttraining.com/patterns/">React Training Patterns</a></li>
+<li><a href="https://github.com/aviabird/angularspree">AngularSpree</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="mobile-resources"><a class="header" href="#mobile-resources">Mobile Resources</a></h2>
+<h4 id="tech-6"><a class="header" href="#tech-6">Tech</a></h4>
+<ul>
+<li><a href="https://www.google.com/intl/pt-BR/analytics/index.html">Google Analytics</a></li>
+<li><a href="https://try.crashlytics.com/">Crashlytics</a></li>
+<li><a href="https://www.bitrise.io/">Bitrise</a></li>
+<li><a href="http://fabric.io/">Fabric</a></li>
+<li><a href="http://www.instavr.co/">InstaVR</a></li>
+<li><a href="https://easyar.com/">EasyAR</a></li>
+<li><a href="https://vuforia.com/">Vuforia</a></li>
+</ul>
+<h6 id="android"><a class="header" href="#android">Android</a></h6>
+<ul>
+<li><a href="https://kotlinlang.org/">Kotlin</a></li>
+<li><a href="https://github.com/ReactiveX/RxJava">RxJava</a></li>
+<li><a href="https://www.genymotion.com/">genymotion</a></li>
+<li><a href="https://github.com/RoboBinding/RoboBinding">RoboBinding</a></li>
+<li><a href="http://jakewharton.github.io/butterknife/">Butter Knife</a></li>
+<li><a href="http://square.github.io/picasso/">Picasso</a></li>
+<li><a href="https://github.com/yarolegovich/wellsql">WellSQL</a></li>
+<li><a href="https://github.com/FasterXML/jackson">Jackson</a></li>
+<li><a href="http://square.github.io/retrofit/">Retrofit</a></li>
+<li><a href="https://github.com/robotiumtech/robotium">robotium</a></li>
+<li><a href="https://firebase.google.com/?hl=pt-br">Firebase</a></li>
+<li><a href="https://github.com/airbnb/lottie-android">lottie-android</a></li>
+<li><a href="https://unity3d.com/unity/multiplatform">Unity</a></li>
+<li><a href="https://github.com/tensorflow/tensorflow/tree/master/tensorflow/examples/android">TensorFlow for Android</a></li>
+<li><a href="https://github.com/square/leakcanary">leakcanary</a></li>
+<li><a href="https://github.com/jgilfelt/chuck">chuck</a></li>
+<li><a href="https://github.com/facebook/litho">litho</a></li>
+</ul>
+<h6 id="ios"><a class="header" href="#ios">IOS</a></h6>
+<ul>
+<li><a href="https://github.com/SyncDB/Sync">Sync</a></li>
+<li><a href="https://github.com/realm/realm-cocoa">realm-cocoa</a></li>
+<li><a href="https://github.com/Alamofire/Alamofire">Alamofire</a></li>
+<li><a href="https://github.com/rs/SDWebImage">SDWebImage</a></li>
+<li><a href="https://github.com/xmartlabs/Eureka">Eureka</a></li>
+<li><a href="https://github.com/ReactiveX/RxSwift">RxSwift</a></li>
+<li><a href="https://github.com/mac-cain13/R.swift">R.swift</a></li>
+<li><a href="https://github.com/SnapKit/SnapKit">SnapKit</a></li>
+<li><a href="https://github.com/hackiftekhar/IQKeyboardManager">IQKeyboardManagerSwift</a></li>
+<li><a href="https://github.com/Quick/Quick">Quick</a></li>
+<li><a href="https://github.com/lkzhao/Hero">Hero</a></li>
+<li><a href="https://github.com/CosmicMind/Material">Material</a></li>
+<li><a href="https://github.com/Instagram/IGListKit">IGListKit</a></li>
+<li><a href="https://github.com/ViccAlexander/Chameleon">Chameleon</a></li>
+<li><a href="https://github.com/nvzqz/FileKit">FileKit</a></li>
+<li><a href="https://github.com/stig/json-framework">json-framework</a></li>
+<li><a href="https://github.com/tensorflow/tensorflow/tree/master/tensorflow/examples/ios">TensorFlow for iOS</a></li>
+<li><a href="https://developers.google.com/j2objc/">j2objc</a></li>
+<li><a href="https://github.com/Nirma/Attributed">Attributed</a></li>
+<li><a href="https://github.com/jmfieldman/Cadmium">Cadmium</a></li>
+</ul>
+<h4 id="books-9"><a class="header" href="#books-9">Books</a></h4>
+<ul>
+<li><a href="https://www.amazon.com/Android-Cookbook-Problems-Solutions-Developers-ebook/dp/B071VLZ9ZK/ref=sr_1_14?s=digital-text&amp;ie=UTF8&amp;qid=1498492311&amp;sr=1-14&amp;keywords=android">Android Cookbook</a></li>
+<li><a href="https://www.amazon.com/Android-Design-Patterns-Best-Practice-ebook/dp/B01HGR1RFG/ref=sr_1_27?s=digital-text&amp;ie=UTF8&amp;qid=1498492331&amp;sr=1-27&amp;keywords=android">Android Design Patterns and Best Practice</a></li>
+<li><a href="https://www.amazon.com/iOS-10-Programming-Fundamentals-Swift-ebook/dp/B01M0XVT2G/ref=sr_1_2?s=digital-text&amp;ie=UTF8&amp;qid=1498492791&amp;sr=1-2&amp;keywords=ios">iOS 10 Programming Fundamentals with Swift</a></li>
+<li><a href="https://www.amazon.com/Learning-Swift-Building-macOS-Beyond-ebook/dp/B06XYGFYQT/ref=sr_1_18?s=digital-text&amp;ie=UTF8&amp;qid=1498492821&amp;sr=1-18&amp;keywords=ios">Learning Swift</a></li>
+</ul>
+<h4 id="links-5"><a class="header" href="#links-5">Links</a></h4>
+<ul>
+<li><a href="https://github.com/JStumpp/awesome-android">Awesome Android</a></li>
+<li><a href="https://github.com/vsouza/awesome-ios">Awesome iOS</a></li>
+<li><a href="https://developer.android.com/index.html">Android Developer</a></li>
+<li><a href="https://www.youtube.com/user/androiddevelopers?gl=CO&amp;hl=es-419">Android Developers YouTube</a></li>
+<li><a href="https://source.android.com/">Android Source</a></li>
+<li><a href="http://www.vogella.com/tutorials/android.html">Vogella Android Tutorials</a></li>
+<li><a href="http://gizmodo.com/tag/android">Gizmodo Android</a></li>
+<li><a href="https://www.androidcentral.com/">Android Central</a></li>
+<li><a href="https://www.cultofmac.com/">Cult of Mac</a></li>
+<li><a href="http://www.cocoawithlove.com/">Cocoa with Love</a></li>
+<li><a href="http://iosdevweekly.com/">iOS Dev Weekly</a></li>
+<li><a href="http://www.cimgf.com/">CIMGF</a></li>
+<li><a href="http://nshipster.com/">NSHipster</a></li>
+<li><a href="https://www.cocoacontrols.com/">Cocoa Controls</a></li>
+<li><a href="http://petersteinberger.com/">Peter Steinberger</a></li>
+<li><a href="http://www.ios-blog.co.uk/">iOS Blog UK</a></li>
+<li><a href="https://medium.com/app-coder-io/33-ios-open-source-libraries-that-will-dominate-2017-4762cf3ce449">33 iOS Open Source Libraries</a></li>
+<li><a href="https://www.raywenderlich.com/">Ray Wenderlich</a></li>
+<li><a href="https://iosdevbr.herokuapp.com/">iOS Dev BR Slack</a></li>
+<li><a href="http://slack.androiddevbr.org/">Android Dev BR Slack</a></li>
+<li><a href="https://medium.cobeisfresh.com/@COBEistech">COBE Tech Medium</a></li>
+<li><a href="https://medium.mybridge.co/39-open-source-swift-ui-libraries-for-ios-app-development-da1f8dc61a0f">39 Open Source Swift UI Libraries</a></li>
+<li><a href="https://github.com/android10/Android-CleanArchitecture">Android Clean Architecture</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h3 id="core-python"><a class="header" href="#core-python">Core Python</a></h3>
+<ul>
+<li>Python Iterators (create your own)</li>
+<li>Partial functions</li>
+<li>Map, Filter, Reduce</li>
+<li>List Comprehensions</li>
+<li>RegEx</li>
+<li>Unit Testing</li>
+<li>Behave</li>
+<li>Create your own lib/egg</li>
+<li>Create your own Python Annotation</li>
+</ul>
+<h3 id="libs-and-frameworks"><a class="header" href="#libs-and-frameworks">Libs and Frameworks</a></h3>
+<ul>
+<li>Django</li>
+<li>Celery</li>
+<li>Flask</li>
+<li>Tornado</li>
+<li>Bottle</li>
+<li>NumPy</li>
+<li>OpenCV</li>
+<li>Scalene</li>
+<li>scikit-learn</li>
+</ul>
+<h2 id="ooad-challenges---round-1"><a class="header" href="#ooad-challenges---round-1">OOAD Challenges - Round 1</a></h2>
+<ul>
+<li>(1) Build a TAX system where different products have different tax per state and year.</li>
+<li>(2) Build a Logger Builder Router System where you can log into FS, ELK or any other log system where you can configure the logs to be sync or assync using the same API.</li>
+<li>(3) Build Render Template where the same temple can be render in HTML, PDF or CSV.</li>
+<li>(4) Build A Logistic System where you need to calculate different freigth prices based on volume, size and type of transportation i.e boat, truck, rail, prices are dynamic they keep changing.</li>
+<li>(5) Build Restaurant Queue System Capable of telling how long each dish will take.</li>
+<li>(6) Build Guitar Factory System where you can specify details of a guitar and the system creates a
+custon guitar for you with OS, Specs, Models. The system should keep track of Inventory.</li>
+<li>(7) Build Ticket system, where you should be able to sell x number of ticker per different shows and
+choose the seats number, zone of the venue, date and respect maximun capacity.</li>
+</ul>
+<h2 id="ooad-challenges-round-2-1"><a class="header" href="#ooad-challenges-round-2-1">OOAD Challenges Round 2</a></h2>
+<ul>
+<li>(1) Build a Grocery TODO List system (add item, remove, mark as done, do, re-do, listAll)</li>
+<li>(2) Build a FileShare System  (save files, restore files, delete files, listFiles, Search) with encryption</li>
+<li>(3) Build a Note Taking system (add notes,save notes,edit notes, delete notes, sync)</li>
+<li>(4) Build a Calendar system (book meetings, remove meetings, listMeetings, suggest best time for 2 people)</li>
+<li>(5) Build a Redis clone client/server (Strings: set,get,remove,append, maps: set,get,keys,values)</li>
+<li>(6) Build a Teacher's Class Organizer/Optimizer</li>
+<li>(7) Build a Social Media Sharing Photo App (publish photos, tag photos, timeline, comments)</li>
+</ul>
+<h3 id="code-challenges---round-1"><a class="header" href="#code-challenges---round-1">Code Challenges - Round 1</a></h3>
+<ul>
+<li>(1) Build a Converter Framework where you convert complex types.</li>
+<li>(2) Build a Task framework where you submit tasks to your own pool of threads.</li>
+<li>(3) Build a Validation Framework based on Annotations.</li>
+<li>(4) Build a observability core framework based on latency metrics.</li>
+<li>(5) Build a code generator based on YAML Definitions.</li>
+<li>(6) Build your own Core Bank Ledger.</li>
+<li>(7) Build your own HTTP Server supporting /GET endpoints.</li>
+</ul>
+<h3 id="books-10"><a class="header" href="#books-10">Books</a></h3>
+<ul>
+<li><a href="https://www.amazon.com/Principles-Software-Architecture-Modernization-microservices/dp/9355519532/ref=sr_1_1?crid=7U3H2IE5U7Y4&amp;dib=eyJ2IjoiMSJ9.ebHg7EIiJ3GThIg8Dwf4PelC70iUIbHPKv7_7zk8vrk8K2FB4zlrUQyNZwKAHPO46cAYR5z2-KyqnXqNz3Ee2lmU-aGR7NLhq7jko2UihHIl-taoJ6i_hkMjcc12ZF3pOmB9lFrvbsGgbDagq1Vzqg.oz7TxYpSBxBZjVjkuIPDZM7Wxx_XMRU0Uj7jo9Rq_BI&amp;dib_tag=se&amp;keywords=principles+of+software+architecture+modernization&amp;qid=1741069169&amp;sprefix=Principles+of+software+a%2Caps%2C190&amp;sr=8-1">Principles of Software Architecture Modernization</a></li>
+<li><a href="https://www.amazon.com/dp/9365893100/ref=mes-dp?_encoding=UTF8&amp;pd_rd_w=JpyYV&amp;content-id=amzn1.sym.7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_p=7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_r=K6XYEHZZ76RWDSAXAY5X&amp;pd_rd_wg=RH04x&amp;pd_rd_r=f230b2e4-c342-429e-a362-c856e4c2362a">Continuous Modernization</a></li>
+<li><a href="https://www.amazon.com/Fluent-Python-Luciano-Ramalho-ebook-dp-B09WZJMMJP/dp/B09WZJMMJP/ref=mt_other?_encoding=UTF8&amp;me=&amp;qid=1656115565">Fluent Python</a></li>
+<li><a href="https://www.amazon.com/Learning-Python-Powerful-Object-Oriented-Programming-ebook-dp-B00DDZPC9S/dp/B00DDZPC9S/ref=mt_other?_encoding=UTF8&amp;me=&amp;qid=1656115565">Learning Python: Powerful Object-Oriented Programming</a></li>
+<li><a href="https://www.amazon.com/Refactoring-Improving-Existing-Addison-Wesley-Technology-ebook/dp/B007WTFWJ6/ref=sr_1_4?crid=1PFLBMDO55DGS&amp;keywords=kent+beck&amp;qid=1656112484&amp;s=digital-text&amp;sprefix=kent+beck%2Cdigital-text%2C125&amp;sr=1-4">Refactoring: Improving the Design of Existing Code</a></li>
+<li><a href="https://www.amazon.com/Implementation-Patterns-Addison-Wesley-Signature-Beck-ebook/dp/B004UAALDW/ref=sr_1_3?crid=1PFLBMDO55DGS&amp;keywords=kent+beck&amp;qid=1656112484&amp;s=digital-text&amp;sprefix=kent+beck%2Cdigital-text%2C125&amp;sr=1-3">Implementation Patterns</a></li>
+<li><a href="https://www.amazon.com/Design-Patterns-Object-Oriented-Addison-Wesley-Professional-ebook/dp/B000SEIBB8/ref=sr_1_1?crid=AB99ZJ4MPI0D&amp;keywords=design+patterns&amp;qid=1656112548&amp;s=digital-text&amp;sprefix=designpatterns%2Cdigital-text%2C120&amp;sr=1-1">Design Patterns: Elements of Reusable Object-Oriented Software</a></li>
+<li><a href="https://www.amazon.com/Enterprise-Integration-Patterns-Designing-Addison-Wesley-ebook/dp/B007MQLL4E/ref=sr_1_1?keywords=enterprise+integration+patterns&amp;qid=1656112579&amp;s=digital-text&amp;sprefix=enterprise+in%2Cdigital-text%2C121&amp;sr=1-1">Enterprise Integration Patterns</a></li>
+<li><a href="https://www.amazon.com/Unit-Testing-Principles-Practices-Patterns-ebook/dp/B09782L692/ref=sr_1_2?crid=3AKFN85M7QTZG&amp;keywords=testing&amp;qid=1656112639&amp;s=digital-text&amp;sprefix=testin%2Cdigital-text%2C123&amp;sr=1-2">Unit Testing Principles, Practices, and Patterns</a></li>
+<li><a href="http://www.amazon.com/Working-Effectively-Legacy-Michael-Feathers/dp/0131177052/ref=pd_sim_b_3?ie=UTF8&amp;refRID=0NFDX09AB5N8Y6EM4BB5">Working Effectively with Legacy Code</a></li>
+<li><a href="https://www.amazon.com/Designing-Data-Intensive-Applications-Reliable-Maintainable-ebook/dp/B06XPJML5D/ref=sr_1_65?crid=3CX1FTAAZCG03&amp;keywords=coding+patterns&amp;qid=1656112744&amp;s=digital-text&amp;sprefix=coding+pattern%2Cdigital-text%2C115&amp;sr=1-65">Designing Data-Intensive Applications: The Big Ideas Behind Reliable, Scalable, and Maintainable Systems</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="qa-resources"><a class="header" href="#qa-resources">QA Resources</a></h2>
+<h3 id="tech-7"><a class="header" href="#tech-7">Tech</a></h3>
+<ul>
+<li><a href="https://nodejs.org/en/">Nodejs</a></li>
+<li><a href="https://www.typescriptlang.org/">Typescript</a></li>
+<li><a href="http://expressjs.com/pt-br/">Express</a></li>
+<li><a href="https://facebook.github.io/react/">React</a></li>
+<li><a href="https://yarnpkg.com/en/">Yarn</a></li>
+<li><a href="https://www.cypress.io/">Cypress</a></li>
+<li><a href="https://playwright.dev/">playwright</a></li>
+<li><a href="https://jestjs.io/">Jest</a></li>
+<li><a href="https://www.java.com/">Java</a></li>
+<li><a href="https://spring.io/projects/spring-boot">Spring Boot</a></li>
+<li><a href="https://junit.org/junit5/">Junit 5</a></li>
+<li><a href="https://gatling.io/">Gatling</a></li>
+<li><a href="https://github.com/Shopify/toxiproxy">ToxyProxy</a></li>
+<li><a href="https://podman.io/">Podman</a></li>
+<li><a href="https://kubernetes.io/">k8s</a></li>
+<li><a href="https://www.jenkins.io/">Jenkins</a></li>
+<li><a href="https://www.sonarqube.org/">SonarQube</a></li>
+<li><a href="https://wix.github.io/Detox/">Detox</a></li>
+<li><a href="https://testing-library.com/">Testing Library</a></li>
+<li><a href="https://www.testcontainers.org/">TestContainers</a></li>
+<li><a href="https://www.usebruno.com/">Bruno</a></li>
+<li><a href="https://robotframework.org/">Robot Framework</a></li>
+<li><a href="https://developer.chrome.com/docs/lighthouse/overview?hl=en">Lighthouse</a></li>
+</ul>
+<h2 id="testing-skills-in-testing-diversity"><a class="header" href="#testing-skills-in-testing-diversity">Testing Skills in Testing Diversity</a></h2>
+<ul>
+<li>Unit Tests</li>
+<li>Integration Tests</li>
+<li>Contract Testing</li>
+<li>End to End Tests</li>
+<li>Stress Testing / Performance Tests / Load Testing</li>
+<li>CSS Testing</li>
+<li>Mutation Testing</li>
+<li>Fuzzy Testing</li>
+<li>Chaos Engineering / Chaos Testing / Fault Injection</li>
+<li>Configuration Testing</li>
+<li>A/B Testing</li>
+<li>Threat Analysis</li>
+</ul>
+<h3 id="code-challenges-round-1-build-and-test-with-test-diversity"><a class="header" href="#code-challenges-round-1-build-and-test-with-test-diversity">Code Challenges Round 1 (build and test with test diversity)</a></h3>
+<ul>
+<li>(1) Build a converter Framework where you convert complex types.</li>
+<li>(2) Build a task framework where you submit tasks to your own pool of threads.</li>
+<li>(3) Build a validation Framework based on Annotations.</li>
+<li>(4) Build a observability core framework based on latency metrics.</li>
+<li>(5) Build a code generator based on YAML Definitions.</li>
+<li>(6) Build a Core Bank Ledger.</li>
+<li>(7) Build a HTTP Server supporting /GET endpoints.</li>
+</ul>
+<h3 id="code-challenges-round-2-build-and-test-with-test-diversity"><a class="header" href="#code-challenges-round-2-build-and-test-with-test-diversity">Code Challenges Round 2 (build and test with test diversity)</a></h3>
+<ul>
+<li>(1) Build a Stress Test Framework for HTTP</li>
+<li>(2) Build a <a href="https://dontpad.com/">Dont Pad</a></li>
+<li>(3) Build a Unused Class Detector</li>
+<li>(4) Build a <a href="https://github.com/veltman/clmystery">Murder Mistery Game using terminal and linux</a></li>
+<li>(5) Build a Implement your own String Implementation methods: (toArray,foreach,reverse,iterator,length,charAt,equals,isEmpty,replace,substring,trim,toJson,indexOf,hashCode)</li>
+<li>(6) Build a Hibernate Slow Query Detector</li>
+<li>(7) Build a <a href="https://datatracker.ietf.org/doc/html/rfc6749">oAuth 2.0 Server</a></li>
+</ul>
+<h3 id="books-11"><a class="header" href="#books-11">Books</a></h3>
+<ul>
+<li><a href="https://www.amazon.com/Principles-Software-Architecture-Modernization-microservices/dp/9355519532/ref=sr_1_1?crid=7U3H2IE5U7Y4&amp;dib=eyJ2IjoiMSJ9.ebHg7EIiJ3GThIg8Dwf4PelC70iUIbHPKv7_7zk8vrk8K2FB4zlrUQyNZwKAHPO46cAYR5z2-KyqnXqNz3Ee2lmU-aGR7NLhq7jko2UihHIl-taoJ6i_hkMjcc12ZF3pOmB9lFrvbsGgbDagq1Vzqg.oz7TxYpSBxBZjVjkuIPDZM7Wxx_XMRU0Uj7jo9Rq_BI&amp;dib_tag=se&amp;keywords=principles+of+software+architecture+modernization&amp;qid=1741069169&amp;sprefix=Principles+of+software+a%2Caps%2C190&amp;sr=8-1">Principles of Software Architecture Modernization</a></li>
+<li><a href="https://www.amazon.com/dp/9365893100/ref=mes-dp?_encoding=UTF8&amp;pd_rd_w=JpyYV&amp;content-id=amzn1.sym.7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_p=7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_r=K6XYEHZZ76RWDSAXAY5X&amp;pd_rd_wg=RH04x&amp;pd_rd_r=f230b2e4-c342-429e-a362-c856e4c2362a">Continuous Modernization</a></li>
+<li><a href="https://www.amazon.com/Unit-Testing-Principles-Practices-Patterns-ebook/dp/B09782L692/ref=sr_1_6?crid=2HRFBY67WRGPZ&amp;dib=eyJ2IjoiMSJ9.KRrEep1bIM-sBWFulSMMkFtysnIfKrS7gSLIOfpGPLqlaWnpOgkdpl1j7zOEO1F9s3C28aMLqJ3j7w6pe9_X0vjkNaR-XcPln6krmNE4titgwwVjGABUgDXOqayUFdMa5nIoqQD_oiuSwwoNi1LNpWTZPTaJwWx75m-SyFgxtrv6EvcFZZelfIex9wMsryMb7u7xnc3DvoAYLloRIrU-Xv50I-kRPohaqbbFNSdBajU.c0t9BAR79OKfEuoTQpd64PXRj-v7ZEmkh2vbaIwze0Y&amp;dib_tag=se&amp;keywords=testing&amp;qid=1741069248&amp;s=digital-text&amp;sprefix=testing%2Cdigital-text%2C152&amp;sr=1-6">Unit Testing Principles, Practices, and Patterns</a></li>
+<li><a href="https://www.amazon.com/xUnit-Test-Patterns-Refactoring-Addison-Wesley-ebook/dp/B004X1D36K/ref=sr_1_1?crid=2DMO8TOLAY8WM&amp;dib=eyJ2IjoiMSJ9.nro2gcZq94BLwx5XjMNnUM9wVUe1Mdij_HTQ4yMP6YvBhvgSEybyBdG1gyCC8TAnxX_0qWEXT2pWSXR_MC6DDjiJ-U1fkKhXuB0CY8_IZiKQtcMSxaq32MBe9-tnJsecdqvbL24mGO0Y9oIcIl4lzCM_mf5xux0XYg7qnC6IToK7Zo6KV6AF3T18LgmRdj7MzEabM7lg-Vk5m0njYaO-X3D1iWjE0gN8QgWJVRD2dZuYRwlMWzerDtnWGa8Gc8g1Syh-53P0dEU2ArCd-MoF68aMePTvVA3bQu5wYEkgSmw.jJHnoMTzFA7j2DLDi11qZwK9k5GZUifogAJAQzHBckM&amp;dib_tag=se&amp;keywords=xunit&amp;qid=1741069261&amp;s=digital-text&amp;sprefix=xunit%2Cdigital-text%2C140&amp;sr=1-1">xUnit Test Patterns: Refactoring Test Code</a></li>
+<li><a href="https://www.amazon.com/dp/B005OYHF0A/ref=mes-dp?_encoding=UTF8&amp;pd_rd_w=czJac&amp;content-id=amzn1.sym.7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_p=7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_r=5AV171GK7J3JK3KSNQ54&amp;pd_rd_wg=KAgvQ&amp;pd_rd_r=15ff15ec-56e3-4536-bfec-50e296289e7a">Working Effectively with Legacy Code</a></li>
+<li><a href="https://www.amazon.com/dp/B09B8LFKQL/ref=mes-dp?_encoding=UTF8&amp;pd_rd_w=1HCOd&amp;content-id=amzn1.sym.7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_p=7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_r=QAN8YZCQYZHMP0PN1DZ2&amp;pd_rd_wg=Cdh6W&amp;pd_rd_r=6c67a558-9367-4f38-be9c-bb6df0221bf9">A Philosophy of Software Design, 2nd Edition</a></li>
+<li><a href="https://www.amazon.com/dp/B07VRS84D1/ref=mes-dp?_encoding=UTF8&amp;pd_rd_w=czJac&amp;content-id=amzn1.sym.7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_p=7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_r=5AV171GK7J3JK3KSNQ54&amp;pd_rd_wg=KAgvQ&amp;pd_rd_r=15ff15ec-56e3-4536-bfec-50e296289e7a">Pragmatic Programmer, The: Your journey to mastery, 20th Anniversary Edition</a></li>
+<li><a href="https://www.amazon.com/dp/B0CW1G5D2N/ref=mes-dp?_encoding=UTF8&amp;pd_rd_w=RXudV&amp;content-id=amzn1.sym.7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_p=7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_r=GZXMXS981EDYAB78QDEP&amp;pd_rd_wg=ofJu2&amp;pd_rd_r=e97b85e1-33e9-4066-be45-34d60a5b44d6">Grokking Algorithms, Second Edition</a></li>
+<li><a href="https://www.amazon.com/dp/B094WZNKP2/ref=mes-dp?_encoding=UTF8&amp;pd_rd_w=38LQx&amp;content-id=amzn1.sym.7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_p=7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_r=KAM6A34T6RRNJ2ZVBVAR&amp;pd_rd_wg=txmnh&amp;pd_rd_r=4a54a82e-45b4-4f57-86d3-5cbeb1174608">Introduction to Algorithms, fourth edition</a></li>
+<li><a href="https://www.amazon.com/Lean-Software-Development-Agile-Toolkit-ebook/dp/B00HEL13HW/ref=sr_1_1?crid=193X92TO36E38&amp;dib=eyJ2IjoiMSJ9.11BTOrpsdhwsAIck3SZ5XxtGurGVj7zWztXwu-7se9NTbdyuygsrsp_f86V4Pk2MptjTRiETgTN6gNIxdtCCVRHlxAqD-UQpe3cyTIOxs8OSMDP77pA4S6Z0bHfF5SWvw9MExYVPElRcI1XVJf8zbjlTpIdAIuA9lVfBFdOvLA_mLGB-RY2CaSWvt19WKJQd-1qSxErPfyGyOH8jCLDpfyoIn6XlWNRfvwLOWO1drNA.itQkP96UG_4ntwI7DFIhgvwvuPiWiYAUTfdTmb93AcU&amp;dib_tag=se&amp;keywords=Lean+software&amp;qid=1741069599&amp;s=digital-text&amp;sprefix=lean+software%2Cdigital-text%2C152&amp;sr=1-1">Lean Software Development: An Agile Toolkit: An Agile Toolkit (Agile Software Development Series)</a></li>
+<li><a href="https://www.amazon.com/Observability-Engineering-Charity-Majors-ebook/dp/B09ZQ6FHTT/ref=sr_1_1?crid=2WILTG1XXKT00&amp;dib=eyJ2IjoiMSJ9.R1F_lrqdr3IU4Ej0lbiTcebyAVzVs01OMqjG_LHnumoRkXob6IXLRObt-ASrXViervWYOs_M0YdrNkhIePh_Tb5I2g9oEMOda9yQuJiHbPeQCCT8izrBgHifrJtB52Wnl7ROiPQBRmz4NToK77lpdzgIJpQxvgRIn3u8WJ__4zDQZVHIKOKwe5RlFnwYeEIfHEEvpQBPRbvgcrIdnVIch6p3dHT1XWxclMUe9sLk0qw.YDUlAZXUHrkD-ARawmdbaAuiQlixs-zI-p3BDSTw0QA&amp;dib_tag=se&amp;keywords=observability&amp;qid=1741069661&amp;s=digital-text&amp;sprefix=observabilityt%2Cdigital-text%2C163&amp;sr=1-1">Observability Engineering: Achieving Production Excellence</a></li>
+<li><a href="https://www.amazon.com/Refactoring-Databases-Evolutionary-Addison-Wesley-Signature-ebook/dp/B0DHY617PD/ref=sr_1_2?crid=1QNITR8ADX418&amp;dib=eyJ2IjoiMSJ9.Mgmjte1N_iknsu2Xw0EdQJuZfe5t9RUUL4SNkdTNtqwZvXwdVSNvPaeO5ubNOEjVXGmD9YSBsY6zSX1bZMgnv3mjudEOKRsBR-En3oG3ojT3px51KJzJcfruJGBRx_0NDkh7yajOmKk0mB7AyDLIcLm5ivIYvmlW-Cy458LFLF1kRJ5ifGDFO7FiPAZ-3skwXCAXE0ZzhhA_cH__DHgRjFyFK5uN7SOoRwg_vM4s9KW6HrY3zCs7dmjMwjvCYe-qDEPxrCYrUfwQPIGMHYDpthyhdkeBM2LiTGaoc3O2GlY.OJIGcek6--srp3ttBg1SQShUWg9C4cakqJfnKGxX8H0&amp;dib_tag=se&amp;keywords=database+refactoring&amp;qid=1741070303&amp;s=digital-text&amp;sprefix=database+refacrtoring%2Cdigital-text%2C145&amp;sr=1-2">Refactoring Databases: Evolutionary Database Design</a></li>
+</ul>
+<h3 id="links-6"><a class="header" href="#links-6">Links</a></h3>
+<ul>
+<li><a href="https://github.com/diegopacheco/tech-resources/blob/master/qa-manifesto.md">QA Manifesto</a></li>
+<li><a href="https://eloquentjavascript.net/">Eloquent JavaScript - 4th edition (2024)</a></li>
+<li><a href="https://www.enterpriseintegrationpatterns.com/">EIP</a></li>
+<li><a href="https://refactoring.guru/design-patterns">Design Patterns</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="core-learning-javascript"><a class="header" href="#core-learning-javascript">Core Learning JavaScript</a></h2>
+<ul>
+<li>ES6</li>
+<li>How nodejs Reactor Pattern/Architecture works</li>
+<li>Promises, Async/Await</li>
+<li>Classes, Objects, Arrays, Map and Set, JSON</li>
+<li>Tailwind</li>
+</ul>
+<h2 id="core-learning-react"><a class="header" href="#core-learning-react">Core Learning React</a></h2>
+<ul>
+<li>React Architecture</li>
+<li>Lifecycle Events</li>
+<li>Hooks and custom hooks</li>
+<li>Fetch vs Axios</li>
+<li>Routing</li>
+<li>Pagination</li>
+<li>Service Workers</li>
+<li>Web Components</li>
+<li>Module Federation</li>
+<li>Performance and Profiling</li>
+<li><a href="https://swr.vercel.app/">SWR</a></li>
+<li>Local Storage</li>
+<li>Session Storage</li>
+<li>Cookies</li>
+<li>IndexedDB</li>
+<li>Drag and Drop API</li>
+<li>Intersection Observer API</li>
+<li>Mutation Observer API</li>
+<li>Canvas API</li>
+<li>Context Security Policy (CSP)</li>
+</ul>
+<h2 id="advanced"><a class="header" href="#advanced">Advanced</a></h2>
+<ul>
+<li>Electron</li>
+<li>Next.js</li>
+<li>WebAssembly</li>
+<li>Million.js</li>
+</ul>
+<h2 id="state-management"><a class="header" href="#state-management">State Management</a></h2>
+<ul>
+<li>Redux</li>
+<li>Context Api</li>
+<li>MobX</li>
+<li>Zustand</li>
+<li>Recoil</li>
+<li>Jotai</li>
+<li>XState</li>
+</ul>
+<h2 id="testing"><a class="header" href="#testing">Testing</a></h2>
+<ul>
+<li>React Testing Library</li>
+<li>Jest</li>
+<li>Cypress</li>
+</ul>
+<h2 id="better-react"><a class="header" href="#better-react">Better React</a></h2>
+<ul>
+<li><a href="https://nextjs.org/">Next</a></li>
+<li><a href="https://astro.build/">Astro</a></li>
+<li><a href="https://elysiajs.com/">Elysia</a></li>
+<li><a href="https://www.solidjs.com/">Solid</a></li>
+<li><a href="https://svelte.dev/">Svelte</a></li>
+<li><a href="https://fresh.deno.dev/">Fresh</a></li>
+<li><a href="https://enhance.dev/">Enhance</a></li>
+</ul>
+<h2 id="better-js-runtime"><a class="header" href="#better-js-runtime">Better JS Runtime</a></h2>
+<ul>
+<li><a href="https://bun.sh/">Bun</a></li>
+<li><a href="https://deno.com/">Deno</a></li>
+</ul>
+<h2 id="the-future-maybe"><a class="header" href="#the-future-maybe">The future, maybe?</a></h2>
+<ul>
+<li><a href="https://htmx.org/essays/hateoas/">HTMX</a></li>
+<li><a href="https://github.com/nicojs/typed-html">Typed HTML</a></li>
+</ul>
+<h2 id="ooad-challenges---round-1-1"><a class="header" href="#ooad-challenges---round-1-1">OOAD Challenges - Round 1</a></h2>
+<ul>
+<li>(1) Build a TAX system where different products have different tax per state and year.</li>
+<li>(2) Build a Logger Builder Router System where you can log into FS, ELK or any other log system where you can configure the logs to be sync or assync using the same API.</li>
+<li>(3) Build Render Template where the same temple can be render in HTML, PDF or CSV.</li>
+<li>(4) Build A Logistic System where you need to calculate different freigth prices based on volume, size and type of transportation i.e boat, truck, rail, prices are dynamic they keep changing.</li>
+<li>(5) Build Restaurant Queue System Capable of telling how long each dish will take.</li>
+<li>(6) Build Guitar Factory System where you can specify details of a guitar and the system creates a
+custon guitar for you with OS, Specs, Models. The system should keep track of Inventory.</li>
+<li>(7) Build Ticket system, where you should be able to sell x number of ticker per different shows and
+choose the seats number, zone of the venue, date and respect maximun capacity.</li>
+</ul>
+<h2 id="ooad-challenges-round-2-2"><a class="header" href="#ooad-challenges-round-2-2">OOAD Challenges Round 2</a></h2>
+<ul>
+<li>(1) Build a Grocery TODO List system (add item, remove, mark as done, do, re-do, listAll)</li>
+<li>(2) Build a FileShare System  (save files, restore files, delete files, listFiles, Search) with encryption</li>
+<li>(3) Build a Note Taking system (add notes,save notes,edit notes, delete notes, sync)</li>
+<li>(4) Build a Calendar system (book meetings, remove meetings, listMeetings, suggest best time for 2 people)</li>
+<li>(5) Build a Redis clone client/server (Strings: set,get,remove,append, maps: set,get,keys,values)</li>
+<li>(6) Build a Teacher's Class Organizer/Optimizer</li>
+<li>(7) Build a Social Media Sharing Photo App (publish photos, tag photos, timeline, comments)</li>
+</ul>
+<h2 id="code-challenges---round-1-1"><a class="header" href="#code-challenges---round-1-1">Code Challenges - Round 1</a></h2>
+<ul>
+<li>(1) Build your own Wheater App(show the wheater in celcius/fahrenheit, annimations)</li>
+<li>(2) Build your own Trello(Simple Kanban board, create: cards, collumns, move, delete)</li>
+<li>(3) Build your own Netflix(Stream the movies from youtube)</li>
+<li>(4) Build your own Amazon Retail(List product, search, rate, recomendations)</li>
+<li>(5) Build your own Linux Terminal (ls, cat, mkdir, touch, echo, cd)</li>
+<li>(6) Build your own Slack (profile, chat rooms, notifications)</li>
+<li>(7) Build your own Notability (list, make notes)</li>
+</ul>
+<h2 id="code-challenges---round-2"><a class="header" href="#code-challenges---round-2">Code Challenges - Round 2</a></h2>
+<ul>
+<li>(1) Build your own Time Tracker App (start, stop, laps)</li>
+<li>(2) Build your own Calendar App (Book meetings, edit, remove, sugest best time for 2 people)</li>
+<li>(3) Build your own Benchmark App for JS code</li>
+<li>(4) Build your own Flap Bird clone game</li>
+<li>(5) Build your own MS Paint clone App</li>
+<li>(6) Build your own Video Player</li>
+<li>(7) Build your own React (render, pass props, mount/unmount hooks)</li>
+</ul>
+<h2 id="code-challenges---round-3"><a class="header" href="#code-challenges---round-3">Code Challenges - Round 3</a></h2>
+<ul>
+<li>(1) Build your own Linter</li>
+<li>(2) Build your own Testing Framework</li>
+<li>(3) Build your own Fetch Library</li>
+<li>(4) Build your own Data Faker</li>
+<li>(5) Build your own Background Process Job Manager</li>
+<li>(6) Build your own Http Server</li>
+<li>(7) Build your own NodeJS Runtime</li>
+<li>(8) Build your own Tailwind CSS</li>
+<li>(9) Build your own React Renderer</li>
+</ul>
+<h2 id="links-7"><a class="header" href="#links-7">Links</a></h2>
+<ul>
+<li><a href="https://eloquentjavascript.net/">Eloquent JavaScript - 4th edition (2024)</a></li>
+<li><a href="https://csshell.com/">CSS Hell</a></li>
+<li><a href="https://hackernoon.com/learn-you-some-custom-react-renderers-aed7164a4199">Learn how React Reconciler package works by building your own lightweight React DOM</a></li>
+<li><a href="https://medium.com/@deathmood/how-to-write-your-own-virtual-dom-ee74acc13060">How to write your own Virtual DOM</a></li>
+<li><a href="https://pomb.us/build-your-own-react/">Build your own React</a></li>
+<li><a href="https://jasonformat.com/wtf-is-jsx/">WTF is JSX (Let's Build a JSX Renderer)</a></li>
+<li><a href="https://github.com/labs42io/clean-code-typescript">Clean Code with TypeScript</a></li>
+</ul>
+<h2 id="books-12"><a class="header" href="#books-12">Books</a></h2>
+<ul>
+<li><a href="https://www.amazon.com/Principles-Software-Architecture-Modernization-microservices/dp/9355519532/ref=sr_1_1?crid=7U3H2IE5U7Y4&amp;dib=eyJ2IjoiMSJ9.ebHg7EIiJ3GThIg8Dwf4PelC70iUIbHPKv7_7zk8vrk8K2FB4zlrUQyNZwKAHPO46cAYR5z2-KyqnXqNz3Ee2lmU-aGR7NLhq7jko2UihHIl-taoJ6i_hkMjcc12ZF3pOmB9lFrvbsGgbDagq1Vzqg.oz7TxYpSBxBZjVjkuIPDZM7Wxx_XMRU0Uj7jo9Rq_BI&amp;dib_tag=se&amp;keywords=principles+of+software+architecture+modernization&amp;qid=1741069169&amp;sprefix=Principles+of+software+a%2Caps%2C190&amp;sr=8-1">Principles of Software Architecture Modernization</a></li>
+<li><a href="https://www.amazon.com/dp/9365893100/ref=mes-dp?_encoding=UTF8&amp;pd_rd_w=JpyYV&amp;content-id=amzn1.sym.7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_p=7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_r=K6XYEHZZ76RWDSAXAY5X&amp;pd_rd_wg=RH04x&amp;pd_rd_r=f230b2e4-c342-429e-a362-c856e4c2362a">Continuous Modernization</a></li>
+<li><a href="https://www.amazon.com/Eloquent-JavaScript-3rd-Introduction-Programming-ebook/dp/B07C96Q217/ref=sr_1_1?crid=A87JZI6EYY7&amp;keywords=eloquent+javascript&amp;qid=1656112897&amp;s=digital-text&amp;sprefix=eloquent+javascript%2Cdigital-text%2C117&amp;sr=1-1">Eloquent JavaScript, 3rd Edition</a></li>
+<li><a href="https://www.amazon.com/Effective-TypeScript-Specific-Ways-Improve-ebook/dp/B07Z8HRZZ3/ref=sr_1_1?crid=2R5C4G7OYJIOX&amp;keywords=effective+typescript&amp;qid=1656112919&amp;s=digital-text&amp;sprefix=effective+typescript%2Cdigital-text%2C117&amp;sr=1-1">Effective TypeScript</a></li>
+<li><a href="https://www.amazon.com/Implementation-Patterns-Addison-Wesley-Signature-Beck-ebook/dp/B004UAALDW/ref=sr_1_1?crid=1A8IS7ZGD9B0J&amp;keywords=implementation+patterns&amp;qid=1656112944&amp;s=digital-text&amp;sprefix=implementation+patterns%2Cdigital-text%2C114&amp;sr=1-1">Implementation Patterns</a></li>
+<li><a href="https://www.amazon.com/Unit-Testing-Principles-Practices-Patterns-ebook/dp/B09782L692/ref=sr_1_1?crid=2BWTGITULWF8K&amp;keywords=unit+testing&amp;qid=1656113183&amp;s=digital-text&amp;sprefix=unit+teesting%2Cdigital-text%2C118&amp;sr=1-1">Unit Testing Principles, Practices, and Patterns</a></li>
+<li><a href="https://www.amazon.com/Road-learn-React-pragmatic-React-js-ebook/dp/B077HJFCQX/ref=sr_1_1?crid=1W74VWA4PR6KV&amp;keywords=react+book&amp;qid=1656116600&amp;sprefix=react+book%2Caps%2C141&amp;sr=8-1">The Road to React: Your journey to master React.js in JavaScript</a></li>
+<li><a href="https://www.amazon.com/Learning-React-Modern-Patterns-Developing-ebook-dp-B08B489X8Q/dp/B08B489X8Q/ref=mt_other?_encoding=UTF8&amp;me=&amp;qid=1656116600">Learning React: Modern Patterns for Developing React Apps</a></li>
+<li><a href="https://www.amazon.com/React-Cookbook-David-Griffiths-ebook/dp/B09CG7HCD8/ref=sr_1_4?crid=1K0XYP76DHUNO&amp;keywords=react&amp;qid=1656113389&amp;s=digital-text&amp;sprefix=reac%2Cdigital-text%2C131&amp;sr=1-4">React Cookbook</a></li>
+<li><a href="https://www.amazon.com/14-Habits-Highly-Productive-Developers-ebook/dp/B08BF74RRG/ref=sr_1_1?crid=1GORFEFKK2N3E&amp;keywords=zeno+rocha&amp;qid=1656113275&amp;s=digital-text&amp;sprefix=zeno+rocha%2Cdigital-text%2C124&amp;sr=1-1">14 Habits of Highly Productive Developers</a></li>
+<li><a href="https://www.amazon.com/Grokking-Algorithms-illustrated-programmers-curious-ebook/dp/B09781V6F7/ref=sr_1_1?keywords=grokking+algorithms&amp;qid=1656113304&amp;s=digital-text&amp;sprefix=groking+%2Cdigital-text%2C121&amp;sr=1-1">Grokking Algorithms</a></li>
+<li><a href="https://www.amazon.com/Dont-Make-Think-Revisited-Usability-ebook/dp/B00HJUBRPG/ref=sr_1_2?crid=3ET4QC9V7BL7F&amp;keywords=usability&amp;qid=1656113354&amp;s=digital-text&amp;sprefix=usability%2Cdigital-text%2C119&amp;sr=1-2">Don't Make Me Think, Revisited: A Common Sense Approach to Web Usability</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="core-learning-javascript-1"><a class="header" href="#core-learning-javascript-1">Core Learning JavaScript</a></h2>
+<ul>
+<li>ES6</li>
+<li>How nodejs Reactor Pattern/Architecture works</li>
+<li>Promises, Async/Await</li>
+<li>Classes, Objects, Arrays, Map and Set, JSON</li>
+</ul>
+<h2 id="core-learning-rn"><a class="header" href="#core-learning-rn">Core Learning RN</a></h2>
+<ul>
+<li>React Native Architecture (Thread model, Fabric)</li>
+<li>Lifecycle Events</li>
+<li>Hooks and custom hooks</li>
+<li>Fetch vs Axios</li>
+<li>Navigation</li>
+<li>Deep Linking</li>
+<li>Analytics</li>
+<li>Geolocation</li>
+<li>Internationalization</li>
+<li>Animation</li>
+<li>Routing</li>
+<li>FlatList + Pagination</li>
+<li>Expo</li>
+<li>Offline: AsyncStorage</li>
+<li>Native Modules (IOS and Android)</li>
+<li>Debugging: JavaScript Remotely, React DevTools</li>
+<li>Performance and Profiling</li>
+</ul>
+<h2 id="state-management-1"><a class="header" href="#state-management-1">State Management</a></h2>
+<ul>
+<li>Redux</li>
+<li>Context Api</li>
+<li>MobX</li>
+</ul>
+<h2 id="testing-1"><a class="header" href="#testing-1">Testing</a></h2>
+<ul>
+<li>React Native Testing Library</li>
+<li>Jest</li>
+<li>Detox</li>
+</ul>
+<h2 id="advanced-1"><a class="header" href="#advanced-1">Advanced</a></h2>
+<ul>
+<li><a href="https://shopify.github.io/flash-list/">flash-list</a></li>
+<li><a href="https://github.com/airbnb/lottie-web">lottie-web</a></li>
+<li><a href="https://github.com/IjzerenHein/react-native-bundle-visualizer">Bundle Visualizer</a></li>
+<li><a href="https://github.com/callstack/repack">Re.Pack</a></li>
+<li><a href="https://github.com/infinitered/reactotron">Reactotron</a></li>
+<li><a href="https://github.com/facebook/flipper">Flipper</a></li>
+</ul>
+<h2 id="ooad-challenges---round-1-2"><a class="header" href="#ooad-challenges---round-1-2">OOAD Challenges - Round 1</a></h2>
+<ul>
+<li>(1) Build a TAX system where different products have different tax per state and year.</li>
+<li>(2) Build a Logger Builder Router System where you can log into FS, ELK or any other log system where you can configure the logs to be sync or assync using the same API.</li>
+<li>(3) Build Render Template where the same temple can be render in HTML, PDF or CSV.</li>
+<li>(4) Build A Logistic System where you need to calculate different freigth prices based on volume, size and type of transportation i.e boat, truck, rail, prices are dynamic they keep changing.</li>
+<li>(5) Build Restaurant Queue System Capable of telling how long each dish will take.</li>
+<li>(6) Build Guitar Factory System where you can specify details of a guitar and the system creates a
+custon guitar for you with OS, Specs, Models. The system should keep track of Inventory.</li>
+<li>(7) Build Ticket system, where you should be able to sell x number of ticker per different shows and
+choose the seats number, zone of the venue, date and respect maximun capacity.</li>
+</ul>
+<h2 id="ooad-challenges-round-2-3"><a class="header" href="#ooad-challenges-round-2-3">OOAD Challenges Round 2</a></h2>
+<ul>
+<li>(1) Build a Grocery TODO List system (add item, remove, mark as done, do, re-do, listAll)</li>
+<li>(2) Build a FileShare System  (save files, restore files, delete files, listFiles, Search) with encryption</li>
+<li>(3) Build a Note Taking system (add notes,save notes,edit notes, delete notes, sync)</li>
+<li>(4) Build a Calendar system (book meetings, remove meetings, listMeetings, suggest best time for 2 people)</li>
+<li>(5) Build a Redis clone client/server (Strings: set,get,remove,append, maps: set,get,keys,values)</li>
+<li>(6) Build a Teacher's Class Organizer/Optimizer</li>
+<li>(7) Build a Social Media Sharing Photo App (publish photos, tag photos, timeline, comments)</li>
+</ul>
+<h2 id="code-challenges---round-1-2"><a class="header" href="#code-challenges---round-1-2">Code Challenges - Round 1</a></h2>
+<ul>
+<li>(1) Build your own Wheater App(show the wheater in celcius/fahrenheit, annimations)</li>
+<li>(2) Build your own Trello(Simple Kanban board, create: cards, collumns, move, delete)</li>
+<li>(3) Build your own Netflix(Stream the movies from youtube)</li>
+<li>(4) Build your own Amazon Retail(List product, search, rate, recomendations)</li>
+<li>(5) Build your own Linux Terminal (ls, cat, mkdir, touch, echo, cd)</li>
+<li>(6) Build your own Slack (profile, chat rooms, notifications)</li>
+<li>(7) Build your own Notability (list, make notes)</li>
+</ul>
+<h2 id="code-challenges---round-2-1"><a class="header" href="#code-challenges---round-2-1">Code Challenges - Round 2</a></h2>
+<ul>
+<li>(1) Build your own Time Tracker App (start, stop, laps)</li>
+<li>(2) Build your own Calendar App (Book meetings, edit, remove, sugest best time for 2 people)</li>
+<li>(3) Build your own Benchmark App for JS code</li>
+<li>(4) Build your own Flap Bird clone game</li>
+<li>(5) Build your own MS Paint clone App</li>
+<li>(6) Build your own Video Player</li>
+<li>(7) Build your own React (render, pass props, mount/unmount hooks)</li>
+</ul>
+<h2 id="code-challenges---round-3-1"><a class="header" href="#code-challenges---round-3-1">Code Challenges - Round 3</a></h2>
+<ul>
+<li>(1) Build your own Linter</li>
+<li>(2) Build your own Testing Framework</li>
+<li>(3) Build your own Fetch Library</li>
+<li>(4) Build your own Data Faker</li>
+<li>(5) Build your own Async Logger</li>
+<li>(6) Build your own Internal Metrics System</li>
+<li>(7) Build your own HTML Parser</li>
+</ul>
+<h2 id="books-13"><a class="header" href="#books-13">Books</a></h2>
+<ul>
+<li><a href="https://www.amazon.com/Principles-Software-Architecture-Modernization-microservices/dp/9355519532/ref=sr_1_1?crid=7U3H2IE5U7Y4&amp;dib=eyJ2IjoiMSJ9.ebHg7EIiJ3GThIg8Dwf4PelC70iUIbHPKv7_7zk8vrk8K2FB4zlrUQyNZwKAHPO46cAYR5z2-KyqnXqNz3Ee2lmU-aGR7NLhq7jko2UihHIl-taoJ6i_hkMjcc12ZF3pOmB9lFrvbsGgbDagq1Vzqg.oz7TxYpSBxBZjVjkuIPDZM7Wxx_XMRU0Uj7jo9Rq_BI&amp;dib_tag=se&amp;keywords=principles+of+software+architecture+modernization&amp;qid=1741069169&amp;sprefix=Principles+of+software+a%2Caps%2C190&amp;sr=8-1">Principles of Software Architecture Modernization</a></li>
+<li><a href="https://www.amazon.com/dp/9365893100/ref=mes-dp?_encoding=UTF8&amp;pd_rd_w=JpyYV&amp;content-id=amzn1.sym.7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_p=7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_r=K6XYEHZZ76RWDSAXAY5X&amp;pd_rd_wg=RH04x&amp;pd_rd_r=f230b2e4-c342-429e-a362-c856e4c2362a">Continuous Modernization</a></li>
+<li><a href="https://www.amazon.com/Eloquent-JavaScript-3rd-Introduction-Programming-ebook/dp/B07C96Q217/ref=sr_1_1?crid=A87JZI6EYY7&amp;keywords=eloquent+javascript&amp;qid=1656112897&amp;s=digital-text&amp;sprefix=eloquent+javascript%2Cdigital-text%2C117&amp;sr=1-1">Eloquent JavaScript, 3rd Edition</a></li>
+<li><a href="https://www.amazon.com/Effective-TypeScript-Specific-Ways-Improve-ebook/dp/B07Z8HRZZ3/ref=sr_1_1?crid=2R5C4G7OYJIOX&amp;keywords=effective+typescript&amp;qid=1656112919&amp;s=digital-text&amp;sprefix=effective+typescript%2Cdigital-text%2C117&amp;sr=1-1">Effective TypeScript</a></li>
+<li><a href="https://www.amazon.com/Implementation-Patterns-Addison-Wesley-Signature-Beck-ebook/dp/B004UAALDW/ref=sr_1_1?crid=1A8IS7ZGD9B0J&amp;keywords=implementation+patterns&amp;qid=1656112944&amp;s=digital-text&amp;sprefix=implementation+patterns%2Cdigital-text%2C114&amp;sr=1-1">Implementation Patterns</a></li>
+<li><a href="https://www.amazon.com/Unit-Testing-Principles-Practices-Patterns-ebook/dp/B09782L692/ref=sr_1_1?crid=2BWTGITULWF8K&amp;keywords=unit+testing&amp;qid=1656113183&amp;s=digital-text&amp;sprefix=unit+teesting%2Cdigital-text%2C118&amp;sr=1-1">Unit Testing Principles, Practices, and Patterns</a></li>
+<li><a href="https://www.amazon.com/Mastering-React-Native-Eric-Masiello-ebook/dp/B01LPRN15M/ref=sr_1_8?crid=3UX6YAQOJ9JV7&amp;keywords=react-native&amp;qid=1656112960&amp;s=digital-text&amp;sprefix=react-nativ%2Cdigital-text%2C129&amp;sr=1-8">Mastering React Native</a></li>
+<li><a href="https://www.amazon.com/Fullstack-React-Native-beautiful-JavaScript-ebook/dp/B07Y8NJGKB/ref=sr_1_6?crid=3UX6YAQOJ9JV7&amp;keywords=react-native&amp;qid=1656112960&amp;s=digital-text&amp;sprefix=react-nativ%2Cdigital-text%2C129&amp;sr=1-6">Fullstack React Native: Create beautiful mobile apps with JavaScript and React Native</a></li>
+<li><a href="https://www.amazon.com/React-Cookbook-David-Griffiths-ebook/dp/B09CG7HCD8/ref=sr_1_4?crid=1K0XYP76DHUNO&amp;keywords=react&amp;qid=1656113389&amp;s=digital-text&amp;sprefix=reac%2Cdigital-text%2C131&amp;sr=1-4">React Cookbook</a></li>
+<li><a href="https://www.amazon.com/14-Habits-Highly-Productive-Developers-ebook/dp/B08BF74RRG/ref=sr_1_1?crid=1GORFEFKK2N3E&amp;keywords=zeno+rocha&amp;qid=1656113275&amp;s=digital-text&amp;sprefix=zeno+rocha%2Cdigital-text%2C124&amp;sr=1-1">14 Habits of Highly Productive Developers</a></li>
+<li><a href="https://www.amazon.com/Grokking-Algorithms-illustrated-programmers-curious-ebook/dp/B09781V6F7/ref=sr_1_1?keywords=grokking+algorithms&amp;qid=1656113304&amp;s=digital-text&amp;sprefix=groking+%2Cdigital-text%2C121&amp;sr=1-1">Grokking Algorithms</a></li>
+<li><a href="https://www.amazon.com/Dont-Make-Think-Revisited-Usability-ebook/dp/B00HJUBRPG/ref=sr_1_2?crid=3ET4QC9V7BL7F&amp;keywords=usability&amp;qid=1656113354&amp;s=digital-text&amp;sprefix=usability%2Cdigital-text%2C119&amp;sr=1-2">Don't Make Me Think, Revisited: A Common Sense Approach to Web Usability</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h3 id="core-scala"><a class="header" href="#core-scala">Core Scala</a></h3>
+<ul>
+<li>Scala Basics
+<ul>
+<li>Variables</li>
+<li>Functions</li>
+<li>Classes</li>
+<li>Traits</li>
+<li>Objects</li>
+<li>Case Classes</li>
+<li>Case Objects</li>
+<li>Sealed Traits</li>
+</ul>
+</li>
+<li>Pattern Matching</li>
+<li>Tuples</li>
+<li>Generics</li>
+<li>Monads
+<ul>
+<li>Option</li>
+<li>Try</li>
+<li>Either</li>
+<li>Future</li>
+<li>List</li>
+<li>Map</li>
+</ul>
+</li>
+<li>For Comprehensions</li>
+<li>Mutable and Immutable Collections</li>
+<li>Scala Test</li>
+<li>Scala Check</li>
+<li>Higher Order Functions</li>
+<li>Currying</li>
+<li>Partial Functions</li>
+<li>Type Classes</li>
+<li>Tail Recursion</li>
+<li>Reflection</li>
+<li>Implicits</li>
+<li>Advanced Monads
+<ul>
+<li>IO</li>
+<li>State</li>
+<li>Reader</li>
+<li>Writer</li>
+<li>Free</li>
+</ul>
+</li>
+<li>Parser Combinators</li>
+<li>Macros</li>
+</ul>
+<h3 id="spring-stack-1"><a class="header" href="#spring-stack-1">Spring Stack</a></h3>
+<ul>
+<li>Spring Core - IoC</li>
+<li>Spring Core - Bean Scopes(Singleton, Prototype)</li>
+<li>Spring Core - Setter/Contructor Injection</li>
+<li>Spring Core - Bean Post Processor</li>
+<li>Spring Core - @Value</li>
+<li>Spring Core - Testing, Environment, WebTestClient</li>
+<li>Spring Boot - Rest Support, RestTemplate</li>
+<li>Spring Boot - Integration Test with Rest</li>
+<li>Spring Data JDBC</li>
+<li>Cache with Caffeine</li>
+<li>Configure Transaction management with JPA</li>
+<li>Spring Security: CSRF Protection</li>
+<li>Spring Security: Authorize HTTP Requests(HttpSecurity and SecurityFilterChain)</li>
+</ul>
+<h3 id="learn-frameworks-and-libs-1"><a class="header" href="#learn-frameworks-and-libs-1">Learn Frameworks and Libs</a></h3>
+<ul>
+<li>SBT: Simple Build Tool</li>
+<li>Gson</li>
+<li>Spring Data JDBC</li>
+<li>Pekko</li>
+<li>Json4S</li>
+<li>Slick</li>
+<li>Cats</li>
+<li>ZIO</li>
+<li>Scalaz</li>
+<li>Http4s</li>
+<li>Circe</li>
+<li>Specs2</li>
+<li>Tapir</li>
+</ul>
+<h2 id="functional-programing-challenges-1"><a class="header" href="#functional-programing-challenges-1">Functional Programing Challenges 1</a></h2>
+<ul>
+<li>(1) <a href="https://aperiodic.net/pip/scala/s-99/">S99 Problems</a></li>
+<li>(2) <a href="https://projecteuler.net/">Project Euler</a></li>
+</ul>
+<h2 id="ooad-challenges-round-1-1"><a class="header" href="#ooad-challenges-round-1-1">OOAD Challenges Round 1</a></h2>
+<ul>
+<li>(1) Build a TAX system where different products have different tax per state and year.</li>
+<li>(2) Build a Logger Builder Router System where you can log into FS, ELK or any other log system where you can configure the logs to be sync or assync using the same API.</li>
+<li>(3) Build Render Template where the same temple can be render in HTML, PDF or CSV.</li>
+<li>(4) Build A Logistic System where you need to calculate different freigth prices based on volume, size and type of transportation i.e boat, truck, rail, prices are dynamic they keep changing.</li>
+<li>(5) Build Restaurant Queue System Capable of telling how long each dish will take.</li>
+<li>(6) Build Guitar Factory System where you can specify details of a guitar and the system creates a
+custon guitar for you with OS, Specs, Models. The system should keep track of Inventory.</li>
+<li>(7) Build Ticket system, where you should be able to sell x number of ticker per different shows and
+choose the seats number, zone of the venue, date and respect maximun capacity.</li>
+</ul>
+<h2 id="ooad-challenges-round-2-4"><a class="header" href="#ooad-challenges-round-2-4">OOAD Challenges Round 2</a></h2>
+<ul>
+<li>(1) Build a Grocery TODO List system (add item, remove, mark as done, do, re-do, listAll)</li>
+<li>(2) Build a FileShare System  (save files, restore files, delete files, listFiles, Search) with encryption</li>
+<li>(3) Build a Note Taking system (add notes,save notes,edit notes, delete notes, sync)</li>
+<li>(4) Build a Calendar system (book meetings, remove meetings, listMeetings, suggest best time for 2 people)</li>
+<li>(5) Build a Redis clone client/server (Strings: set,get,remove,append, maps: set,get,keys,values)</li>
+<li>(6) Build a Teacher's Class Organizer/Optimizer</li>
+<li>(7) Build a Social Media Sharing Photo App (publish photos, tag photos, timeline, comments)</li>
+</ul>
+<h3 id="code-challenges-round-1-2"><a class="header" href="#code-challenges-round-1-2">Code Challenges Round 1</a></h3>
+<ul>
+<li>(1) Build a converter Framework where you convert complex types.</li>
+<li>(2) Build a task framework where you submit tasks to your own pool of threads.</li>
+<li>(3) Build a validation Framework based on Annotations.</li>
+<li>(4) Build a observability core framework based on latency metrics.</li>
+<li>(5) Build a code generator based on YAML Definitions.</li>
+<li>(6) Build a Core Bank Ledger.</li>
+<li>(7) Build a HTTP Server supporting /GET endpoints.</li>
+</ul>
+<h3 id="code-challenges-round-2-2"><a class="header" href="#code-challenges-round-2-2">Code Challenges Round 2</a></h3>
+<ul>
+<li>(1) Build a Stress Test Framework for HTTP</li>
+<li>(2) Build a <a href="https://dontpad.com/">Dont Pad</a></li>
+<li>(3) Build a Unused Class Detector</li>
+<li>(4) Build a <a href="https://github.com/veltman/clmystery">Murder Mistery Game using terminal and linux</a></li>
+<li>(5) Build a Implement your own String Implementation methods: (toArray,foreach,reverse,iterator,length,charAt,equals,isEmpty,replace,substring,trim,toJson,indexOf,hashCode)</li>
+<li>(6) Build a Hibernate Slow Query Detector</li>
+<li>(7) Build a <a href="https://datatracker.ietf.org/doc/html/rfc6749">oAuth 2.0 Server</a></li>
+</ul>
+<h3 id="books-14"><a class="header" href="#books-14">Books</a></h3>
+<ul>
+<li><a href="https://www.amazon.com/Building-applications-Scala-Diego-Pacheco/dp/178646148X">Build Applications with Scala</a></li>
+<li><a href="https://learnyouahaskell.com/">Learn you a haskell for greater good</a></li>
+<li><a href="https://www.amazon.com/Programming-Scala-Martin-Odersky/dp/098153161X/ref=sr_1_6?crid=5GM42PJRJSWW&amp;dib=eyJ2IjoiMSJ9.7GINLZfnJ_0vYx0VCh4rKtT8ANlHmc4H5Iqs5TeA_5tJFbONsAqYSdkGZFKg9FkTmxCHEMQmARmP_yDBz0cARIuAgfLBXXUDdZ-6xr6bAaD4T6CBiXSRfKi62V8jQ3_mcuvX4zZ1dpk2j_19fzNojUGTOBhvw0q_oGL2esXBww1YDJSAy2ZN_holMkxFKm2ZUumevnKvEfkpKddnu4We9e28UgXHp0McfhhVTnKKHiU.8tlCS-goVU4MQmNkcLTwWz4s7wS1ZcRdfUY8t3HzQYU&amp;dib_tag=se&amp;keywords=scala+books&amp;qid=1738832859&amp;sprefix=scale+books%2Caps%2C196&amp;sr=8-6">Programming in Scala</a></li>
+<li><a href="https://www.amazon.com/Scala-Cookbook-Object-Oriented-Functional-Programming/dp/1449339611/ref=sr_1_9?crid=5GM42PJRJSWW&amp;dib=eyJ2IjoiMSJ9.7GINLZfnJ_0vYx0VCh4rKtT8ANlHmc4H5Iqs5TeA_5tJFbONsAqYSdkGZFKg9FkTmxCHEMQmARmP_yDBz0cARIuAgfLBXXUDdZ-6xr6bAaD4T6CBiXSRfKi62V8jQ3_mcuvX4zZ1dpk2j_19fzNojUGTOBhvw0q_oGL2esXBww1YDJSAy2ZN_holMkxFKm2ZUumevnKvEfkpKddnu4We9e28UgXHp0McfhhVTnKKHiU.8tlCS-goVU4MQmNkcLTwWz4s7wS1ZcRdfUY8t3HzQYU&amp;dib_tag=se&amp;keywords=scala+books&amp;qid=1738832859&amp;sprefix=scale+books%2Caps%2C196&amp;sr=8-9">Scala Cookbook: Recipes for Object-Oriented and Functional Programming</a></li>
+<li><a href="https://www.amazon.com/Functional-Programming-Simplified-Alvin-Alexander-ebook/dp/B076J7CJKY/ref=sr_1_15?crid=5GM42PJRJSWW&amp;dib=eyJ2IjoiMSJ9.7GINLZfnJ_0vYx0VCh4rKtT8ANlHmc4H5Iqs5TeA_5tJFbONsAqYSdkGZFKg9FkTmxCHEMQmARmP_yDBz0cARIuAgfLBXXUDdZ-6xr6bAaD4T6CBiXSRfKi62V8jQ3_mcuvX4zZ1dpk2j_19fzNojUGTOBhvw0q_oGL2esXBww1YDJSAy2ZN_holMkxFKm2ZUumevnKvEfkpKddnu4We9e28UgXHp0McfhhVTnKKHiU.8tlCS-goVU4MQmNkcLTwWz4s7wS1ZcRdfUY8t3HzQYU&amp;dib_tag=se&amp;keywords=scala+books&amp;qid=1738832859&amp;sprefix=scale+books%2Caps%2C196&amp;sr=8-15">Functional Programming, Simplified: (Scala edition)</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="security--infosec-resources"><a class="header" href="#security--infosec-resources">Security &amp; InfoSec Resources</a></h1>
+<h2 id="important-topics-4"><a class="header" href="#important-topics-4">Important Topics</a></h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Information_security#Key_concepts">CIA Triad (Confidentiality, Integrity, Availability)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Defense_in_depth_(computing)">Defense in Depth</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Zero_trust_security_model">Zero Trust Architecture</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Threat_model">Threat Modeling</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Risk_assessment">Risk Assessment</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Computer_security_incident_management">Incident Response</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Vulnerability_management">Vulnerability Management</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Secure_by_design">Security by Design</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Principle_of_least_privilege">Least Privilege Principle</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Information_security_operations_center">Security Operations Center (SOC)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Digital_forensics">Digital Forensics</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Social_engineering_(security)">Social Engineering</a></li>
+</ul>
+<h2 id="security-frameworks--standards"><a class="header" href="#security-frameworks--standards">Security Frameworks &amp; Standards</a></h2>
+<ul>
+<li><a href="https://www.nist.gov/cyberframework">NIST Cybersecurity Framework</a></li>
+<li><a href="https://www.iso.org/isoiec-27001-information-security.html">ISO 27001/27002</a></li>
+<li><a href="https://www.cisecurity.org/controls/">CIS Controls</a></li>
+<li><a href="https://owasp.org/www-project-top-ten/">OWASP Top 10</a></li>
+<li><a href="https://www.sans.org/top25-software-errors/">SANS Top 25</a></li>
+<li><a href="https://attack.mitre.org/">MITRE ATT&amp;CK</a></li>
+<li><a href="https://www.pcisecuritystandards.org/">PCI DSS</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sarbanes%E2%80%93Oxley_Act">SOX Compliance</a></li>
+<li><a href="https://gdpr.eu/">GDPR</a></li>
+<li><a href="https://www.hhs.gov/hipaa/index.html">HIPAA</a></li>
+</ul>
+<h2 id="penetration-testing-tools"><a class="header" href="#penetration-testing-tools">Penetration Testing Tools</a></h2>
+<h3 id="network-scanning--enumeration"><a class="header" href="#network-scanning--enumeration">Network Scanning &amp; Enumeration</a></h3>
+<ul>
+<li><a href="https://nmap.org/">Nmap</a></li>
+<li><a href="https://github.com/robertdavidgraham/masscan">Masscan</a></li>
+<li><a href="https://zmap.io/">Zmap</a></li>
+<li><a href="https://nc110.sourceforge.io/">Netcat</a></li>
+<li><a href="https://www.wireshark.org/">Wireshark</a></li>
+<li><a href="https://www.tcpdump.org/">Tcpdump</a></li>
+</ul>
+<h3 id="web-application-testing"><a class="header" href="#web-application-testing">Web Application Testing</a></h3>
+<ul>
+<li><a href="https://portswigger.net/burp">Burp Suite</a></li>
+<li><a href="https://www.zaproxy.org/">OWASP ZAP</a></li>
+<li><a href="https://cirt.net/Nikto2">Nikto</a></li>
+<li><a href="https://sqlmap.org/">SQLmap</a></li>
+<li><a href="https://github.com/OJ/gobuster">Gobuster</a></li>
+<li><a href="https://dirb.sourceforge.net/">Dirb</a></li>
+</ul>
+<h3 id="exploitation-frameworks"><a class="header" href="#exploitation-frameworks">Exploitation Frameworks</a></h3>
+<ul>
+<li><a href="https://www.metasploit.com/">Metasploit</a></li>
+<li><a href="https://www.cobaltstrike.com/">Cobalt Strike</a></li>
+<li><a href="https://github.com/EmpireProject/Empire">Empire</a></li>
+<li><a href="https://github.com/PowerShellEmpire/PowerShellEmpire">Powershell Empire</a></li>
+<li><a href="https://github.com/cobbr/Covenant">Covenant</a></li>
+</ul>
+<h3 id="wireless-security"><a class="header" href="#wireless-security">Wireless Security</a></h3>
+<ul>
+<li><a href="https://www.aircrack-ng.org/">Aircrack-ng</a></li>
+<li><a href="https://www.kismetwireless.net/">Kismet</a></li>
+<li><a href="https://github.com/derv82/wifite2">Wifite</a></li>
+<li><a href="https://github.com/t6x/reaver-wps-fork-t6x">Reaver</a></li>
+</ul>
+<h3 id="social-engineering"><a class="header" href="#social-engineering">Social Engineering</a></h3>
+<ul>
+<li><a href="https://github.com/trustedsec/social-engineer-toolkit">SET (Social Engineer Toolkit)</a></li>
+<li><a href="https://getgophish.com/">Gophish</a></li>
+<li><a href="https://github.com/rsmusllp/king-phisher">King Phisher</a></li>
+</ul>
+<h2 id="security-monitoring--siem"><a class="header" href="#security-monitoring--siem">Security Monitoring &amp; SIEM</a></h2>
+<h3 id="siem-platforms"><a class="header" href="#siem-platforms">SIEM Platforms</a></h3>
+<ul>
+<li><a href="https://www.splunk.com/">Splunk</a></li>
+<li><a href="https://www.ibm.com/products/qradar-siem">IBM QRadar</a></li>
+<li><a href="https://www.microfocus.com/en-us/products/siem-security-information-event-management">ArcSight</a></li>
+<li><a href="https://logrhythm.com/">LogRhythm</a></li>
+<li><a href="https://www.elastic.co/security/">Elastic Security</a></li>
+<li><a href="https://wazuh.com/">Wazuh</a></li>
+</ul>
+<h3 id="network-monitoring"><a class="header" href="#network-monitoring">Network Monitoring</a></h3>
+<ul>
+<li><a href="https://www.nagios.org/">Nagios</a></li>
+<li><a href="https://www.zabbix.com/">Zabbix</a></li>
+<li><a href="https://www.paessler.com/prtg">PRTG</a></li>
+<li><a href="https://www.solarwinds.com/">SolarWinds</a></li>
+<li><a href="https://pandorafms.org/">Pandora FMS</a></li>
+</ul>
+<h3 id="threat-intelligence"><a class="header" href="#threat-intelligence">Threat Intelligence</a></h3>
+<ul>
+<li><a href="https://www.misp-project.org/">MISP</a></li>
+<li><a href="https://www.opencti.io/">OpenCTI</a></li>
+<li><a href="https://virustotal.github.io/yara/">YARA</a></li>
+<li><a href="https://github.com/SigmaHQ/sigma">Sigma</a></li>
+<li><a href="https://suricata.io/">Suricata</a></li>
+</ul>
+<h2 id="vulnerability-management"><a class="header" href="#vulnerability-management">Vulnerability Management</a></h2>
+<h3 id="vulnerability-scanners"><a class="header" href="#vulnerability-scanners">Vulnerability Scanners</a></h3>
+<ul>
+<li><a href="https://www.tenable.com/products/nessus">Nessus</a></li>
+<li><a href="https://www.openvas.org/">OpenVAS</a></li>
+<li><a href="https://www.qualys.com/apps/vulnerability-management/">Qualys VMDR</a></li>
+<li><a href="https://www.rapid7.com/products/nexpose/">Rapid7 Nexpose</a></li>
+<li><a href="https://www.greenbone.net/">Greenbone</a></li>
+</ul>
+<h3 id="static-code-analysis"><a class="header" href="#static-code-analysis">Static Code Analysis</a></h3>
+<ul>
+<li><a href="https://www.sonarqube.org/">SonarQube</a></li>
+<li><a href="https://checkmarx.com/">Checkmarx</a></li>
+<li><a href="https://www.veracode.com/">Veracode</a></li>
+<li><a href="https://www.microfocus.com/en-us/products/static-code-analysis-sast">Fortify</a></li>
+<li><a href="https://bandit.readthedocs.io/">Bandit (Python)</a></li>
+<li><a href="https://github.com/nodesecurity/eslint-plugin-security">ESLint Security</a></li>
+</ul>
+<h3 id="container-security"><a class="header" href="#container-security">Container Security</a></h3>
+<ul>
+<li><a href="https://trivy.dev/">Trivy</a></li>
+<li><a href="https://github.com/quay/clair">Clair</a></li>
+<li><a href="https://anchore.com/">Anchore</a></li>
+<li><a href="https://www.paloaltonetworks.com/prisma/cloud">Twistlock</a></li>
+<li><a href="https://www.aquasec.com/">Aqua Security</a></li>
+</ul>
+<h2 id="cloud-security"><a class="header" href="#cloud-security">Cloud Security</a></h2>
+<h3 id="aws-security"><a class="header" href="#aws-security">AWS Security</a></h3>
+<ul>
+<li><a href="https://aws.amazon.com/config/">AWS Config</a></li>
+<li><a href="https://aws.amazon.com/cloudtrail/">AWS CloudTrail</a></li>
+<li><a href="https://aws.amazon.com/guardduty/">AWS GuardDuty</a></li>
+<li><a href="https://aws.amazon.com/security-hub/">AWS Security Hub</a></li>
+<li><a href="https://aws.amazon.com/inspector/">AWS Inspector</a></li>
+</ul>
+<h3 id="multi-cloud-security"><a class="header" href="#multi-cloud-security">Multi-Cloud Security</a></h3>
+<ul>
+<li><a href="https://www.paloaltonetworks.com/prisma/cloud">Prisma Cloud</a></li>
+<li><a href="https://cloudsploit.com/">CloudSploit</a></li>
+<li><a href="https://github.com/nccgroup/ScoutSuite">ScoutSuite</a></li>
+</ul>
+<h2 id="cryptography--pki"><a class="header" href="#cryptography--pki">Cryptography &amp; PKI</a></h2>
+<h3 id="cryptographic-libraries"><a class="header" href="#cryptographic-libraries">Cryptographic Libraries</a></h3>
+<ul>
+<li><a href="https://www.openssl.org/">OpenSSL</a></li>
+<li><a href="https://www.bouncycastle.org/">Bouncy Castle</a></li>
+<li><a href="https://libsodium.gitbook.io/">libsodium</a></li>
+<li><a href="https://www.cryptopp.com/">Crypto++</a></li>
+</ul>
+<h3 id="pki-tools"><a class="header" href="#pki-tools">PKI Tools</a></h3>
+<ul>
+<li><a href="https://www.ejbca.org/">EJBCA</a></li>
+<li><a href="https://www.openca.org/">OpenCA</a></li>
+<li><a href="https://www.vaultproject.io/">HashiCorp Vault</a></li>
+<li><a href="https://letsencrypt.org/">Let's Encrypt</a></li>
+</ul>
+<h2 id="security-challenges-round-1"><a class="header" href="#security-challenges-round-1">Security Challenges Round 1</a></h2>
+<ul>
+<li>(1) Build a Vulnerability Scanner that can identify common web application vulnerabilities (SQL injection, XSS, CSRF) with custom payloads and reporting.</li>
+<li>(2) Create a Network Intrusion Detection System (NIDS) that can monitor network traffic and detect suspicious activities using signature and anomaly-based detection.</li>
+<li>(3) Build a Log Analysis System that can parse security logs from multiple sources, correlate events, and generate alerts for potential security incidents.</li>
+<li>(4) Create a Password Security Audit Tool that can check password strength, detect common passwords, and implement secure password policies.</li>
+<li>(5) Build a Phishing Detection System that can analyze emails and websites to identify phishing attempts using machine learning and heuristic analysis.</li>
+<li>(6) Create a File Integrity Monitoring System that can detect unauthorized changes to critical system files and configurations.</li>
+<li>(7) Build a Security Information Dashboard that aggregates security metrics from multiple tools and provides real-time security posture visibility.</li>
+</ul>
+<h2 id="security-challenges-round-2"><a class="header" href="#security-challenges-round-2">Security Challenges Round 2</a></h2>
+<ul>
+<li>(1) Create a Threat Hunting Platform that can proactively search for advanced persistent threats (APTs) using behavioral analysis and threat intelligence.</li>
+<li>(2) Build a Zero Trust Network Access (ZTNA) System with identity verification, device compliance checking, and micro-segmentation capabilities.</li>
+<li>(3) Create an Automated Incident Response System that can contain threats, collect forensic evidence, and orchestrate response workflows.</li>
+<li>(4) Build a Cloud Security Posture Management (CSPM) tool that can assess cloud configurations against security best practices and compliance requirements.</li>
+<li>(5) Create a Deception Technology Platform with honeypots, honeynets, and decoy systems to detect and analyze attacker behavior.</li>
+<li>(6) Build a Security Orchestration, Automation and Response (SOAR) platform that can automate security workflows and integrate multiple security tools.</li>
+<li>(7) Create a Digital Forensics Investigation System that can acquire, preserve, analyze, and report on digital evidence from various sources.</li>
+</ul>
+<h2 id="security-challenges-round-3"><a class="header" href="#security-challenges-round-3">Security Challenges Round 3</a></h2>
+<ul>
+<li>(1) Build a Machine Learning-based User and Entity Behavior Analytics (UEBA) system that can detect insider threats and compromised accounts.</li>
+<li>(2) Create a Threat Intelligence Platform that can collect, analyze, and share threat indicators across multiple organizations with automated enrichment.</li>
+<li>(3) Build a Secure Software Development Lifecycle (SSDLC) Platform with automated security testing, code analysis, and compliance checking.</li>
+<li>(4) Create a Privacy-Preserving Data Analytics System using techniques like differential privacy, homomorphic encryption, and secure multi-party computation.</li>
+<li>(5) Build a Quantum-Safe Cryptography Implementation that can protect against future quantum computing threats with post-quantum algorithms.</li>
+<li>(6) Create a Security Awareness Training Platform with phishing simulations, interactive content, and behavioral change measurement.</li>
+<li>(7) Build a Cyber Threat Intelligence Sharing Platform that enables real-time threat information exchange between organizations while preserving anonymity.</li>
+</ul>
+<h2 id="books-15"><a class="header" href="#books-15">Books</a></h2>
+<ul>
+<li><a href="https://www.amazon.com/Principles-Software-Architecture-Modernization-microservices/dp/9355519532/ref=sr_1_1?crid=7U3H2IE5U7Y4&amp;dib=eyJ2IjoiMSJ9.ebHg7EIiJ3GThIg8Dwf4PelC70iUIbHPKv7_7zk8vrk8K2FB4zlrUQyNZwKAHPO46cAYR5z2-KyqnXqNz3Ee2lmU-aGR7NLhq7jko2UihHIl-taoJ6i_hkMjcc12ZF3pOmB9lFrvbsGgbDagq1Vzqg.oz7TxYpSBxBZjVjkuIPDZM7Wxx_XMRU0Uj7jo9Rq_BI&amp;dib_tag=se&amp;keywords=principles+of+software+architecture+modernization&amp;qid=1741069169&amp;sprefix=Principles+of+software+a%2Caps%2C190&amp;sr=8-1">Principles of Software Architecture Modernization</a></li>
+<li><a href="https://www.amazon.com/dp/9365893100/ref=mes-dp?_encoding=UTF8&amp;pd_rd_w=JpyYV&amp;content-id=amzn1.sym.7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_p=7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_r=K6XYEHZZ76RWDSAXAY5X&amp;pd_rd_wg=RH04x&amp;pd_rd_r=f230b2e4-c342-429e-a362-c856e4c2362a">Continuous Modernization</a></li>
+<li><a href="https://www.amazon.com/Web-Application-Hackers-Handbook-Exploiting/dp/1118026470/">The Web Application Hacker's Handbook</a></li>
+<li><a href="https://www.amazon.com/Hacking-Art-Exploitation-Jon-Erickson/dp/1593271441/">Hacking: The Art of Exploitation</a></li>
+<li><a href="https://www.amazon.com/Shellcoders-Handbook-Discovering-Exploiting-Security/dp/047008023X/">The Shellcoder's Handbook</a></li>
+<li><a href="https://www.amazon.com/Black-Hat-Python-Programming-Pentesters/dp/1593275900/">Black Hat Python</a></li>
+<li><a href="https://www.amazon.com/Gray-Hat-Hacking-Ethical-Handbook/dp/0071832386/">Gray Hat Hacking: The Ethical Hacker's Handbook</a></li>
+<li><a href="https://www.amazon.com/Tangled-Web-Securing-Modern-Applications/dp/1593273886/">The Tangled Web: A Guide to Securing Modern Web Applications</a></li>
+<li><a href="https://www.amazon.com/Security-Engineering-Building-Dependable-Distributed/dp/0470068523/">Security Engineering: A Guide to Building Dependable Distributed Systems</a></li>
+<li><a href="https://www.amazon.com/Applied-Cryptography-Protocols-Algorithms-Source/dp/1119096723/">Applied Cryptography</a></li>
+<li><a href="https://www.amazon.com/Cryptography-Engineering-Principles-Practical-Applications/dp/0470474246/">Cryptography Engineering</a></li>
+<li><a href="https://www.amazon.com/Art-Memory-Forensics-Detecting-Malware/dp/1118825098/">The Art of Memory Forensics</a></li>
+<li><a href="https://www.amazon.com/Malware-Analysts-Cookbook-DVD-Techniques/dp/0470613033/">Malware Analyst's Cookbook</a></li>
+<li><a href="https://www.amazon.com/Practical-Malware-Analysis-Hands-Dissecting/dp/1593272901/">Practical Malware Analysis</a></li>
+<li><a href="https://www.amazon.com/Network-Security-Assessment-Know-Your/dp/149191095X/">Network Security Assessment</a></li>
+<li><a href="https://www.amazon.com/Practice-Network-Security-Monitoring-Understanding/dp/1593275099/">The Practice of Network Security Monitoring</a></li>
+<li><a href="https://www.amazon.com/Blue-Team-Handbook-condensed-Responder/dp/1091493898/">Blue Team Handbook: Incident Response Edition</a></li>
+<li><a href="https://www.amazon.com/Red-Team-Development-Operations-practical/dp/B083XVG633/">Red Team Development and Operations</a></li>
+<li><a href="https://www.amazon.com/Social-Engineering-Art-Human-Hacking/dp/0470639539/">Social Engineering: The Art of Human Hacking</a></li>
+<li><a href="https://www.amazon.com/Cuckoos-Egg-Tracking-Computer-Espionage/dp/1416507787/">The Cuckoo's Egg</a></li>
+<li><a href="https://www.amazon.com/Ghost-Wires-Adventures-Worlds-Wanted/dp/0316037729/">Ghost in the Wires</a></li>
+<li><a href="https://www.amazon.com/Countdown-Zero-Day-Stuxnet-Digital/dp/0770436193/">Countdown to Zero Day</a></li>
+<li><a href="https://www.amazon.com/Phoenix-Project-DevOps-Helping-Business-ebook/dp/B0DPNL8863/ref=sr_1_1?crid=8G1NX5OK9ZIQ&amp;dib=eyJ2IjoiMSJ9.wiWwt0G1guUdWgnsFDK6nal3hO4lijRYOrOZfxfZaTf-HsNtCwXfO0hOBZUDlRS-L3sZoZD6u38qiy4wNQG-r0IxV3OlrPNaI-RcyykMuXEhQpxAYAyXAj8mwQ5Qmf3CTD7oTeRiXViOI1PYkBSKQWWF3DThfHMwlGTMZR2GPTD7RYBf4FlSBzgtY_eJ3S5yjpzeCm5otrZAs2BqBnZ0c30lZ2UwUNVkNMXDh8lB9yY.IbPxgZbiFXccbFSFHnbyCw50DQ-Vcww7I-rzEw9g48g&amp;dib_tag=se&amp;keywords=The+Phoenix+Project&amp;qid=1741070029&amp;s=digital-text&amp;sprefix=the+phoenix+project%2Cdigital-text%2C151&amp;sr=1-1">The Phoenix Project</a></li>
+<li><a href="https://www.amazon.com/CISSP-All-One-Exam-Guide/dp/1260142655/">CISSP All-in-One Exam Guide</a></li>
+<li><a href="https://www.amazon.com/Security-Guide-Network-Security-Fundamentals/dp/1337288780/">Security+ Guide to Network Security Fundamentals</a></li>
+</ul>
+<h2 id="links-8"><a class="header" href="#links-8">Links</a></h2>
+<ul>
+<li><a href="https://owasp.org/">OWASP</a></li>
+<li><a href="https://www.sans.org/">SANS Institute</a></li>
+<li><a href="https://www.nist.gov/cybersecurity">NIST Cybersecurity</a></li>
+<li><a href="https://cve.mitre.org/">CVE Database</a></li>
+<li><a href="https://www.exploit-db.com/">Exploit Database</a></li>
+<li><a href="https://www.securityfocus.com/">SecurityFocus</a></li>
+<li><a href="https://krebsonsecurity.com/">Krebs on Security</a></li>
+<li><a href="https://www.darkreading.com/">Dark Reading</a></li>
+<li><a href="https://threatpost.com/">Threatpost</a></li>
+<li><a href="https://thehackernews.com/">The Hacker News</a></li>
+<li><a href="https://www.cisa.gov/">Cybersecurity &amp; Infrastructure Security Agency</a></li>
+<li><a href="https://us-cert.cisa.gov/">US-CERT</a></li>
+<li><a href="https://www.first.org/">FIRST</a></li>
+<li><a href="https://www.isaca.org/">ISACA</a></li>
+<li><a href="https://isc2.org/">(ISC)²</a></li>
+<li><a href="https://www.comptia.org/certifications/security">CompTIA Security+</a></li>
+<li><a href="https://www.isc2.org/Certifications/CISSP">CISSP</a></li>
+<li><a href="https://www.isaca.org/credentialing/cism">CISM</a></li>
+<li><a href="https://www.eccouncil.org/programs/certified-ethical-hacker-ceh/">CEH</a></li>
+<li><a href="https://www.offensive-security.com/pwk-oscp/">OSCP</a></li>
+<li><a href="https://www.cybrary.it/course/cissp/">CISSP Study Guide</a></li>
+<li><a href="https://www.cybrary.it/">Cybrary</a></li>
+<li><a href="https://www.coursera.org/specializations/cyber-security">Coursera Cybersecurity</a></li>
+<li><a href="https://www.edx.org/learn/cybersecurity">edX Cybersecurity</a></li>
+<li><a href="https://www.sans.org/cyber-security-courses/">SANS Training</a></li>
+<li><a href="https://www.infosecinstitute.com/">Infosec Institute</a></li>
+<li><a href="https://www.udemy.com/topic/cyber-security/">Udemy Security Courses</a></li>
+<li><a href="https://www.pluralsight.com/browse/information-cyber-security">Pluralsight Security</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="technology--skills"><a class="header" href="#technology--skills">Technology / Skills</a></h2>
+<ul>
+<li><a href="https://www.figma.com/">Figma</a></li>
+<li><a href="https://heap.io/">Heap Analytics</a></li>
+<li>Typescript (need to be able to read JS Code)</li>
+<li>JavaScript (need to be able to read JS Code)</li>
+<li>Need to be able to run Webapp and Mobile App locally</li>
+<li>UI Patterns for Mobile</li>
+<li>Web UI Patterns</li>
+<li>Accessibility Patterns</li>
+<li>Usability Patterns</li>
+<li>User Research Patterns</li>
+<li>A/B Testing Patterns</li>
+<li>Design Systems / Atomic Design</li>
+<li>Design Thinking</li>
+<li>Startegic Design</li>
+<li>Design Sprint</li>
+<li>Design Ops</li>
+<li>Dark Patterns</li>
+<li>Microinteractions</li>
+<li>Material Design</li>
+<li>CSS</li>
+<li>HTML</li>
+<li>React</li>
+<li>Responsive Design</li>
+<li>LLMs and UX Writing</li>
+<li>LLMs and UX Research</li>
+<li>LLMs and Figma Design</li>
+</ul>
+<h3 id="design-challenges-round-1"><a class="header" href="#design-challenges-round-1">Design Challenges Round 1</a></h3>
+<ul>
+<li>(1) Design a Netflix-like clone</li>
+<li>(2) Design a Spotify-like clone</li>
+<li>(3) Design a Uber-like clone</li>
+<li>(4) Design a Amazon-like clone</li>
+<li>(5) Design a Facebook-like clone</li>
+<li>(6) Design a Modern Bank Webapp</li>
+<li>(7) Design a Metrics Dashboard app</li>
+</ul>
+<h3 id="researchpresentation-challenges-round-1"><a class="header" href="#researchpresentation-challenges-round-1">Research/Presentation Challenges Round 1</a></h3>
+<ul>
+<li>(1) Research Modern Banking</li>
+<li>(2) Research Modern Credit Cards</li>
+<li>(3) Research Modern Payments Solutions</li>
+<li>(4) Research Modern FinTech Startups</li>
+<li>(5) Research Modern Open Banking</li>
+<li>(6) Research Modern Loans</li>
+<li>(7) Research Modern Marketplaces</li>
+</ul>
+<h3 id="random-challenges-round-1"><a class="header" href="#random-challenges-round-1">Random Challenges Round 1</a></h3>
+<ul>
+<li>(1) Pick up 10 random UIs and make proposals to make them better (use Figma)</li>
+<li>(2) Pair with an Engineer everyday 2h per day (UI or Mobile)</li>
+<li>(3) Given a bad UI - make 8 versions of the UI and write trade-offs + Figmas</li>
+<li>(4) Do UX reasearch on a random app/domain</li>
+<li>(5) Do UX writting for core flows of a random UI</li>
+<li>(6) Propose a new feature for a random app</li>
+<li>(7) Do a usability test on a random UI</li>
+</ul>
+<h2 id="books-16"><a class="header" href="#books-16">Books</a></h2>
+<ul>
+<li><a href="https://www.amazon.com/Principles-Software-Architecture-Modernization-microservices/dp/9355519532/ref=sr_1_1?crid=7U3H2IE5U7Y4&amp;dib=eyJ2IjoiMSJ9.ebHg7EIiJ3GThIg8Dwf4PelC70iUIbHPKv7_7zk8vrk8K2FB4zlrUQyNZwKAHPO46cAYR5z2-KyqnXqNz3Ee2lmU-aGR7NLhq7jko2UihHIl-taoJ6i_hkMjcc12ZF3pOmB9lFrvbsGgbDagq1Vzqg.oz7TxYpSBxBZjVjkuIPDZM7Wxx_XMRU0Uj7jo9Rq_BI&amp;dib_tag=se&amp;keywords=principles+of+software+architecture+modernization&amp;qid=1741069169&amp;sprefix=Principles+of+software+a%2Caps%2C190&amp;sr=8-1">Principles of Software Architecture Modernization</a></li>
+<li><a href="https://www.amazon.com/dp/9365893100/ref=mes-dp?_encoding=UTF8&amp;pd_rd_w=JpyYV&amp;content-id=amzn1.sym.7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_p=7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_r=K6XYEHZZ76RWDSAXAY5X&amp;pd_rd_wg=RH04x&amp;pd_rd_r=f230b2e4-c342-429e-a362-c856e4c2362a">Continuous Modernization</a></li>
+<li><a href="https://www.amazon.com/Dont-Make-Think-Revisited-Usability-ebook/dp/B00HJUBRPG/ref=sr_1_2?crid=3ET4QC9V7BL7F&amp;keywords=usability&amp;qid=1656113354&amp;s=digital-text&amp;sprefix=usability%2Cdigital-text%2C119&amp;sr=1-2">Don't Make Me Think, Revisited: A Common Sense Approach to Web Usability</a></li>
+<li><a href="https://www.amazon.com/Design-Everyday-Things-Revised-Expanded-ebook/dp/B00E257T6C/ref=sr_1_1?crid=3LH185K7GWQF5&amp;dib=eyJ2IjoiMSJ9.gsNbTKuP5yRscAUenjRTw7whCOWfTn0rm2v3oyfmXF4bLa9azhngpqm3g3o7U1mvTqdu6CqdP6KTBdYOVlVhL_g0sP2UaXfWXRh9ku232hvRRu-mV9g7TyeBKRPijRq3zKjBzixw3FBaUJFGeDhL2E1zk0811RLSxjDGpATrW12yndL02gQKi56uZVVUYDm-cSI2XP2OkREB6gM4IbTGBUsLp6k2vClaK3Hz2HsAlIQ.mxJeFcAmRr_j_hpXaRCgCdw8qFBXCIPLNPHjfQbn6jo&amp;dib_tag=se&amp;keywords=dan+norman&amp;qid=1741070806&amp;sprefix=dan+norman%2Caps%2C283&amp;sr=8-1">The Design of Everyday Things: Revised and Expanded Edition</a></li>
+<li><a href="https://www.amazon.com/dp/B010MH1DAQ/ref=mes-dp?_encoding=UTF8&amp;pd_rd_w=Ti2Rc&amp;content-id=amzn1.sym.7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_p=7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_r=QN9F1KVTMP6E4AEK7R7T&amp;pd_rd_wg=JzXCk&amp;pd_rd_r=12d6c393-39af-46de-9496-6e46694ae908">Sprint: How to Solve Big Problems and Test New Ideas in Just Five Days</a></li>
+<li><a href="https://www.amazon.com/dp/B08LPKRD5L/ref=mes-dp?_encoding=UTF8&amp;pd_rd_w=Hziom&amp;content-id=amzn1.sym.7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_p=7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_r=F5SJY3ZWMST8K81WRDGF&amp;pd_rd_wg=VokvJ&amp;pd_rd_r=fd1f8e0f-4bd4-4b7e-946d-4c202cf983fa">Empowered: Ordinary People, Extraordinary Products (Silicon Valley Product Group)</a></li>
+<li><a href="https://www.amazon.com/dp/B077NRB36N/ref=mes-dp?_encoding=UTF8&amp;pd_rd_w=OTfZf&amp;content-id=amzn1.sym.7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_p=7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_r=X4QZX80SJFD1HKWDKDVE&amp;pd_rd_wg=12KuC&amp;pd_rd_r=0ea2b47a-8635-409e-ab6b-ffd977fa6d66">Inspired: How to Create Tech Products Customers Love (Silicon Valley Product Group)</a></li>
+<li><a href="https://www.amazon.com/dp/B094PVB97X/ref=mes-dp?_encoding=UTF8&amp;pd_rd_w=GjdOX&amp;content-id=amzn1.sym.7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_p=7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_r=P47XMCYDD15GB703X20E&amp;pd_rd_wg=Uohqg&amp;pd_rd_r=29f522ec-4d0b-492b-9e33-974b7daa0082">Continuous Discovery Habits: Discover Products that Create Customer Value and Business Value</a></li>
+<li><a href="https://www.amazon.com/dp/B01H4G2J1U/ref=mes-dp?_encoding=UTF8&amp;pd_rd_w=DdQm5&amp;content-id=amzn1.sym.7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_p=7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_r=3D0PNG6NYMPTW8T7MHR5&amp;pd_rd_wg=irshv&amp;pd_rd_r=e9ea45a9-67f6-4596-baf5-6e2f6882e72d">The Mom Test: How to talk to customers &amp; learn if your business is a good idea when everyone is lying to you</a></li>
+<li><a href="https://www.amazon.com/dp/B004J4XGN6/ref=mes-dp?_encoding=UTF8&amp;pd_rd_w=7yS2z&amp;content-id=amzn1.sym.7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_p=7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_r=SM6T9RE7BGAP6773J4YE&amp;pd_rd_wg=fNEBH&amp;pd_rd_r=b47ba69e-c1de-480f-99fd-81e36c6ba50d">The Lean Startup: How Today's Entrepreneurs Use Continuous Innovation to Create Radically Successful Businesses</a></li>
+<li><a href="https://www.amazon.com/dp/B084RHMYZM/ref=mes-dp?_encoding=UTF8&amp;pd_rd_w=gZxMC&amp;content-id=amzn1.sym.7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_p=7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_r=YD1GM12Z8RBMMPE219DV&amp;pd_rd_wg=XISXS&amp;pd_rd_r=4b3a1ef0-b0e2-4e49-bc72-c2fc05d9f87c">The Startup Owner's Manual: The Step-By-Step Guide for Building a Great Company</a></li>
+<li><a href="https://www.amazon.com/UX-Research-Practical-Techniques-Designing-ebook/dp/B01N9BZ060/ref=sr_1_25?crid=3KQK712DUTZ87&amp;dib=eyJ2IjoiMSJ9.VMGD_DzawQPRJAmvIr-w8yXtXJaypvNWf5f_asjp9tqlTeb5LdbMUcM3OeUcQotelndqQDI2tvshjx7eGWTM6lSi9iogOinQMDRNFfzhI9Sv3TIUvsMEP_uGNl6QazOtn0l5PTeGoUXAXqsvU14WcFS826feSAJ1b6x5P-uwkoaDYm-ATh59wATyBjpUg2BUP0lQXp2AvqMSdcjwoEVkKHTEbAG7H05La8h8srvDmJw.6auj0qYgpqc8eBhUbroTii_eujiWriayfgmQHOgVQuE&amp;dib_tag=se&amp;keywords=ux+design&amp;qid=1741070976&amp;s=digital-text&amp;sprefix=ux+design%2Cdigital-text%2C172&amp;sr=1-25&amp;xpid=euB_C-7V7NDbF">UX Research: Practical Techniques for Designing Better</a></li>
+<li><a href="https://www.amazon.com/dp/B09BH8RF8M/ref=mes-dp?_encoding=UTF8&amp;pd_rd_w=YqgoQ&amp;content-id=amzn1.sym.7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_p=7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_r=F5KHKKFVFB282R63721B&amp;pd_rd_wg=l8vTH&amp;pd_rd_r=7d750286-e82c-4524-ad2d-a6011d494787">Lean UX: Designing Great Products with Agile Teams</a></li>
+<li><a href="https://www.amazon.com/dp/B07QJ1Y8Y5/ref=mes-dp?_encoding=UTF8&amp;pd_rd_w=fqCSF&amp;content-id=amzn1.sym.7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_p=7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_r=B3FTQ78PR89AHCBJZQZZ&amp;pd_rd_wg=gcGac&amp;pd_rd_r=1074ffcd-4c13-4189-bc3f-7df8f0229566">Outcomes Over Output: Why customer behavior is the key metric for business success</a></li>
+<li><a href="https://www.amazon.com/dp/B07X1LQ45Y/ref=mes-dp?_encoding=UTF8&amp;pd_rd_w=7hKG1&amp;content-id=amzn1.sym.7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_p=7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_r=N42QSDC69D326PJ0GGSF&amp;pd_rd_wg=Lq02V&amp;pd_rd_r=954890a2-36f2-4d3c-95a6-860203d30c9a">The Jobs To Be Done Playbook: Align Your Markets, Organization, and Strategy Around Customer Needs</a></li>
+<li><a href="https://www.amazon.com/dp/B00NF07FHS/ref=mes-dp?_encoding=UTF8&amp;pd_rd_w=0nRxu&amp;content-id=amzn1.sym.7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_p=7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_r=5C17075YRY1ETAFCN40Z&amp;pd_rd_wg=icqUo&amp;pd_rd_r=9390e642-98d0-4c7f-b242-63d683daf565">User Story Mapping: Discover the Whole Story, Build the Right Product</a></li>
+<li><a href="https://www.amazon.com/Lean-Software-Development-Agile-Toolkit-ebook/dp/B00HEL13HW/ref=sr_1_1?crid=14I8JFW6SOKOI&amp;dib=eyJ2IjoiMSJ9.JneXkk11X4Fn_rQ77mMEug3QWCrQdlPdMeXZztCFBeXZC0miW4PO2vsYbpIw0rKi9xYzQyhoqeFkVz811DAJwrgrnhjfP-Ajwrgj7C8wGf8yl4tEYwSW3cKUrVRspTOJxVm9_HpA2R9BOOAaqxbJyftMpXTL3v_RHye-pHpr_15IqBzwBaSGUHQN2QGs7xl4mVQ9N-5GEcIeiPJEsLJ8j8Rl5mY5-5GtWCBygfjo1x0.t3YSkHwY4rPrEODancSrXAV94-JGK4ZC2iEOGcv1BJE&amp;dib_tag=se&amp;keywords=lean+software&amp;qid=1741071116&amp;s=digital-text&amp;sprefix=lean+software%2Cdigital-text%2C163&amp;sr=1-1">Lean Software Development: An Agile Toolkit: An Agile Toolkit (Agile Software Development Series)</a></li>
+</ul>
 
                     </main>
 

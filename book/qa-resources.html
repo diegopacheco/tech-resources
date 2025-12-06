@@ -1,0 +1,314 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>QA Resources - Tech Resources</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "searchindex.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Tech Resources</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <i class="fa fa-spinner fa-spin"></i>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h2 id="qa-resources"><a class="header" href="#qa-resources">QA Resources</a></h2>
+<h3 id="tech"><a class="header" href="#tech">Tech</a></h3>
+<ul>
+<li><a href="https://nodejs.org/en/">Nodejs</a></li>
+<li><a href="https://www.typescriptlang.org/">Typescript</a></li>
+<li><a href="http://expressjs.com/pt-br/">Express</a></li>
+<li><a href="https://facebook.github.io/react/">React</a></li>
+<li><a href="https://yarnpkg.com/en/">Yarn</a></li>
+<li><a href="https://www.cypress.io/">Cypress</a></li>
+<li><a href="https://playwright.dev/">playwright</a></li>
+<li><a href="https://jestjs.io/">Jest</a></li>
+<li><a href="https://www.java.com/">Java</a></li>
+<li><a href="https://spring.io/projects/spring-boot">Spring Boot</a></li>
+<li><a href="https://junit.org/junit5/">Junit 5</a></li>
+<li><a href="https://gatling.io/">Gatling</a></li>
+<li><a href="https://github.com/Shopify/toxiproxy">ToxyProxy</a></li>
+<li><a href="https://podman.io/">Podman</a></li>
+<li><a href="https://kubernetes.io/">k8s</a></li>
+<li><a href="https://www.jenkins.io/">Jenkins</a></li>
+<li><a href="https://www.sonarqube.org/">SonarQube</a></li>
+<li><a href="https://wix.github.io/Detox/">Detox</a></li>
+<li><a href="https://testing-library.com/">Testing Library</a></li>
+<li><a href="https://www.testcontainers.org/">TestContainers</a></li>
+<li><a href="https://www.usebruno.com/">Bruno</a></li>
+<li><a href="https://robotframework.org/">Robot Framework</a></li>
+<li><a href="https://developer.chrome.com/docs/lighthouse/overview?hl=en">Lighthouse</a></li>
+</ul>
+<h2 id="testing-skills-in-testing-diversity"><a class="header" href="#testing-skills-in-testing-diversity">Testing Skills in Testing Diversity</a></h2>
+<ul>
+<li>Unit Tests</li>
+<li>Integration Tests</li>
+<li>Contract Testing</li>
+<li>End to End Tests</li>
+<li>Stress Testing / Performance Tests / Load Testing</li>
+<li>CSS Testing</li>
+<li>Mutation Testing</li>
+<li>Fuzzy Testing</li>
+<li>Chaos Engineering / Chaos Testing / Fault Injection</li>
+<li>Configuration Testing</li>
+<li>A/B Testing</li>
+<li>Threat Analysis</li>
+</ul>
+<h3 id="code-challenges-round-1-build-and-test-with-test-diversity"><a class="header" href="#code-challenges-round-1-build-and-test-with-test-diversity">Code Challenges Round 1 (build and test with test diversity)</a></h3>
+<ul>
+<li>(1) Build a converter Framework where you convert complex types.</li>
+<li>(2) Build a task framework where you submit tasks to your own pool of threads.</li>
+<li>(3) Build a validation Framework based on Annotations.</li>
+<li>(4) Build a observability core framework based on latency metrics.</li>
+<li>(5) Build a code generator based on YAML Definitions.</li>
+<li>(6) Build a Core Bank Ledger.</li>
+<li>(7) Build a HTTP Server supporting /GET endpoints.</li>
+</ul>
+<h3 id="code-challenges-round-2-build-and-test-with-test-diversity"><a class="header" href="#code-challenges-round-2-build-and-test-with-test-diversity">Code Challenges Round 2 (build and test with test diversity)</a></h3>
+<ul>
+<li>(1) Build a Stress Test Framework for HTTP</li>
+<li>(2) Build a <a href="https://dontpad.com/">Dont Pad</a></li>
+<li>(3) Build a Unused Class Detector</li>
+<li>(4) Build a <a href="https://github.com/veltman/clmystery">Murder Mistery Game using terminal and linux</a></li>
+<li>(5) Build a Implement your own String Implementation methods: (toArray,foreach,reverse,iterator,length,charAt,equals,isEmpty,replace,substring,trim,toJson,indexOf,hashCode)</li>
+<li>(6) Build a Hibernate Slow Query Detector</li>
+<li>(7) Build a <a href="https://datatracker.ietf.org/doc/html/rfc6749">oAuth 2.0 Server</a></li>
+</ul>
+<h3 id="books"><a class="header" href="#books">Books</a></h3>
+<ul>
+<li><a href="https://www.amazon.com/Principles-Software-Architecture-Modernization-microservices/dp/9355519532/ref=sr_1_1?crid=7U3H2IE5U7Y4&amp;dib=eyJ2IjoiMSJ9.ebHg7EIiJ3GThIg8Dwf4PelC70iUIbHPKv7_7zk8vrk8K2FB4zlrUQyNZwKAHPO46cAYR5z2-KyqnXqNz3Ee2lmU-aGR7NLhq7jko2UihHIl-taoJ6i_hkMjcc12ZF3pOmB9lFrvbsGgbDagq1Vzqg.oz7TxYpSBxBZjVjkuIPDZM7Wxx_XMRU0Uj7jo9Rq_BI&amp;dib_tag=se&amp;keywords=principles+of+software+architecture+modernization&amp;qid=1741069169&amp;sprefix=Principles+of+software+a%2Caps%2C190&amp;sr=8-1">Principles of Software Architecture Modernization</a></li>
+<li><a href="https://www.amazon.com/dp/9365893100/ref=mes-dp?_encoding=UTF8&amp;pd_rd_w=JpyYV&amp;content-id=amzn1.sym.7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_p=7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_r=K6XYEHZZ76RWDSAXAY5X&amp;pd_rd_wg=RH04x&amp;pd_rd_r=f230b2e4-c342-429e-a362-c856e4c2362a">Continuous Modernization</a></li>
+<li><a href="https://www.amazon.com/Unit-Testing-Principles-Practices-Patterns-ebook/dp/B09782L692/ref=sr_1_6?crid=2HRFBY67WRGPZ&amp;dib=eyJ2IjoiMSJ9.KRrEep1bIM-sBWFulSMMkFtysnIfKrS7gSLIOfpGPLqlaWnpOgkdpl1j7zOEO1F9s3C28aMLqJ3j7w6pe9_X0vjkNaR-XcPln6krmNE4titgwwVjGABUgDXOqayUFdMa5nIoqQD_oiuSwwoNi1LNpWTZPTaJwWx75m-SyFgxtrv6EvcFZZelfIex9wMsryMb7u7xnc3DvoAYLloRIrU-Xv50I-kRPohaqbbFNSdBajU.c0t9BAR79OKfEuoTQpd64PXRj-v7ZEmkh2vbaIwze0Y&amp;dib_tag=se&amp;keywords=testing&amp;qid=1741069248&amp;s=digital-text&amp;sprefix=testing%2Cdigital-text%2C152&amp;sr=1-6">Unit Testing Principles, Practices, and Patterns</a></li>
+<li><a href="https://www.amazon.com/xUnit-Test-Patterns-Refactoring-Addison-Wesley-ebook/dp/B004X1D36K/ref=sr_1_1?crid=2DMO8TOLAY8WM&amp;dib=eyJ2IjoiMSJ9.nro2gcZq94BLwx5XjMNnUM9wVUe1Mdij_HTQ4yMP6YvBhvgSEybyBdG1gyCC8TAnxX_0qWEXT2pWSXR_MC6DDjiJ-U1fkKhXuB0CY8_IZiKQtcMSxaq32MBe9-tnJsecdqvbL24mGO0Y9oIcIl4lzCM_mf5xux0XYg7qnC6IToK7Zo6KV6AF3T18LgmRdj7MzEabM7lg-Vk5m0njYaO-X3D1iWjE0gN8QgWJVRD2dZuYRwlMWzerDtnWGa8Gc8g1Syh-53P0dEU2ArCd-MoF68aMePTvVA3bQu5wYEkgSmw.jJHnoMTzFA7j2DLDi11qZwK9k5GZUifogAJAQzHBckM&amp;dib_tag=se&amp;keywords=xunit&amp;qid=1741069261&amp;s=digital-text&amp;sprefix=xunit%2Cdigital-text%2C140&amp;sr=1-1">xUnit Test Patterns: Refactoring Test Code</a></li>
+<li><a href="https://www.amazon.com/dp/B005OYHF0A/ref=mes-dp?_encoding=UTF8&amp;pd_rd_w=czJac&amp;content-id=amzn1.sym.7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_p=7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_r=5AV171GK7J3JK3KSNQ54&amp;pd_rd_wg=KAgvQ&amp;pd_rd_r=15ff15ec-56e3-4536-bfec-50e296289e7a">Working Effectively with Legacy Code</a></li>
+<li><a href="https://www.amazon.com/dp/B09B8LFKQL/ref=mes-dp?_encoding=UTF8&amp;pd_rd_w=1HCOd&amp;content-id=amzn1.sym.7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_p=7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_r=QAN8YZCQYZHMP0PN1DZ2&amp;pd_rd_wg=Cdh6W&amp;pd_rd_r=6c67a558-9367-4f38-be9c-bb6df0221bf9">A Philosophy of Software Design, 2nd Edition</a></li>
+<li><a href="https://www.amazon.com/dp/B07VRS84D1/ref=mes-dp?_encoding=UTF8&amp;pd_rd_w=czJac&amp;content-id=amzn1.sym.7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_p=7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_r=5AV171GK7J3JK3KSNQ54&amp;pd_rd_wg=KAgvQ&amp;pd_rd_r=15ff15ec-56e3-4536-bfec-50e296289e7a">Pragmatic Programmer, The: Your journey to mastery, 20th Anniversary Edition</a></li>
+<li><a href="https://www.amazon.com/dp/B0CW1G5D2N/ref=mes-dp?_encoding=UTF8&amp;pd_rd_w=RXudV&amp;content-id=amzn1.sym.7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_p=7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_r=GZXMXS981EDYAB78QDEP&amp;pd_rd_wg=ofJu2&amp;pd_rd_r=e97b85e1-33e9-4066-be45-34d60a5b44d6">Grokking Algorithms, Second Edition</a></li>
+<li><a href="https://www.amazon.com/dp/B094WZNKP2/ref=mes-dp?_encoding=UTF8&amp;pd_rd_w=38LQx&amp;content-id=amzn1.sym.7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_p=7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_r=KAM6A34T6RRNJ2ZVBVAR&amp;pd_rd_wg=txmnh&amp;pd_rd_r=4a54a82e-45b4-4f57-86d3-5cbeb1174608">Introduction to Algorithms, fourth edition</a></li>
+<li><a href="https://www.amazon.com/Lean-Software-Development-Agile-Toolkit-ebook/dp/B00HEL13HW/ref=sr_1_1?crid=193X92TO36E38&amp;dib=eyJ2IjoiMSJ9.11BTOrpsdhwsAIck3SZ5XxtGurGVj7zWztXwu-7se9NTbdyuygsrsp_f86V4Pk2MptjTRiETgTN6gNIxdtCCVRHlxAqD-UQpe3cyTIOxs8OSMDP77pA4S6Z0bHfF5SWvw9MExYVPElRcI1XVJf8zbjlTpIdAIuA9lVfBFdOvLA_mLGB-RY2CaSWvt19WKJQd-1qSxErPfyGyOH8jCLDpfyoIn6XlWNRfvwLOWO1drNA.itQkP96UG_4ntwI7DFIhgvwvuPiWiYAUTfdTmb93AcU&amp;dib_tag=se&amp;keywords=Lean+software&amp;qid=1741069599&amp;s=digital-text&amp;sprefix=lean+software%2Cdigital-text%2C152&amp;sr=1-1">Lean Software Development: An Agile Toolkit: An Agile Toolkit (Agile Software Development Series)</a></li>
+<li><a href="https://www.amazon.com/Observability-Engineering-Charity-Majors-ebook/dp/B09ZQ6FHTT/ref=sr_1_1?crid=2WILTG1XXKT00&amp;dib=eyJ2IjoiMSJ9.R1F_lrqdr3IU4Ej0lbiTcebyAVzVs01OMqjG_LHnumoRkXob6IXLRObt-ASrXViervWYOs_M0YdrNkhIePh_Tb5I2g9oEMOda9yQuJiHbPeQCCT8izrBgHifrJtB52Wnl7ROiPQBRmz4NToK77lpdzgIJpQxvgRIn3u8WJ__4zDQZVHIKOKwe5RlFnwYeEIfHEEvpQBPRbvgcrIdnVIch6p3dHT1XWxclMUe9sLk0qw.YDUlAZXUHrkD-ARawmdbaAuiQlixs-zI-p3BDSTw0QA&amp;dib_tag=se&amp;keywords=observability&amp;qid=1741069661&amp;s=digital-text&amp;sprefix=observabilityt%2Cdigital-text%2C163&amp;sr=1-1">Observability Engineering: Achieving Production Excellence</a></li>
+<li><a href="https://www.amazon.com/Refactoring-Databases-Evolutionary-Addison-Wesley-Signature-ebook/dp/B0DHY617PD/ref=sr_1_2?crid=1QNITR8ADX418&amp;dib=eyJ2IjoiMSJ9.Mgmjte1N_iknsu2Xw0EdQJuZfe5t9RUUL4SNkdTNtqwZvXwdVSNvPaeO5ubNOEjVXGmD9YSBsY6zSX1bZMgnv3mjudEOKRsBR-En3oG3ojT3px51KJzJcfruJGBRx_0NDkh7yajOmKk0mB7AyDLIcLm5ivIYvmlW-Cy458LFLF1kRJ5ifGDFO7FiPAZ-3skwXCAXE0ZzhhA_cH__DHgRjFyFK5uN7SOoRwg_vM4s9KW6HrY3zCs7dmjMwjvCYe-qDEPxrCYrUfwQPIGMHYDpthyhdkeBM2LiTGaoc3O2GlY.OJIGcek6--srp3ttBg1SQShUWg9C4cakqJfnKGxX8H0&amp;dib_tag=se&amp;keywords=database+refactoring&amp;qid=1741070303&amp;s=digital-text&amp;sprefix=database+refacrtoring%2Cdigital-text%2C145&amp;sr=1-2">Refactoring Databases: Evolutionary Database Design</a></li>
+</ul>
+<h3 id="links"><a class="header" href="#links">Links</a></h3>
+<ul>
+<li><a href="https://github.com/diegopacheco/tech-resources/blob/master/qa-manifesto.md">QA Manifesto</a></li>
+<li><a href="https://eloquentjavascript.net/">Eloquent JavaScript - 4th edition (2024)</a></li>
+<li><a href="https://www.enterpriseintegrationpatterns.com/">EIP</a></li>
+<li><a href="https://refactoring.guru/design-patterns">Design Patterns</a></li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="python-resources.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="react-resources.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="python-resources.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="react-resources.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+
+    </div>
+    </body>
+</html>

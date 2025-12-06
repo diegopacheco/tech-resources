@@ -1,0 +1,308 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Cloud Native Resources - Tech Resources</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "searchindex.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Tech Resources</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <i class="fa fa-spinner fa-spin"></i>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h2 id="cloud-native-resources"><a class="header" href="#cloud-native-resources">Cloud Native Resources</a></h2>
+<p><img src="./images/cloud-native-hero.png" alt="Cloud Native" /></p>
+<h4 id="important-topics"><a class="header" href="#important-topics">Important Topics</a></h4>
+<ul>
+<li><a href="http://www.soa-manifesto.org/">SOA</a></li>
+<li><a href="https://martinfowler.com/articles/microservices.html">Microservices</a></li>
+<li><a href="https://www.cncf.io/about/faq/">Cloud Native</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Linux_containers">Containers</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Serverless_computing">Serverless</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Discoverability">Discoverability</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Log_management">Central Logging</a></li>
+</ul>
+<h4 id="tech"><a class="header" href="#tech">Tech</a></h4>
+<ul>
+<li><a href="https://netflix.github.io/">NettflixOSS</a></li>
+<li><a href="http://projects.spring.io/spring-cloud/">SpringCloud</a></li>
+<li><a href="http://dropwizard.io/">Dropwizard</a></li>
+<li><a href="https://twitter.github.io/finagle/">Finagle</a></li>
+<li><a href="https://github.com/google/guice">Guice</a></li>
+<li><a href="https://github.com/OpenFeign/feign">Feign</a></li>
+<li><a href="https://kubernetes.io/">Kubernetes</a></li>
+<li><a href="http://mesos.apache.org/">Mesos</a></li>
+<li><a href="https://www.docker.com/">Docker</a></li>
+<li><a href="https://github.com/ReactiveX/RxJava">RxJava</a></li>
+<li><a href="http://www.grpc.io/">gRPC</a></li>
+<li><a href="https://linkerd.io/">Linkerd</a></li>
+<li><a href="https://coredns.io/">CoreDNS</a></li>
+<li><a href="http://www.fluentd.org/">FluentD</a></li>
+<li><a href="http://nosql-database.org/">NoSQL</a></li>
+<li><a href="https://aws.amazon.com/lambda">Lambda</a></li>
+<li><a href="https://cloud.google.com/functions/">Cloud Functions</a></li>
+<li><a href="https://serverless.com/">Serverless</a></li>
+<li><a href="https://github.com/garnaat/kappa">Kappa</a></li>
+<li><a href="http://graphql.org/">GraphQL</a></li>
+<li><a href="https://github.com/spring-cloud/spring-cloud-function">Spring Cloud Functions</a></li>
+<li><a href="https://github.com/orika-mapper/orika">Orika</a></li>
+<li><a href="http://bytebuddy.net/#/">ByteBuddy</a></li>
+<li><a href="https://github.com/cglib/cglib">CGLib</a></li>
+<li><a href="https://github.com/ben-manes/caffeine">Caffeine</a></li>
+<li><a href="https://github.com/lightbend/config">Config</a></li>
+<li><a href="http://www.mapdb.org/">MapDB</a></li>
+<li><a href="https://github.com/MenoData/Time4J">Time4J</a></li>
+<li><a href="https://noexception.machinezoo.com/">NoException</a></li>
+<li><a href="http://owlike.github.io/genson/">Genson</a></li>
+<li><a href="https://github.com/bazaarvoice/jolt">Jolt</a></li>
+<li><a href="https://gist.github.com/diegopacheco/5696a6403e9eeefe84a0c0dc6a2db77d#devops-engineering">DevOps Engineering</a></li>
+</ul>
+<h4 id="books"><a class="header" href="#books">Books</a></h4>
+<ul>
+<li><a href="https://www.amazon.com/Principles-Software-Architecture-Modernization-microservices/dp/9355519532/ref=sr_1_1?crid=7U3H2IE5U7Y4&amp;dib=eyJ2IjoiMSJ9.ebHg7EIiJ3GThIg8Dwf4PelC70iUIbHPKv7_7zk8vrk8K2FB4zlrUQyNZwKAHPO46cAYR5z2-KyqnXqNz3Ee2lmU-aGR7NLhq7jko2UihHIl-taoJ6i_hkMjcc12ZF3pOmB9lFrvbsGgbDagq1Vzqg.oz7TxYpSBxBZjVjkuIPDZM7Wxx_XMRU0Uj7jo9Rq_BI&amp;dib_tag=se&amp;keywords=principles+of+software+architecture+modernization&amp;qid=1741069169&amp;sprefix=Principles+of+software+a%2Caps%2C190&amp;sr=8-1">Principles of Software Architecture Modernization</a></li>
+<li><a href="https://www.amazon.com/dp/9365893100/ref=mes-dp?_encoding=UTF8&amp;pd_rd_w=JpyYV&amp;content-id=amzn1.sym.7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_p=7d2923e8-7496-46a5-862d-8ef28e908025&amp;pf_rd_r=K6XYEHZZ76RWDSAXAY5X&amp;pd_rd_wg=RH04x&amp;pd_rd_r=f230b2e4-c342-429e-a362-c856e4c2362a">Continuous Modernization</a></li>
+<li><a href="https://www.amazon.com/Cloud-Native-Java-Designing-Resilient/dp/1449374646/ref=sr_1_1?ie=UTF8&amp;qid=1498486436&amp;sr=8-1&amp;keywords=cloud+native">Cloud Native Java</a></li>
+<li><a href="https://www.amazon.com/Cloud-Native-Infrastructure-Manage-Scalable/dp/1491984309/ref=sr_1_6?ie=UTF8&amp;qid=1498486436&amp;sr=8-6&amp;keywords=cloud+native">Cloud Native Infrastructure</a></li>
+<li><a href="https://www.amazon.com/Kubernetes-Running-Dive-Future-Infrastructure/dp/1491935677/ref=pd_sbs_14_2?_encoding=UTF8&amp;pd_rd_i=1491935677&amp;pd_rd_r=TDNM9TRZWJNA9274A2VA&amp;pd_rd_w=8RsyM&amp;pd_rd_wg=uanTu&amp;psc=1&amp;refRID=TDNM9TRZWJNA9274A2VA">Kubernetes: Up and Running</a></li>
+<li><a href="https://www.amazon.com/Kubernetes-Action-Marko-Luksa/dp/1617293725/ref=pd_sbs_14_3?_encoding=UTF8&amp;pd_rd_i=1617293725&amp;pd_rd_r=TDNM9TRZWJNA9274A2VA&amp;pd_rd_w=8RsyM&amp;pd_rd_wg=uanTu&amp;psc=1&amp;refRID=TDNM9TRZWJNA9274A2VA">Kubernetes in Action</a></li>
+<li><a href="https://www.amazon.com/Mesos-Action-Roger-Ignazio/dp/1617292923/ref=pd_sbs_14_18?_encoding=UTF8&amp;pd_rd_i=1617292923&amp;pd_rd_r=9EAVSY0WPGMTWJ6SXP4W&amp;pd_rd_w=kSSRw&amp;pd_rd_wg=4lxtf&amp;psc=1&amp;refRID=9EAVSY0WPGMTWJ6SXP4W">Mesos in Action</a></li>
+<li><a href="https://www.amazon.com/Google-Cloud-Platform-Action-Geewax/dp/1617293520/ref=pd_sbs_14_22?_encoding=UTF8&amp;pd_rd_i=1617293520&amp;pd_rd_r=9EAVSY0WPGMTWJ6SXP4W&amp;pd_rd_w=kSSRw&amp;pd_rd_wg=4lxtf&amp;psc=1&amp;refRID=9EAVSY0WPGMTWJ6SXP4W">Google Cloud Platform in Action</a></li>
+<li><a href="https://www.amazon.com/Serverless-Architectures-AWS-examples-Lambda/dp/1617293822/ref=sr_1_1?s=books&amp;ie=UTF8&amp;qid=1498486532&amp;sr=1-1&amp;keywords=serverless">Serverless Architectures on AWS</a></li>
+<li><a href="https://www.amazon.com/Serverless-Single-Page-Apps-Available/dp/1680501496/ref=sr_1_3?s=books&amp;ie=UTF8&amp;qid=1498486532&amp;sr=1-3&amp;keywords=serverless">Serverless Single Page Apps</a></li>
+<li><a href="https://www.amazon.com/AWS-Lambda-Action-Event-driven-applications/dp/1617293717/ref=sr_1_4?s=books&amp;ie=UTF8&amp;qid=1498486532&amp;sr=1-4&amp;keywords=serverless">AWS Lambda in Action</a></li>
+<li><a href="https://www.amazon.com/dp/1617292540/ref=sxbs_sxwds-stvp_2?pf_rd_m=ATVPDKIKX0DER&amp;pf_rd_p=2972357942&amp;pd_rd_wg=eUzho&amp;pf_rd_r=39HDFBGCFN91KH898YS7&amp;pf_rd_s=desktop-sx-bottom-slot&amp;pf_rd_t=301&amp;pd_rd_i=1617292540&amp;pd_rd_w=uFrXb&amp;pf_rd_i=cloud+native+microservices&amp;pd_rd_r=A22KKY5PTXBPAHDM40Q1&amp;ie=UTF8&amp;qid=1498486607&amp;sr=2">Cloud Native Microservices</a></li>
+<li><a href="https://www.amazon.com/Docker-Action-Jeff-Nickoloff/dp/1633430235/ref=pd_sim_14_3?_encoding=UTF8&amp;pd_rd_i=1633430235&amp;pd_rd_r=KK8VZ74DG7H0AY7V9Z42&amp;pd_rd_w=eaBU2&amp;pd_rd_wg=Uk7B7&amp;psc=1&amp;refRID=KK8VZ74DG7H0AY7V9Z42">Docker in Action</a></li>
+<li><a href="https://www.amazon.com/RxJava-Essentials-Ivan-Morgillo/dp/1784399108/ref=sr_1_fkmr0_3?ie=UTF8&amp;qid=1498486849&amp;sr=8-3-fkmr0&amp;keywords=rx+java+book">RxJava Essentials</a></li>
+</ul>
+<h4 id="links"><a class="header" href="#links">Links</a></h4>
+<ul>
+<li><a href="https://www.cncf.io/">CNCF</a></li>
+<li><a href="https://martinfowler.com/microservices/">Martin Fowler on Microservices</a></li>
+<li><a href="https://medium.com/netflix-techblog">Netflix Tech Blog</a></li>
+<li><a href="https://spring.io/blog">Spring Blog</a></li>
+<li><a href="https://aws.amazon.com/blogs/compute/category/aws-lambda/">AWS Lambda Blog</a></li>
+<li><a href="https://cloudplatform.googleblog.com/">Google Cloud Platform Blog</a></li>
+<li><a href="https://blogs.vmware.com/cloudnative/">VMware Cloud Native Blog</a></li>
+<li><a href="https://cloudnative.io/blog/">Cloud Native Blog</a></li>
+<li><a href="https://www.infoq.com/microservices/?utm_source=infoq&amp;utm_medium=header_graybar&amp;utm_campaign=topic_clk">InfoQ Microservices</a></li>
+<li><a href="https://gist.github.com/diegopacheco/5696a6403e9eeefe84a0c0dc6a2db77d">Diego's Cloud Native Gist</a></li>
+<li><a href="https://courses.edx.org/courses/course-v1:LinuxFoundationX+LFS158x+2T2017/">Linux Foundation Kubernetes Course</a></li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="arch-devops-resources.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="data-eng-resources.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="arch-devops-resources.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="data-eng-resources.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+
+    </div>
+    </body>
+</html>
