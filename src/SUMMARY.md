@@ -16,6 +16,7 @@
 - [Architecture Documentation Template](./arch-doc-template.md)
 - [POC Hero](./poc-hero.md)
 - [Presentation Hero](./presentation-hero.md)
+- [Sales Hero](./sales-hero.md)
 
 # Self-Growth Resources
 

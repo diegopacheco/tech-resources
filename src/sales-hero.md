@@ -16,7 +16,7 @@ Most of engineers have alergy to sales. I completely get it, flufly stuff, wrong
 10. When you are advocating for best practices or standards within your team or organization.
 11. When you are deliverying a demo and need to highlight the value of your solution.
 
-## Structure
+## Invisible Structure
 
 Does not matter if you are doing a demo, slide deck presentation or even writting a document. You need some elements, or structure, however such structure or element does not need to be explicitly stated or even named but it needs to be present. 
 
