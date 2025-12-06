@@ -1,0 +1,356 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Doing Better in AI Era - Tech Resources</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "searchindex.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Tech Resources</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <i class="fa fa-spinner fa-spin"></i>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h2 id="doing-better-in-ai-era"><a class="header" href="#doing-better-in-ai-era">Doing better in AI Era</a></h2>
+<p>Like it or not... AI is here and is creating disruption. Does not matter how good or bad AI it is, the fact is that is changing people perceptions and behaviors. Some CEOs are already pushing companies to use AI very hard(like Shopify, Microsoft, Google, and X). AI(Gen-AI) is good but there is a some concerning stuff happening, like:</p>
+<ul>
+<li>There is a overal reduction in the number of jobs available (<a href="https://www.trueup.io/job-trend">TrueUp job trends</a>).</li>
+<li>There is a posibility that will reduce wages/salaries (<a href="https://thejobchicksinsideredge.substack.com/p/inside-amazons-offshoring-playbook">Amazon offshoring playbook</a>).</li>
+</ul>
+<p><img src="images/jobs-tech-2025.png" alt="Jobs Tech 2025" /></p>
+<ul>
+<li>Print screen from <a href="https://www.trueup.io/job-trend">TrueUp job trends</a> on 2025-JUL-21.
+<br/>
+<br/></li>
+</ul>
+<p><img src="images/jobs-reductions-july-6-2025.png" alt="Jobs Reductions July 6 2025" /></p>
+<ul>
+<li>Print screen from <a href="https://thejobchicksinsideredge.substack.com/p/inside-amazons-offshoring-playbook">Amazon offshoring playbook</a> on tweet of JUL 6, 2025.
+<br/>
+<br/></li>
+</ul>
+<p>Some of this movements are not enterily to AI credit, for instance, the pandemic(COVID/2019) was a big factor in slowing down the economy and TECH was in a bubble(free money in USA is over). Companies always like to optimize and reduce costs, and people are very exmpensive. So some of this movements have nothing todo with AI but combined we are in a complex situation where things are a bit harder and more uncertain and way more competitive than before.</p>
+<p>I'm mostely optimistic about AI and do belive in <a href="https://en.wikipedia.org/wiki/Jevons_paradox">Jevons paradox</a>. I dont think AI is magic and will replace all engineering but if you suck, if you performance is very poor you are at high risk. So we must be doing better.</p>
+<h2 id="producing-code"><a class="header" href="#producing-code">Producing Code</a></h2>
+<p>Considering Generative AI, producing code(even a lot of it) is nothing now a days. Anyone can produce a lot of code(look tools like Claude Code, OpenAI codex CLI, Gemini CLI, Google Jules, GitHub Copilot, Cursor). So do not think producing code is the most impressive thing. However producing good code still matters, knows proper design, testing, and architecture are very important skills. How do you know what is good code? Think about that! Why I'm talking about this? Because you must change your mind and mindset and delivery, delivery matters the most but just deliverying is not good enought never was and never will be. You must deliver good code, that is maintainable, testable, and scalable.</p>
+<p>Throwing AI generated code at someone is like searching something in google, get the first anwser and just present that as your university thesis, how that went in the past? (Pretty bad and pretty wrong thing to do). So you must review more and do more homework.</p>
+<h2 id="review-pressure"><a class="header" href="#review-pressure">Review Pressure</a></h2>
+<p>Since producing code is trivial and it can be done in large quantities all the presure is on the reviewers. So you must not throw code(or AI generated code) in others without reviwing and understanding it deeply, you must do you homework, meaning:</p>
+<ul>
+<li>Before submiting code to others, review and understand it deeply.</li>
+<li>You must know everything all the time.</li>
+<li>If you are touching the code, you must know.</li>
+<li>If you are presenting something you must know all of it.</li>
+<li>It cannot have a string you don't understand and dont know how it works - know it all.</li>
+<li>Is there a language feature or token? you must kwnow it.</li>
+<li>There is a text taling about algorithims or some technique like Cache Locality or Greedy Algorithms? You must know it.</li>
+<li>IF you don't know you:
+<ul>
+<li>Must learn it.</li>
+<li>Must do a POC.</li>
+<li>Must see videos on the web.</li>
+<li>Must read papers and the official documentation.</li>
+</ul>
+</li>
+</ul>
+<h2 id="be-a-killer-when-the-matter-is-delivery"><a class="header" href="#be-a-killer-when-the-matter-is-delivery">Be a Killer when the matter is delivery</a></h2>
+<ol>
+<li>Always meet people expectations and deadlines.</li>
+<li>Always do more than people asked of you.</li>
+<li>Always do a lot of tests.</li>
+<li>Always understand everything you are doing.</li>
+<li>Always be proactive and take the lead, ask questions and be on TOP of everything.</li>
+<li>Always research, read papers, and check information, double check, LLM still halucinates.</li>
+<li>Always compare with other solutions, do benchmarks and different implementations.</li>
+<li>Always have great documentation and do great UI/presentations.</li>
+<li>Ask for feedback, often and frequent, are you presenting? do many dry runs.</li>
+</ol>
+<h2 id="aplied-learning"><a class="header" href="#aplied-learning">Aplied Learning</a></h2>
+<p>All learning must be applied in day-by-day work otherwise is not useful for you and you are loosing opportunidies to do better and have better performance. Performance always matter and you must think about this, when people talk about your name, what they think?</p>
+<ul>
+<li>A) YES Mr X is a killer, I want him badly.</li>
+<li>B) OH No MR Z sucks, pls I pass dont need him.</li>
+</ul>
+<p>Everyboddy is being watched and measured all the time, you track record matters a lot, so keep in mind, what performance do you want associated with your name? The great one or a bad one? Performance is key for future improvements and opportunities, so you must be doing better all the time. You are RESPONSIBLE for your performance, excuses and blaming others will make you not good. Dont look for excuses, look for oportunities to grow and feedfack, there are always opportunitites to do better, so be proactive and look for them.</p>
+<h2 id="continnous-improvement"><a class="header" href="#continnous-improvement">Continnous Improvement</a></h2>
+<p>AI is being trained and improved all the time, so you must be doing the same. You must be improving all the time, you must be learning and applying this learning in your day-by-day work. You must be proactive and look for ways to improve your performance, your code, your design, your architecture, your tests, your documentation, and your presentations.</p>
+<p>Why AI is getting better? Because is being measured. Every single new model, they always disaplay benchmarks they beat up. We can learn something from that. You must know your numbers, would know your performance by heart, so tell me?:</p>
+<ul>
+<li>How many PRs you did last month?</li>
+<li>How many Tests you wrote?</li>
+<li>How many bugs you fixed?</li>
+<li>How many features you delivered?</li>
+<li>How many reviews you did?</li>
+<li>How many presentations you did?</li>
+<li>How many meetings you attended?</li>
+<li>How many people you helped?</li>
+</ul>
+<p>It's always a good idea have an EXCEL and track all this things everyday, the better you know your number, easier is for you to beat team.Going DEEP is the only way to improve, if we are not in TOP of things and dont master our GAME we are not doing better, so you must be doing better all the time.</p>
+<p>Obeservability is everything. Think about a F1 race, if you dont know how long take to do a lap, you cant beat your team. Several engineers think they are killing it and doing fine but is they ask the right people, mentors, they might realize they are not there. So the important thing is to always ask and align expectations (<a href="https://diegopachecotech.substack.com/p/expectations">Expectations</a>), so here is a seconf suggestion for tracking:</p>
+<ul>
+<li>Story ID or link(maybe issue tracking link)</li>
+<li>What date you started?</li>
+<li>What was the estimation from the manager?</li>
+<li>What date you finished?</li>
+<li>Did you beat the estimation or not?</li>
+<li>Notes of what happened and why, did you have any delays or surpises?</li>
+</ul>
+<p>Whith that, you can build ownership. Extreme ownership is very much needed. You can ask you self, consider last 10 items, I'm beating the time always? You might be wonder, why to ask a manager estimates(and must be days, story points is useless)? Because people have exceptations and they dont tell you, usually and a EM or director set of exceptations not meet could get you fired.</p>
+<p>Engineers always assume they are doing great, but in reality they are not, because they <em>calibration is wrong</em>. So let me give you better calibarion:</p>
+<ul>
+<li>Zero story delivered per week is bad.</li>
+<li>Zero story per sprint is very bad.</li>
+<li>You must deliver all that was addressed to you.</li>
+<li>Push back, when is not clear or when requirements, business rules are missing.</li>
+<li>You will be held accoutable for you performance, so you must be on TOP of your numbers.</li>
+<li>Lack of feedback is not good feedback.</li>
+</ul>
+<h2 id="the-way-forward"><a class="header" href="#the-way-forward">The Way Forward</a></h2>
+<ul>
+<li>Be Curious, always ask questions, always learn.</li>
+<li>Be Proactive, always take the lead, always be on TOP of things.</li>
+<li>Be a Killer, always deliver, always do more than expected.</li>
+<li>Have constant discipline, learn all the things you dont know, repeat.</li>
+<li>Avoid complacency. Do not be happy with little, always do more, always be better.</li>
+<li>You promise, you deliver, so always write down, always remember, be someone reliable like a rock.</li>
+<li>Go Deeper, know better, invest more on POCs, reading papers, videos and do not avoid hard problems, face hard problems early on.</li>
+</ul>
+<br/>
+<br/>
+<p><img src="images/belive.jpg" alt="Believe sign" /></p>
+<ul>
+<li>Ted Lasso reference: <a href="https://www.imdb.com/title/tt10986410/">Ted Lasso on IMDB</a> (highly recommended).</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="simple-engineering-problems.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="arch-doc-template.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="simple-engineering-problems.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="arch-doc-template.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+
+    </div>
+    </body>
+</html>
