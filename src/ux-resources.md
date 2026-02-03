@@ -76,3 +76,14 @@
 * [The Jobs To Be Done Playbook: Align Your Markets, Organization, and Strategy Around Customer Needs](https://www.amazon.com/dp/B07X1LQ45Y/ref=mes-dp?_encoding=UTF8&pd_rd_w=7hKG1&content-id=amzn1.sym.7d2923e8-7496-46a5-862d-8ef28e908025&pf_rd_p=7d2923e8-7496-46a5-862d-8ef28e908025&pf_rd_r=N42QSDC69D326PJ0GGSF&pd_rd_wg=Lq02V&pd_rd_r=954890a2-36f2-4d3c-95a6-860203d30c9a)
 * [User Story Mapping: Discover the Whole Story, Build the Right Product](https://www.amazon.com/dp/B00NF07FHS/ref=mes-dp?_encoding=UTF8&pd_rd_w=0nRxu&content-id=amzn1.sym.7d2923e8-7496-46a5-862d-8ef28e908025&pf_rd_p=7d2923e8-7496-46a5-862d-8ef28e908025&pf_rd_r=5C17075YRY1ETAFCN40Z&pd_rd_wg=icqUo&pd_rd_r=9390e642-98d0-4c7f-b242-63d683daf565)
 * [Lean Software Development: An Agile Toolkit: An Agile Toolkit (Agile Software Development Series)](https://www.amazon.com/Lean-Software-Development-Agile-Toolkit-ebook/dp/B00HEL13HW/ref=sr_1_1?crid=14I8JFW6SOKOI&dib=eyJ2IjoiMSJ9.JneXkk11X4Fn_rQ77mMEug3QWCrQdlPdMeXZztCFBeXZC0miW4PO2vsYbpIw0rKi9xYzQyhoqeFkVz811DAJwrgrnhjfP-Ajwrgj7C8wGf8yl4tEYwSW3cKUrVRspTOJxVm9_HpA2R9BOOAaqxbJyftMpXTL3v_RHye-pHpr_15IqBzwBaSGUHQN2QGs7xl4mVQ9N-5GEcIeiPJEsLJ8j8Rl5mY5-5GtWCBygfjo1x0.t3YSkHwY4rPrEODancSrXAV94-JGK4ZC2iEOGcv1BJE&dib_tag=se&keywords=lean+software&qid=1741071116&s=digital-text&sprefix=lean+software%2Cdigital-text%2C163&sr=1-1)
+
+## Youtube Channels
+
+Phoebe Yu
+https://www.youtube.com/@phoebeyutbt/videos
+
+NNgroup
+https://www.youtube.com/user/NNgroup/videos
+
+Google Design
+https://www.youtube.com/c/GoogleDesign/videos
