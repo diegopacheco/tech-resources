@@ -80,10 +80,10 @@
 ## Youtube Channels
 
 Phoebe Yu
-https://www.youtube.com/@phoebeyutbt/videos
+[https://www.youtube.com/@phoebeyutbt/videos](https://www.youtube.com/@phoebeyutbt/videos)
 
 NNgroup
-https://www.youtube.com/user/NNgroup/videos
+[https://www.youtube.com/user/NNgroup/videos](https://www.youtube.com/user/NNgroup/videos)
 
 Google Design
-https://www.youtube.com/c/GoogleDesign/videos
+[https://www.youtube.com/c/GoogleDesign/videos](https://www.youtube.com/c/GoogleDesign/videos)
