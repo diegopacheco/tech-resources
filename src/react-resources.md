@@ -45,15 +45,18 @@
 * Recoil
 * Jotai
 * XState
+* Jotai
 
 ## Testing
 
 * React Testing Library
 * Jest
 * Cypress
+* Playwright
 
 ## Better React
 
+* [TanStack](https://tanstack.com/)
 * [Next](https://nextjs.org/)
 * [Astro](https://astro.build/)
 * [Elysia](https://elysiajs.com/)
